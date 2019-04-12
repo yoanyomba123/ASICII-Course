@@ -1,0 +1,57 @@
+	-slack_lesser_than 100.00
+	-sort_by slack
+  slack (VIOLATED)                                   -0.89
+  slack (VIOLATED)                                   -0.89
+  slack (VIOLATED)                                   -0.89
+  slack (VIOLATED)                                   -0.88
+  slack (VIOLATED)                                   -0.88
+  slack (VIOLATED)                                   -0.87
+  slack (VIOLATED)                                   -0.87
+  slack (VIOLATED)                                   -0.78
+  slack (VIOLATED)                                   -0.76
+  slack (VIOLATED)                                   -0.75
+  slack (VIOLATED)                                   -0.73
+  slack (VIOLATED)                                   -0.72
+  slack (VIOLATED)                                   -0.69
+  slack (VIOLATED)                                   -0.63
+  slack (VIOLATED)                                   -0.62
+  slack (VIOLATED)                                   -0.60
+  slack (VIOLATED)                                   -0.54
+  slack (VIOLATED)                                   -0.36
+	-slack_lesser_than 0.00
+	-sort_by slack
+No paths with slack less than 0.00.
+	-slack_lesser_than 0.00
+	-sort_by slack
+  slack (VIOLATED)                                   -2.51
+  slack (VIOLATED)                                   -2.50
+  slack (VIOLATED)                                   -2.50
+  slack (VIOLATED)                                   -2.48
+  slack (VIOLATED)                                   -2.47
+  slack (VIOLATED)                                   -2.47
+  slack (VIOLATED)                                   -1.95
+  slack (VIOLATED)                                   -1.93
+  slack (VIOLATED)                                   -1.88
+  slack (VIOLATED)                                   -1.71
+  slack (VIOLATED)                                   -1.68
+  slack (VIOLATED)                                   -1.63
+  slack (VIOLATED)                                   -0.55
+  slack (VIOLATED)                                   -0.52
+	-slack_lesser_than 0.00
+	-sort_by slack
+  slack (VIOLATED)                                   -4.32
+  slack (VIOLATED)                                   -4.26
+  slack (VIOLATED)                                   -4.26
+  slack (VIOLATED)                                   -4.25
+  slack (VIOLATED)                                   -4.25
+  slack (VIOLATED)                                   -4.23
+  slack (VIOLATED)                                   -4.22
+  slack (VIOLATED)                                   -4.22
+  slack (VIOLATED)                                   -4.22
+  slack (VIOLATED)                                   -4.09
+  slack (VIOLATED)                                   -4.04
+  slack (VIOLATED)                                   -3.66
+	-sort_by slack
+  slack (MET)                                         0.85
+	-sort_by slack
+  slack (MET)                                         0.34

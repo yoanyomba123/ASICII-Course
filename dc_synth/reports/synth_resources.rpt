@@ -1,0 +1,14 @@
+Warning: Design 'fpu' has '46' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : resources
+Design : fpu
+Version: M-2016.12-SP1
+Date   : Fri Apr 12 12:18:48 2019
+****************************************
+
+
+No resource sharing information to report.
+
+No implementations to report
+1

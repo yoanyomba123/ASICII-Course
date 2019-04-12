@@ -1,0 +1,575 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : s35932
+Version: L-2016.03-SP5-1
+Date   : Wed Mar  6 01:49:44 2019
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_30 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3570/Y (OR2X1_RVT)                      0.09 *     2.14 f
+  U5608/S (FADDX1_RVT)                     0.19 *     2.33 r
+  DATA_9_30 (out)                          0.00 *     2.33 r
+  data arrival time                                   2.33
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.33
+  -----------------------------------------------------------
+  slack (MET)                                         5.67
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_20 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3554/Y (OR2X1_RVT)                      0.10 *     2.14 f
+  U5621/S (FADDX1_RVT)                     0.18 *     2.32 r
+  DATA_9_20 (out)                          0.00 *     2.32 r
+  data arrival time                                   2.32
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.32
+  -----------------------------------------------------------
+  slack (MET)                                         5.68
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_16 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U5631/Y (OR2X1_RVT)                      0.09 *     2.14 f
+  U5632/S (FADDX1_RVT)                     0.18 *     2.32 r
+  DATA_9_16 (out)                          0.00 *     2.32 r
+  data arrival time                                   2.32
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.32
+  -----------------------------------------------------------
+  slack (MET)                                         5.68
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_13 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3566/Y (NOR2X0_RVT)                     0.11 *     2.15 r
+  U5642/SO (HADDX1_RVT)                    0.13 *     2.29 f
+  DATA_9_13 (out)                          0.00 *     2.29 f
+  data arrival time                                   2.29
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.29
+  -----------------------------------------------------------
+  slack (MET)                                         5.71
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_2 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3700/Y (NOR2X0_RVT)                     0.11 *     2.15 r
+  U5663/SO (HADDX1_RVT)                    0.13 *     2.28 f
+  DATA_9_2 (out)                           0.00 *     2.29 f
+  data arrival time                                   2.29
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.29
+  -----------------------------------------------------------
+  slack (MET)                                         5.71
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_15 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U5638/Y (NOR2X0_RVT)                     0.11 *     2.16 r
+  U5639/SO (HADDX1_RVT)                    0.13 *     2.28 f
+  DATA_9_15 (out)                          0.00 *     2.28 f
+  data arrival time                                   2.28
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.28
+  -----------------------------------------------------------
+  slack (MET)                                         5.72
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_8 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3567/Y (NOR2X0_RVT)                     0.12 *     2.17 r
+  U5653/SO (HADDX1_RVT)                    0.12 *     2.28 f
+  DATA_9_8 (out)                           0.00 *     2.28 f
+  data arrival time                                   2.28
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.28
+  -----------------------------------------------------------
+  slack (MET)                                         5.72
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_3 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U5660/Y (NOR2X0_RVT)                     0.10 *     2.14 r
+  U5661/SO (HADDX1_RVT)                    0.14 *     2.28 f
+  DATA_9_3 (out)                           0.00 *     2.28 f
+  data arrival time                                   2.28
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.28
+  -----------------------------------------------------------
+  slack (MET)                                         5.72
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_12 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3699/Y (NOR2X0_RVT)                     0.11 *     2.15 r
+  U5644/SO (HADDX1_RVT)                    0.13 *     2.28 f
+  DATA_9_12 (out)                          0.00 *     2.28 f
+  data arrival time                                   2.28
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.28
+  -----------------------------------------------------------
+  slack (MET)                                         5.72
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_9 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U5650/Y (NOR2X0_RVT)                     0.10 *     2.14 r
+  U5651/SO (HADDX1_RVT)                    0.14 *     2.28 f
+  DATA_9_9 (out)                           0.00 *     2.28 f
+  data arrival time                                   2.28
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.28
+  -----------------------------------------------------------
+  slack (MET)                                         5.72
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_14 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3569/Y (NOR2X0_RVT)                     0.09 *     2.14 r
+  U5640/SO (HADDX1_RVT)                    0.14 *     2.28 f
+  DATA_9_14 (out)                          0.00 *     2.28 f
+  data arrival time                                   2.28
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.28
+  -----------------------------------------------------------
+  slack (MET)                                         5.72
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_1 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3701/Y (NOR2X0_RVT)                     0.11 *     2.15 r
+  U5665/SO (HADDX1_RVT)                    0.12 *     2.28 f
+  DATA_9_1 (out)                           0.00 *     2.28 f
+  data arrival time                                   2.28
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.28
+  -----------------------------------------------------------
+  slack (MET)                                         5.72
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_4 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3565/Y (NOR2X0_RVT)                     0.09 *     2.14 r
+  U5659/SO (HADDX1_RVT)                    0.14 *     2.28 f
+  DATA_9_4 (out)                           0.00 *     2.28 f
+  data arrival time                                   2.28
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.28
+  -----------------------------------------------------------
+  slack (MET)                                         5.72
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_11 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U5645/Y (NOR2X0_RVT)                     0.09 *     2.14 r
+  U5646/SO (HADDX1_RVT)                    0.13 *     2.27 f
+  DATA_9_11 (out)                          0.00 *     2.27 f
+  data arrival time                                   2.27
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.27
+  -----------------------------------------------------------
+  slack (MET)                                         5.73
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_5 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U5657/Y (NOR2X0_RVT)                     0.10 *     2.15 r
+  U5658/SO (HADDX1_RVT)                    0.12 *     2.27 f
+  DATA_9_5 (out)                           0.00 *     2.27 f
+  data arrival time                                   2.27
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.27
+  -----------------------------------------------------------
+  slack (MET)                                         5.73
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_7 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3702/Y (NOR2X0_RVT)                     0.10 *     2.15 r
+  U5654/SO (HADDX1_RVT)                    0.12 *     2.27 f
+  DATA_9_7 (out)                           0.00 *     2.27 f
+  data arrival time                                   2.27
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.27
+  -----------------------------------------------------------
+  slack (MET)                                         5.73
+
+
+  Startpoint: TM1 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_23 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM1 (in)                                 0.00       2.00 r
+  U45/Y (INVX8_RVT)                        0.05 *     2.05 f
+  U5243/S (FADDX1_RVT)                     0.22 *     2.27 r
+  DATA_9_23 (out)                          0.00 *     2.27 r
+  data arrival time                                   2.27
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.27
+  -----------------------------------------------------------
+  slack (MET)                                         5.73
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_0 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U44/Y (INVX4_RVT)                        0.05 *     2.05 f
+  U3568/Y (NOR2X0_RVT)                     0.09 *     2.14 r
+  U5666/SO (HADDX1_RVT)                    0.13 *     2.27 f
+  DATA_9_0 (out)                           0.00 *     2.27 f
+  data arrival time                                   2.27
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.27
+  -----------------------------------------------------------
+  slack (MET)                                         5.73
+
+
+  Startpoint: TM1 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_18 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM1 (in)                                 0.00       2.00 r
+  U45/Y (INVX8_RVT)                        0.05 *     2.05 f
+  U4768/S (FADDX1_RVT)                     0.22 *     2.27 r
+  DATA_9_18 (out)                          0.00 *     2.27 r
+  data arrival time                                   2.27
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.27
+  -----------------------------------------------------------
+  slack (MET)                                         5.73
+
+
+  Startpoint: TM0 (input port clocked by ideal_clock1)
+  Endpoint: DATA_9_31 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  TM0 (in)                                 0.00       2.00 r
+  U5600/Y (NAND2X0_RVT)                    0.06 *     2.06 f
+  U5601/S (FADDX1_RVT)                     0.21 *     2.27 r
+  DATA_9_31 (out)                          0.00 *     2.27 r
+  data arrival time                                   2.27
+
+  clock ideal_clock1 (rise edge)          10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -2.27
+  -----------------------------------------------------------
+  slack (MET)                                         5.73
+
+
+1

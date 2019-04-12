@@ -1,0 +1,55 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-input_pins
+	-nets
+	-max_paths 1
+	-transition_time
+	-capacitance
+	-sort_by slack
+Design : s35932
+Version: L-2016.06-SP3-1
+Date   : Wed Mar  6 02:38:50 2019
+****************************************
+
+Warning: There are 3 invalid end points for constrained paths. (UITE-416)
+
+  Startpoint: DFF_767/q_reg
+               (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: DFF_747/q_reg
+               (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Last common pin: CK
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                  0.00       0.00       0.00
+  clock network delay (propagated)                           0.16       0.16
+  DFF_767/q_reg/CLK (DFFX1_RVT)                   0.21       0.00       0.16 r
+  DFF_767/q_reg/QN (DFFX1_RVT)                    0.23       0.34 +     0.50 f
+  n3285 (net)                    4    25.89 
+  U6144/B (FADDX1_RVT)                            0.23       3.13 +     3.62 f
+  U6144/S (FADDX1_RVT)                            0.05       0.20 +     3.82 r
+  n3242 (net)                    1     1.36 
+  U6145/A1 (AND2X1_RVT)                           0.05       0.03 +     3.85 r
+  U6145/Y (AND2X1_RVT)                            0.04       0.06 +     3.91 r
+  WX5165 (net)                   1     0.92 
+  DFF_747/q_reg/D (DFFX1_RVT)                     0.04       0.02 +     3.93 r
+  data arrival time                                                     3.93
+
+  clock ideal_clock1 (rise edge)                  0.00      10.00      10.00
+  clock network delay (propagated)                           0.15      10.15
+  clock reconvergence pessimism                              0.00      10.15
+  DFF_747/q_reg/CLK (DFFX1_RVT)                                        10.15 r
+  library setup time                                        -0.05      10.10
+  data required time                                                   10.10
+  -----------------------------------------------------------------------------
+  data required time                                                   10.10
+  data arrival time                                                    -3.93
+  -----------------------------------------------------------------------------
+  slack (MET)                                                           6.17
+
+
+1

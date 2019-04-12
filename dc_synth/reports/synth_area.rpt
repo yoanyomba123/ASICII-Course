@@ -1,0 +1,235 @@
+Information: Building the design 'bw_r_rf16x160'. (HDL-193)
+Warning: Cannot find the design 'bw_r_rf16x160' in the library 'WORK'. (LBR-1)
+Information: Building the design 'test_stub_scan'. (HDL-193)
+Warning: Cannot find the design 'test_stub_scan' in the library 'WORK'. (LBR-1)
+Information: Building the design 'mul64'. (HDL-193)
+Warning: Cannot find the design 'mul64' in the library 'WORK'. (LBR-1)
+Information: Building the design 'cluster_header'. (HDL-193)
+Warning: Cannot find the design 'cluster_header' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffrl_async' instantiated from design 'fpu_in_ctl' with
+	the parameters "1". (HDL-193)
+Warning: Cannot find the design 'dffrl_async' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffr_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "1". (HDL-193)
+Warning: Cannot find the design 'dffr_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "1". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "5". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "4". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "4". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "1". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "8". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "16". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "3". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'clken_buf'. (HDL-193)
+Warning: Cannot find the design 'clken_buf' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_dp' with
+	the parameters "2". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_dp' with
+	the parameters "64". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_in_dp' with
+	the parameters "69". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_dp' with
+	the parameters "155". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "1". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "8". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "4". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "2". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "5". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "31". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "19". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "2". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "18". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "10". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "9". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "6". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "10". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_exp_dp' with
+	the parameters "11". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_exp_dp' with
+	the parameters "13". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_exp_dp' with
+	the parameters "12". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_add_exp_dp' with
+	the parameters "13". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "63". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "55". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "64". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "54". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "58". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffre_s' instantiated from design 'fpu_mul_ctl' with
+	the parameters "5". (HDL-193)
+Warning: Cannot find the design 'dffre_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_mul_ctl' with
+	the parameters "6". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_mul_ctl' with
+	the parameters "7". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_mul_frac_dp' with
+	the parameters "56". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_mul_frac_dp' with
+	the parameters "55". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffe_s' instantiated from design 'fpu_mul_frac_dp' with
+	the parameters "52". (HDL-193)
+Warning: Cannot find the design 'dffe_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffr_s' instantiated from design 'fpu_div_ctl' with
+	the parameters "8". (HDL-193)
+Warning: Cannot find the design 'dffr_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dffr_s' instantiated from design 'fpu_div_ctl' with
+	the parameters "3". (HDL-193)
+Warning: Cannot find the design 'dffr_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_div_frac_dp' with
+	the parameters "53". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_div_frac_dp' with
+	the parameters "12". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_out_ctl' with
+	the parameters "3". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s'. (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Information: Building the design 'dff_s' instantiated from design 'fpu_out_dp' with
+	the parameters "77". (HDL-193)
+Warning: Cannot find the design 'dff_s' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'bw_r_rf16x160' in 'fpu'. (LINK-5)
+Warning: Unable to resolve reference 'test_stub_scan' in 'fpu'. (LINK-5)
+Warning: Unable to resolve reference 'mul64' in 'fpu_mul'. (LINK-5)
+Warning: Unable to resolve reference 'cluster_header' in 'bw_clk_cl_fpu_cmp'. (LINK-5)
+Warning: Unable to resolve reference 'dffrl_async' in 'fpu_in_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffr_s' in 'fpu_in_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_in_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffre_s' in 'fpu_in_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'clken_buf' in 'fpu_in_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_in_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_in_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffrl_async' in 'fpu_add_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_add_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffre_s' in 'fpu_add_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_add_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'clken_buf' in 'fpu_add_exp_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_add_exp_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_add_exp_dp'. (LINK-5)
+Warning: Unable to resolve reference 'clken_buf' in 'fpu_add_frac_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_add_frac_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_add_frac_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffrl_async' in 'fpu_mul_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_mul_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_mul_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffre_s' in 'fpu_mul_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'clken_buf' in 'fpu_mul_exp_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_mul_exp_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_mul_exp_dp'. (LINK-5)
+Warning: Unable to resolve reference 'clken_buf' in 'fpu_mul_frac_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_mul_frac_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_mul_frac_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffrl_async' in 'fpu_div_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_div_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_div_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffr_s' in 'fpu_div_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffre_s' in 'fpu_div_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'clken_buf' in 'fpu_div_exp_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_div_exp_dp'. (LINK-5)
+Warning: Unable to resolve reference 'clken_buf' in 'fpu_div_frac_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffe_s' in 'fpu_div_frac_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_div_frac_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dffrl_async' in 'fpu_out_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dffre_s' in 'fpu_out_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_out_ctl'. (LINK-5)
+Warning: Unable to resolve reference 'clken_buf' in 'fpu_out_dp'. (LINK-5)
+Warning: Unable to resolve reference 'dff_s' in 'fpu_out_dp'. (LINK-5)
+ 
+****************************************
+Report : area
+Design : fpu
+Version: M-2016.12-SP1
+Date   : Fri Apr 12 12:18:47 2019
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed32rvt_ss0p95v25c (File: /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db)
+
+Number of ports:                         7042
+Number of nets:                         22004
+Number of cells:                        11761
+Number of combinational cells:          11084
+Number of sequential cells:               653
+Number of macros/black boxes:               0
+Number of buf/inv:                       1556
+Number of references:                       9
+
+Combinational area:              25753.428425
+Buf/Inv area:                     2112.953223
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:           13632.705794
+
+Total cell area:                 25753.428425
+Total area:                      39386.134219
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1

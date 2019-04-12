@@ -1,0 +1,1173 @@
+
+***************************************************************************
+Report         : DRC_Error Types
+Design cel     : s35932
+Error view cel : 
+Date           : Wed Mar  6 02:00:42 2019
+***************************************************************************
+
+Data                    Value
+---------------------------------------------------------------------------
+Error type ID           218112
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{178.354 142.861} {178.378 142.863}}
+
+Error type ID           218113
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{178.376 142.778} {178.378 142.813}}
+
+Error type ID           218114
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{178.354 142.811} {178.378 142.813}}
+
+Error type ID           218115
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{178.354 142.806} {178.356 142.813}}
+
+Error type ID           218116
+Error type names        {Diff net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: CK_G1B1I81)
+
+Default error status    Error
+Bbox coordinates        {{178.471 142.212} {179.090 143.462}}
+
+Error type ID           218117
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{178.327 142.757} {178.405 142.962}}
+
+Error type ID           218118
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I91 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.097 148.097} {5.227 148.247}}
+
+Error type ID           218119
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.837 147.977} {5.967 148.117}}
+
+Error type ID           218120
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay491 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{59.926 147.976} {59.928 148.008}}
+
+Error type ID           218121
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay491 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{59.919 147.927} {59.977 148.057}}
+
+Error type ID           218122
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay491 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{59.926 148.006} {59.970 148.008}}
+
+Error type ID           218123
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 11 12) (Net1: CTS_ideal_clock1_CTO_delay491 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{65.114 149.324} {65.247 149.429}}
+
+Error type ID           218124
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay491 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{65.243 149.328} {65.248 149.330}}
+
+Error type ID           218125
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay491 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{65.243 149.323} {65.245 149.330}}
+
+Error type ID           218126
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay491 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{65.133 149.323} {65.135 149.330}}
+
+Error type ID           218127
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{63.726 147.976} {63.728 148.003}}
+
+Error type ID           218128
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{82.293 147.977} {82.423 148.106}}
+
+Error type ID           218129
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I5 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{94.017 148.121} {94.147 148.255}}
+
+Error type ID           218130
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{94.886 147.976} {94.888 148.003}}
+
+Error type ID           218131
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{153.144 142.888} {153.146 142.920}}
+
+Error type ID           218132
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{158.616 142.893} {158.618 142.920}}
+
+Error type ID           218133
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{177.160 142.893} {177.162 142.920}}
+
+Error type ID           218134
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I8 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{181.872 152.925} {181.874 152.952}}
+
+Error type ID           218135
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay1412 Net2: n3672)
+
+Default error status    Error
+Bbox coordinates        {{182.817 152.522} {183.015 152.662}}
+
+Error type ID           218136
+Error type names        {Diff net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay1412 Net2: n3672)
+
+Default error status    Error
+Bbox coordinates        {{182.887 152.512} {182.945 152.672}}
+
+Error type ID           218137
+Error type names        {Diff net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay1412 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{182.887 152.512} {182.945 152.672}}
+
+Error type ID           218138
+Error type names        {Same net spacing} 
+Error type layer        M2-M2
+Number of errors        1
+Description             DRC Violations (Layer 13 13) (Net1: CK_G1B1I17 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{87.450 162.944} {87.622 163.006}}
+
+Error type ID           218139
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I17 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{87.784 162.842} {87.786 162.846}}
+
+Error type ID           218140
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I17 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{87.775 162.725} {87.872 162.855}}
+
+Error type ID           218141
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{51.791 171.513} {51.881 171.645}}
+
+Error type ID           218142
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{86.721 172.885} {86.854 173.015}}
+
+Error type ID           218143
+Error type names        {Special notch spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I17 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{87.408 172.687} {87.462 172.738}}
+
+Error type ID           218144
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{116.767 172.852} {116.845 173.065}}
+
+Error type ID           218145
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I38 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{112.795 172.783} {112.873 172.913}}
+
+Error type ID           218146
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{111.952 173.007} {111.954 173.016}}
+
+Error type ID           218147
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{111.943 172.990} {112.040 173.128}}
+
+Error type ID           218148
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I38 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{112.822 172.832} {112.824 172.864}}
+
+Error type ID           218149
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I38 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{112.822 172.832} {112.846 172.834}}
+
+Error type ID           218150
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{115.600 173.007} {115.602 173.016}}
+
+Error type ID           218151
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{115.591 172.990} {115.688 173.128}}
+
+Error type ID           218152
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{116.807 172.990} {116.897 173.122}}
+
+Error type ID           218153
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{116.794 173.001} {116.818 173.003}}
+
+Error type ID           218154
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{116.816 173.001} {116.818 173.016}}
+
+Error type ID           218155
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{116.794 172.951} {116.818 172.953}}
+
+Error type ID           218156
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I23 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{116.341 172.737} {116.471 172.883}}
+
+Error type ID           218157
+Error type names        {Diff net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: CK_G1B1I231)
+
+Default error status    Error
+Bbox coordinates        {{116.911 172.352} {117.530 173.602}}
+
+Error type ID           218158
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I23 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{126.958 178.072} {126.960 178.099}}
+
+Error type ID           218159
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 11 12) (Net1: CK_G1B1I391 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{172.601 174.903} {172.731 175.008}}
+
+Error type ID           218160
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I391 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{172.710 175.006} {172.712 175.009}}
+
+Error type ID           218161
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{172.254 174.728} {172.256 174.759}}
+
+Error type ID           218162
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{172.247 174.679} {172.305 174.808}}
+
+Error type ID           218163
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{172.254 174.757} {172.298 174.759}}
+
+Error type ID           218164
+Error type names        {Diff net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: CK_G1B1I39)
+
+Default error status    Error
+Bbox coordinates        {{171.542 174.158} {172.161 175.408}}
+
+Error type ID           218165
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{173.470 174.728} {173.472 174.759}}
+
+Error type ID           218166
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{173.463 174.679} {173.521 174.808}}
+
+Error type ID           218167
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{173.470 174.757} {173.514 174.759}}
+
+Error type ID           218168
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I39 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{184.001 182.907} {184.132 183.046}}
+
+Error type ID           218169
+Error type names        {Same net spacing} 
+Error type layer        M2-M2
+Number of errors        1
+Description             DRC Violations (Layer 13 13) (Net1: CK_G1B1I39 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{184.122 182.860} {184.188 182.991}}
+
+Error type ID           215808
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{185.825 75.909} {185.944 76.039}}
+
+Error type ID           215809
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I12 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{186.614 75.754} {186.616 75.762}}
+
+Error type ID           215810
+Error type names        {Same net spacing} 
+Error type layer        M2-M2
+Number of errors        1
+Description             DRC Violations (Layer 13 13) (Net1: CTS_ideal_clock1_CTO_delay11 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{6.586 87.739} {6.758 87.824}}
+
+Error type ID           215811
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay11 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{6.422 87.899} {6.424 87.926}}
+
+Error type ID           215812
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I20 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{8.441 84.573} {8.582 84.719}}
+
+Error type ID           215813
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{9.181 84.441} {9.311 84.581}}
+
+Error type ID           215814
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I24 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{11.157 85.793} {11.287 85.939}}
+
+Error type ID           215815
+Error type names        {Same net spacing} 
+Error type layer        M2-M2
+Number of errors        1
+Description             DRC Violations (Layer 13 13) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{31.970 92.539} {32.084 92.636}}
+
+Error type ID           215816
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{32.304 92.618} {32.306 92.641}}
+
+Error type ID           215817
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 11 12) (Net1: CK_G1B1I210 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{33.045 92.476} {33.175 92.581}}
+
+Error type ID           215818
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I210 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{33.064 92.475} {33.066 92.482}}
+
+Error type ID           215819
+Error type names        {Same net spacing} 
+Error type layer        M2-M2
+Number of errors        1
+Description             DRC Violations (Layer 13 13) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{74.834 82.738} {75.006 82.803}}
+
+Error type ID           215820
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{75.016 82.701} {75.018 82.728}}
+
+Error type ID           215821
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{88.806 91.228} {88.808 91.270}}
+
+Error type ID           215822
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{88.806 91.128} {88.808 91.170}}
+
+Error type ID           215823
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I11 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{88.545 92.629} {88.675 92.759}}
+
+Error type ID           215824
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I11 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{87.936 91.280} {87.938 91.326}}
+
+Error type ID           215825
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I11 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{87.914 91.324} {87.938 91.326}}
+
+Error type ID           215826
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I11 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{87.887 91.231} {87.965 91.375}}
+
+Error type ID           215827
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.358 99.301} {5.360 99.308}}
+
+Error type ID           215828
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 11 12) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.249 99.302} {5.379 99.407}}
+
+Error type ID           215829
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.249 99.182} {5.359 99.319}}
+
+Error type ID           215830
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.950 97.956} {5.952 97.963}}
+
+Error type ID           215831
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.950 97.956} {5.968 97.958}}
+
+Error type ID           215832
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.840 97.901} {5.855 97.903}}
+
+Error type ID           215833
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 11 12) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.821 97.857} {5.967 97.962}}
+
+Error type ID           215834
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.794 97.956} {5.842 97.958}}
+
+Error type ID           215835
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.840 97.956} {5.842 97.963}}
+
+Error type ID           215836
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.840 97.901} {5.842 97.908}}
+
+Error type ID           215837
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.794 97.906} {5.842 97.908}}
+
+Error type ID           215838
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.847 97.945} {5.951 98.082}}
+
+Error type ID           215839
+Error type names        {Diff net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.791 97.857} {5.854 98.007}}
+
+Error type ID           215840
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M2-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 13 12) (Net1: CK_G1B1I24 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{6.794 97.037} {6.854 97.167}}
+
+Error type ID           215841
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I40 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{6.442 99.433} {6.466 99.435}}
+
+Error type ID           215842
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I40 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{6.455 99.422} {6.545 99.554}}
+
+Error type ID           215843
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I40 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{6.464 99.433} {6.466 99.448}}
+
+Error type ID           215844
+Error type names        {Same net spacing} 
+Error type layer        M2-M2
+Number of errors        1
+Description             DRC Violations (Layer 13 13) (Net1: CK_G1B1I24 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{6.738 97.001} {6.910 97.096}}
+
+Error type ID           215845
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CTS_ideal_clock1_CTO_delay1312 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{7.205 99.180} {7.335 99.330}}
+
+Error type ID           215846
+Error type names        {Diff net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I40 Net2: CTS_ideal_clock1_CTO_delay1312)
+
+Default error status    Error
+Bbox coordinates        {{6.559 98.784} {7.178 100.034}}
+
+Error type ID           215847
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I40 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{6.415 99.384} {6.493 99.497}}
+
+Error type ID           215848
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CTS_ideal_clock1_CTO_delay11 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{11.784 96.077} {11.786 96.104}}
+
+Error type ID           215849
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{60.101 97.817} {60.231 97.957}}
+
+Error type ID           215850
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I36 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{77.733 94.473} {77.863 94.587}}
+
+Error type ID           215851
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{75.936 95.973} {76.086 96.103}}
+
+Error type ID           215852
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{101.799 94.601} {101.889 94.733}}
+
+Error type ID           215853
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{41.273 116.042} {41.403 116.167}}
+
+Error type ID           215854
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I10 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{161.766 109.200} {161.768 109.243}}
+
+Error type ID           215855
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{160.896 109.476} {160.898 109.480}}
+
+Error type ID           215856
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{160.887 109.454} {160.984 109.597}}
+
+Error type ID           215857
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I25 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{14.034 121.225} {14.175 121.365}}
+
+Error type ID           215858
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{12.544 119.485} {12.546 119.512}}
+
+Error type ID           215859
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I381 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{141.441 128.024} {141.571 128.174}}
+
+Error type ID           215860
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{142.181 127.916} {142.311 128.053}}
+
+Error type ID           215861
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I10 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{163.328 119.370} {163.330 119.396}}
+
+Error type ID           215862
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.887 134.729} {5.977 134.861}}
+
+Error type ID           215863
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.966 134.690} {5.990 134.692}}
+
+Error type ID           215864
+Error type names        {Same net spacing} 
+Error type layer        M2-M2
+Number of errors        1
+Description             DRC Violations (Layer 13 13) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.778 141.233} {5.846 141.372}}
+
+Error type ID           215865
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.939 134.591} {6.017 134.741}}
+
+Error type ID           215866
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.834 141.289} {5.967 141.419}}
+
+Error type ID           215867
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I9 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{5.097 141.406} {5.227 141.556}}
+
+Error type ID           215868
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 11 12) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{105.701 139.338} {105.851 139.443}}
+
+Error type ID           215869
+Error type names        {End of line spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK Net2: )
+
+Default error status    Error
+Bbox coordinates        {{106.015 139.315} {106.105 139.447}}
+
+Error type ID           215870
+Error type names        {Same net spacing} 
+Error type layer        M2-M2
+Number of errors        1
+Description             DRC Violations (Layer 13 13) (Net1: CK_G1B1I5 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{101.130 141.241} {101.302 141.328}}
+
+Error type ID           215871
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I5 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{100.966 141.401} {100.968 141.430}}
+
+Error type ID           215872
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I331 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{106.855 139.296} {106.896 139.298}}
+
+Error type ID           215873
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 11 12) (Net1: CK_G1B1I331 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{106.746 139.186} {106.856 139.291}}
+
+Error type ID           215874
+Error type names        {Diff net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I331 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{106.696 139.136} {106.763 139.296}}
+
+Error type ID           215875
+Error type names        {Same net spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I331 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{106.696 139.136} {106.763 139.296}}
+
+Error type ID           215876
+Error type names        {Special notch spacing} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I331 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{106.746 139.245} {106.777 139.298}}
+
+Error type ID           215877
+Error type names        {Less than minimum edge length} 
+Error type layer        M1-M1
+Number of errors        1
+Description             DRC Violations (Layer 11 11) (Net1: CK_G1B1I331 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{106.745 139.245} {106.777 139.247}}
+
+Error type ID           215878
+Error type names        {Via-Metal Concave corner rule} 
+Error type layer        M1-VIA1
+Number of errors        1
+Description             DRC Violations (Layer 12 11) (Net1: CK_G1B1I22 Net2: )
+
+Default error status    Error
+Bbox coordinates        {{153.885 142.641} {154.015 142.787}}
+
+
+Too many types to report -- aborting.  Please limit query.

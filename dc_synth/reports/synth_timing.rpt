@@ -1,0 +1,2428 @@
+Warning: Design 'fpu' has '46' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 100
+Design : fpu
+Version: M-2016.12-SP1
+Date   : Fri Apr 12 12:18:48 2019
+****************************************
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[7] (internal pin)
+  Endpoint: fp_cpx_req_cq[7]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[7] (dff_s)        0.00       0.00 r
+  fpu_out/fpu_out_ctl/fp_cpx_req_cq[7] (fpu_out_ctl)      0.00       0.00 r
+  fpu_out/fp_cpx_req_cq[7] (fpu_out)                      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq[7] (fpu_rptr_groups)      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq_buf1[7] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_req_cq[7] (out)                                  0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[6] (internal pin)
+  Endpoint: fp_cpx_req_cq[6]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[6] (dff_s)        0.00       0.00 r
+  fpu_out/fpu_out_ctl/fp_cpx_req_cq[6] (fpu_out_ctl)      0.00       0.00 r
+  fpu_out/fp_cpx_req_cq[6] (fpu_out)                      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq[6] (fpu_rptr_groups)      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq_buf1[6] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_req_cq[6] (out)                                  0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[5] (internal pin)
+  Endpoint: fp_cpx_req_cq[5]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[5] (dff_s)        0.00       0.00 r
+  fpu_out/fpu_out_ctl/fp_cpx_req_cq[5] (fpu_out_ctl)      0.00       0.00 r
+  fpu_out/fp_cpx_req_cq[5] (fpu_out)                      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq[5] (fpu_rptr_groups)      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq_buf1[5] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_req_cq[5] (out)                                  0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[4] (internal pin)
+  Endpoint: fp_cpx_req_cq[4]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[4] (dff_s)        0.00       0.00 r
+  fpu_out/fpu_out_ctl/fp_cpx_req_cq[4] (fpu_out_ctl)      0.00       0.00 r
+  fpu_out/fp_cpx_req_cq[4] (fpu_out)                      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq[4] (fpu_rptr_groups)      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq_buf1[4] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_req_cq[4] (out)                                  0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[3] (internal pin)
+  Endpoint: fp_cpx_req_cq[3]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[3] (dff_s)        0.00       0.00 r
+  fpu_out/fpu_out_ctl/fp_cpx_req_cq[3] (fpu_out_ctl)      0.00       0.00 r
+  fpu_out/fp_cpx_req_cq[3] (fpu_out)                      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq[3] (fpu_rptr_groups)      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq_buf1[3] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_req_cq[3] (out)                                  0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[2] (internal pin)
+  Endpoint: fp_cpx_req_cq[2]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[2] (dff_s)        0.00       0.00 r
+  fpu_out/fpu_out_ctl/fp_cpx_req_cq[2] (fpu_out_ctl)      0.00       0.00 r
+  fpu_out/fp_cpx_req_cq[2] (fpu_out)                      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq[2] (fpu_rptr_groups)      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq_buf1[2] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_req_cq[2] (out)                                  0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[1] (internal pin)
+  Endpoint: fp_cpx_req_cq[1]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[1] (dff_s)        0.00       0.00 r
+  fpu_out/fpu_out_ctl/fp_cpx_req_cq[1] (fpu_out_ctl)      0.00       0.00 r
+  fpu_out/fp_cpx_req_cq[1] (fpu_out)                      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq[1] (fpu_rptr_groups)      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq_buf1[1] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_req_cq[1] (out)                                  0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[0] (internal pin)
+  Endpoint: fp_cpx_req_cq[0]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q[0] (dff_s)        0.00       0.00 r
+  fpu_out/fpu_out_ctl/fp_cpx_req_cq[0] (fpu_out_ctl)      0.00       0.00 r
+  fpu_out/fp_cpx_req_cq[0] (fpu_out)                      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq[0] (fpu_rptr_groups)      0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_req_cq_buf1[0] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_req_cq[0] (out)                                  0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[7] (internal pin)
+  Endpoint: fp_cpx_data_ca[144]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[7] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[144] (fpu_out_dp)     0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[144] (fpu_out)                   0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[144] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[144] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[144] (out)                               0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[6] (internal pin)
+  Endpoint: fp_cpx_data_ca[143]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[6] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[143] (fpu_out_dp)     0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[143] (fpu_out)                   0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[143] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[143] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[143] (out)                               0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[5] (internal pin)
+  Endpoint: fp_cpx_data_ca[142]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[5] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[142] (fpu_out_dp)     0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[142] (fpu_out)                   0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[142] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[142] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[142] (out)                               0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[4] (internal pin)
+  Endpoint: fp_cpx_data_ca[141]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[4] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[141] (fpu_out_dp)     0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[141] (fpu_out)                   0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[141] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[141] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[141] (out)                               0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[3] (internal pin)
+  Endpoint: fp_cpx_data_ca[140]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[3] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[140] (fpu_out_dp)     0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[140] (fpu_out)                   0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[140] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[140] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[140] (out)                               0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[2] (internal pin)
+  Endpoint: fp_cpx_data_ca[136]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[2] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[136] (fpu_out_dp)     0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[136] (fpu_out)                   0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[136] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[136] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[136] (out)                               0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[1] (internal pin)
+  Endpoint: fp_cpx_data_ca[135]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[1] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[135] (fpu_out_dp)     0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[135] (fpu_out)                   0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[135] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[135] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[135] (out)                               0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[0] (internal pin)
+  Endpoint: fp_cpx_data_ca[134]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_84_77/q[0] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[134] (fpu_out_dp)     0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[134] (fpu_out)                   0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[134] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[134] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[134] (out)                               0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[76] (internal pin)
+  Endpoint: fp_cpx_data_ca[76]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[76] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[76] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[76] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[76] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[76] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[76] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[75] (internal pin)
+  Endpoint: fp_cpx_data_ca[75]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[75] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[75] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[75] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[75] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[75] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[75] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[74] (internal pin)
+  Endpoint: fp_cpx_data_ca[74]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[74] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[74] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[74] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[74] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[74] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[74] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[73] (internal pin)
+  Endpoint: fp_cpx_data_ca[73]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[73] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[73] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[73] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[73] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[73] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[73] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[72] (internal pin)
+  Endpoint: fp_cpx_data_ca[72]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[72] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[72] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[72] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[72] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[72] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[72] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[71] (internal pin)
+  Endpoint: fp_cpx_data_ca[71]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[71] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[71] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[71] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[71] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[71] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[71] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[70] (internal pin)
+  Endpoint: fp_cpx_data_ca[70]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[70] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[70] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[70] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[70] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[70] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[70] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[69] (internal pin)
+  Endpoint: fp_cpx_data_ca[69]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[69] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[69] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[69] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[69] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[69] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[69] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[68] (internal pin)
+  Endpoint: fp_cpx_data_ca[68]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[68] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[68] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[68] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[68] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[68] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[68] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[67] (internal pin)
+  Endpoint: fp_cpx_data_ca[67]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[67] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[67] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[67] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[67] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[67] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[67] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[66] (internal pin)
+  Endpoint: fp_cpx_data_ca[66]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[66] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[66] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[66] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[66] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[66] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[66] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[65] (internal pin)
+  Endpoint: fp_cpx_data_ca[65]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[65] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[65] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[65] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[65] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[65] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[65] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[64] (internal pin)
+  Endpoint: fp_cpx_data_ca[64]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[64] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[64] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[64] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[64] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[64] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[64] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[63] (internal pin)
+  Endpoint: fp_cpx_data_ca[63]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[63] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[63] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[63] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[63] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[63] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[63] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[62] (internal pin)
+  Endpoint: fp_cpx_data_ca[62]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[62] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[62] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[62] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[62] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[62] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[62] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[61] (internal pin)
+  Endpoint: fp_cpx_data_ca[61]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[61] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[61] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[61] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[61] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[61] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[61] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[60] (internal pin)
+  Endpoint: fp_cpx_data_ca[60]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[60] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[60] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[60] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[60] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[60] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[60] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[59] (internal pin)
+  Endpoint: fp_cpx_data_ca[59]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[59] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[59] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[59] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[59] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[59] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[59] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[58] (internal pin)
+  Endpoint: fp_cpx_data_ca[58]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[58] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[58] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[58] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[58] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[58] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[58] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[57] (internal pin)
+  Endpoint: fp_cpx_data_ca[57]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[57] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[57] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[57] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[57] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[57] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[57] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[56] (internal pin)
+  Endpoint: fp_cpx_data_ca[56]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[56] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[56] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[56] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[56] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[56] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[56] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[55] (internal pin)
+  Endpoint: fp_cpx_data_ca[55]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[55] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[55] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[55] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[55] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[55] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[55] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[54] (internal pin)
+  Endpoint: fp_cpx_data_ca[54]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[54] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[54] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[54] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[54] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[54] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[54] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[53] (internal pin)
+  Endpoint: fp_cpx_data_ca[53]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[53] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[53] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[53] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[53] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[53] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[53] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[52] (internal pin)
+  Endpoint: fp_cpx_data_ca[52]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[52] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[52] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[52] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[52] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[52] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[52] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[51] (internal pin)
+  Endpoint: fp_cpx_data_ca[51]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[51] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[51] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[51] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[51] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[51] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[51] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[50] (internal pin)
+  Endpoint: fp_cpx_data_ca[50]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[50] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[50] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[50] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[50] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[50] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[50] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[49] (internal pin)
+  Endpoint: fp_cpx_data_ca[49]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[49] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[49] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[49] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[49] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[49] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[49] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[48] (internal pin)
+  Endpoint: fp_cpx_data_ca[48]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[48] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[48] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[48] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[48] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[48] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[48] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[47] (internal pin)
+  Endpoint: fp_cpx_data_ca[47]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[47] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[47] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[47] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[47] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[47] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[47] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[46] (internal pin)
+  Endpoint: fp_cpx_data_ca[46]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[46] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[46] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[46] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[46] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[46] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[46] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[45] (internal pin)
+  Endpoint: fp_cpx_data_ca[45]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[45] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[45] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[45] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[45] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[45] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[45] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[44] (internal pin)
+  Endpoint: fp_cpx_data_ca[44]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[44] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[44] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[44] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[44] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[44] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[44] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[43] (internal pin)
+  Endpoint: fp_cpx_data_ca[43]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[43] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[43] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[43] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[43] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[43] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[43] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[42] (internal pin)
+  Endpoint: fp_cpx_data_ca[42]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[42] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[42] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[42] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[42] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[42] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[42] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[41] (internal pin)
+  Endpoint: fp_cpx_data_ca[41]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[41] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[41] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[41] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[41] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[41] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[41] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[40] (internal pin)
+  Endpoint: fp_cpx_data_ca[40]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[40] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[40] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[40] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[40] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[40] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[40] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[39] (internal pin)
+  Endpoint: fp_cpx_data_ca[39]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[39] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[39] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[39] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[39] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[39] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[39] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[38] (internal pin)
+  Endpoint: fp_cpx_data_ca[38]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[38] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[38] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[38] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[38] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[38] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[38] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[37] (internal pin)
+  Endpoint: fp_cpx_data_ca[37]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[37] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[37] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[37] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[37] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[37] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[37] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[36] (internal pin)
+  Endpoint: fp_cpx_data_ca[36]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[36] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[36] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[36] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[36] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[36] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[36] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[35] (internal pin)
+  Endpoint: fp_cpx_data_ca[35]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[35] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[35] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[35] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[35] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[35] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[35] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[34] (internal pin)
+  Endpoint: fp_cpx_data_ca[34]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[34] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[34] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[34] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[34] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[34] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[34] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[33] (internal pin)
+  Endpoint: fp_cpx_data_ca[33]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[33] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[33] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[33] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[33] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[33] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[33] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[32] (internal pin)
+  Endpoint: fp_cpx_data_ca[32]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[32] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[32] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[32] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[32] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[32] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[32] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[31] (internal pin)
+  Endpoint: fp_cpx_data_ca[31]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[31] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[31] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[31] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[31] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[31] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[31] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[30] (internal pin)
+  Endpoint: fp_cpx_data_ca[30]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[30] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[30] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[30] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[30] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[30] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[30] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[29] (internal pin)
+  Endpoint: fp_cpx_data_ca[29]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[29] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[29] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[29] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[29] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[29] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[29] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[28] (internal pin)
+  Endpoint: fp_cpx_data_ca[28]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[28] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[28] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[28] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[28] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[28] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[28] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[27] (internal pin)
+  Endpoint: fp_cpx_data_ca[27]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[27] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[27] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[27] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[27] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[27] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[27] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[26] (internal pin)
+  Endpoint: fp_cpx_data_ca[26]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[26] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[26] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[26] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[26] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[26] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[26] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[25] (internal pin)
+  Endpoint: fp_cpx_data_ca[25]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[25] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[25] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[25] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[25] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[25] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[25] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[24] (internal pin)
+  Endpoint: fp_cpx_data_ca[24]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[24] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[24] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[24] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[24] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[24] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[24] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[23] (internal pin)
+  Endpoint: fp_cpx_data_ca[23]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[23] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[23] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[23] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[23] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[23] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[23] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[22] (internal pin)
+  Endpoint: fp_cpx_data_ca[22]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[22] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[22] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[22] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[22] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[22] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[22] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[21] (internal pin)
+  Endpoint: fp_cpx_data_ca[21]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[21] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[21] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[21] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[21] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[21] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[21] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[20] (internal pin)
+  Endpoint: fp_cpx_data_ca[20]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[20] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[20] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[20] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[20] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[20] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[20] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[19] (internal pin)
+  Endpoint: fp_cpx_data_ca[19]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[19] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[19] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[19] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[19] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[19] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[19] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[18] (internal pin)
+  Endpoint: fp_cpx_data_ca[18]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[18] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[18] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[18] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[18] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[18] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[18] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[17] (internal pin)
+  Endpoint: fp_cpx_data_ca[17]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[17] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[17] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[17] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[17] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[17] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[17] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[16] (internal pin)
+  Endpoint: fp_cpx_data_ca[16]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[16] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[16] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[16] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[16] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[16] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[16] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[15] (internal pin)
+  Endpoint: fp_cpx_data_ca[15]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[15] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[15] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[15] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[15] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[15] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[15] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[14] (internal pin)
+  Endpoint: fp_cpx_data_ca[14]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[14] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[14] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[14] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[14] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[14] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[14] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[13] (internal pin)
+  Endpoint: fp_cpx_data_ca[13]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[13] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[13] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[13] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[13] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[13] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[13] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[12] (internal pin)
+  Endpoint: fp_cpx_data_ca[12]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[12] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[12] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[12] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[12] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[12] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[12] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[11] (internal pin)
+  Endpoint: fp_cpx_data_ca[11]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[11] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[11] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[11] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[11] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[11] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[11] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[10] (internal pin)
+  Endpoint: fp_cpx_data_ca[10]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[10] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[10] (fpu_out_dp)      0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[10] (fpu_out)                    0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[10] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[10] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[10] (out)                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[9] (internal pin)
+  Endpoint: fp_cpx_data_ca[9]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[9] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[9] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[9] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[9] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[9] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[9] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[8] (internal pin)
+  Endpoint: fp_cpx_data_ca[8]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[8] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[8] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[8] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[8] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[8] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[8] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[7] (internal pin)
+  Endpoint: fp_cpx_data_ca[7]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[7] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[7] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[7] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[7] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[7] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[7] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[6] (internal pin)
+  Endpoint: fp_cpx_data_ca[6]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[6] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[6] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[6] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[6] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[6] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[6] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[5] (internal pin)
+  Endpoint: fp_cpx_data_ca[5]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[5] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[5] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[5] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[5] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[5] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[5] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[4] (internal pin)
+  Endpoint: fp_cpx_data_ca[4]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[4] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[4] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[4] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[4] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[4] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[4] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[3] (internal pin)
+  Endpoint: fp_cpx_data_ca[3]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[3] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[3] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[3] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[3] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[3] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[3] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[2] (internal pin)
+  Endpoint: fp_cpx_data_ca[2]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[2] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[2] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[2] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[2] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[2] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[2] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[1] (internal pin)
+  Endpoint: fp_cpx_data_ca[1]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[1] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[1] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[1] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[1] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[1] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[1] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[0] (internal pin)
+  Endpoint: fp_cpx_data_ca[0]
+            (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q[0] (dff_s)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/fp_cpx_data_ca[0] (fpu_out_dp)       0.00       0.00 r
+  fpu_out/fp_cpx_data_ca[0] (fpu_out)                     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca[0] (fpu_rptr_groups)     0.00       0.00 r
+  fpu_rptr_groups/fp_cpx_data_ca_buf1[0] (fpu_rptr_groups)
+                                                          0.00       0.00 r
+  fp_cpx_data_ca[0] (out)                                 0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: test_stub/so_0 (internal pin)
+  Endpoint: so (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed32rvt_ss0p95v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  test_stub/so_0 (test_stub_scan)                         0.00       0.00 r
+  fpu_rptr_groups/so_unbuf (fpu_rptr_groups)              0.00       0.00 r
+  fpu_rptr_groups/so (fpu_rptr_groups)                    0.00       0.00 r
+  so (out)                                                0.01       0.01 r
+  data arrival time                                                  0.01
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

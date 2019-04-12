@@ -1,0 +1,77 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fpu
+Version: M-2016.12-SP1
+Date   : Fri Apr 12 12:18:48 2019
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ss0p95v25c (File: /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db)
+
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fpu                    35000             saed32rvt_ss0p95v25c
+fpu_in                 8000              saed32rvt_ss0p95v25c
+fpu_add                16000             saed32rvt_ss0p95v25c
+fpu_mul                8000              saed32rvt_ss0p95v25c
+fpu_div                8000              saed32rvt_ss0p95v25c
+fpu_out                8000              saed32rvt_ss0p95v25c
+bw_clk_cl_fpu_cmp      ForQA             saed32rvt_ss0p95v25c
+fpu_rptr_groups        ForQA             saed32rvt_ss0p95v25c
+fpu_in_ctl             8000              saed32rvt_ss0p95v25c
+fpu_in_dp              8000              saed32rvt_ss0p95v25c
+fpu_add_ctl            8000              saed32rvt_ss0p95v25c
+fpu_add_exp_dp         8000              saed32rvt_ss0p95v25c
+fpu_add_frac_dp        16000             saed32rvt_ss0p95v25c
+fpu_mul_ctl            8000              saed32rvt_ss0p95v25c
+fpu_mul_exp_dp         8000              saed32rvt_ss0p95v25c
+fpu_mul_frac_dp        8000              saed32rvt_ss0p95v25c
+fpu_div_ctl            8000              saed32rvt_ss0p95v25c
+fpu_div_exp_dp         8000              saed32rvt_ss0p95v25c
+fpu_div_frac_dp        8000              saed32rvt_ss0p95v25c
+fpu_out_ctl            ForQA             saed32rvt_ss0p95v25c
+fpu_out_dp             8000              saed32rvt_ss0p95v25c
+fpu_in2_gt_in1_frac    8000              saed32rvt_ss0p95v25c
+fpu_denorm_frac        8000              saed32rvt_ss0p95v25c
+fpu_cnt_lead0_64b      8000              saed32rvt_ss0p95v25c
+fpu_cnt_lead0_53b_0    8000              saed32rvt_ss0p95v25c
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 197.4005 uW   (68%)
+  Net Switching Power  =  91.0987 uW   (32%)
+                         ---------
+Total Dynamic Power    = 288.4992 uW  (100%)
+
+Cell Leakage Power     = 757.3119 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network    197.4003           90.9772        7.5731e+08        1.0457e+03  ( 100.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+--------------------------------------------------------------------------------------------------
+Total            197.4003 uW        90.9772 uW     7.5731e+08 pW     1.0457e+03 uW
+1

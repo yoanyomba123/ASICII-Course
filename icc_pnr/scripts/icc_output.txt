@@ -1,0 +1,11 @@
+icc_shell> start_gui
+Information: Visibility is turned ON for cells and cell contents because the task is set to Block Implementation (GUI-026)
+icc_shell> ls
+.                    cts_icc.tcl        icc_output.txt       signoff_icc.tcl
+..                   extract_icc.tcl    init_design_icc.tcl  test.tcl
+chip_finish_icc.tcl  filenames.log      place_icc.tcl
+command.log          floorplan_icc.tcl  route_icc.tcl
+icc_shell> exit
+
+Thank you...
+
