@@ -1,6 +1,6 @@
 
 # define design to extract
-set design_extract s35932_extract
+set design_extract fpu_extract
 
 ###########################################################################
 ### Extraction

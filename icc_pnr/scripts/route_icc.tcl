@@ -1,5 +1,5 @@
 # define the given design rout
-set route_name s35932_route
+set route_name fpu_route
 
 ###########################################################################
 ### Routing
