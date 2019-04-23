@@ -1,10 +1,10 @@
-Warning: Design 'fpu' has '46' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'fpu' has '8' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : cell
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Fri Apr 12 12:18:48 2019
+Date   : Tue Apr 23 00:37:05 2019
 ****************************************
 
 Attributes:
@@ -16,20 +16,20 @@ Attributes:
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-cluster_header            bw_clk_cl_fpu_cmp               0.000000  b, h
-fpu_add                   fpu_add                         11194.535069
-                                                                    b, h
-fpu_div                   fpu_div                         4302.912104
-                                                                    b, h
-fpu_in                    fpu_in                          1834.411447
-                                                                    b, h
-fpu_mul                   fpu_mul                         7626.861498
-                                                                    b, h
-fpu_out                   fpu_out                         794.708307
-                                                                    b, h
+cluster_header            bw_clk_cl_fpu_cmp               2.033152  b, h
+fpu_add                   fpu_add                         27025.419288
+                                                                    h, n
+fpu_div                   fpu_div                         11035.186790
+                                                                    h, n
+fpu_in                    fpu_in                          5433.344608
+                                                                    h, n
+fpu_mul                   fpu_mul                         15754.895058
+                                                                    b, h, n
+fpu_out                   fpu_out                         1636.433205
+                                                                    h, n
 fpu_rptr_groups           fpu_rptr_groups                 0.000000  h
 i_fpu_inq_sram            bw_r_rf16x160                   0.000000  b
-test_stub                 test_stub_scan                  0.000000  b
+test_stub                 test_stub_scan                  24.397825 h
 --------------------------------------------------------------------------------
-Total 9 cells                                             25753.428425
+Total 9 cells                                             60911.709926
 1
