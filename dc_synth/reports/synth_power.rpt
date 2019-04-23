@@ -29,7 +29,7 @@ Report : power
         -analysis_effort low
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Tue Apr 23 00:37:05 2019
+Date   : Tue Apr 23 19:21:27 2019
 ****************************************
 
 
@@ -736,7 +736,7 @@ Power-specific unit information :
 
 
   Cell Internal Power  =   1.7119 mW   (80%)
-  Net Switching Power  = 418.1027 uW   (20%)
+  Net Switching Power  = 418.1158 uW   (20%)
                          ---------
 Total Dynamic Power    =   2.1300 mW  (100%)
 
@@ -753,7 +753,7 @@ black_box          0.0000            0.0000            0.0000            0.0000 
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
 register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
 sequential     1.1972e+03           20.5212        5.4010e+08        1.7578e+03  (  49.32%)
-combinational    514.7932          396.4578        8.9535e+08        1.8066e+03  (  50.68%)
+combinational    514.7545          396.4709        8.9535e+08        1.8066e+03  (  50.68%)
 --------------------------------------------------------------------------------------------------
-Total          1.7120e+03 uW       416.9790 uW     1.4355e+09 pW     3.5644e+03 uW
+Total          1.7119e+03 uW       416.9921 uW     1.4355e+09 pW     3.5644e+03 uW
 1

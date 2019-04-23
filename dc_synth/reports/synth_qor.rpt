@@ -4,7 +4,7 @@ Warning: Design 'fpu' has '8' unresolved references. For more detailed informati
 Report : qor
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Tue Apr 23 00:37:05 2019
+Date   : Tue Apr 23 19:21:27 2019
 ****************************************
 
 
@@ -64,12 +64,12 @@ Date   : Tue Apr 23 00:37:05 2019
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                   15.51
-  Logic Optimization:                 28.94
-  Mapping Optimization:              228.01
+  Resource Sharing:                   29.93
+  Logic Optimization:                 29.27
+  Mapping Optimization:              231.61
   -----------------------------------------
-  Overall Compile Time:              284.44
-  Overall Compile Wall Clock Time:   285.59
+  Overall Compile Time:              302.87
+  Overall Compile Wall Clock Time:   305.08
 
   --------------------------------------------------------------------
 

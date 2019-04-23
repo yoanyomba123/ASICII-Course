@@ -1,7 +1,7 @@
 ## Give the path to the verilog files and define the WORK directory
 #
 set username mgk39
-lappend search_path /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-CPU/mul  /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-FPU /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/srams /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/u1 /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/m1 /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/common /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/include
+lappend search_path /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-FPU /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/srams /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/u1 /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/m1 /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/common /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC_src/trunk/T1-common/include
 
 define_design_lib WORK -path "work"
 #
