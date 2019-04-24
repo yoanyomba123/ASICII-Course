@@ -3,7 +3,7 @@
 Report : cell
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Wed Apr 24 14:32:26 2019
+Date   : Wed Apr 24 14:45:48 2019
 ****************************************
 
 Attributes:
@@ -15,15 +15,21 @@ Attributes:
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-cluster_header            bw_clk_cl_fpu_cmp               0.000000  h, n, u
-fpu_add                   fpu_add                         0.000000  h, n, u
-fpu_div                   fpu_div                         0.000000  h, n, u
-fpu_in                    fpu_in                          0.000000  h, n, u
-fpu_mul                   fpu_mul                         0.000000  h, n, u
-fpu_out                   fpu_out                         0.000000  h, n, u
+cluster_header            bw_clk_cl_fpu_cmp               83.867520 h, n
+fpu_add                   fpu_add                         27002.292183
+                                                                    h, n
+fpu_div                   fpu_div                         11031.120486
+                                                                    h, n
+fpu_in                    fpu_in                          5426.228576
+                                                                    h, n
+fpu_mul                   fpu_mul                         53461.477646
+                                                                    h, n
+fpu_out                   fpu_out                         1633.637621
+                                                                    h, n
 fpu_rptr_groups           fpu_rptr_groups                 0.000000  h
-i_fpu_inq_sram            bw_r_rf16x160                   0.000000  h, n, u
-test_stub                 test_stub_scan                  0.000000  h, u
+i_fpu_inq_sram            bw_r_rf16x160                   24977.018239
+                                                                    h, n
+test_stub                 test_stub_scan                  24.651968 h
 --------------------------------------------------------------------------------
-Total 9 cells                                             0.000000
+Total 9 cells                                             123640.294238
 1

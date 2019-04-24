@@ -1,6 +1,95 @@
-Information: Could not auto-link design 'fpu'. (DES-017)
-Information: Could not auto-link design 'fpu'. (DES-017)
-Information: Could not auto-link design 'fpu'. (DES-017)
-Information: Could not auto-link design 'fpu'. (DES-017)
-Information: Could not auto-link design 'fpu'. (DES-017)
-Information: Could not auto-link design 'fpu'. (DES-017)
+Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
+Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 100.00
+	-max_paths 100
+	-sort_by slack
+Design : fpu
+Version: L-2016.06-SP3-1
+Date   : Wed Apr 24 14:46:30 2019
+****************************************
+
+Warning: There are 2227 invalid end points for constrained paths. (UITE-416)
+No constrained paths.
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 0.00
+	-max_paths 100
+	-sort_by slack
+Design : fpu
+Version: L-2016.06-SP3-1
+Date   : Wed Apr 24 14:46:30 2019
+****************************************
+
+Warning: There are 2227 invalid end points for constrained paths. (UITE-416)
+No constrained paths.
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 0.00
+	-max_paths 100
+	-sort_by slack
+Design : fpu
+Version: L-2016.06-SP3-1
+Date   : Wed Apr 24 14:46:30 2019
+****************************************
+
+No constrained paths.
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 0.00
+	-max_paths 100
+	-sort_by slack
+Design : fpu
+Version: L-2016.06-SP3-1
+Date   : Wed Apr 24 14:46:31 2019
+****************************************
+
+No constrained paths.
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : fpu
+Version: L-2016.06-SP3-1
+Date   : Wed Apr 24 14:46:31 2019
+****************************************
+
+Warning: There are 2227 invalid end points for constrained paths. (UITE-416)
+No constrained paths.
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+	-sort_by slack
+Design : fpu
+Version: L-2016.06-SP3-1
+Date   : Wed Apr 24 14:46:31 2019
+****************************************
+
+Warning: There are 2227 invalid end points for constrained paths. (UITE-416)
+No constrained paths.
+
+1
