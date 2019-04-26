@@ -1,0 +1,712 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : FIFO
+Version: L-2016.03-SP5-1
+Date   : Wed Feb 13 10:26:38 2019
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 25/25/25
+
+Information: Percent of Arnoldi-based delays = 15.09%
+
+Information: Percent of CCS-based delays =  2.34%
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][17]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U43/Y (AO22X1_RVT)                               0.21 &     4.39 r
+  memblk/FIFO_reg[3][17]/D (DFFX1_RVT)                    0.00 &     4.39 r
+  data arrival time                                                  4.39
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.00       5.00
+  memblk/FIFO_reg[3][17]/CLK (DFFX1_RVT)                  0.00       5.00 r
+  library setup time                                     -0.07       4.93
+  data required time                                                 4.93
+  --------------------------------------------------------------------------
+  data required time                                                 4.93
+  data arrival time                                                 -4.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][4]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 f
+  FInN (in)                                0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)             0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)               0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)               0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)               0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)              0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                  1.04 &     4.18 r
+  memblk/U50/Y (AO22X1_RVT)                0.20 &     4.39 r
+  memblk/FIFO_reg[3][4]/D (DFFX1_RVT)      0.00 &     4.39 r
+  data arrival time                                   4.39
+
+  clock ideal_clock1 (rise edge)           5.00       5.00
+  clock network delay (propagated)         0.01       5.01
+  memblk/FIFO_reg[3][4]/CLK (DFFX1_RVT)
+                                           0.00       5.01 r
+  library setup time                      -0.07       4.93
+  data required time                                  4.93
+  -----------------------------------------------------------
+  data required time                                  4.93
+  data arrival time                                  -4.39
+  -----------------------------------------------------------
+  slack (MET)                                         0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][11]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U56/Y (AO22X1_RVT)                               0.20 &     4.38 r
+  memblk/FIFO_reg[3][11]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][11]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.93
+  data required time                                                 4.93
+  --------------------------------------------------------------------------
+  data required time                                                 4.93
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][10]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U62/Y (AO22X1_RVT)                               0.20 &     4.38 r
+  memblk/FIFO_reg[3][10]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][10]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.93
+  data required time                                                 4.93
+  --------------------------------------------------------------------------
+  data required time                                                 4.93
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][13]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U58/Y (AO22X1_RVT)                               0.20 &     4.38 r
+  memblk/FIFO_reg[3][13]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][13]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.93
+  data required time                                                 4.93
+  --------------------------------------------------------------------------
+  data required time                                                 4.93
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][8]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 f
+  FInN (in)                                0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)             0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)               0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)               0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)               0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)              0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                  1.04 &     4.18 r
+  memblk/U54/Y (AO22X1_RVT)                0.20 &     4.38 r
+  memblk/FIFO_reg[3][8]/D (DFFX1_RVT)      0.00 &     4.38 r
+  data arrival time                                   4.38
+
+  clock ideal_clock1 (rise edge)           5.00       5.00
+  clock network delay (propagated)         0.01       5.01
+  memblk/FIFO_reg[3][8]/CLK (DFFX1_RVT)
+                                           0.00       5.01 r
+  library setup time                      -0.07       4.93
+  data required time                                  4.93
+  -----------------------------------------------------------
+  data required time                                  4.93
+  data arrival time                                  -4.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][16]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U45/Y (AO22X1_RVT)                               0.20 &     4.38 r
+  memblk/FIFO_reg[3][16]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][16]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.93
+  data required time                                                 4.93
+  --------------------------------------------------------------------------
+  data required time                                                 4.93
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][9]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 f
+  FInN (in)                                0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)             0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)               0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)               0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)               0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)              0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                  1.04 &     4.18 r
+  memblk/U55/Y (AO22X1_RVT)                0.20 &     4.38 r
+  memblk/FIFO_reg[3][9]/D (DFFX1_RVT)      0.00 &     4.38 r
+  data arrival time                                   4.38
+
+  clock ideal_clock1 (rise edge)           5.00       5.00
+  clock network delay (propagated)         0.01       5.01
+  memblk/FIFO_reg[3][9]/CLK (DFFX1_RVT)
+                                           0.00       5.01 r
+  library setup time                      -0.07       4.93
+  data required time                                  4.93
+  -----------------------------------------------------------
+  data required time                                  4.93
+  data arrival time                                  -4.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][31]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U156/Y (AO22X1_RVT)                              0.20 &     4.38 r
+  memblk/FIFO_reg[3][31]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][31]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.93
+  data required time                                                 4.93
+  --------------------------------------------------------------------------
+  data required time                                                 4.93
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][18]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U47/Y (AO22X1_RVT)                               0.20 &     4.38 r
+  memblk/FIFO_reg[3][18]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][18]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.93
+  data required time                                                 4.93
+  --------------------------------------------------------------------------
+  data required time                                                 4.93
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][3]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 f
+  FInN (in)                                0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)             0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)               0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)               0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)               0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)              0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                  1.04 &     4.18 r
+  memblk/U61/Y (AO22X1_RVT)                0.20 &     4.38 r
+  memblk/FIFO_reg[3][3]/D (DFFX1_RVT)      0.00 &     4.38 r
+  data arrival time                                   4.38
+
+  clock ideal_clock1 (rise edge)           5.00       5.00
+  clock network delay (propagated)         0.01       5.01
+  memblk/FIFO_reg[3][3]/CLK (DFFX1_RVT)
+                                           0.00       5.01 r
+  library setup time                      -0.07       4.93
+  data required time                                  4.93
+  -----------------------------------------------------------
+  data required time                                  4.93
+  data arrival time                                  -4.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][2]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 f
+  FInN (in)                                0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)             0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)               0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)               0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)               0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)              0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                  1.04 &     4.18 r
+  memblk/U49/Y (AO22X1_RVT)                0.20 &     4.38 r
+  memblk/FIFO_reg[3][2]/D (DFFX1_RVT)      0.00 &     4.38 r
+  data arrival time                                   4.38
+
+  clock ideal_clock1 (rise edge)           5.00       5.00
+  clock network delay (propagated)         0.01       5.01
+  memblk/FIFO_reg[3][2]/CLK (DFFX1_RVT)
+                                           0.00       5.01 r
+  library setup time                      -0.07       4.93
+  data required time                                  4.93
+  -----------------------------------------------------------
+  data required time                                  4.93
+  data arrival time                                  -4.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][1]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 f
+  FInN (in)                                0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)             0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)               0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)               0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)               0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)              0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                  1.04 &     4.18 r
+  memblk/U248/Y (AO22X1_RVT)               0.20 &     4.38 r
+  memblk/FIFO_reg[3][1]/D (DFFX1_RVT)      0.00 &     4.38 r
+  data arrival time                                   4.38
+
+  clock ideal_clock1 (rise edge)           5.00       5.00
+  clock network delay (propagated)         0.01       5.01
+  memblk/FIFO_reg[3][1]/CLK (DFFX1_RVT)
+                                           0.00       5.01 r
+  library setup time                      -0.07       4.93
+  data required time                                  4.93
+  -----------------------------------------------------------
+  data required time                                  4.93
+  data arrival time                                  -4.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][14]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U59/Y (AO22X1_RVT)                               0.20 &     4.38 r
+  memblk/FIFO_reg[3][14]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][14]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.93
+  data required time                                                 4.93
+  --------------------------------------------------------------------------
+  data required time                                                 4.93
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][0]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 f
+  FInN (in)                                0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)             0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)               0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)               0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)               0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)              0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                  1.04 &     4.18 r
+  memblk/U82/Y (AO22X1_RVT)                0.20 &     4.38 r
+  memblk/FIFO_reg[3][0]/D (DFFX1_RVT)      0.00 &     4.38 r
+  data arrival time                                   4.38
+
+  clock ideal_clock1 (rise edge)           5.00       5.00
+  clock network delay (propagated)         0.01       5.01
+  memblk/FIFO_reg[3][0]/CLK (DFFX1_RVT)
+                                           0.00       5.01 r
+  library setup time                      -0.07       4.93
+  data required time                                  4.93
+  -----------------------------------------------------------
+  data required time                                  4.93
+  data arrival time                                  -4.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][12]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U57/Y (AO22X1_RVT)                               0.20 &     4.38 r
+  memblk/FIFO_reg[3][12]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][12]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.93
+  data required time                                                 4.93
+  --------------------------------------------------------------------------
+  data required time                                                 4.93
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][27]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U249/Y (AO22X1_RVT)                              0.21 &     4.39 r
+  memblk/FIFO_reg[3][27]/D (DFFX1_RVT)                    0.00 &     4.39 r
+  data arrival time                                                  4.39
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][27]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.94
+  data required time                                                 4.94
+  --------------------------------------------------------------------------
+  data required time                                                 4.94
+  data arrival time                                                 -4.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][7]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 f
+  FInN (in)                                0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)             0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)               0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)               0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)               0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)              0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                  1.04 &     4.18 r
+  memblk/U53/Y (AO22X1_RVT)                0.20 &     4.38 r
+  memblk/FIFO_reg[3][7]/D (DFFX1_RVT)      0.00 &     4.38 r
+  data arrival time                                   4.38
+
+  clock ideal_clock1 (rise edge)           5.00       5.00
+  clock network delay (propagated)         0.01       5.01
+  memblk/FIFO_reg[3][7]/CLK (DFFX1_RVT)
+                                           0.00       5.01 r
+  library setup time                      -0.07       4.94
+  data required time                                  4.94
+  -----------------------------------------------------------
+  data required time                                  4.94
+  data arrival time                                  -4.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.56
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][23]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U63/Y (AO22X1_RVT)                               0.20 &     4.38 r
+  memblk/FIFO_reg[3][23]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][23]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.94
+  data required time                                                 4.94
+  --------------------------------------------------------------------------
+  data required time                                                 4.94
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.56
+
+
+  Startpoint: FInN (input port clocked by ideal_clock1)
+  Endpoint: memblk/FIFO_reg[3][15]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  FInN (in)                                               0.00 @     2.00 f
+  memblk/writeN (FIFO_MEM_BLK)                            0.00       2.00 f
+  memblk/U136/Y (NOR4X1_RVT)                              0.13 @     2.13 r
+  memblk/U262/Y (AND4X1_RVT)                              0.11 &     2.24 r
+  memblk/U263/Y (AND4X1_RVT)                              0.13 &     2.38 r
+  memblk/U260/Y (NAND3X0_RVT)                             0.77 &     3.14 f
+  memblk/U4/Y (INVX1_RVT)                                 1.04 &     4.18 r
+  memblk/U60/Y (AO22X1_RVT)                               0.20 &     4.38 r
+  memblk/FIFO_reg[3][15]/D (DFFX1_RVT)                    0.00 &     4.38 r
+  data arrival time                                                  4.38
+
+  clock ideal_clock1 (rise edge)                          5.00       5.00
+  clock network delay (propagated)                        0.01       5.01
+  memblk/FIFO_reg[3][15]/CLK (DFFX1_RVT)                  0.00       5.01 r
+  library setup time                                     -0.07       4.94
+  data required time                                                 4.94
+  --------------------------------------------------------------------------
+  data required time                                                 4.94
+  data arrival time                                                 -4.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.56
+
+
+1

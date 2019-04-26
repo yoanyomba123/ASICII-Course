@@ -10,10 +10,9 @@ Report : timing
 	-sort_by slack
 Design : fpu
 Version: L-2016.06-SP3-1
-Date   : Wed Apr 24 14:46:31 2019
+Date   : Thu Apr 25 19:51:31 2019
 ****************************************
 
-Warning: There are 2227 invalid end points for constrained paths. (UITE-416)
 No constrained paths.
 
 1

@@ -3,11 +3,37 @@
 Report : resources
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Wed Apr 24 14:45:49 2019
+Date   : Thu Apr 25 19:50:43 2019
 ****************************************
 
 
-No resource sharing information to report.
+Resource Report for this hierarchy in file
+        /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/test_stub_scan.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_2        | DW01_inc       | width=4    | fpu_in/fpu_in_ctl/add_278 (fpu_in_ctl.v:278) |
+| add_x_3        | DW01_inc       | width=4    | fpu_in/fpu_in_ctl/add_295 (fpu_in_ctl.v:295) |
+| add_x_4        | DW01_inc       | width=4    | fpu_in/fpu_in_ctl/add_334 (fpu_in_ctl.v:334) |
+| add_x_5        | DW01_inc       | width=4    | fpu_in/fpu_in_ctl/add_354 (fpu_in_ctl.v:354) |
+| eq_x_6         | DW_cmp         | width=4    | fpu_in/fpu_in_ctl/eq_433 (fpu_in_ctl.v:433) |
+| eq_x_7         | DW_cmp         | width=4    | fpu_in/fpu_in_ctl/eq_437 (fpu_in_ctl.v:437) |
+| eq_x_8         | DW_cmp         | width=4    | fpu_in/fpu_in_ctl/eq_439 (fpu_in_ctl.v:439) |
+=============================================================================
 
-No implementations to report
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_2            | DW01_inc         | apparch (area)     |                |
+| add_x_3            | DW01_inc         | apparch (area)     |                |
+| add_x_4            | DW01_inc         | apparch (area)     |                |
+| add_x_5            | DW01_inc         | apparch (area)     |                |
+| eq_x_6             | DW_cmp           | apparch (area)     |                |
+| eq_x_7             | DW_cmp           | apparch (area)     |                |
+| eq_x_8             | DW_cmp           | apparch (area)     |                |
+===============================================================================
+
 1

@@ -14,5 +14,5 @@ report_qor_snapshot > reports/${design}_cts_qor_snapshot.rpt
 report_qor > reports/${design}_cts_qor.rpt
 report_timing -max_paths 20 -delay max > reports/${design}_cts.setup.rpt
 report_timing -max_paths 20 -delay min > reports/${design}_cts.hold.rpt
-report_clock_tree -summary > reports/${design}_clocktree.rpt
+#report_clock_tree -summary > reports/${design}_clocktree.rpt
  

@@ -1,0 +1,397 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : fpu
+Version: L-2016.03-SP5-1
+Date   : Thu Apr 25 20:53:08 2019
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+
+  Startpoint: global_shift_enable
+              (input port)
+  Endpoint: so (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  global_shift_enable (in)                 0.00       0.00 f
+  U2/Y (NBUFFX4_RVT)                      11.13 *    11.13 f
+  U7/Y (NBUFFX2_RVT)                       0.12 *    11.25 f
+  U8/Y (INVX4_RVT)                         0.08 *    11.33 r
+  U2585/Y (OA222X1_RVT)                    0.30 *    11.62 r
+  so (out)                                 0.01 *    11.63 r
+  data arrival time                                  11.63
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_req_cq[0]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.38       0.38 f
+  fp_cpx_req_cq[0] (out)                                  0.01 *     0.39 f
+  data arrival time                                                  0.39
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[1]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_req_cq[1]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[1]/Q (DFFX1_RVT)
+                                                          0.37       0.37 f
+  fp_cpx_req_cq[1] (out)                                  0.01 *     0.38 f
+  data arrival time                                                  0.38
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[2]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_req_cq[2]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[2]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[2]/Q (DFFX1_RVT)
+                                                          0.37       0.37 f
+  fp_cpx_req_cq[2] (out)                                  0.01 *     0.38 f
+  data arrival time                                                  0.38
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[76]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[76]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[76]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[76]/Q (DFFX1_RVT)
+                                                          0.33       0.33 f
+  fp_cpx_data_ca[76] (out)                                0.01 *     0.33 f
+  data arrival time                                                  0.33
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[74]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[74]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[74]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[74]/Q (DFFX1_RVT)
+                                                          0.33       0.33 f
+  fp_cpx_data_ca[74] (out)                                0.01 *     0.33 f
+  data arrival time                                                  0.33
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[75]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[75]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[75]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[75]/Q (DFFX1_RVT)
+                                                          0.33       0.33 f
+  fp_cpx_data_ca[75] (out)                                0.01 *     0.33 f
+  data arrival time                                                  0.33
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[73]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[73]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[73]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[73]/Q (DFFX1_RVT)
+                                                          0.31       0.31 f
+  fp_cpx_data_ca[73] (out)                                0.00 *     0.32 f
+  data arrival time                                                  0.32
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[72]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[72]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[72]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[72]/Q (DFFX1_RVT)
+                                                          0.31       0.31 f
+  fp_cpx_data_ca[72] (out)                                0.00 *     0.32 f
+  data arrival time                                                  0.32
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[69]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[69]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[69]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[69]/Q (DFFX1_RVT)
+                                                          0.29       0.29 f
+  fp_cpx_data_ca[69] (out)                                0.00 *     0.30 f
+  data arrival time                                                  0.30
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[4]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[4]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[4]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[4]/Q (DFFX1_RVT)
+                                                          0.27       0.27 f
+  fp_cpx_data_ca[4] (out)                                 0.00 *     0.27 f
+  data arrival time                                                  0.27
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[2]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[2]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[2]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[2]/Q (DFFX1_RVT)
+                                                          0.27       0.27 f
+  fp_cpx_data_ca[2] (out)                                 0.00 *     0.27 f
+  data arrival time                                                  0.27
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[3]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.26       0.26 f
+  fp_cpx_data_ca[3] (out)                                 0.00 *     0.27 f
+  data arrival time                                                  0.27
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[5]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[5]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[5]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[5]/Q (DFFX1_RVT)
+                                                          0.26       0.26 f
+  fp_cpx_data_ca[5] (out)                                 0.00 *     0.26 f
+  data arrival time                                                  0.26
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[3]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_req_cq[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.26       0.26 f
+  fp_cpx_req_cq[3] (out)                                  0.00 *     0.26 f
+  data arrival time                                                  0.26
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[4]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_req_cq[4]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[4]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[4]/Q (DFFX1_RVT)
+                                                          0.26       0.26 f
+  fp_cpx_req_cq[4] (out)                                  0.00 *     0.26 f
+  data arrival time                                                  0.26
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[7]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[7]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[7]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[7]/Q (DFFX1_RVT)
+                                                          0.25       0.25 f
+  fp_cpx_data_ca[7] (out)                                 0.00 *     0.25 f
+  data arrival time                                                  0.25
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[6]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[6]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[6]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[6]/Q (DFFX1_RVT)
+                                                          0.25       0.25 f
+  fp_cpx_data_ca[6] (out)                                 0.00 *     0.25 f
+  data arrival time                                                  0.25
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[5]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_req_cq[5]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[5]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_ctl/i_fp_cpx_req_cq/q_reg[5]/Q (DFFX1_RVT)
+                                                          0.25       0.25 f
+  fp_cpx_req_cq[5] (out)                                  0.00 *     0.25 f
+  data arrival time                                                  0.25
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[12]
+              (rising edge-triggered flip-flop)
+  Endpoint: fp_cpx_data_ca[12]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[12]/CLK (DFFX1_RVT)
+                                                          0.00       0.00 r
+  fpu_out/fpu_out_dp/i_fp_cpx_data_ca_76_0/q_reg[12]/Q (DFFX1_RVT)
+                                                          0.25       0.25 f
+  fp_cpx_data_ca[12] (out)                                0.00 *     0.25 f
+  data arrival time                                                  0.25
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

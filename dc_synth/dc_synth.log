@@ -19,51 +19,226 @@
  of a written license agreement with Synopsys, Inc. All other use, reproduction,
             or distribution of this software is strictly prohibited.
 Initializing...
-set design fpu
-fpu
-#set file_lib "/mnt/class_data/ecec574-f2016/SAED_EDK90nm/Digital_Standard_cell_Library"
-set os_path "../OpenSPARC_src/"
-../OpenSPARC_src/
-#set search_path "$search_path $file_lib/synopsys/models $os_path/include $os_path/common $os_path/lib ./src ./scripts"
-#set synthetic_library "dw_foundation.sldb"
-# set target_library "saed90nm_typ.db"
-# set link_library "* $target_library $synthetic_library"
-lappend search_path ${os_path}
-. /opt/synopsys/2016/core-synthesis-tools/libraries/syn /opt/synopsys/2016/core-synthesis-tools/minpower/syn /opt/synopsys/2016/core-synthesis-tools/dw/syn_ver /opt/synopsys/2016/core-synthesis-tools/dw/sim_ver ../OpenSPARC_src/
+## Give the path to the verilog files and define the WORK directory
+#
+set username dm3233
+dm3233
+lappend search_path /home/${username}@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/  
+. /opt/synopsys/2016/core-synthesis-tools/libraries/syn /opt/synopsys/2016/core-synthesis-tools/minpower/syn /opt/synopsys/2016/core-synthesis-tools/dw/syn_ver /opt/synopsys/2016/core-synthesis-tools/dw/sim_ver /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/
 define_design_lib WORK -path "work"
 1
-set link_library [ list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db]
-/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db
-set target_library [ list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db ]
-/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db
-analyze -f verilog -library WORK [list $os_path/common/cluster_header.v $os_path/common/swrvr_clib.v $os_path/common/swrvr_dlib.v $os_path/common/synchronizer_asr.v $os_path/T1-FPU/bw_clk_cl_fpu_cmp.v $os_path/T1-FPU/fpu_add_ctl.v $os_path/T1-FPU/fpu_add_exp_dp.v $os_path/T1-FPU/fpu_add_frac_dp.v $os_path/T1-FPU/fpu_add.v $os_path/T1-FPU/fpu_cnt_lead0_53b.v $os_path/T1-FPU/fpu_cnt_lead0_64b.v $os_path/T1-FPU/fpu_cnt_lead0_lvl1.v $os_path/T1-FPU/fpu_cnt_lead0_lvl2.v $os_path/T1-FPU/fpu_cnt_lead0_lvl3.v $os_path/T1-FPU/fpu_cnt_lead0_lvl4.v $os_path/T1-FPU/fpu_denorm_3b.v $os_path/T1-FPU/fpu_denorm_3to1.v $os_path/T1-FPU/fpu_denorm_frac.v $os_path/T1-FPU/fpu_div_ctl.v $os_path/T1-FPU/fpu_div_exp_dp.v $os_path/T1-FPU/fpu_div_frac_dp.v $os_path/T1-FPU/fpu_div.v $os_path/T1-FPU/fpu_in2_gt_in1_2b.v $os_path/T1-FPU/fpu_in2_gt_in1_3b.v $os_path/T1-FPU/fpu_in2_gt_in1_3to1.v $os_path/T1-FPU/fpu_in2_gt_in1_frac.v $os_path/T1-FPU/fpu_in_ctl.v $os_path/T1-FPU/fpu_in_dp.v $os_path/T1-FPU/fpu_in.v $os_path/T1-FPU/fpu_mul_ctl.v $os_path/T1-FPU/fpu_mul_exp_dp.v $os_path/T1-FPU/fpu_mul_frac_dp.v $os_path/T1-FPU/fpu_mul.v $os_path/T1-FPU/fpu_out_ctl.v $os_path/T1-FPU/fpu_out_dp.v $os_path/T1-FPU/fpu_out.v $os_path/T1-FPU/fpu_rptr_groups.v $os_path/T1-FPU/fpu_rptr_macros.v $os_path/T1-FPU/fpu_rptr_min_global.v $os_path/pr_macro/mul64.v $os_path/common/test_stub_scan.v $os_path/srams/bw_r_rf16x160.v $os_path/T1-FPU/fpu.v]
+#
+### Define the library location
+set link_library [ list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db ]
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db
+set target_library [ list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db]
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db
+#
+### Read in verilog files
+#analyze -library WORK -format verilog [ list bw_clk_cl_fpu_cmp.v fpu_add_ctl.v fpu_add_exp_dp.v fpu_add_frac_dp.v fpu_add.v fpu_cnt_lead0_53b.v fpu_cnt_lead0_64b.v fpu_cnt_lead0_lvl1.v fpu_cnt_lead0_lvl2.v fpu_cnt_lead0_lvl3.v fpu_cnt_lead0_lvl4.v fpu_denorm_3b.v fpu_denorm_3to1.v fpu_denorm_frac.v fpu_div_ctl.v fpu_div_exp_dp.v fpu_div_frac_dp.v fpu_div.v fpu_in2_gt_in1_2b.v fpu_in2_gt_in1_3b.v fpu_in2_gt_in1_3to1.v fpu_in2_gt_in1_frac.v fpu_in_ctl.v fpu_in_dp.v fpu_in.v fpu_mul_ctl.v fpu_mul_exp_dp.v fpu_mul_frac_dp.v fpu_mul.v fpu_out_ctl.v fpu_out_dp.v fpu_out.v fpu_rptr_groups.v fpu_rptr_macros.v fpu_rptr_min_global.v fpu.v cluster_header_ctu.v cluster_header_dup.v cluster_header_sync.v cluster_header.v cmp_sram_redhdr.v dbl_buf.v swrvr_clib.v swrvr_dlib.v synchronizer_asr_dup.v synchronizer_asr.v sync_pulse_synchronizer.v test_stub_bist.v test_stub_scan.v ucb_bus_in.v ucb_bus_out.v ucb_flow_2buf.v ucb_flow_jbi.v ucb_flow_spi.v ucb_noflow.v m1.V bw_r_cm16x40b.v bw_r_cm16x40.v bw_r_dcd.v bw_r_dcm.v bw_r_efa.v bw_rf_16x65.v bw_rf_16x81.v bw_r_frf.v bw_r_icd.v bw_r_idct.v bw_r_irf_fpga1.v bw_r_irf_register.v bw_r_irf.v bw_r_l2d_32k.v bw_r_l2d_rep_bot.v bw_r_l2d_rep_top.v bw_r_l2d.v bw_r_l2t.v bw_r_rf16x128d.v bw_r_rf16x160.v bw_r_rf16x32.v bw_r_rf32x108.v bw_r_rf32x152b.v bw_r_rf32x80.v bw_r_scm.v bw_r_tlb_fpga.v bw_r_tlb.v regfile_1w_4r.v u1.V mul64.v bw_u1_syncff_4x.v bw_u1_soffasr_2x.v bw_u1_scanl_2x.v bw_r_rf16x160.v]
+analyze -library WORK -format verilog [list fpu.v bw_r_rf16x160.v bw_clk_cl_fpu_cmp.v  fpu_add_ctl.v fpu_add_exp_dp.v fpu_add_frac_dp.v fpu_add.v fpu_cnt_lead0_53b.v fpu_cnt_lead0_64b.v fpu_cnt_lead0_lvl1.v fpu_cnt_lead0_lvl2.v fpu_cnt_lead0_lvl3.v fpu_cnt_lead0_lvl4.v fpu_denorm_3b.v fpu_denorm_3to1.v fpu_denorm_frac.v fpu_div_ctl.v fpu_div_exp_dp.v fpu_div_frac_dp.v fpu_div.v fpu_in2_gt_in1_2b.v fpu_in2_gt_in1_3b.v fpu_in2_gt_in1_3to1.v fpu_in2_gt_in1_frac.v fpu_in_ctl.v fpu_in_dp.v fpu_in.v fpu_mul_ctl.v fpu_mul_exp_dp.v fpu_mul_frac_dp.v fpu_mul.v fpu_out_ctl.v fpu_out_dp.v fpu_out.v fpu_rptr_groups.v fpu_rptr_macros.v fpu_rptr_min_global.v mul64.v test_stub_scan.v cluster_header.v swrvr_clib.v swrvr_dlib.v u1.V synchronizer_asr.v]
 Running PRESTO HDLC
-Compiling source file ../OpenSPARC_src//common/cluster_header.v
-Error:  Unable to open file `../OpenSPARC_src//common/cluster_header.v': No such file or directory. (VER-41)
-*** Presto compilation terminated with 1 errors. ***
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:269: the undeclared symbol 'pcx_fpio_data_rdy_px2_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:279: the undeclared symbol 'arst_l_in_buf3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:280: the undeclared symbol 'fpu_grst_l_in_buf2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:319: the undeclared symbol 'se_in_buf3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:320: the undeclared symbol 'manual_scan_0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:321: the undeclared symbol 'scan_manual_1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:338: the undeclared symbol 'se' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:339: the undeclared symbol 'si_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:340: the undeclared symbol 'scan_inq_sram_w' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:343: the undeclared symbol 'rst_tri_en' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:368: the undeclared symbol 'arst_l_add_buf4' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:369: the undeclared symbol 'fpu_grst_l_add_buf3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:388: the undeclared symbol 'se_add_exp_buf2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:389: the undeclared symbol 'se_add_frac_buf2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:391: the undeclared symbol 'scan_manual_2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:415: the undeclared symbol 'fmul_clken_l_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:416: the undeclared symbol 'arst_l_mul_buf2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:417: the undeclared symbol 'fpu_grst_l_mul_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:431: the undeclared symbol 'se_mul_buf4' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:432: the undeclared symbol 'se_mul64_buf2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:434: the undeclared symbol 'scan_manual_3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:456: the undeclared symbol 'fdiv_clken_l_div_frac_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:457: the undeclared symbol 'fdiv_clken_l_div_exp_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:458: the undeclared symbol 'arst_l_div_buf2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:473: the undeclared symbol 'se_div_buf5' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:475: the undeclared symbol 'scan_manual_4' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:509: the undeclared symbol 'arst_l_out_buf3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:519: the undeclared symbol 'se_out_buf2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:521: the undeclared symbol 'scan_manual_5' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:531: the undeclared symbol 'ctu_tst_pre_grst_l_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:533: the undeclared symbol 'global_shift_enable_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:534: the undeclared symbol 'ctu_tst_scan_disable_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:535: the undeclared symbol 'ctu_tst_scanmode_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:536: the undeclared symbol 'ctu_tst_macrotest_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:537: the undeclared symbol 'ctu_tst_short_chain_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:538: the undeclared symbol 'scan_manual_6_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:551: the undeclared symbol 'so_unbuf' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:564: the undeclared symbol 'cluster_cken_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:565: the undeclared symbol 'arst_l_cluster_header_buf2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:566: the undeclared symbol 'grst_l_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:572: the undeclared symbol 'se_cluster_header_buf2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu.v:574: the undeclared symbol 'scan_manual_6' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/bw_r_rf16x160.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/bw_clk_cl_fpu_cmp.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_add_ctl.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_add_ctl.v:684: the undeclared symbol 'add_ctl_rst_l' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_add_exp_dp.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_add_exp_dp.v:214: the undeclared symbol 'clk' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_add_frac_dp.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_add_frac_dp.v:357: the undeclared symbol 'clk' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_add.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_add.v:415: the undeclared symbol 'scan_out_fpu_add_ctl' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_add.v:475: the undeclared symbol 'scan_out_fpu_add_exp_dp' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_cnt_lead0_53b.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_cnt_lead0_64b.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_cnt_lead0_64b.v:467: the undeclared symbol 'lead0_63_32_0' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_cnt_lead0_lvl1.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_cnt_lead0_lvl2.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_cnt_lead0_lvl3.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_cnt_lead0_lvl4.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_denorm_3b.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_denorm_3to1.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_denorm_frac.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_div_ctl.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_div_ctl.v:499: the undeclared symbol 'div_ctl_rst_l' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_div_exp_dp.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_div_exp_dp.v:142: the undeclared symbol 'clk' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_div_frac_dp.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_div_frac_dp.v:185: the undeclared symbol 'clk' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_div.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_div.v:330: the undeclared symbol 'scan_out_fpu_div_ctl' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_div.v:378: the undeclared symbol 'scan_out_fpu_div_exp_dp' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in2_gt_in1_2b.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in2_gt_in1_3b.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in2_gt_in1_3to1.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in2_gt_in1_frac.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in_ctl.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in_ctl.v:201: the undeclared symbol 'in_ctl_rst_l' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in_ctl.v:820: the undeclared symbol 'inq_adda_dly' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in_ctl.v:833: the undeclared symbol 'inq_mula_dly' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in_dp.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_in.v:261: the undeclared symbol 'scan_out_fpu_in_ctl' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_ctl.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_ctl.v:464: the undeclared symbol 'mul_ctl_rst_l' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_ctl.v:1648: the undeclared symbol 'm3bstg_of_mask' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_exp_dp.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_exp_dp.v:149: the undeclared symbol 'clk' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_exp_dp.v:431: the undeclared symbol 'm5stg_shl_55' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_exp_dp.v:431: the undeclared symbol 'm5stg_shl_54' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_exp_dp.v:432: the undeclared symbol 'm5stg_inc_exp_54' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_exp_dp.v:432: the undeclared symbol 'm5stg_inc_exp_55' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_exp_dp.v:432: the undeclared symbol 'm5stg_inc_exp_105' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_frac_dp.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul_frac_dp.v:192: the undeclared symbol 'clk' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul.v:330: the undeclared symbol 'scan_out_fpu_mul_ctl' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul.v:373: the undeclared symbol 'scan_out_fpu_mul_exp_dp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_mul.v:430: the undeclared symbol 'scan_out_fpu_mul_frac_dp' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_out_ctl.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_out_ctl.v:94: the undeclared symbol 'out_ctl_rst_l' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_out_dp.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_out_dp.v:113: the undeclared symbol 'clk' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_out.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_out.v:167: the undeclared symbol 'scan_out_fpu_out_ctl' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_rptr_groups.v
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_rptr_groups.v:497: the undeclared symbol 'se_add_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_rptr_groups.v:498: the undeclared symbol 'se_mul64_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_rptr_groups.v:499: the undeclared symbol 'so_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_rptr_groups.v:500: the undeclared symbol 'se_buf1_unused' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_rptr_groups.v:511: the undeclared symbol 'se_add_buf2_unused' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_rptr_groups.v:527: the undeclared symbol 'arst_l_buf1' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_rptr_macros.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/fpu_rptr_min_global.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/mul64.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/test_stub_scan.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/cluster_header.v
+Opening include file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU//sys.h
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/cluster_header.v:92: delays for continuous assignment are ignored. (VER-173)
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_dlib.v
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/u1.V
+Compiling source file /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/synchronizer_asr.v
+Presto compilation completed successfully.
 Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db'
 Information: Using CCS timing libraries. (TIM-024)
 Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db'
 Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db'
-0
-#
-# # Now moving onto s15850 sample benchmark. 
-#rci
-elaborate -architecture verilog -library WORK fpu
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db'
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db'
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db'
+1
+elaborate fpu -architecture verilog -library WORK
 Loading db file '/opt/synopsys/2016/core-synthesis-tools/libraries/syn/gtech.db'
 Loading db file '/opt/synopsys/2016/core-synthesis-tools/libraries/syn/standard.sldb'
   Loading link library 'saed32rvt_ss0p95v125c'
   Loading link library 'saed32rvt_ss0p95v25c'
   Loading link library 'saed32rvt_ss0p95vn40c'
+  Loading link library 'saed32sram_ss0p95v125c'
+  Loading link library 'saed32sram_ss0p95v25c'
+  Loading link library 'saed32sram_ss0p95vn40c'
   Loading link library 'gtech'
 Running PRESTO HDLC
 Presto compilation completed successfully.
 Elaborated 1 design.
 Current design is now 'fpu'.
-Information: Building the design 'fpu_in'. (HDL-193)
+
+Received Signal 15 from: PID=11402 (UID=945019985)
+
 Presto compilation completed successfully.
 Information: Building the design 'bw_r_rf16x160'. (HDL-193)
-Warning: Cannot find the design 'bw_r_rf16x160' in the library 'WORK'. (LBR-1)
+
+Inferred memory devices in process
+	in routine bw_r_rf16x160 line 93 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/bw_r_rf16x160.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   byte_wen_d1_reg   | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|    wrptr_d1_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|   word_wen_d1_reg   | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|    wrdata_d1_reg    | Flip-flop |  160  |  Y  | N  | N  | N  | N  | N  | N  |
+|    wr_en_d1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine bw_r_rf16x160 line 276 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/bw_r_rf16x160.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rdptr_d1_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|     ren_d1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine bw_r_rf16x160 line 537 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/bw_r_rf16x160.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      dout_reg       | Latch |  160  |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine bw_r_rf16x160 line 609 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/bw_r_rf16x160.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     inq_ary_reg     | Latch | 2560  |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Statistics for MUX_OPs
+=======================================================
+| block name/line   | Inputs | Outputs | # sel inputs |
+=======================================================
+| bw_r_rf16x160/559 |   16   |   160   |      4       |
+| bw_r_rf16x160/652 |   16   |   160   |      4       |
+=======================================================
+Presto compilation completed successfully.
 Information: Building the design 'fpu_add'. (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'fpu_mul'. (HDL-193)
@@ -73,7 +248,7 @@ Presto compilation completed successfully.
 Information: Building the design 'fpu_out'. (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'test_stub_scan'. (HDL-193)
-Warning: Cannot find the design 'test_stub_scan' in the library 'WORK'. (LBR-1)
+Presto compilation completed successfully.
 Information: Building the design 'bw_clk_cl_fpu_cmp'. (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'fpu_rptr_groups'. (HDL-193)
@@ -95,9 +270,992 @@ Presto compilation completed successfully.
 Information: Building the design 'fpu_mul_frac_dp'. (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'mul64'. (HDL-193)
-Warning: Cannot find the design 'mul64' in the library 'WORK'. (LBR-1)
-Information: Building the
-Received Signal 15 from: PID=17093 (UID=945019985)
-completed successfully.
+Presto compilation completed successfully.
+Information: Building the design 'fpu_div_ctl'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_div_exp_dp'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_div_frac_dp'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_out_ctl'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_out_dp'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'cluster_header'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_bufrpt_grp32'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_bufrpt_grp64'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_bufrpt_grp4'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_rptr_pcx_fpio_grp16'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_rptr_fp_cpx_grp16'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_rptr_inq'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dffrl_async' instantiated from design 'fpu_in_ctl' with
+	the parameters "1". (HDL-193)
 
-Received Signal 15 from: PID=17093 (UID=945019985)
+Inferred memory devices in process
+	in routine dffrl_async_SIZE1 line 489 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffr_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "1". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffr_s_SIZE1 line 141 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "1". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE1 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "5". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE5 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "4". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE4 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "4". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE4 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "1". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE1 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "8". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE8 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "16". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE16 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_in_ctl' with
+	the parameters "3". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE3 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'clken_buf'. (HDL-193)
+
+Inferred memory devices in process
+	in routine clken_buf line 776 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      clken_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_dp' with
+	the parameters "2". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE2 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_dp' with
+	the parameters "64". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE64 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_in_dp' with
+	the parameters "69". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE69 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  69   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_in_dp' with
+	the parameters "155". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE155 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  155  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "1". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE1 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "8". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE8 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "4". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE4 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "2". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE2 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "5". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE5 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "31". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE31 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  31   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "19". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE19 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  19   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "2". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE2 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "18". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE18 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "10". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE10 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "9". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE9 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "6". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE6 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_add_ctl' with
+	the parameters "10". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE10 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_exp_dp' with
+	the parameters "11". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE11 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_exp_dp' with
+	the parameters "13". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE13 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_exp_dp' with
+	the parameters "12". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE12 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_add_exp_dp' with
+	the parameters "13". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE13 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "63". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE63 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  63   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "55". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE55 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  55   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "64". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE64 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fpu_in2_gt_in1_frac'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "54". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE54 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  54   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fpu_denorm_frac'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_cnt_lead0_64b'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_add_frac_dp' with
+	the parameters "58". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE58 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  58   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffre_s' instantiated from design 'fpu_mul_ctl' with
+	the parameters "5". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffre_s_SIZE5 line 317 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_mul_ctl' with
+	the parameters "6". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE6 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_mul_ctl' with
+	the parameters "7". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE7 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fpu_cnt_lead0_53b'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_mul_frac_dp' with
+	the parameters "56". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE56 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  56   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_mul_frac_dp' with
+	the parameters "55". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE55 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  55   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffe_s' instantiated from design 'fpu_mul_frac_dp' with
+	the parameters "52". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffe_s_SIZE52 line 255 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  52   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mul_booth'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_array1'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'mul64' with
+	the parameters "78". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE78 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  78   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'mul64' with
+	the parameters "82". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE82 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  82   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mul_array2'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dp_mux2es' instantiated from design 'mul64' with
+	the parameters "97". (HDL-193)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_dlib.v:39: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 36 in file
+	'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_dlib.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            39            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'mul64' with
+	the parameters "97". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE97 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  97   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dp_mux2es' instantiated from design 'mul64' with
+	the parameters "98". (HDL-193)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_dlib.v:39: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 36 in file
+	'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_dlib.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            39            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'mul64' with
+	the parameters "98". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE98 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  98   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'mul64' with
+	the parameters "68". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE68 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  68   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'mul64' with
+	the parameters "69". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE69 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  69   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'mul64' with
+	the parameters "104". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE104 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  104  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'mul64' with
+	the parameters "32". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE32 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffr_s' instantiated from design 'fpu_div_ctl' with
+	the parameters "8". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffr_s_SIZE8 line 141 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dffr_s' instantiated from design 'fpu_div_ctl' with
+	the parameters "3". (HDL-193)
+
+Inferred memory devices in process
+	in routine dffr_s_SIZE3 line 141 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_div_frac_dp' with
+	the parameters "53". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE53 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  53   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_div_frac_dp' with
+	the parameters "12". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE12 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_out_ctl' with
+	the parameters "3". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE3 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dff_s' instantiated from design 'fpu_out_dp' with
+	the parameters "77". (HDL-193)
+
+Inferred memory devices in process
+	in routine dff_s_SIZE77 line 54 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_clib.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  77   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'bw_u1_syncff_4x'. (HDL-193)
+
+Inferred memory devices in process
+	in routine bw_u1_syncff_4x line 3891 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/u1.V'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       q_r_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'bw_u1_scanl_2x'. (HDL-193)
+
+Inferred memory devices in process
+	in routine bw_u1_scanl_2x line 3877 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/u1.V'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      so_l_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'synchronizer_asr'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_in2_gt_in1_3b'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_in2_gt_in1_2b'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_in2_gt_in1_3to1'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_denorm_3b'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_denorm_3to1'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_cnt_lead0_lvl1'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_cnt_lead0_lvl2'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_cnt_lead0_lvl3'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fpu_cnt_lead0_lvl4'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_bodec'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dp_mux2es' instantiated from design 'mul_booth' with
+	the parameters "3". (HDL-193)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_dlib.v:39: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 36 in file
+	'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_dlib.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            39            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'dp_mux2es'. (HDL-193)
+Warning:  /home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_dlib.v:39: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 36 in file
+	'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/swrvr_dlib.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            39            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'mul_negen'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_csa42'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_csa32'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_ha'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_ppgenrow3'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_mux2'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'bw_u1_soffasr_2x'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_ppgen3sign'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_ppgen3'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_ppgen3lsb4'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'zsoffasr_prim'. (HDL-193)
+
+Inferred memory devices in process
+	in routine zsoffasr_prim line 4099 in file
+		'/home/dm3233@drexel.edu/ecec574/tutorial/OpenSPARC/trunk/T1-FPU/u1.V'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mul_ppgensign'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul_ppgen'. (HDL-193)
+Presto compilation completed successfully.
+1
+current_design fpu
+Current design is 'fpu'.
+{fpu}
+link
+
+  Linking design 'fpu'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  saed32rvt_ss0p95v125c (library) /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db
+  saed32rvt_ss0p95v25c (library) /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db
+  saed32rvt_ss0p95vn40c (library) /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db
+  saed32sram_ss0p95v125c (library) /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db
+  saed32sram_ss0p95v25c (library) /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db
+  saed32sram_ss0p95vn40c (library) /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db
+
+1
+### Check if design is consistent
+check_design  > reports/synth_check_design.rpt
+#
+set clk_list {{gclk 1204.82 0.086 0.086 0.04}}
+{gclk 1204.82 0.086 0.086 0.04}
+### Create Constraints
+set default_clk gclk
+gclk
+set default_clk_freq 1204.82
+1204.82
+set default_setup_skew 0.086
+0.086
+set default_hold_skew 0.086
+0.086
+set default_clk_transition 0.04
+0.04
+set max_transition 0.110
+0.110
+set max_fanout 6
+6
+set default_input_delay 0.15
+Information: Use of Variable 'default_input_delay' is not recommended. This variable will be obsolete in a future release. (INFO-101)
+0.15
+set default_output_delay 0.2
+Information: Use of Variable 'default_output_delay' is not recommended. This variable will be obsolete in a future release. (INFO-101)
+0.2
+set critical_range 0.30
+0.30
+set num_of_path 50
+50
+#
+### Compilation
+### you can change medium to either low or high
+# compile -area_effort medium -map_effort medium -power_effort medium
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Loading db file '/opt/synopsys/2016/core-synthesis-tools/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | M-2016.12-DWBB_201612.1 |     *     |
+| Licensed DW Building Blocks        | M-2016.12-DWBB_201612.1 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 9384 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 11 instances of design 'fpu_bufrpt_grp32'. (OPT-1056)
+Information: Uniquified 2 instances of design 'fpu_bufrpt_grp64'. (OPT-1056)
+Information: Uniquified 11 instances of design 'fpu_bufrpt_grp4'. (OPT-1056)
+Information: Uniquified 8 instances of design 'fpu_rptr_pcx_fpio_grp16'. (OPT-1056)
+Information: Uniquified 10 instances of design 'fpu_rptr_fp_cpx_grp16'. (OPT-1056)
+Information: Uniquified 5 instances of design 'dffrl_async_SIZE1'. (OPT-1056)
+Information: Uniquified 10 instances of design 'dffr_s_SIZE1'. (OPT-1056)
+Information: Uniquified 32 instances of design 'dff_s_SIZE1'. (OPT-1056)
+Information: Uniquified 3 instances of design 'dff_s_SIZE5'. (OPT-1056)
+Information: Uniquified 7 instances of design 'dffre_s_SIZE4'. (OPT-1056)
+Information: Uniquified 4 instances of design 'dff_s_SIZE4'. (OPT-1056)
+Information: Uniquified 15 instances of design 'dffre_s_SIZE1'. (OPT-1056)
+Information: Uniquified 6 instances of design 'dff_s_SIZE8'. (OPT-1056)
+Information: Uniquified 19 instances of design 'dffre_s_SIZE3'. (OPT-1056)
+Information: Uniquified 12 instances of design 'clken_buf'. (OPT-1056)
+Information: Uniquified 3 instances of design 'dff_s_SIZE2'. (OPT-1056)
+Information: Uniquified 6 instances of design 'dff_s_SIZE64'. (OPT-1056)
+Information: Uniquified 142 instances of design 'dffe_s_SIZE1'. (OPT-1056)
+Information: Uniquified 5 instances of design 'dffe_s_SIZE4'. (OPT-1056)
+Information: Uniquified 22 instances of design 'dffe_s_SIZE2'. (OPT-1056)
+Information: Uniquified 13 instances of design 'dffe_s_SIZE5'. (OPT-1056)
+Information: Uniquified 3 instances of design 'dffe_s_SIZE10'. (OPT-1056)
+Information: Uniquified 2 instances of design 'dffre_s_SIZE6'. (OPT-1056)
+Information: Uniquified 2 instances of design 'dff_s_SIZE10'. (OPT-1056)
+Information: Uniquified 15 instances of design 'dffe_s_SIZE11'. (OPT-1056)
+Information: Uniquified 16 instances of design 'dffe_s_SIZE13'. (OPT-1056)
+Information: Uniquified 7 instances of design 'dff_s_SIZE13'. (OPT-1056)
+Information: Uniquified 11 instances of design 'dffe_s_SIZE55'. (OPT-1056)
+Information: Uniquified 10 instances of design 'dffe_s_SIZE64'. (OPT-1056)
+Information: Uniquified 2 instances of design 'dffe_s_SIZE6'. (OPT-1056)
+Information: Uniquified 2 instances of design 'dffe_s_SIZE7'. (OPT-1056)
+Information: Uniquified 3 instances of design 'fpu_cnt_lead0_53b'. (OPT-1056)
+Information: Uniquified 4 instances of design 'dff_s_SIZE55'. (OPT-1056)
+Information: Uniquified 2 instances of design 'mul_array1'. (OPT-1056)
+Information: Uniquified 2 instances of design 'dff_s_SIZE78'. (OPT-1056)
+Information: Uniquified 2 instances of design 'dff_s_SIZE82'. (OPT-1056)
+Information: Uniquified 2 instances of design 'dff_s_SIZE32'. (OPT-1056)
+Information: Uniquified 5 instances of design 'dffr_s_SIZE3'. (OPT-1056)
+Information: Uniquified 2 instances of design 'dff_s_SIZE53'. (OPT-1056)
+Information: Uniquified 17 instances of design 'dff_s_SIZE3'. (OPT-1056)
+Information: Uniquified 3 instances of design 'bw_u1_scanl_2x'. (OPT-1056)
+Information: Uniquified 2 instances of design 'synchronizer_asr'. (OPT-1056)
+Information: Uniquified 17 instances of design 'fpu_in2_gt_in1_3b'. (OPT-1056)
+Information: Uniquified 2 instances of design 'fpu_in2_gt_in1_2b'. (OPT-1056)
+Information: Uniquified 8 instances of design 'fpu_in2_gt_in1_3to1'. (OPT-1056)
+Information: Uniquified 18 instances of design 'fpu_denorm_3b'. (OPT-1056)
+Information: Uniquified 8 instances of design 'fpu_denorm_3to1'. (OPT-1056)
+Information: Uniquified 55 instances of design 'fpu_cnt_lead0_lvl1'. (OPT-1056)
+Information: Uniquified 26 instances of design 'fpu_cnt_lead0_lvl2'. (OPT-1056)
+Information: Uniquified 13 instances of design 'fpu_cnt_lead0_lvl3'. (OPT-1056)
+Information: Uniquified 8 instances of design 'fpu_cnt_lead0_lvl4'. (OPT-1056)
+Information: Uniquified 4 instances of design 'mul_bodec'. (OPT-1056)
+Information: Uniquified 16 instances of design 'dp_mux2es_SIZE3'. (OPT-1056)
+Information: Uniquified 16 instances of design 'mul_negen'. (OPT-1056)
+Information: Uniquified 181 instances of design 'mul_csa42'. (OPT-1056)
+Information: Uniquified 928 instances of design 'mul_csa32'. (OPT-1056)
+Information: Uniquified 75 instances of design 'mul_ha'. (OPT-1056)
+Information: Uniquified 6 instances of design 'mul_ppgenrow3'. (OPT-1056)
+Information: Uniquified 98 instances of design 'mul_mux2'. (OPT-1056)
+Information: Uniquified 4 instances of design 'bw_u1_soffasr_2x'. (OPT-1056)
+Information: Uniquified 6 instances of design 'mul_ppgen3sign'. (OPT-1056)
+Information: Uniquified 360 instances of design 'mul_ppgen3'. (OPT-1056)
+Information: Uniquified 6 instances of design 'mul_ppgen3lsb4'. (OPT-1056)
+Information: Uniquified 4 instances of design 'zsoffasr_prim'. (OPT-1056)
+Information: Uniquified 18 instances of design 'mul_ppgensign'. (OPT-1056)
+Information: Uniquified 1152 instances of design 'mul_ppgen'. (OPT-1056)
+  Simplifying Design 'fpu'
+Information: Removing unused design 'fpu_bufrpt_grp4_0'. (OPT-1055)
+Information: Removing unused design 'fpu_rptr_pcx_fpio_grp16_6'. (OPT-1055)
+
+
+Received Signal 15 from: PID=11402 (UID=945019985)

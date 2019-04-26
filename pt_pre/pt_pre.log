@@ -1,0 +1,242 @@
+
+                                 PrimeTime (R)
+
+              Version L-2016.06-SP3-1 for linux64 - Jan 12, 2017 
+
+                    Copyright (c) 1988 - 2017 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+###### Pre-Layout PrimeTime Script #######
+set design fpu
+fpu
+# set power_enable_analysis true
+## Define the library location
+# set link_library [list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db]
+set link_library [ list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db ]
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db
+# might need to change this TODO
+set target_library [list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db]
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db
+# might need to change this TODO
+set link_path "* /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db" 
+* /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db
+## read the verilog files
+read_verilog ../dc_synth/output/${design}.v
+1
+set link_create_black_boxes false
+false
+link_design
+Loading verilog file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v'
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db'
+Linking design bw_r_rf16x160...
+Information: Removing 10 unneeded designs..... (LNK-034)
+Information: Module 'fpu_add_frac_dp' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_add' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_mul_frac_dp' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'mul_array1_1' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'mul_array1_0' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'mul64' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_mul' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_div_frac_dp' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_div' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: 277 (94.22%) library cells are unused in library saed32rvt_ss0p95v25c..... (LNK-045)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: total 277 library cells are unused (LNK-046)
+Design 'bw_r_rf16x160' was successfully linked.
+Information: There are 7106 leaf cells, ports, hiers and 6964 nets in the design (LNK-047)
+1
+read_ddc ../dc_synth/output/${design}.ddc
+1
+## Set top module name
+# current_design ${design}
+## Read in SDC from the synthesis
+# source ../dc_synth/const/s1238.sdc
+## Analysis reports
+report_design
+Unlinking design bw_r_rf16x160...
+Warning: All timing information (backannotation, exceptions, etc.) is being removed from design 'bw_r_rf16x160'. User-created annotations must be restored after relinking this design. (LNK-024)
+Linking design fpu...
+Information: Removing 11 unneeded designs..... (LNK-034)
+Information: Module 'bw_r_rf16x160' in file '/home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/output/fpu.ddc' is not used in the current design .  (LNK-039)
+Information: 249 (84.69%) library cells are unused in library saed32rvt_ss0p95v25c..... (LNK-045)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: total 249 library cells are unused (LNK-046)
+****************************************
+Report : design
+Design : fpu
+Version: L-2016.06-SP3-1
+Date   : Thu Apr 25 19:25:09 2019
+****************************************
+
+Design Attribute                         Value
+---------------------------------------------------------------------------
+Operating Conditions:
+  analysis_type                          on_chip_variation
+  operating_condition_min_name           ss0p95v25c
+  process_min                            0.99
+  temperature_min                        25
+  voltage_min                            0.95
+  tree_type_min                          worst_case
+
+  operating_condition_max_name           ss0p95v25c
+  process_max                            0.99
+  temperature_max                        25
+  voltage_max                            0.95
+  tree_type_max                          worst_case
+
+Wire Load:                               (use report_wire_load for more information)
+  wire_load_mode                         enclosed
+  wire_load_model_max                    140000
+  wire_load_model_library_max            saed32rvt_ss0p95v25c
+  wire_load_selection_type_max           user-specified
+  wire_load_model_min                    140000
+  wire_load_model_library_min            saed32rvt_ss0p95v25c
+  wire_load_selection_type_min           user-specified
+  wire_load_selection_group_max          predcaps
+  wire_load_selection_group_min          predcaps
+  wire_load_min_block_size               0
+
+Design Rules:
+  max_capacitance                        --
+  min_capacitance                        --
+  max_fanout                             --
+  max_transition                         --
+  static_integrity                       --
+  dynamic_integrity                      --
+  delay_penalty_limit                    --
+  max_area                               --
+
+Timing Ranges:
+  early_factor                           --
+  late_factor                            --
+
+Licensing:
+  required_licenses                      DesignWare
+
+Pin Input Delays:
+None specified.
+
+Pin Output Delays:
+None specified.
+Fast Analysis:                           disabled
+
+1
+report_reference
+Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
+Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
+****************************************
+Report : reference
+Design : fpu
+Version: L-2016.06-SP3-1
+Date   : Thu Apr 25 19:25:09 2019
+****************************************
+
+
+Attributes:
+    b - black-box (unknown)
+    h - hierarchical
+    n - noncombinational
+    u - contains unmapped logic
+    A - abstracted timing model
+    E - extracted timing model
+    S - Stamp timing model
+    Q - Quick timing model (QTM)
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+--------------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_ss0p95v25c
+                                    2.03     371       754.30      
+AND2X2_RVT         saed32rvt_ss0p95v25c
+                                    2.29     1           2.29      
+AND3X1_RVT         saed32rvt_ss0p95v25c
+                                    2.29     23         52.61      
+AND4X1_RVT         saed32rvt_ss0p95v25c
+                                    2.54     3           7.62      
+AO21X1_RVT         saed32rvt_ss0p95v25c
+                                    2.54     39         99.12      
+AO221X1_RVT        saed32rvt_ss0p95v25c
+                                    3.05     7          21.35      
+AO222X1_RVT        saed32rvt_ss0p95v25c
+                                    3.30     170       561.66      
+AO22X1_RVT         saed32rvt_ss0p95v25c
+                                    2.54     356       904.75      
+AOI22X1_RVT        saed32rvt_ss0p95v25c
+                                    3.05     1           3.05      
+DFFARX1_RVT        saed32rvt_ss0p95v25c
+                                    7.12     3          21.35      n
+DFFX1_RVT          saed32rvt_ss0p95v25c
+                                    6.61     491      3244.40      n
+HADDX1_RVT         saed32rvt_ss0p95v25c
+                                    3.30     4          13.22      
+INVX0_RVT          saed32rvt_ss0p95v25c
+                                    1.27     30         38.12      
+INVX1_RVT          saed32rvt_ss0p95v25c
+                                    1.27     5           6.35      
+LATCHX1_RVT        saed32rvt_ss0p95v25c
+                                    5.08     3          15.25      n
+MUX21X1_RVT        saed32rvt_ss0p95v25c
+                                    3.30     4          13.22      
+NAND2X0_RVT        saed32rvt_ss0p95v25c
+                                    1.52     54         82.34      
+NAND3X0_RVT        saed32rvt_ss0p95v25c
+                                    1.78     10         17.79      
+NAND4X0_RVT        saed32rvt_ss0p95v25c
+                                    2.03     8          16.27      
+NOR2X0_RVT         saed32rvt_ss0p95v25c
+                                    2.54     5          12.71      
+NOR3X0_RVT         saed32rvt_ss0p95v25c
+                                    2.80     1           2.80      
+NOR4X1_RVT         saed32rvt_ss0p95v25c
+                                    3.05     19         57.94      
+OA21X1_RVT         saed32rvt_ss0p95v25c
+                                    2.54     7          17.79      
+OA221X1_RVT        saed32rvt_ss0p95v25c
+                                    3.05     10         30.50      
+OA221X2_RVT        saed32rvt_ss0p95v25c
+                                    3.30     1           3.30      
+OA222X1_RVT        saed32rvt_ss0p95v25c
+                                    3.30     4          13.22      
+OAI22X1_RVT        saed32rvt_ss0p95v25c
+                                    3.05     1           3.05      
+OR2X1_RVT          saed32rvt_ss0p95v25c
+                                    2.03     102       207.38      
+OR3X1_RVT          saed32rvt_ss0p95v25c
+                                    2.54     1           2.54      
+OR3X2_RVT          saed32rvt_ss0p95v25c
+                                    2.54     1           2.54      
+OR4X1_RVT          saed32rvt_ss0p95v25c
+                                    3.56     3          10.67      
+bw_r_rf16x160                    24694.21    1        24694.21     h
+fpu_add                          24268.68    1        24268.68     h
+fpu_div                          9709.53     1        9709.53      h
+fpu_mul                          31802.61    1        31802.61     h
+--------------------------------------------------------------------------------
+Total 35 references                                   96714.52
+1
+report_timing -from [all_inputs] -max_paths 100 -slack_lesser_than 100 -to [all_registers -data_pins] > reports/timing.rpt
+report_timing -from [all_register -clock_pins] -max_paths 100 -to [all_registers -data_pins]  >> reports/timing.rpt
+report_timing -from [all_registers -clock_pins] -max_paths 100 -to [all_outputs] >> reports/timing.rpt
+report_timing -from [all_inputs] -to [all_outputs] -max_paths 100 >> reports/timing.rpt
+report_timing -from [all_registers -clock_pins] -to [all_registers -data_pins] -delay_type max  >> reports/timing.rpt
+report_timing -from [all_registers -clock_pins] -to [all_registers -data_pins] -delay_type min  >> reports/timing.rpt
+report_timing -transition_time -capacitance -nets -input_pins -from [all_registers -clock_pins] -to [all_registers -data_pins]  > reports/timing.tran.cap.rpt
+## Save outputs
+save_session output/${design}.session
+Information: Cleaning and overwriting all data in the existing directory '/home/dm3233@drexel.edu/ecec574/ASICII/pt_pre/output/fpu.session'. (SR-002)
+Saving netlist information.....
+Saving miscellaneous application information.....
+Saving timing information.....
+Saving variable information.....
+1
+1
+Information: Defining new variable 'design'. (CMD-041)
+1
+pt_shell> 
+Received Signal 1 from: PID=11402 (UID=945019985)
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
