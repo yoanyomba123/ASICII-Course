@@ -1,0 +1,681 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 20
+Design : fpu
+Version: L-2016.03-SP5-1
+Date   : Fri Apr 26 00:15:17 2019
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 125/125/125
+
+Information: Percent of Arnoldi-based delays = 16.45%
+
+Information: Percent of CCS-based delays = 16.23%
+
+  Startpoint: cluster_header/I0/sync_cluster_master/q_r_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: cluster_header/I0/sync_cluster_slave/so_l_reg
+            (positive level-sensitive latch clocked by ideal_clock')
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.48       2.48
+  cluster_header/I0/sync_cluster_master/q_r_reg/CLK (DFFX1_RVT)
+                                                          0.00       2.48 r
+  cluster_header/I0/sync_cluster_master/q_r_reg/QN (DFFX1_RVT)
+                                                          0.15       2.63 r
+  cluster_header/I0/sync_cluster_slave/so_l_reg/D (LATCHX1_RVT)
+                                                          0.00 &     2.63 r
+  data arrival time                                                  2.63
+
+  clock ideal_clock' (fall edge)                          2.00       2.00
+  clock network delay (propagated)                        0.51       2.51
+  cluster_header/I0/sync_cluster_slave/so_l_reg/CLK (LATCHX1_RVT)
+                                                          0.00       2.51 f
+  library hold time                                      -0.02       2.49
+  data required time                                                 2.49
+  --------------------------------------------------------------------------
+  data required time                                                 2.49
+  data arrival time                                                 -2.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.14
+
+
+  Startpoint: cluster_header/I0/dbginit_repeater/repeater/i0/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: cluster_header/I0/dbginit_repeater/syncff/i0/q_reg
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.48       0.48
+  cluster_header/I0/dbginit_repeater/repeater/i0/q_reg/CLK (DFFSSRX1_RVT)
+                                                          0.00       0.48 r
+  cluster_header/I0/dbginit_repeater/repeater/i0/q_reg/QN (DFFSSRX1_RVT)
+                                                          0.15       0.64 r
+  cluster_header/I0/dbginit_repeater/syncff/i0/q_reg/SI (SDFFX1_RVT)
+                                                          0.00 &     0.64 r
+  data arrival time                                                  0.64
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
+  cluster_header/I0/dbginit_repeater/syncff/i0/q_reg/CLK (SDFFX1_RVT)
+                                                          0.00       0.52 r
+  library hold time                                      -0.07       0.45
+  data required time                                                 0.45
+  --------------------------------------------------------------------------
+  data required time                                                 0.45
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.19
+
+
+  Startpoint: fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[1]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[1]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[1]/QN (DFFX1_RVT)
+                                                          0.15       0.73 f
+  fpu_mul/U2267/Y (AO22X1_RVT)                            0.07 &     0.80 f
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[1]/D (DFFX1_RVT)
+                                                          0.00 &     0.80 f
+  data arrival time                                                  0.80
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.21
+
+
+  Startpoint: fpu_div/fpu_div_ctl/i_d1stg_rnd_mode/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_div/fpu_div_ctl/i_div_rnd_mode/q_reg[0]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_div/fpu_div_ctl/i_d1stg_rnd_mode/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_div/fpu_div_ctl/i_d1stg_rnd_mode/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.19       0.72 f
+  fpu_div/U285/Y (AO22X1_RVT)                             0.06 &     0.78 f
+  fpu_div/fpu_div_ctl/i_div_rnd_mode/q_reg[0]/D (DFFX1_RVT)
+                                                          0.00 &     0.78 f
+  data arrival time                                                  0.78
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_div/fpu_div_ctl/i_div_rnd_mode/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  library hold time                                       0.01       0.57
+  data required time                                                 0.57
+  --------------------------------------------------------------------------
+  data required time                                                 0.57
+  data arrival time                                                 -0.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.21
+
+
+  Startpoint: fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[6]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[6]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[6]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[6]/QN (DFFX1_RVT)
+                                                          0.15       0.73 f
+  fpu_mul/U2543/Y (AO22X1_RVT)                            0.07 &     0.80 f
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[6]/D (DFFX1_RVT)
+                                                          0.00 &     0.80 f
+  data arrival time                                                  0.80
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[6]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  library hold time                                       0.01       0.59
+  data required time                                                 0.59
+  --------------------------------------------------------------------------
+  data required time                                                 0.59
+  data arrival time                                                 -0.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.22
+
+
+  Startpoint: fpu_add/fpu_add_ctl/i_a1stg_op/q_reg[6]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_ctl/i_a2stg_opdec/q_reg[10]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_add/fpu_add_ctl/i_a1stg_op/q_reg[6]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_add/fpu_add_ctl/i_a1stg_op/q_reg[6]/QN (DFFX1_RVT)
+                                                          0.18       0.71 f
+  fpu_add/U1034/Y (AO22X1_RVT)                            0.08 &     0.79 f
+  fpu_add/fpu_add_ctl/i_a2stg_opdec/q_reg[10]/D (DFFX1_RVT)
+                                                          0.00 &     0.79 f
+  data arrival time                                                  0.79
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.56       0.56
+  fpu_add/fpu_add_ctl/i_a2stg_opdec/q_reg[10]/CLK (DFFX1_RVT)
+                                                          0.00       0.56 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.22
+
+
+  Startpoint: fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[8]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[8]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[8]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[8]/QN (DFFX1_RVT)
+                                                          0.15       0.73 f
+  fpu_mul/U2522/Y (AO22X1_RVT)                            0.07 &     0.80 f
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[8]/D (DFFX1_RVT)
+                                                          0.00 &     0.80 f
+  data arrival time                                                  0.80
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[8]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.22
+
+
+  Startpoint: fpu_add/fpu_add_ctl/i_a1stg_op/q_reg[6]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_ctl/i_a2stg_opdec/q_reg[0]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_add/fpu_add_ctl/i_a1stg_op/q_reg[6]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_add/fpu_add_ctl/i_a1stg_op/q_reg[6]/QN (DFFX1_RVT)
+                                                          0.18       0.71 f
+  fpu_add/U1033/Y (AO22X1_RVT)                            0.08 &     0.79 f
+  fpu_add/fpu_add_ctl/i_a2stg_opdec/q_reg[0]/D (DFFX1_RVT)
+                                                          0.00 &     0.79 f
+  data arrival time                                                  0.79
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.56       0.56
+  fpu_add/fpu_add_ctl/i_a2stg_opdec/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.56 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.22
+
+
+  Startpoint: fpu_div/fpu_div_frac_dp/i_div_norm_inv/q_reg[50]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_div/fpu_div_frac_dp/i_div_shl_data/q_reg[50]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.54       0.54
+  fpu_div/fpu_div_frac_dp/i_div_norm_inv/q_reg[50]/CLK (DFFX1_RVT)
+                                                          0.00       0.54 r
+  fpu_div/fpu_div_frac_dp/i_div_norm_inv/q_reg[50]/QN (DFFX1_RVT)
+                                                          0.18       0.71 f
+  fpu_div/fpu_div_frac_dp/i_div_shl_data/q_reg[50]/RSTB (DFFSSRX1_RVT)
+                                                          0.00 &     0.71 f
+  data arrival time                                                  0.71
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.54       0.54
+  fpu_div/fpu_div_frac_dp/i_div_shl_data/q_reg[50]/CLK (DFFSSRX1_RVT)
+                                                          0.00       0.54 r
+  library hold time                                      -0.04       0.50
+  data required time                                                 0.50
+  --------------------------------------------------------------------------
+  data required time                                                 0.50
+  data arrival time                                                 -0.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.22
+
+
+  Startpoint: fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[4]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[4]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[4]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[4]/QN (DFFX1_RVT)
+                                                          0.15       0.73 f
+  fpu_mul/U2515/Y (AO22X1_RVT)                            0.07 &     0.80 f
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[4]/D (DFFX1_RVT)
+                                                          0.00 &     0.80 f
+  data arrival time                                                  0.80
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[4]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.22
+
+
+  Startpoint: fpu_div/fpu_div_ctl/i_d6stg_opdec/q_reg[1]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_div/fpu_div_ctl/i_d7stg_opdec/q_reg[1]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_div/fpu_div_ctl/i_d6stg_opdec/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_div/fpu_div_ctl/i_d6stg_opdec/q_reg[1]/Q (DFFX1_RVT)
+                                                          0.20       0.73 f
+  fpu_div/U118/Y (AND2X1_RVT)                             0.07 &     0.79 f
+  fpu_div/fpu_div_ctl/i_d7stg_opdec/q_reg[1]/D (DFFX1_RVT)
+                                                          0.00 &     0.79 f
+  data arrival time                                                  0.79
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.56       0.56
+  fpu_div/fpu_div_ctl/i_d7stg_opdec/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.56 r
+  library hold time                                       0.01       0.57
+  data required time                                                 0.57
+  --------------------------------------------------------------------------
+  data required time                                                 0.57
+  data arrival time                                                 -0.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.22
+
+
+  Startpoint: fpu_add/fpu_add_ctl/i_a4stg_cc/q_reg[1]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_ctl/i_add_cc_out/q_reg[1]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_add/fpu_add_ctl/i_a4stg_cc/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_add/fpu_add_ctl/i_a4stg_cc/q_reg[1]/Q (DFFX1_RVT)
+                                                          0.20       0.73 f
+  fpu_add/U678/Y (AO22X1_RVT)                             0.07 &     0.80 f
+  fpu_add/fpu_add_ctl/i_add_cc_out/q_reg[1]/D (DFFX1_RVT)
+                                                          0.00 &     0.80 f
+  data arrival time                                                  0.80
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.56       0.56
+  fpu_add/fpu_add_ctl/i_add_cc_out/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.56 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.22
+
+
+  Startpoint: fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[10]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[10]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[10]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[10]/QN (DFFX1_RVT)
+                                                          0.16       0.74 f
+  fpu_mul/U2551/Y (AO22X1_RVT)                            0.07 &     0.81 f
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[10]/D (DFFX1_RVT)
+                                                          0.00 &     0.81 f
+  data arrival time                                                  0.81
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[10]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[0]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  fpu_mul/fpu_mul_exp_dp/i_m4stg_exp/q_reg[0]/QN (DFFX1_RVT)
+                                                          0.16       0.74 f
+  fpu_mul/U2450/Y (AND2X1_RVT)                            0.08 &     0.81 f
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[0]/D (DFFX1_RVT)
+                                                          0.00 &     0.81 f
+  data arrival time                                                  0.81
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_exp_pre1/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: fpu_add/fpu_add_ctl/i_a4stg_cc/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_ctl/i_add_cc_out/q_reg[0]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_add/fpu_add_ctl/i_a4stg_cc/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_add/fpu_add_ctl/i_a4stg_cc/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.20       0.74 f
+  fpu_add/U737/Y (AO22X1_RVT)                             0.07 &     0.81 f
+  fpu_add/fpu_add_ctl/i_add_cc_out/q_reg[0]/D (DFFX1_RVT)
+                                                          0.00 &     0.81 f
+  data arrival time                                                  0.81
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.56       0.56
+  fpu_add/fpu_add_ctl/i_add_cc_out/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.56 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: fpu_mul/fpu_mul_ctl/i_m4stg_right_shift/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_exp_dp/i_m5stg_inc_exp/q_reg[1]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_mul/fpu_mul_ctl/i_m4stg_right_shift/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_mul/fpu_mul_ctl/i_m4stg_right_shift/q_reg[0]/QN (DFFX1_RVT)
+                                                          0.18       0.73 f
+  fpu_mul/U1117/Y (AND2X1_RVT)                            0.08 &     0.81 f
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_inc_exp/q_reg[1]/D (DFFX1_RVT)
+                                                          0.00 &     0.81 f
+  data arrival time                                                  0.81
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.58       0.58
+  fpu_mul/fpu_mul_exp_dp/i_m5stg_inc_exp/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.58 r
+  library hold time                                       0.00       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: fpu_mul/fpu_mul_ctl/i_m3astg_id/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_ctl/i_m3bstg_id/q_reg[3]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_mul/fpu_mul_ctl/i_m3astg_id/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_mul/fpu_mul_ctl/i_m3astg_id/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.19       0.72 f
+  fpu_mul/U2390/Y (AO22X1_RVT)                            0.08 &     0.80 f
+  fpu_mul/fpu_mul_ctl/i_m3bstg_id/q_reg[3]/D (DFFX1_RVT)
+                                                          0.00 &     0.80 f
+  data arrival time                                                  0.80
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_mul/fpu_mul_ctl/i_m3bstg_id/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  library hold time                                       0.01       0.57
+  data required time                                                 0.57
+  --------------------------------------------------------------------------
+  data required time                                                 0.57
+  data arrival time                                                 -0.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: fpu_add/fpu_add_ctl/i_a2stg_opdec/q_reg[27]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_ctl/i_a3stg_opdec/q_reg[15]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_add/fpu_add_ctl/i_a2stg_opdec/q_reg[27]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_add/fpu_add_ctl/i_a2stg_opdec/q_reg[27]/Q (DFFX1_RVT)
+                                                          0.20       0.73 f
+  fpu_add/U1042/Y (AO22X1_RVT)                            0.08 &     0.81 f
+  fpu_add/fpu_add_ctl/i_a3stg_opdec/q_reg[15]/D (DFFX1_RVT)
+                                                          0.00 &     0.81 f
+  data arrival time                                                  0.81
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.56       0.56
+  fpu_add/fpu_add_ctl/i_a3stg_opdec/q_reg[15]/CLK (DFFX1_RVT)
+                                                          0.00       0.56 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: fpu_add/fpu_add_ctl/i_a3stg_fcc/q_reg[1]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_ctl/i_a4stg_fcc/q_reg[1]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_add/fpu_add_ctl/i_a3stg_fcc/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_add/fpu_add_ctl/i_a3stg_fcc/q_reg[1]/Q (DFFX1_RVT)
+                                                          0.20       0.73 f
+  fpu_add/U554/Y (AO22X1_RVT)                             0.08 &     0.81 f
+  fpu_add/fpu_add_ctl/i_a4stg_fcc/q_reg[1]/D (DFFX1_RVT)
+                                                          0.00 &     0.81 f
+  data arrival time                                                  0.81
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.56       0.56
+  fpu_add/fpu_add_ctl/i_a4stg_fcc/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.56 r
+  library hold time                                       0.01       0.58
+  data required time                                                 0.58
+  --------------------------------------------------------------------------
+  data required time                                                 0.58
+  data arrival time                                                 -0.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: fpu_mul/fpu_mul_ctl/i_m2stg_id/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_ctl/i_m3astg_id/q_reg[0]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.53       0.53
+  fpu_mul/fpu_mul_ctl/i_m2stg_id/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.53 r
+  fpu_mul/fpu_mul_ctl/i_m2stg_id/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.19       0.72 f
+  fpu_mul/U2401/Y (AO22X1_RVT)                            0.08 &     0.80 f
+  fpu_mul/fpu_mul_ctl/i_m3astg_id/q_reg[0]/D (DFFX1_RVT)
+                                                          0.00 &     0.80 f
+  data arrival time                                                  0.80
+
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_mul/fpu_mul_ctl/i_m3astg_id/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  library hold time                                       0.01       0.57
+  data required time                                                 0.57
+  --------------------------------------------------------------------------
+  data required time                                                 0.57
+  data arrival time                                                 -0.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.24
+
+
+1

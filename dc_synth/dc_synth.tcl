@@ -27,21 +27,24 @@ check_design  > reports/synth_check_design.rpt
 
 set clk_list {{gclk 1204.82 0.086 0.086 0.04}}
 
-### Create Constraints
 set default_clk gclk
-set default_clk_freq 1204.82
-set default_setup_skew 0.086
-set default_hold_skew 0.086
-set default_clk_transition 0.04
+reset_design
+#create clocK
+create_clock -name ideal_clock -period 2 [get_ports gclk]
+### Create Constraints
+#set default_clk_freq 1204.82
+#set default_setup_skew 0.086
+#set default_hold_skew 0.086
+#set default_clk_transition 0.04
 
-set max_transition 0.110
-set max_fanout 6
+#set max_transition 0.110
+#set max_fanout 6
 
-set default_input_delay 0.15
-set default_output_delay 0.2
-set critical_range 0.30
+#set default_input_delay 0.15
+#set default_output_delay 0.2
+#set critical_range 0.30
 
-set num_of_path 50
+#set num_of_path 50
 
 #
 ### Compilation

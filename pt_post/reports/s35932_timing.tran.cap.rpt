@@ -10,7 +10,7 @@ Report : timing
 	-sort_by slack
 Design : s35932
 Version: L-2016.06-SP3-1
-Date   : Wed Mar  6 02:38:50 2019
+Date   : Fri Apr 26 00:16:13 2019
 ****************************************
 
 Warning: There are 3 invalid end points for constrained paths. (UITE-416)

@@ -1,12 +1,12 @@
-Information: Changed wire load model for 'fpu_mul_frac_dp' from '16000' to '8000'. (OPT-170)
 Information: Updating design information... (UID-85)
+Warning: Design 'fpu' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Thu Apr 25 19:50:42 2019
+Date   : Thu Apr 25 23:52:21 2019
 ****************************************
 
 
@@ -26,9 +26,8 @@ fpu_add                35000             saed32rvt_ss0p95v25c
 fpu_mul                35000             saed32rvt_ss0p95v25c
 fpu_div                16000             saed32rvt_ss0p95v25c
 fpu_add_frac_dp        35000             saed32rvt_ss0p95v25c
-fpu_mul_frac_dp        8000              saed32rvt_ss0p95v25c
-mul64                  35000             saed32rvt_ss0p95v25c
-fpu_div_frac_dp        8000              saed32rvt_ss0p95v25c
+fpu_mul_frac_dp        16000             saed32rvt_ss0p95v25c
+fpu_div_frac_dp        16000             saed32rvt_ss0p95v25c
 mul_array1_1           8000              saed32rvt_ss0p95v25c
 mul_array1_0           8000              saed32rvt_ss0p95v25c
 
@@ -42,14 +41,13 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =   1.1991 mW   (85%)
-  Net Switching Power  = 205.3578 uW   (15%)
+  Cell Internal Power  =   6.7876 mW   (89%)
+  Net Switching Power  = 876.3710 uW   (11%)
                          ---------
-Total Dynamic Power    =   1.4044 mW  (100%)
+Total Dynamic Power    =   7.6639 mW  (100%)
 
-Cell Leakage Power     =   2.6092 mW
+Cell Leakage Power     =   2.8293 mW
 
-Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
                  Internal         Switching           Leakage            Total
 Power Group      Power            Power               Power              Power   (   %    )  Attrs
@@ -57,10 +55,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential     1.0163e+03            7.3542        1.0216e+09        2.0452e+03  (  50.96%)
-combinational    182.7991          198.0038        1.5876e+09        1.9684e+03  (  49.04%)
+clock_network      4.6832          770.4525        8.7122e+05          776.0070  (   7.40%)
+register       6.6513e+03           18.2080        6.4545e+08        7.3149e+03  (  69.71%)
+sequential     1.9669e-03        2.9023e-04        3.8036e+08          380.3582  (   3.62%)
+combinational    131.4768           87.7115        1.8026e+09        2.0218e+03  (  19.27%)
 --------------------------------------------------------------------------------------------------
-Total          1.1991e+03 uW       205.3580 uW     2.6092e+09 pW     4.0136e+03 uW
+Total          6.7874e+03 uW       876.3724 uW     2.8293e+09 pW     1.0493e+04 uW
 1

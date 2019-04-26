@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running pt_shell Version L-2016.06-SP3-1 for linux64 -- Jan 12, 2017
-#@ # Date:   Thu Apr 25 19:51:21 2019
+#@ # Date:   Thu Apr 25 23:52:38 2019
 #@ # Run by: dm3233@xunil-03.coe.drexel.edu
 #@ 
 
@@ -872,7 +872,6 @@ source /opt/synopsys/2016/primetime/admin/setup/.synopsys_pt.setup
 #@ }
 #@ # -- End source /opt/synopsys/2016/primetime/auxx/tcllib/lib/itcl4.0.2/itcl.tcl
 
-source pt_pre.
 source pt_pre.tcl
 #@ # -- Starting source pt_pre.tcl
 

@@ -17,6 +17,6 @@ read_parasitics -format SPEF ../icc_pnr/output/${design}_extract.spef.max
 source ../icc_pnr/output/${design}_extract.sdc
 ## Analysis reports
 ##report_timing -from [all_registers -clock_pins] -to [all_registers -data_pins] -delay_type min  >> reports/timing.rpt
-#report_area > reports/${design}_area.rpt
 #report_resources > reports/${design}_resources.rpt
+#report_clock_tree
 ## Save outputs

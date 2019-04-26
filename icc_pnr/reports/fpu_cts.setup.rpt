@@ -1,0 +1,1100 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : fpu
+Version: L-2016.03-SP5-1
+Date   : Fri Apr 26 00:05:30 2019
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRVirtualC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 125/125/125
+
+Information: Percent of Arnoldi-based delays =  3.89%
+
+Information: Percent of CCS-based delays =  3.89%
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[52]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U14/Y (OA22X1_RVT)                              0.12 *     2.27 f
+  fpu_add/U34/Y (NAND3X2_RVT)                             0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[4] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U88/Y (AND2X4_RVT)              0.12 *     2.50 r
+  fpu_add/fpu_add_frac_dp/U3658/Y (AO21X1_RVT)            0.08 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[52]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[52]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[39]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U954/Y (OA22X1_RVT)                             0.12 *     2.27 f
+  fpu_add/U78/Y (NAND3X2_RVT)                             0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[2] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U3563/Y (NAND2X4_RVT)           0.09 *     2.48 f
+  fpu_add/fpu_add_frac_dp/U3574/Y (INVX8_RVT)             0.04 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U3624/Y (AO21X1_RVT)            0.06 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[39]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[39]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[41]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U14/Y (OA22X1_RVT)                              0.12 *     2.27 f
+  fpu_add/U34/Y (NAND3X2_RVT)                             0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[4] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U88/Y (AND2X4_RVT)              0.12 *     2.50 r
+  fpu_add/fpu_add_frac_dp/U384/Y (OR2X1_RVT)              0.08 *     2.58 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[41]/D (DFFX1_RVT)
+                                                          0.00 *     2.58 r
+  data arrival time                                                  2.58
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[41]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.58
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a2stg_expadd2_in2/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[16]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a2stg_expadd2_in2/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a2stg_expadd2_in2/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.22       0.77 r
+  fpu_add/U136/Y (NOR2X0_RVT)                             0.08 *     0.85 f
+  fpu_add/U138/Y (OAI21X2_RVT)                            0.11 *     0.96 r
+  fpu_add/U145/Y (AOI21X1_RVT)                            0.10 *     1.06 f
+  fpu_add/U66/Y (OAI21X2_RVT)                             0.12 *     1.18 r
+  fpu_add/U112/Y (NAND2X0_RVT)                            0.04 *     1.22 f
+  fpu_add/U120/Y (NAND3X0_RVT)                            0.06 *     1.28 r
+  fpu_add/U417/CO (FADDX1_RVT)                            0.11 *     1.39 r
+  fpu_add/U451/CO (FADDX1_RVT)                            0.10 *     1.49 r
+  fpu_add/U449/CO (FADDX1_RVT)                            0.10 *     1.59 r
+  fpu_add/U415/CO (FADDX1_RVT)                            0.10 *     1.70 r
+  fpu_add/U412/CO (FADDX1_RVT)                            0.11 *     1.81 r
+  fpu_add/U985/Y (INVX1_RVT)                              0.02 *     1.83 f
+  fpu_add/U983/Y (NAND2X0_RVT)                            0.04 *     1.87 r
+  fpu_add/U515/Y (AND2X2_RVT)                             0.10 *     1.97 r
+  fpu_add/U516/Y (INVX8_RVT)                              0.04 *     2.01 f
+  fpu_add/fpu_add_frac_dp/a2stg_expadd_11 (fpu_add_frac_dp)
+                                                          0.00       2.01 f
+  fpu_add/fpu_add_frac_dp/U477/Y (AND3X1_RVT)             0.13 *     2.14 f
+  fpu_add/fpu_add_frac_dp/U1973/Y (OR2X1_RVT)             0.13 *     2.26 f
+  fpu_add/fpu_add_frac_dp/U1024/Y (NAND2X0_RVT)           0.07 *     2.34 r
+  fpu_add/fpu_add_frac_dp/U1027/Y (NAND4X0_RVT)           0.08 *     2.42 f
+  fpu_add/fpu_add_frac_dp/U1028/Y (MUX21X1_RVT)           0.18 *     2.60 f
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[16]/D (DFFX1_RVT)
+                                                          0.00 *     2.60 f
+  data arrival time                                                  2.60
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[16]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.03       2.58
+  data required time                                                 2.58
+  --------------------------------------------------------------------------
+  data required time                                                 2.58
+  data arrival time                                                 -2.60
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[51]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U14/Y (OA22X1_RVT)                              0.12 *     2.27 f
+  fpu_add/U34/Y (NAND3X2_RVT)                             0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[4] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U88/Y (AND2X4_RVT)              0.12 *     2.50 r
+  fpu_add/fpu_add_frac_dp/U3655/Y (AO21X1_RVT)            0.08 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[51]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[51]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[62]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 r
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.90 f
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.10 *     1.00 r
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.03 *     1.03 f
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.06 *     1.09 r
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.20 r
+  fpu_add/U974/CO (FADDX1_RVT)                            0.11 *     1.31 r
+  fpu_add/U980/CO (FADDX1_RVT)                            0.11 *     1.42 r
+  fpu_add/U969/CO (FADDX2_RVT)                            0.12 *     1.53 r
+  fpu_add/U922/CO (FADDX1_RVT)                            0.11 *     1.65 r
+  fpu_add/U84/Y (NAND2X0_RVT)                             0.05 *     1.70 f
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.06 *     1.76 r
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 r
+  fpu_add/U925/CO (FADDX1_RVT)                            0.10 *     1.97 r
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.09 *     2.05 f
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.13 *     2.19 r
+  fpu_add/U14/Y (OA22X1_RVT)                              0.11 *     2.29 r
+  fpu_add/U74/Y (NAND2X4_RVT)                             0.10 *     2.39 f
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[5] (fpu_add_frac_dp)
+                                                          0.00       2.39 f
+  fpu_add/fpu_add_frac_dp/U362/Y (OR2X1_RVT)              0.07 *     2.46 f
+  fpu_add/fpu_add_frac_dp/U363/Y (INVX4_RVT)              0.05 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U1747/Y (AO21X1_RVT)            0.06 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[62]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[62]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[48]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U14/Y (OA22X1_RVT)                              0.12 *     2.27 f
+  fpu_add/U34/Y (NAND3X2_RVT)                             0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[4] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U88/Y (AND2X4_RVT)              0.12 *     2.50 r
+  fpu_add/fpu_add_frac_dp/U3656/Y (AO21X1_RVT)            0.08 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[48]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[48]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[50]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U14/Y (OA22X1_RVT)                              0.12 *     2.27 f
+  fpu_add/U34/Y (NAND3X2_RVT)                             0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[4] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U88/Y (AND2X4_RVT)              0.12 *     2.50 r
+  fpu_add/fpu_add_frac_dp/U3659/Y (AO21X1_RVT)            0.08 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[50]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[50]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[61]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 r
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.90 f
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.10 *     1.00 r
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.03 *     1.03 f
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.06 *     1.09 r
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.20 r
+  fpu_add/U974/CO (FADDX1_RVT)                            0.11 *     1.31 r
+  fpu_add/U980/CO (FADDX1_RVT)                            0.11 *     1.42 r
+  fpu_add/U969/CO (FADDX2_RVT)                            0.12 *     1.53 r
+  fpu_add/U922/CO (FADDX1_RVT)                            0.11 *     1.65 r
+  fpu_add/U84/Y (NAND2X0_RVT)                             0.05 *     1.70 f
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.06 *     1.76 r
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 r
+  fpu_add/U925/CO (FADDX1_RVT)                            0.10 *     1.97 r
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.09 *     2.05 f
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.13 *     2.19 r
+  fpu_add/U14/Y (OA22X1_RVT)                              0.11 *     2.29 r
+  fpu_add/U74/Y (NAND2X4_RVT)                             0.10 *     2.39 f
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[5] (fpu_add_frac_dp)
+                                                          0.00       2.39 f
+  fpu_add/fpu_add_frac_dp/U362/Y (OR2X1_RVT)              0.07 *     2.46 f
+  fpu_add/fpu_add_frac_dp/U363/Y (INVX4_RVT)              0.05 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U1748/Y (AO21X1_RVT)            0.06 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[61]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[61]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[35]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U954/Y (OA22X1_RVT)                             0.12 *     2.27 f
+  fpu_add/U78/Y (NAND3X2_RVT)                             0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[2] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U3563/Y (NAND2X4_RVT)           0.09 *     2.48 f
+  fpu_add/fpu_add_frac_dp/U3574/Y (INVX8_RVT)             0.04 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U3623/Y (AO21X1_RVT)            0.05 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[35]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[35]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.55
+  data required time                                                 2.55
+  --------------------------------------------------------------------------
+  data required time                                                 2.55
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[38]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U954/Y (OA22X1_RVT)                             0.12 *     2.27 f
+  fpu_add/U58/Y (NAND3X2_RVT)                             0.12 *     2.39 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[1] (fpu_add_frac_dp)
+                                                          0.00       2.39 r
+  fpu_add/fpu_add_frac_dp/U1335/Y (NAND2X4_RVT)           0.09 *     2.47 f
+  fpu_add/fpu_add_frac_dp/U1072/Y (INVX8_RVT)             0.04 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U3619/Y (AO21X1_RVT)            0.06 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[38]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[38]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[40]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U954/Y (OA22X1_RVT)                             0.12 *     2.27 f
+  fpu_add/U979/Y (NAND3X2_RVT)                            0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[3] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U407/Y (NAND2X4_RVT)            0.09 *     2.47 f
+  fpu_add/fpu_add_frac_dp/U415/Y (INVX8_RVT)              0.04 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U3652/Y (AO21X1_RVT)            0.06 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[40]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[40]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[63]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 r
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.90 f
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.10 *     1.00 r
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.03 *     1.03 f
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.06 *     1.09 r
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.20 r
+  fpu_add/U974/CO (FADDX1_RVT)                            0.11 *     1.31 r
+  fpu_add/U980/CO (FADDX1_RVT)                            0.11 *     1.42 r
+  fpu_add/U969/CO (FADDX2_RVT)                            0.12 *     1.53 r
+  fpu_add/U922/CO (FADDX1_RVT)                            0.11 *     1.65 r
+  fpu_add/U84/Y (NAND2X0_RVT)                             0.05 *     1.70 f
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.06 *     1.76 r
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 r
+  fpu_add/U925/CO (FADDX1_RVT)                            0.10 *     1.97 r
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.09 *     2.05 f
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.13 *     2.19 r
+  fpu_add/U14/Y (OA22X1_RVT)                              0.11 *     2.29 r
+  fpu_add/U74/Y (NAND2X4_RVT)                             0.10 *     2.39 f
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[5] (fpu_add_frac_dp)
+                                                          0.00       2.39 f
+  fpu_add/fpu_add_frac_dp/U362/Y (OR2X1_RVT)              0.07 *     2.46 f
+  fpu_add/fpu_add_frac_dp/U363/Y (INVX4_RVT)              0.05 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U1750/Y (AO21X1_RVT)            0.06 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[63]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[63]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[49]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U14/Y (OA22X1_RVT)                              0.12 *     2.27 f
+  fpu_add/U34/Y (NAND3X2_RVT)                             0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[4] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U88/Y (AND2X4_RVT)              0.12 *     2.50 r
+  fpu_add/fpu_add_frac_dp/U3654/Y (AO21X1_RVT)            0.07 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[49]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[49]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[34]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U954/Y (OA22X1_RVT)                             0.12 *     2.27 f
+  fpu_add/U78/Y (NAND3X2_RVT)                             0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[2] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U3563/Y (NAND2X4_RVT)           0.09 *     2.48 f
+  fpu_add/fpu_add_frac_dp/U3574/Y (INVX8_RVT)             0.04 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U3625/Y (AO21X1_RVT)            0.05 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[34]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[34]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.55
+  data required time                                                 2.55
+  --------------------------------------------------------------------------
+  data required time                                                 2.55
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[47]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U954/Y (OA22X1_RVT)                             0.12 *     2.27 f
+  fpu_add/U979/Y (NAND3X2_RVT)                            0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[3] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U407/Y (NAND2X4_RVT)            0.09 *     2.47 f
+  fpu_add/fpu_add_frac_dp/U415/Y (INVX8_RVT)              0.04 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U3651/Y (AO21X1_RVT)            0.06 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[47]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[47]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.06       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_dp_sngopa/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[37]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_dp_sngopa/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_dp_sngopa/q_reg[0]/QN (DFFX1_RVT)
+                                                          0.17       0.72 f
+  fpu_add/U102/Y (OR2X1_RVT)                              0.08 *     0.79 f
+  fpu_add/U103/Y (AND3X1_RVT)                             0.07 *     0.86 f
+  fpu_add/U518/Y (NAND2X0_RVT)                            0.07 *     0.93 r
+  fpu_add/U960/CO (FADDX1_RVT)                            0.11 *     1.04 r
+  fpu_add/U966/CO (FADDX1_RVT)                            0.11 *     1.15 r
+  fpu_add/U977/CO (FADDX2_RVT)                            0.12 *     1.27 r
+  fpu_add/U537/Y (NAND2X0_RVT)                            0.05 *     1.31 f
+  fpu_add/U587/Y (NAND3X0_RVT)                            0.06 *     1.37 r
+  fpu_add/U972/CO (FADDX2_RVT)                            0.12 *     1.49 r
+  fpu_add/U130/CO (FADDX2_RVT)                            0.12 *     1.61 r
+  fpu_add/U270/CO (FADDX1_RVT)                            0.10 *     1.71 r
+  fpu_add/U907/Y (NAND2X0_RVT)                            0.04 *     1.75 f
+  fpu_add/U919/Y (NAND3X0_RVT)                            0.05 *     1.81 r
+  fpu_add/U901/CO (FADDX1_RVT)                            0.10 *     1.91 r
+  fpu_add/U906/CO (FADDX2_RVT)                            0.14 *     2.05 r
+  fpu_add/U519/Y (INVX4_RVT)                              0.05 *     2.09 f
+  fpu_add/U953/Y (OR2X2_RVT)                              0.08 *     2.17 f
+  fpu_add/U1318/Y (OA22X1_RVT)                            0.07 *     2.24 f
+  fpu_add/U1319/Y (OA21X1_RVT)                            0.07 *     2.30 f
+  fpu_add/U1320/Y (NAND2X4_RVT)                           0.09 *     2.39 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[0] (fpu_add_frac_dp)
+                                                          0.00       2.39 r
+  fpu_add/fpu_add_frac_dp/U416/Y (NAND2X4_RVT)            0.09 *     2.48 f
+  fpu_add/fpu_add_frac_dp/U441/Y (INVX8_RVT)              0.03 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U3200/Y (AO21X1_RVT)            0.05 *     2.56 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[37]/D (DFFX1_RVT)
+                                                          0.00 *     2.56 r
+  data arrival time                                                  2.56
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[37]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.06       2.55
+  data required time                                                 2.55
+  --------------------------------------------------------------------------
+  data required time                                                 2.55
+  data arrival time                                                 -2.56
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[60]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 r
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.90 f
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.10 *     1.00 r
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.03 *     1.03 f
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.06 *     1.09 r
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.20 r
+  fpu_add/U974/CO (FADDX1_RVT)                            0.11 *     1.31 r
+  fpu_add/U980/CO (FADDX1_RVT)                            0.11 *     1.42 r
+  fpu_add/U969/CO (FADDX2_RVT)                            0.12 *     1.53 r
+  fpu_add/U922/CO (FADDX1_RVT)                            0.11 *     1.65 r
+  fpu_add/U84/Y (NAND2X0_RVT)                             0.05 *     1.70 f
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.06 *     1.76 r
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 r
+  fpu_add/U925/CO (FADDX1_RVT)                            0.10 *     1.97 r
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.09 *     2.05 f
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.13 *     2.19 r
+  fpu_add/U14/Y (OA22X1_RVT)                              0.11 *     2.29 r
+  fpu_add/U74/Y (NAND2X4_RVT)                             0.10 *     2.39 f
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[5] (fpu_add_frac_dp)
+                                                          0.00       2.39 f
+  fpu_add/fpu_add_frac_dp/U362/Y (OR2X1_RVT)              0.07 *     2.46 f
+  fpu_add/fpu_add_frac_dp/U363/Y (INVX4_RVT)              0.05 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U1749/Y (AO21X1_RVT)            0.06 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[60]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[60]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[8]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 r
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.90 f
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.10 *     1.00 r
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.03 *     1.03 f
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.06 *     1.09 r
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.20 r
+  fpu_add/U974/CO (FADDX1_RVT)                            0.11 *     1.31 r
+  fpu_add/U980/CO (FADDX1_RVT)                            0.11 *     1.42 r
+  fpu_add/U969/CO (FADDX2_RVT)                            0.12 *     1.53 r
+  fpu_add/U922/CO (FADDX1_RVT)                            0.11 *     1.65 r
+  fpu_add/U84/Y (NAND2X0_RVT)                             0.05 *     1.70 f
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.06 *     1.76 r
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 r
+  fpu_add/U925/CO (FADDX1_RVT)                            0.10 *     1.97 r
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.09 *     2.05 f
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.13 *     2.19 r
+  fpu_add/U929/Y (NAND2X0_RVT)                            0.04 *     2.23 f
+  fpu_add/U930/Y (MUX21X1_RVT)                            0.10 *     2.33 f
+  fpu_add/U931/Y (OAI22X1_RVT)                            0.13 *     2.47 r
+  fpu_add/fpu_add_frac_dp/a2stg_fracadd_frac2_inv_in (fpu_add_frac_dp)
+                                                          0.00       2.47 r
+  fpu_add/fpu_add_frac_dp/U2902/Y (AO22X1_RVT)            0.09 *     2.56 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[8]/D (DFFX1_RVT)
+                                                          0.00 *     2.56 r
+  data arrival time                                                  2.56
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.62       2.62
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[8]/CLK (DFFX1_RVT)
+                                                          0.00       2.62 r
+  library setup time                                     -0.06       2.55
+  data required time                                                 2.55
+  --------------------------------------------------------------------------
+  data required time                                                 2.55
+  data arrival time                                                 -2.56
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+  Startpoint: fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[45]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.55       0.55
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/CLK (DFFX1_RVT)
+                                                          0.00       0.55 r
+  fpu_add/fpu_add_exp_dp/i_a1stg_in2a/q_reg[3]/Q (DFFX1_RVT)
+                                                          0.22       0.77 f
+  fpu_add/U956/Y (AOI22X2_RVT)                            0.14 *     0.91 r
+  fpu_add/U920/Y (NAND2X2_RVT)                            0.09 *     1.00 f
+  fpu_add/U90/Y (NAND2X0_RVT)                             0.04 *     1.03 r
+  fpu_add/U93/Y (NAND3X0_RVT)                             0.08 *     1.11 f
+  fpu_add/U963/CO (FADDX1_RVT)                            0.11 *     1.22 f
+  fpu_add/U974/CO (FADDX1_RVT)                            0.10 *     1.32 f
+  fpu_add/U980/CO (FADDX1_RVT)                            0.10 *     1.41 f
+  fpu_add/U969/CO (FADDX2_RVT)                            0.10 *     1.52 f
+  fpu_add/U922/CO (FADDX1_RVT)                            0.10 *     1.62 f
+  fpu_add/U85/Y (NAND2X0_RVT)                             0.05 *     1.67 r
+  fpu_add/U87/Y (NAND3X0_RVT)                             0.08 *     1.75 f
+  fpu_add/U921/CO (FADDX1_RVT)                            0.11 *     1.86 f
+  fpu_add/U925/CO (FADDX1_RVT)                            0.09 *     1.95 f
+  fpu_add/U927/Y (XOR3X2_RVT)                             0.08 *     2.03 r
+  fpu_add/U928/Y (NOR4X1_RVT)                             0.12 *     2.15 f
+  fpu_add/U954/Y (OA22X1_RVT)                             0.12 *     2.27 f
+  fpu_add/U979/Y (NAND3X2_RVT)                            0.11 *     2.38 r
+  fpu_add/fpu_add_frac_dp/a2stg_shr_cnt_in[3] (fpu_add_frac_dp)
+                                                          0.00       2.38 r
+  fpu_add/fpu_add_frac_dp/U407/Y (NAND2X4_RVT)            0.09 *     2.47 f
+  fpu_add/fpu_add_frac_dp/U415/Y (INVX8_RVT)              0.04 *     2.51 r
+  fpu_add/fpu_add_frac_dp/U3650/Y (AO21X1_RVT)            0.06 *     2.57 r
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[45]/D (DFFX1_RVT)
+                                                          0.00 *     2.57 r
+  data arrival time                                                  2.57
+
+  clock ideal_clock (rise edge)                           2.00       2.00
+  clock network delay (propagated)                        0.61       2.61
+  fpu_add/fpu_add_frac_dp/i_astg_xtra_regs/q_reg[45]/CLK (DFFX1_RVT)
+                                                          0.00       2.61 r
+  library setup time                                     -0.05       2.56
+  data required time                                                 2.56
+  --------------------------------------------------------------------------
+  data required time                                                 2.56
+  data arrival time                                                 -2.57
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+1

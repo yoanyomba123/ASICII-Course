@@ -1,10 +1,10 @@
 Information: Derived library resistance unit is 999.999939 Kohm (Time unit is 1 ns, and Capacitance unit is 0.001000 pF). (DES-028)
 
 ****************************************
-Report : read_parasitics /home/dm3233@drexel.edu/ecec574/HMW1/icc_pnr/output/s35932_extract.spef.max
+Report : read_parasitics /home/dm3233@drexel.edu/ecec574/ASICII/icc_pnr/output/s35932_extract.spef.max
 Design : s35932
 Version: L-2016.06-SP3-1
-Date   : Wed Mar  6 02:38:48 2019
+Date   : Fri Apr 26 00:16:11 2019
 ****************************************
 
         0 error(s)

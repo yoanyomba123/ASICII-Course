@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running pt_shell Version L-2016.06-SP3-1 for linux64 -- Jan 12, 2017
-#@ # Date:   Wed Mar  6 02:38:41 2019
+#@ # Date:   Fri Apr 26 00:16:05 2019
 #@ # Run by: dm3233@xunil-03.coe.drexel.edu
 #@ 
 
@@ -872,7 +872,6 @@ source /opt/synopsys/2016/primetime/admin/setup/.synopsys_pt.setup
 #@ }
 #@ # -- End source /opt/synopsys/2016/primetime/auxx/tcllib/lib/itcl4.0.2/itcl.tcl
 
-source pt_post.t
 source pt_post.tcl
 #@ # -- Starting source pt_post.tcl
 
@@ -12884,7 +12883,13 @@ source pt_post.tcl
 #@ 
 #@ report_timing -transition_time -capacitance -nets -input_pins -from [all_registers -clock_pins] -to [all_registers -data_pins]  > reports/${design}_timing.tran.cap.rpt
 #@ 
-#@ report_area > reports/${design}_area.rpt
+#@ report_power > reports/${design}_power.rpt
+#@ #report_resources > reports/${design}_resources.rpt
+#@ #report_clock_tree
+#@ ## Save outputs
+#@ save_session output/${design}.session
+#@ 
+#@ 
 #@ # -- End source pt_post.tcl
 
 exit
