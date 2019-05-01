@@ -27,4 +27,4 @@ report_timing -max_paths 20 -delay max > reports/${design_extract}.setup.rpt
 report_timing -max_paths 20 -delay min > reports/${design_extract}.hold.rpt
 
 save_mw_cel -as ${design_extract}
-
+exit

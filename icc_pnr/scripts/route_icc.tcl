@@ -26,4 +26,4 @@ report_timing -max_paths 20 -delay min > reports/${route_name}.hold.rpt
 
 ##Goto Layout Window, Route -> Verify Route
 
-
+exit

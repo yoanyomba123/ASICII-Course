@@ -43,5 +43,4 @@ report_timing -transition_time -capacitance -nets -input_pins -from [all_registe
 
 ## Save outputs
 save_session output/${design}.session
-
-
+exit

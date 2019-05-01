@@ -10,10 +10,10 @@ Report : timing
 	-sort_by slack
 Design : fpu
 Version: L-2016.06-SP3-1
-Date   : Thu Apr 25 23:52:52 2019
+Date   : Wed May  1 15:39:02 2019
 ****************************************
 
-Warning: There are 125 invalid end points for constrained paths. (UITE-416)
+Warning: There are 12 invalid end points for constrained paths. (UITE-416)
 
   Startpoint: fpu_mul/fpu_mul_ctl/i_m1stg_dblop/q_reg[0]
                (rising edge-triggered flip-flop clocked by ideal_clock)
@@ -31,101 +31,107 @@ Warning: There are 125 invalid end points for constrained paths. (UITE-416)
   fpu_mul/fpu_mul_ctl/i_m1stg_dblop/q_reg[0]/Q (DFFX1_RVT)
                                                   0.03       0.16       0.16 f
   fpu_mul/m1stg_dblop (net)      3     1.52 
-  fpu_mul/U48/A (NBUFFX2_RVT)                     0.03       0.13       0.28 f
-  fpu_mul/U48/Y (NBUFFX2_RVT)                     0.10       0.10       0.39 f
-  fpu_mul/n20 (net)             44    20.92 
-  fpu_mul/fpu_mul_frac_dp/U18/A (IBUFFX2_RVT)     0.10     128.91     129.30 f
-  fpu_mul/fpu_mul_frac_dp/U18/Y (IBUFFX2_RVT)     0.03       0.10     129.40 r
-  fpu_mul/fpu_mul_frac_dp/n190 (net)
+  fpu_mul/U85/A (NBUFFX2_RVT)                     0.03       0.13       0.28 f
+  fpu_mul/U85/Y (NBUFFX2_RVT)                     0.10       0.10       0.39 f
+  fpu_mul/n9 (net)              44    20.92 
+  fpu_mul/fpu_mul_frac_dp/U27/A (IBUFFX2_RVT)     0.10     128.91     129.30 f
+  fpu_mul/fpu_mul_frac_dp/U27/Y (IBUFFX2_RVT)     0.03       0.10     129.40 r
+  fpu_mul/fpu_mul_frac_dp/n601 (net)
                                  3     1.59 
-  fpu_mul/fpu_mul_frac_dp/U38/A (NBUFFX2_RVT)     0.03       0.13     129.53 r
-  fpu_mul/fpu_mul_frac_dp/U38/Y (NBUFFX2_RVT)     0.04       0.06     129.59 r
-  fpu_mul/fpu_mul_frac_dp/n15 (net)
+  fpu_mul/fpu_mul_frac_dp/U34/A (NBUFFX2_RVT)     0.03       0.13     129.53 r
+  fpu_mul/fpu_mul_frac_dp/U34/Y (NBUFFX2_RVT)     0.04       0.06     129.59 r
+  fpu_mul/fpu_mul_frac_dp/n4 (net)
                                 13     6.14 
-  fpu_mul/fpu_mul_frac_dp/U6/A1 (OA22X2_RVT)      0.04       4.07     133.66 r
-  fpu_mul/fpu_mul_frac_dp/U6/Y (OA22X2_RVT)       0.04       0.10     133.76 r
-  fpu_mul/fpu_mul_frac_dp/n1898 (net)
+  fpu_mul/fpu_mul_frac_dp/U15/A1 (OA22X2_RVT)     0.04       4.07     133.66 r
+  fpu_mul/fpu_mul_frac_dp/U15/Y (OA22X2_RVT)      0.04       0.10     133.76 r
+  fpu_mul/fpu_mul_frac_dp/n1843 (net)
                                  2     1.00 
-  fpu_mul/fpu_mul_frac_dp/U582/A2 (AND2X1_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1136/A2 (AND2X1_RVT)
                                                   0.04       0.05     133.81 r
-  fpu_mul/fpu_mul_frac_dp/U582/Y (AND2X1_RVT)     0.02       0.06     133.87 r
-  fpu_mul/fpu_mul_frac_dp/n198 (net)
+  fpu_mul/fpu_mul_frac_dp/U1136/Y (AND2X1_RVT)
+                                                  0.02       0.06     133.87 r
+  fpu_mul/fpu_mul_frac_dp/n633 (net)
                                  1     0.41 
-  fpu_mul/fpu_mul_frac_dp/U583/A3 (OA21X1_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1137/A3 (OA21X1_RVT)
                                                   0.02       0.01     133.88 r
-  fpu_mul/fpu_mul_frac_dp/U583/Y (OA21X1_RVT)     0.03       0.06     133.94 r
-  fpu_mul/fpu_mul_frac_dp/n276 (net)
+  fpu_mul/fpu_mul_frac_dp/U1137/Y (OA21X1_RVT)
+                                                  0.03       0.06     133.94 r
+  fpu_mul/fpu_mul_frac_dp/n719 (net)
                                  2     1.03 
-  fpu_mul/fpu_mul_frac_dp/U589/A1 (AND2X1_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1143/A1 (AND2X1_RVT)
                                                   0.03       0.05     133.99 r
-  fpu_mul/fpu_mul_frac_dp/U589/Y (AND2X1_RVT)     0.02       0.05     134.04 r
-  fpu_mul/fpu_mul_frac_dp/n239 (net)
+  fpu_mul/fpu_mul_frac_dp/U1143/Y (AND2X1_RVT)
+                                                  0.02       0.05     134.04 r
+  fpu_mul/fpu_mul_frac_dp/n652 (net)
                                  2     0.90 
-  fpu_mul/fpu_mul_frac_dp/U601/A1 (NAND2X0_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1155/A1 (NAND2X0_RVT)
                                                   0.02       0.04     134.09 r
-  fpu_mul/fpu_mul_frac_dp/U601/Y (NAND2X0_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1155/Y (NAND2X0_RVT)
                                                   0.06       0.05     134.14 f
-  fpu_mul/fpu_mul_frac_dp/n1900 (net)
+  fpu_mul/fpu_mul_frac_dp/n1845 (net)
                                  3     1.65 
-  fpu_mul/fpu_mul_frac_dp/U602/A2 (NOR2X0_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1156/A2 (NOR2X0_RVT)
                                                   0.06       0.13     134.27 f
-  fpu_mul/fpu_mul_frac_dp/U602/Y (NOR2X0_RVT)     0.02       0.09     134.36 r
-  fpu_mul/fpu_mul_frac_dp/n1912 (net)
+  fpu_mul/fpu_mul_frac_dp/U1156/Y (NOR2X0_RVT)
+                                                  0.02       0.09     134.36 r
+  fpu_mul/fpu_mul_frac_dp/n1857 (net)
                                  2     0.89 
-  fpu_mul/fpu_mul_frac_dp/U603/A2 (NAND2X0_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1157/A2 (NAND2X0_RVT)
                                                   0.02       0.04     134.40 r
-  fpu_mul/fpu_mul_frac_dp/U603/Y (NAND2X0_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1157/Y (NAND2X0_RVT)
                                                   0.06       0.05     134.45 f
-  fpu_mul/fpu_mul_frac_dp/n271 (net)
+  fpu_mul/fpu_mul_frac_dp/n714 (net)
                                  3     1.66 
-  fpu_mul/fpu_mul_frac_dp/U604/A (INVX1_RVT)      0.06       0.13     134.58 f
-  fpu_mul/fpu_mul_frac_dp/U604/Y (INVX1_RVT)      0.04       0.05     134.63 r
-  fpu_mul/fpu_mul_frac_dp/n1891 (net)
+  fpu_mul/fpu_mul_frac_dp/U1158/A (INVX1_RVT)     0.06       0.13     134.58 f
+  fpu_mul/fpu_mul_frac_dp/U1158/Y (INVX1_RVT)     0.04       0.05     134.63 r
+  fpu_mul/fpu_mul_frac_dp/n1836 (net)
                                  4     1.95 
-  fpu_mul/fpu_mul_frac_dp/U614/A1 (AND2X1_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1168/A1 (AND2X1_RVT)
                                                   0.04       0.22     134.85 r
-  fpu_mul/fpu_mul_frac_dp/U614/Y (AND2X1_RVT)     0.03       0.06     134.91 r
-  fpu_mul/fpu_mul_frac_dp/n245 (net)
+  fpu_mul/fpu_mul_frac_dp/U1168/Y (AND2X1_RVT)
+                                                  0.03       0.06     134.91 r
+  fpu_mul/fpu_mul_frac_dp/n658 (net)
                                  2     1.03 
-  fpu_mul/fpu_mul_frac_dp/U622/A1 (AND2X1_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1176/A1 (AND2X1_RVT)
                                                   0.03       0.05     134.96 r
-  fpu_mul/fpu_mul_frac_dp/U622/Y (AND2X1_RVT)     0.03       0.06     135.02 r
-  fpu_mul/fpu_mul_frac_dp/n1880 (net)
+  fpu_mul/fpu_mul_frac_dp/U1176/Y (AND2X1_RVT)
+                                                  0.03       0.06     135.02 r
+  fpu_mul/fpu_mul_frac_dp/n1825 (net)
                                  4     1.91 
-  fpu_mul/fpu_mul_frac_dp/U623/A2 (NAND2X0_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1177/A2 (NAND2X0_RVT)
                                                   0.03       0.22     135.24 r
-  fpu_mul/fpu_mul_frac_dp/U623/Y (NAND2X0_RVT)
+  fpu_mul/fpu_mul_frac_dp/U1177/Y (NAND2X0_RVT)
                                                   0.08       0.07     135.30 f
-  fpu_mul/fpu_mul_frac_dp/n1917 (net)
+  fpu_mul/fpu_mul_frac_dp/n1862 (net)
                                  5     2.61 
-  fpu_mul/fpu_mul_frac_dp/U712/A (INVX1_RVT)      0.08       0.40     135.70 f
-  fpu_mul/fpu_mul_frac_dp/U712/Y (INVX1_RVT)      0.05       0.05     135.76 r
+  fpu_mul/fpu_mul_frac_dp/U1220/A (INVX1_RVT)     0.08       0.40     135.70 f
+  fpu_mul/fpu_mul_frac_dp/U1220/Y (INVX1_RVT)     0.05       0.05     135.76 r
   fpu_mul/fpu_mul_frac_dp/m1stg_ld0_2[5] (net)
                                  4     1.86 
-  fpu_mul/fpu_mul_frac_dp/U2537/A1 (AO222X1_RVT)
+  fpu_mul/fpu_mul_frac_dp/U2464/A1 (AO222X1_RVT)
                                                   0.05       0.22     135.98 r
-  fpu_mul/fpu_mul_frac_dp/U2537/Y (AO222X1_RVT)
+  fpu_mul/fpu_mul_frac_dp/U2464/Y (AO222X1_RVT)
                                                   0.04       0.13     136.11 r
   fpu_mul/fpu_mul_frac_dp/m1stg_ld0_2[0] (net)
                                  1     0.52 
-  fpu_mul/U2040/A4 (AO22X1_RVT)                   0.04       0.01     136.12 r
-  fpu_mul/U2040/Y (AO22X1_RVT)                    0.03       0.07     136.19 r
+  fpu_mul/U2428/A4 (AO22X1_RVT)                   0.04       0.01     136.12 r
+  fpu_mul/U2428/Y (AO22X1_RVT)                    0.03       0.07     136.19 r
   fpu_mul/n320 (net)             1     0.50 
   fpu_mul/fpu_mul_ctl/i_m2stg_ld0_2/q_reg[0]/D (DFFX1_RVT)
                                                   0.03       0.01     136.20 r
   data arrival time                                                   136.20
 
-  clock ideal_clock (rise edge)                   0.00       2.00       2.00
-  clock network delay (ideal)                                0.00       2.00
-  clock reconvergence pessimism                              0.00       2.00
-  fpu_mul/fpu_mul_ctl/i_m2stg_ld0_2/q_reg[0]/CLK (DFFX1_RVT)            2.00 r
-  library setup time                                        -0.06       1.94
-  data required time                                                    1.94
+  clock ideal_clock (rise edge)                   0.00       4.00       4.00
+  clock network delay (ideal)                                0.00       4.00
+  clock reconvergence pessimism                              0.00       4.00
+  fpu_mul/fpu_mul_ctl/i_m2stg_ld0_2/q_reg[0]/CLK (DFFX1_RVT)            4.00 r
+  library setup time                                        -0.06       3.94
+  data required time                                                    3.94
   -----------------------------------------------------------------------------
-  data required time                                                    1.94
+  data required time                                                    3.94
   data arrival time                                                  -136.20
   -----------------------------------------------------------------------------
-  slack (VIOLATED)                                                   -134.27
+  slack (VIOLATED)                                                   -132.27
 
 
 1

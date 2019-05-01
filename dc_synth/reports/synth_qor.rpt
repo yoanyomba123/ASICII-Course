@@ -3,7 +3,7 @@
 Report : qor
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Thu Apr 25 23:52:21 2019
+Date   : Wed May  1 15:38:52 2019
 ****************************************
 
 
@@ -11,10 +11,10 @@ Date   : Thu Apr 25 23:52:21 2019
   -----------------------------------
   Levels of Logic:              17.00
   Critical Path Length:        136.20
-  Critical Path Slack:        -134.27
-  Critical Path Clk Period:      2.00
-  Total Negative Slack:    -224701.41
-  No. of Violating Paths:     4163.00
+  Critical Path Slack:        -132.27
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:    -254992.22
+  No. of Violating Paths:     4095.00
   Worst Hold Violation:          0.00
   Total Hold Violation:          0.00
   No. of Hold Violations:        0.00
@@ -25,12 +25,12 @@ Date   : Thu Apr 25 23:52:21 2019
   -----------------------------------
   Hierarchical Cell Count:          9
   Hierarchical Port Count:       2636
-  Leaf Cell Count:              31359
-  Buf/Inv Cell Count:            2648
-  Buf Cell Count:                 582
-  Inv Cell Count:                2066
+  Leaf Cell Count:              30589
+  Buf/Inv Cell Count:            2436
+  Buf Cell Count:                 545
+  Inv Cell Count:                1891
   CT Buf/Inv Cell Count:            7
-  Combinational Cell Count:     24172
+  Combinational Cell Count:     23402
   Sequential Cell Count:         7187
   Macro Count:                      0
   -----------------------------------
@@ -38,21 +38,21 @@ Date   : Thu Apr 25 23:52:21 2019
 
   Area
   -----------------------------------
-  Combinational Area:    58989.363916
-  Noncombinational Area: 43534.614080
-  Buf/Inv Area:           3821.817542
-  Total Buffer Area:          1188.63
-  Total Inverter Area:        2633.19
+  Combinational Area:    57439.847937
+  Noncombinational Area: 43474.127819
+  Buf/Inv Area:           3525.231490
+  Total Buffer Area:          1111.63
+  Total Inverter Area:        2413.61
   Macro/Black Box Area:      0.000000
-  Net Area:              41672.042720
+  Net Area:              41387.957700
   -----------------------------------
-  Cell Area:            102523.977996
-  Design Area:          144196.020716
+  Cell Area:            100913.975756
+  Design Area:          142301.933455
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:         33244
+  Total Number of Nets:         32472
   Nets With Violations:             0
   Max Trans Violations:             0
   Max Cap Violations:               0
@@ -63,16 +63,16 @@ Date   : Thu Apr 25 23:52:21 2019
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                   11.48
-  Logic Optimization:                 47.04
-  Mapping Optimization:               96.17
+  Resource Sharing:                   11.50
+  Logic Optimization:                 37.98
+  Mapping Optimization:              102.46
   -----------------------------------------
-  Overall Compile Time:              339.30
-  Overall Compile Wall Clock Time:   355.14
+  Overall Compile Time:              338.76
+  Overall Compile Wall Clock Time:   352.26
 
   --------------------------------------------------------------------
 
-  Design  WNS: 134.27  TNS: 224701.41  Number of Violating Paths: 4163
+  Design  WNS: 132.27  TNS: 254992.22  Number of Violating Paths: 4095
 
 
   Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0

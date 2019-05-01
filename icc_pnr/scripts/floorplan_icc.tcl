@@ -23,4 +23,4 @@ create_power_strap -nets { VSS } -layer M6 -direction vertical  -width 3
 ## Save the design
 
 save_mw_cel -as ${floorplan_design}
-
+exit

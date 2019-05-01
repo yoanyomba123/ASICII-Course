@@ -291,6 +291,3 @@
 /opt/synopsys/2016/icc/auxx/gui/icc/hb_setup.tcl
 /opt/synopsys/2016/icc/auxx/gui/icc/nb_setup.tcl
 /opt/synopsys/2016/icc/auxx/gui/common/acg/base.tcl
-/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_nominal.tluplus
-/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/tech/star_rcxt/saed32nm_tf_itf_tluplus.map
-/opt/synopsys/2016/icc/auxx/syn/all_command_option_def.tcl

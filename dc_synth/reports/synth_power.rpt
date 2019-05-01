@@ -6,7 +6,7 @@ Report : power
         -analysis_effort low
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Thu Apr 25 23:52:21 2019
+Date   : Wed May  1 15:38:52 2019
 ****************************************
 
 
@@ -27,7 +27,7 @@ fpu_mul                35000             saed32rvt_ss0p95v25c
 fpu_div                16000             saed32rvt_ss0p95v25c
 fpu_add_frac_dp        35000             saed32rvt_ss0p95v25c
 fpu_mul_frac_dp        16000             saed32rvt_ss0p95v25c
-fpu_div_frac_dp        16000             saed32rvt_ss0p95v25c
+fpu_div_frac_dp        8000              saed32rvt_ss0p95v25c
 mul_array1_1           8000              saed32rvt_ss0p95v25c
 mul_array1_0           8000              saed32rvt_ss0p95v25c
 
@@ -41,12 +41,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =   6.7876 mW   (89%)
-  Net Switching Power  = 876.3710 uW   (11%)
+  Cell Internal Power  =   3.4196 mW   (89%)
+  Net Switching Power  = 439.3870 uW   (11%)
                          ---------
-Total Dynamic Power    =   7.6639 mW  (100%)
+Total Dynamic Power    =   3.8590 mW  (100%)
 
-Cell Leakage Power     =   2.8293 mW
+Cell Leakage Power     =   2.7676 mW
 
 
                  Internal         Switching           Leakage            Total
@@ -55,10 +55,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      4.6832          770.4525        8.7122e+05          776.0070  (   7.40%)
-register       6.6513e+03           18.2080        6.4545e+08        7.3149e+03  (  69.71%)
-sequential     1.9669e-03        2.9023e-04        3.8036e+08          380.3582  (   3.62%)
-combinational    131.4768           87.7115        1.8026e+09        2.0218e+03  (  19.27%)
+clock_network      2.7186          386.0220        8.7122e+05          389.6118  (   5.88%)
+register       3.3531e+03            9.0323        6.4146e+08        4.0036e+03  (  60.42%)
+sequential     8.9517e-04        1.3212e-04        3.8036e+08          380.3569  (   5.74%)
+combinational     63.7305           44.3329        1.7449e+09        1.8530e+03  (  27.96%)
 --------------------------------------------------------------------------------------------------
-Total          6.7874e+03 uW       876.3724 uW     2.8293e+09 pW     1.0493e+04 uW
+Total          3.4196e+03 uW       439.3874 uW     2.7676e+09 pW     6.6266e+03 uW
 1

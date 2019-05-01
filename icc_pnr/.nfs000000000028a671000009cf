@@ -1,0 +1,7 @@
+icc_shell
+sh source scripts/init_design.tcl
+sh source scripts/place.tcl
+sh source scripts/cts_icc.tcl
+sh source scripts/route.tcl
+sh source scripts/extract.tcl
+exit
