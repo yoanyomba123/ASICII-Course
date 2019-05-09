@@ -28,6 +28,5 @@ report_timing -delay max -max_paths 20 > output/${design}.setup.rpt
 report_timing -delay min -max_paths 20 > output/${design}.hold.rpt
 
 clock_opt -only_cts -concurrent_clock_and_data
-clock_opt -only_psyn -concurrent_clock_and_data
 clock_opt -clock_tree ideal_clock -fix_hold_all_clocks -inter_clock_balance -update_clock_latency -area_recovery -power
 
