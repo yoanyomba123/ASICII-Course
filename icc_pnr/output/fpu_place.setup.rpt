@@ -6,16 +6,22 @@ Report : timing
         -max_paths 20
 Design : fpu
 Version: L-2016.03-SP5-1
-Date   : Wed May  8 21:34:41 2019
+Date   : Wed May  8 22:12:17 2019
 ****************************************
 
  * Some/all delay information is back-annotated.
 
- # A fanout number of 1000 was used for high fanout net computations.
-
 Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRVirtualC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 25/25/25
 
-  Startpoint: fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]
+Information: Percent of Arnoldi-based delays =  4.11%
+
+Information: Percent of CCS-based delays =  4.11%
+
+  Startpoint: fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]
               (rising edge-triggered flip-flop clocked by ideal_clock)
   Endpoint: fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/clken_reg
             (positive level-sensitive latch clocked by ideal_clock')
@@ -25,49 +31,48 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/Q (DFFX1_RVT)
-                                                          0.15       0.15 r
-  U1657/Y (NAND4X0_RVT)                                   0.19 *     0.33 f
-  U1443/Y (NOR3X0_RVT)                                    0.22 *     0.55 r
-  U1442/Y (AND3X1_RVT)                                    0.30 *     0.85 r
-  U1441/Y (AND3X1_RVT)                                    0.11 *     0.96 r
-  U1461/Y (NAND3X0_RVT)                                   0.09 *     1.05 f
-  U1638/Y (OAI21X1_RVT)                                   0.30 *     1.35 r
-  U1513/Y (INVX0_RVT)                                     0.09 *     1.43 f
-  U1433/Y (AO22X1_RVT)                                    0.31 *     1.74 f
-  U2651/Y (NOR4X1_RVT)                                    0.25 *     1.99 r
-  fpu_add/fadd_clken_l (fpu_add)                          0.00       1.99 r
-  fpu_add/U845/Y (NAND2X0_RVT)                            0.06 *     2.05 f
+  clock network delay (propagated)                        0.52       0.52
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/QN (DFFX1_RVT)     0.38       0.90 f
+  U38/Y (NBUFFX2_RVT)                                     0.27 *     1.17 f
+  U1442/Y (AND3X1_RVT)                                    0.35 *     1.52 f
+  U1441/Y (AND3X1_RVT)                                    0.19 *     1.71 f
+  U1461/Y (NAND3X0_RVT)                                   0.07 *     1.79 r
+  U1638/Y (OAI21X1_RVT)                                   0.25 *     2.04 f
+  U1513/Y (INVX0_RVT)                                     0.11 *     2.15 r
+  U1433/Y (AO22X1_RVT)                                    0.30 *     2.45 r
+  U2651/Y (NOR4X1_RVT)                                    0.23 *     2.69 f
+  fpu_add/fadd_clken_l (fpu_add)                          0.00       2.69 f
+  fpu_add/U845/Y (NAND2X0_RVT)                            0.09 *     2.78 r
   fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/clken_reg/D (LATCHX1_RVT)
-                                                          0.00 *     2.05 f
-  data arrival time                                                  2.05
+                                                          0.00 *     2.78 r
+  data arrival time                                                  2.78
 
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.52      62.02
   fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/clken_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
+                                                          0.00      62.02 r
+  time borrowed from endpoint                             0.00      62.02
+  data required time                                                62.02
   --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -2.05
+  data required time                                                62.02
+  data arrival time                                                 -2.78
   --------------------------------------------------------------------------
-  slack (MET)                                                       59.45
+  slack (MET)                                                       59.25
 
   Time Borrowing Information
   --------------------------------------------------------------
   ideal_clock' nominal pulse width                       61.50   
-  library setup time                                     -0.09   
+  clock latency difference                                0.01   
+  library setup time                                     -0.07   
   --------------------------------------------------------------
-  max time borrow                                        61.41   
+  max time borrow                                        61.44   
   actual time borrow                                      0.00   
   --------------------------------------------------------------
 
 
-  Startpoint: fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]
+  Startpoint: fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]
               (rising edge-triggered flip-flop clocked by ideal_clock)
   Endpoint: fpu_add/fpu_add_frac_dp/ckbuf_add_frac_dp/clken_reg
             (positive level-sensitive latch clocked by ideal_clock')
@@ -77,157 +82,50 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/Q (DFFX1_RVT)
-                                                          0.15       0.15 r
-  U1657/Y (NAND4X0_RVT)                                   0.19 *     0.33 f
-  U1443/Y (NOR3X0_RVT)                                    0.22 *     0.55 r
-  U1442/Y (AND3X1_RVT)                                    0.30 *     0.85 r
-  U1441/Y (AND3X1_RVT)                                    0.11 *     0.96 r
-  U1461/Y (NAND3X0_RVT)                                   0.09 *     1.05 f
-  U1638/Y (OAI21X1_RVT)                                   0.30 *     1.35 r
-  U1513/Y (INVX0_RVT)                                     0.09 *     1.43 f
-  U1433/Y (AO22X1_RVT)                                    0.31 *     1.74 f
-  U2651/Y (NOR4X1_RVT)                                    0.25 *     1.99 r
-  fpu_add/fadd_clken_l (fpu_add)                          0.00       1.99 r
+  clock network delay (propagated)                        0.52       0.52
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/QN (DFFX1_RVT)     0.38       0.90 f
+  U38/Y (NBUFFX2_RVT)                                     0.27 *     1.17 f
+  U1442/Y (AND3X1_RVT)                                    0.35 *     1.52 f
+  U1441/Y (AND3X1_RVT)                                    0.19 *     1.71 f
+  U1461/Y (NAND3X0_RVT)                                   0.07 *     1.79 r
+  U1638/Y (OAI21X1_RVT)                                   0.25 *     2.04 f
+  U1513/Y (INVX0_RVT)                                     0.11 *     2.15 r
+  U1433/Y (AO22X1_RVT)                                    0.30 *     2.45 r
+  U2651/Y (NOR4X1_RVT)                                    0.23 *     2.69 f
+  fpu_add/fadd_clken_l (fpu_add)                          0.00       2.69 f
   fpu_add/fpu_add_frac_dp/fadd_clken_l (fpu_add_frac_dp)
-                                                          0.00       1.99 r
-  fpu_add/fpu_add_frac_dp/U2419/Y (NAND2X0_RVT)           0.04 *     2.03 f
+                                                          0.00       2.69 f
+  fpu_add/fpu_add_frac_dp/U2419/Y (NAND2X0_RVT)           0.06 *     2.74 r
   fpu_add/fpu_add_frac_dp/ckbuf_add_frac_dp/clken_reg/D (LATCHX1_RVT)
-                                                          0.00 *     2.03 f
-  data arrival time                                                  2.03
+                                                          0.00 *     2.74 r
+  data arrival time                                                  2.74
 
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.50      62.00
   fpu_add/fpu_add_frac_dp/ckbuf_add_frac_dp/clken_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
+                                                          0.00      62.00 r
+  time borrowed from endpoint                             0.00      62.00
+  data required time                                                62.00
   --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -2.03
+  data required time                                                62.00
+  data arrival time                                                 -2.74
   --------------------------------------------------------------------------
-  slack (MET)                                                       59.47
+  slack (MET)                                                       59.26
 
   Time Borrowing Information
   --------------------------------------------------------------
   ideal_clock' nominal pulse width                       61.50   
-  library setup time                                     -0.08   
+  clock latency difference                                0.01   
+  library setup time                                     -0.07   
   --------------------------------------------------------------
-  max time borrow                                        61.42   
+  max time borrow                                        61.44   
   actual time borrow                                      0.00   
   --------------------------------------------------------------
 
 
-  Startpoint: fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]
-              (rising edge-triggered flip-flop clocked by ideal_clock)
-  Endpoint: fpu_mul/fpu_mul_exp_dp/ckbuf_mul_exp_dp/clken_reg
-            (positive level-sensitive latch clocked by ideal_clock')
-  Path Group: ideal_clock
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/Q (DFFX1_RVT)
-                                                          0.15       0.15 r
-  U1657/Y (NAND4X0_RVT)                                   0.19 *     0.33 f
-  U1443/Y (NOR3X0_RVT)                                    0.22 *     0.55 r
-  U1442/Y (AND3X1_RVT)                                    0.30 *     0.85 r
-  U1441/Y (AND3X1_RVT)                                    0.11 *     0.96 r
-  U1461/Y (NAND3X0_RVT)                                   0.09 *     1.05 f
-  U1638/Y (OAI21X1_RVT)                                   0.30 *     1.35 r
-  U1513/Y (INVX0_RVT)                                     0.09 *     1.43 f
-  U1432/Y (OA222X1_RVT)                                   0.20 *     1.63 f
-  U2650/Y (NOR4X1_RVT)                                    0.19 *     1.83 r
-  fpu_mul/fmul_clken_l_buf1 (fpu_mul)                     0.00       1.83 r
-  fpu_mul/U472/Y (NAND2X0_RVT)                            0.05 *     1.88 f
-  fpu_mul/fpu_mul_exp_dp/ckbuf_mul_exp_dp/clken_reg/D (LATCHX1_RVT)
-                                                          0.00 *     1.88 f
-  data arrival time                                                  1.88
-
-  clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
-  fpu_mul/fpu_mul_exp_dp/ckbuf_mul_exp_dp/clken_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
-  --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -1.88
-  --------------------------------------------------------------------------
-  slack (MET)                                                       59.62
-
-  Time Borrowing Information
-  --------------------------------------------------------------
-  ideal_clock' nominal pulse width                       61.50   
-  library setup time                                     -0.08   
-  --------------------------------------------------------------
-  max time borrow                                        61.42   
-  actual time borrow                                      0.00   
-  --------------------------------------------------------------
-
-
-  Startpoint: fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]
-              (rising edge-triggered flip-flop clocked by ideal_clock)
-  Endpoint: fpu_mul/fpu_mul_frac_dp/ckbuf_mul_frac_dp/clken_reg
-            (positive level-sensitive latch clocked by ideal_clock')
-  Path Group: ideal_clock
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/Q (DFFX1_RVT)
-                                                          0.15       0.15 r
-  U1657/Y (NAND4X0_RVT)                                   0.19 *     0.33 f
-  U1443/Y (NOR3X0_RVT)                                    0.22 *     0.55 r
-  U1442/Y (AND3X1_RVT)                                    0.30 *     0.85 r
-  U1441/Y (AND3X1_RVT)                                    0.11 *     0.96 r
-  U1461/Y (NAND3X0_RVT)                                   0.09 *     1.05 f
-  U1638/Y (OAI21X1_RVT)                                   0.30 *     1.35 r
-  U1513/Y (INVX0_RVT)                                     0.09 *     1.43 f
-  U1432/Y (OA222X1_RVT)                                   0.20 *     1.63 f
-  U2650/Y (NOR4X1_RVT)                                    0.19 *     1.83 r
-  fpu_mul/fmul_clken_l (fpu_mul)                          0.00       1.83 r
-  fpu_mul/fpu_mul_frac_dp/fmul_clken_l (fpu_mul_frac_dp)
-                                                          0.00       1.83 r
-  fpu_mul/fpu_mul_frac_dp/U1774/Y (NAND2X0_RVT)           0.05 *     1.88 f
-  fpu_mul/fpu_mul_frac_dp/ckbuf_mul_frac_dp/clken_reg/D (LATCHX1_RVT)
-                                                          0.00 *     1.88 f
-  data arrival time                                                  1.88
-
-  clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
-  fpu_mul/fpu_mul_frac_dp/ckbuf_mul_frac_dp/clken_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
-  --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -1.88
-  --------------------------------------------------------------------------
-  slack (MET)                                                       59.62
-
-  Time Borrowing Information
-  --------------------------------------------------------------
-  ideal_clock' nominal pulse width                       61.50   
-  library setup time                                     -0.08   
-  --------------------------------------------------------------
-  max time borrow                                        61.42   
-  actual time borrow                                      0.00   
-  --------------------------------------------------------------
-
-
-  Startpoint: fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]
+  Startpoint: fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]
               (rising edge-triggered flip-flop clocked by ideal_clock)
   Endpoint: fpu_div/fpu_div_frac_dp/ckbuf_div_frac_dp/clken_reg
             (positive level-sensitive latch clocked by ideal_clock')
@@ -237,51 +135,50 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/Q (DFFX1_RVT)
-                                                          0.15       0.15 f
-  U1657/Y (NAND4X0_RVT)                                   0.11 *     0.26 r
-  U1443/Y (NOR3X0_RVT)                                    0.20 *     0.45 f
-  U1442/Y (AND3X1_RVT)                                    0.31 *     0.77 f
-  U1441/Y (AND3X1_RVT)                                    0.19 *     0.95 f
-  U1461/Y (NAND3X0_RVT)                                   0.07 *     1.02 r
-  U1638/Y (OAI21X1_RVT)                                   0.27 *     1.30 f
-  U1513/Y (INVX0_RVT)                                     0.13 *     1.42 r
-  U1891/Y (AO22X1_RVT)                                    0.18 *     1.60 r
-  U2649/Y (NOR4X1_RVT)                                    0.15 *     1.75 f
-  fpu_div/fdiv_clken_l (fpu_div)                          0.00       1.75 f
+  clock network delay (propagated)                        0.52       0.52
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/QN (DFFX1_RVT)     0.38       0.90 f
+  U38/Y (NBUFFX2_RVT)                                     0.27 *     1.17 f
+  U1442/Y (AND3X1_RVT)                                    0.35 *     1.52 f
+  U1441/Y (AND3X1_RVT)                                    0.19 *     1.71 f
+  U1461/Y (NAND3X0_RVT)                                   0.07 *     1.79 r
+  U1638/Y (OAI21X1_RVT)                                   0.25 *     2.04 f
+  U1513/Y (INVX0_RVT)                                     0.11 *     2.15 r
+  U1891/Y (AO22X1_RVT)                                    0.17 *     2.32 r
+  U2649/Y (NOR4X1_RVT)                                    0.15 *     2.47 f
+  fpu_div/fdiv_clken_l (fpu_div)                          0.00       2.47 f
   fpu_div/fpu_div_frac_dp/fdiv_clken_l (fpu_div_frac_dp)
-                                                          0.00       1.75 f
-  fpu_div/fpu_div_frac_dp/U375/Y (NAND2X0_RVT)            0.05 *     1.80 r
+                                                          0.00       2.47 f
+  fpu_div/fpu_div_frac_dp/U375/Y (NAND2X0_RVT)            0.05 *     2.52 r
   fpu_div/fpu_div_frac_dp/ckbuf_div_frac_dp/clken_reg/D (LATCHX1_RVT)
-                                                          0.00 *     1.80 r
-  data arrival time                                                  1.80
+                                                          0.00 *     2.52 r
+  data arrival time                                                  2.52
 
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.49      61.99
   fpu_div/fpu_div_frac_dp/ckbuf_div_frac_dp/clken_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
+                                                          0.00      61.99 r
+  time borrowed from endpoint                             0.00      61.99
+  data required time                                                61.99
   --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -1.80
+  data required time                                                61.99
+  data arrival time                                                 -2.52
   --------------------------------------------------------------------------
-  slack (MET)                                                       59.70
+  slack (MET)                                                       59.47
 
   Time Borrowing Information
   --------------------------------------------------------------
   ideal_clock' nominal pulse width                       61.50   
-  library setup time                                     -0.07   
+  clock latency difference                                0.01   
+  library setup time                                     -0.06   
   --------------------------------------------------------------
-  max time borrow                                        61.43   
+  max time borrow                                        61.45   
   actual time borrow                                      0.00   
   --------------------------------------------------------------
 
 
-  Startpoint: fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]
+  Startpoint: fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]
               (rising edge-triggered flip-flop clocked by ideal_clock)
   Endpoint: fpu_div/fpu_div_exp_dp/ckbuf_div_exp_dp/clken_reg
             (positive level-sensitive latch clocked by ideal_clock')
@@ -291,49 +188,152 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
-  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/Q (DFFX1_RVT)
-                                                          0.15       0.15 f
-  U1657/Y (NAND4X0_RVT)                                   0.11 *     0.26 r
-  U1443/Y (NOR3X0_RVT)                                    0.20 *     0.45 f
-  U1442/Y (AND3X1_RVT)                                    0.31 *     0.77 f
-  U1441/Y (AND3X1_RVT)                                    0.19 *     0.95 f
-  U1461/Y (NAND3X0_RVT)                                   0.07 *     1.02 r
-  U1638/Y (OAI21X1_RVT)                                   0.27 *     1.30 f
-  U1513/Y (INVX0_RVT)                                     0.13 *     1.42 r
-  U1891/Y (AO22X1_RVT)                                    0.18 *     1.60 r
-  U2649/Y (NOR4X1_RVT)                                    0.15 *     1.75 f
-  fpu_div/fdiv_clken_l_div_exp_buf1 (fpu_div)             0.00       1.75 f
-  fpu_div/U243/Y (NAND2X0_RVT)                            0.05 *     1.80 r
+  clock network delay (propagated)                        0.52       0.52
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/QN (DFFX1_RVT)     0.38       0.90 f
+  U38/Y (NBUFFX2_RVT)                                     0.27 *     1.17 f
+  U1442/Y (AND3X1_RVT)                                    0.35 *     1.52 f
+  U1441/Y (AND3X1_RVT)                                    0.19 *     1.71 f
+  U1461/Y (NAND3X0_RVT)                                   0.07 *     1.79 r
+  U1638/Y (OAI21X1_RVT)                                   0.25 *     2.04 f
+  U1513/Y (INVX0_RVT)                                     0.11 *     2.15 r
+  U1891/Y (AO22X1_RVT)                                    0.17 *     2.32 r
+  U2649/Y (NOR4X1_RVT)                                    0.15 *     2.47 f
+  fpu_div/fdiv_clken_l_div_exp_buf1 (fpu_div)             0.00       2.47 f
+  fpu_div/U243/Y (NAND2X0_RVT)                            0.05 *     2.52 r
   fpu_div/fpu_div_exp_dp/ckbuf_div_exp_dp/clken_reg/D (LATCHX1_RVT)
-                                                          0.00 *     1.80 r
-  data arrival time                                                  1.80
+                                                          0.00 *     2.52 r
+  data arrival time                                                  2.52
 
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.50      62.00
   fpu_div/fpu_div_exp_dp/ckbuf_div_exp_dp/clken_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
+                                                          0.00      62.00 r
+  time borrowed from endpoint                             0.00      62.00
+  data required time                                                62.00
   --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -1.80
+  data required time                                                62.00
+  data arrival time                                                 -2.52
   --------------------------------------------------------------------------
-  slack (MET)                                                       59.70
+  slack (MET)                                                       59.48
 
   Time Borrowing Information
   --------------------------------------------------------------
   ideal_clock' nominal pulse width                       61.50   
-  library setup time                                     -0.07   
+  clock latency difference                                0.01   
+  library setup time                                     -0.06   
   --------------------------------------------------------------
-  max time borrow                                        61.43   
+  max time borrow                                        61.45   
   actual time borrow                                      0.00   
   --------------------------------------------------------------
 
 
-  Startpoint: fpu_mul/fpu_mul_ctl/i_m1stg_op/q_reg[2]
+  Startpoint: fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_exp_dp/ckbuf_mul_exp_dp/clken_reg
+            (positive level-sensitive latch clocked by ideal_clock')
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/QN (DFFX1_RVT)     0.38       0.90 f
+  U38/Y (NBUFFX2_RVT)                                     0.27 *     1.17 f
+  U1442/Y (AND3X1_RVT)                                    0.35 *     1.52 f
+  U1441/Y (AND3X1_RVT)                                    0.19 *     1.71 f
+  U1461/Y (NAND3X0_RVT)                                   0.07 *     1.79 r
+  U1638/Y (OAI21X1_RVT)                                   0.25 *     2.04 f
+  U1513/Y (INVX0_RVT)                                     0.11 *     2.15 r
+  U1432/Y (OA222X1_RVT)                                   0.16 *     2.31 r
+  U2650/Y (NOR4X1_RVT)                                    0.16 *     2.48 f
+  fpu_mul/fmul_clken_l_buf1 (fpu_mul)                     0.00       2.48 f
+  fpu_mul/U472/Y (NAND2X0_RVT)                            0.07 *     2.54 r
+  fpu_mul/fpu_mul_exp_dp/ckbuf_mul_exp_dp/clken_reg/D (LATCHX1_RVT)
+                                                          0.00 *     2.54 r
+  data arrival time                                                  2.54
+
+  clock ideal_clock' (rise edge)                         61.50      61.50
+  clock network delay (propagated)                        0.53      62.03
+  fpu_mul/fpu_mul_exp_dp/ckbuf_mul_exp_dp/clken_reg/CLK (LATCHX1_RVT)
+                                                          0.00      62.03 r
+  time borrowed from endpoint                             0.00      62.03
+  data required time                                                62.03
+  --------------------------------------------------------------------------
+  data required time                                                62.03
+  data arrival time                                                 -2.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                       59.49
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  ideal_clock' nominal pulse width                       61.50   
+  clock latency difference                                0.01   
+  library setup time                                     -0.07   
+  --------------------------------------------------------------
+  max time borrow                                        61.44   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_mul/fpu_mul_frac_dp/ckbuf_mul_frac_dp/clken_reg
+            (positive level-sensitive latch clocked by ideal_clock')
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_in/fpu_in_dp/i_fp_op_in/q_reg[7]/QN (DFFX1_RVT)     0.38       0.90 f
+  U38/Y (NBUFFX2_RVT)                                     0.27 *     1.17 f
+  U1442/Y (AND3X1_RVT)                                    0.35 *     1.52 f
+  U1441/Y (AND3X1_RVT)                                    0.19 *     1.71 f
+  U1461/Y (NAND3X0_RVT)                                   0.07 *     1.79 r
+  U1638/Y (OAI21X1_RVT)                                   0.25 *     2.04 f
+  U1513/Y (INVX0_RVT)                                     0.11 *     2.15 r
+  U1432/Y (OA222X1_RVT)                                   0.16 *     2.31 r
+  U2650/Y (NOR4X1_RVT)                                    0.16 *     2.48 f
+  fpu_mul/fmul_clken_l (fpu_mul)                          0.00       2.48 f
+  fpu_mul/fpu_mul_frac_dp/fmul_clken_l (fpu_mul_frac_dp)
+                                                          0.00       2.48 f
+  fpu_mul/fpu_mul_frac_dp/U1774/Y (NAND2X0_RVT)           0.07 *     2.54 r
+  fpu_mul/fpu_mul_frac_dp/ckbuf_mul_frac_dp/clken_reg/D (LATCHX1_RVT)
+                                                          0.00 *     2.54 r
+  data arrival time                                                  2.54
+
+  clock ideal_clock' (rise edge)                         61.50      61.50
+  clock network delay (propagated)                        0.53      62.03
+  fpu_mul/fpu_mul_frac_dp/ckbuf_mul_frac_dp/clken_reg/CLK (LATCHX1_RVT)
+                                                          0.00      62.03 r
+  time borrowed from endpoint                             0.00      62.03
+  data required time                                                62.03
+  --------------------------------------------------------------------------
+  data required time                                                62.03
+  data arrival time                                                 -2.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                       59.49
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  ideal_clock' nominal pulse width                       61.50   
+  clock latency difference                                0.01   
+  library setup time                                     -0.07   
+  --------------------------------------------------------------
+  max time borrow                                        61.45   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: fpu_out/fpu_out_ctl/i_mul_dest_rdy/q_reg[0]
               (rising edge-triggered flip-flop clocked by ideal_clock)
   Endpoint: fpu_mul/i_m4stg_frac/booth/ckbuf_1/clken_reg
             (positive level-sensitive latch clocked by ideal_clock')
@@ -343,40 +343,39 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_mul/fpu_mul_ctl/i_m1stg_op/q_reg[2]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
-  fpu_mul/fpu_mul_ctl/i_m1stg_op/q_reg[2]/Q (DFFX1_RVT)
-                                                          0.15       0.15 f
-  fpu_mul/U152/Y (NOR2X0_RVT)                             0.08 *     0.24 r
-  fpu_mul/U153/Y (NAND3X0_RVT)                            0.09 *     0.33 f
-  fpu_mul/U156/Y (OR2X1_RVT)                              0.11 *     0.43 f
-  fpu_mul/U157/Y (INVX1_RVT)                              0.06 *     0.49 r
-  fpu_mul/U158/Y (OR2X1_RVT)                              0.13 *     0.62 r
-  fpu_mul/i_m4stg_frac/valid (mul64)                      0.00       0.62 r
-  fpu_mul/i_m4stg_frac/U666/Y (AO21X1_RVT)                0.11 *     0.73 r
+  clock network delay (propagated)                        0.50       0.50
+  fpu_out/fpu_out_ctl/i_mul_dest_rdy/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.50 r
+  fpu_out/fpu_out_ctl/i_mul_dest_rdy/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.28       0.78 f
+  fpu_mul/mul_dest_rdya (fpu_mul)                         0.00       0.78 f
+  fpu_mul/U11/Y (OR2X1_RVT)                               0.22 *     1.00 f
+  fpu_mul/U4/Y (NBUFFX2_RVT)                              0.20 *     1.20 f
+  fpu_mul/i_m4stg_frac/mul_step (mul64)                   0.00       1.20 f
+  fpu_mul/i_m4stg_frac/U666/Y (AO21X1_RVT)                0.15 *     1.35 f
   fpu_mul/i_m4stg_frac/booth/ckbuf_1/clken_reg/D (LATCHX1_RVT)
-                                                          0.00 *     0.73 r
-  data arrival time                                                  0.73
+                                                          0.00 *     1.35 f
+  data arrival time                                                  1.35
 
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.52      62.02
   fpu_mul/i_m4stg_frac/booth/ckbuf_1/clken_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
+                                                          0.00      62.02 r
+  time borrowed from endpoint                             0.00      62.02
+  data required time                                                62.02
   --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -0.73
+  data required time                                                62.02
+  data arrival time                                                 -1.35
   --------------------------------------------------------------------------
-  slack (MET)                                                       60.77
+  slack (MET)                                                       60.67
 
   Time Borrowing Information
   --------------------------------------------------------------
   ideal_clock' nominal pulse width                       61.50   
-  library setup time                                     -0.07   
+  clock latency difference                                0.01   
+  library setup time                                     -0.06   
   --------------------------------------------------------------
-  max time borrow                                        61.43   
+  max time borrow                                        61.45   
   actual time borrow                                      0.00   
   --------------------------------------------------------------
 
@@ -391,38 +390,39 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
+  clock network delay (propagated)                        0.50       0.50
   fpu_out/fpu_out_ctl/i_mul_dest_rdy/q_reg[0]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
+                                                          0.00       0.50 r
   fpu_out/fpu_out_ctl/i_mul_dest_rdy/q_reg[0]/Q (DFFX1_RVT)
-                                                          0.22       0.22 f
-  fpu_mul/mul_dest_rdya (fpu_mul)                         0.00       0.22 f
-  fpu_mul/U11/Y (OR2X1_RVT)                               0.13 *     0.36 f
-  fpu_mul/U4/Y (NBUFFX2_RVT)                              0.14 *     0.50 f
-  fpu_mul/i_m4stg_frac/mul_step (mul64)                   0.00       0.50 f
-  fpu_mul/i_m4stg_frac/U410/Y (OR2X1_RVT)                 0.09 *     0.59 f
+                                                          0.28       0.78 f
+  fpu_mul/mul_dest_rdya (fpu_mul)                         0.00       0.78 f
+  fpu_mul/U11/Y (OR2X1_RVT)                               0.22 *     1.00 f
+  fpu_mul/U4/Y (NBUFFX2_RVT)                              0.20 *     1.20 f
+  fpu_mul/i_m4stg_frac/mul_step (mul64)                   0.00       1.20 f
+  fpu_mul/i_m4stg_frac/U410/Y (OR2X1_RVT)                 0.09 *     1.30 f
   fpu_mul/i_m4stg_frac/booth/ckbuf_0/clken_reg/D (LATCHX1_RVT)
-                                                          0.00 *     0.59 f
-  data arrival time                                                  0.59
+                                                          0.00 *     1.30 f
+  data arrival time                                                  1.30
 
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.52      62.02
   fpu_mul/i_m4stg_frac/booth/ckbuf_0/clken_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
+                                                          0.00      62.02 r
+  time borrowed from endpoint                             0.00      62.02
+  data required time                                                62.02
   --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -0.59
+  data required time                                                62.02
+  data arrival time                                                 -1.30
   --------------------------------------------------------------------------
-  slack (MET)                                                       60.91
+  slack (MET)                                                       60.73
 
   Time Borrowing Information
   --------------------------------------------------------------
   ideal_clock' nominal pulse width                       61.50   
+  clock latency difference                                0.01   
   library setup time                                     -0.07   
   --------------------------------------------------------------
-  max time borrow                                        61.43   
+  max time borrow                                        61.44   
   actual time borrow                                      0.00   
   --------------------------------------------------------------
 
@@ -437,60 +437,27 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.50      62.00
   cluster_header/I0/dbginit_repeater/lockup/so_l_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
+                                                          0.00      62.00 r
   cluster_header/I0/dbginit_repeater/lockup/so_l_reg/QN (LATCHX1_RVT)
-                                                          0.12      61.62 f
-  U2399/Y (AO22X1_RVT)                                    0.21 *    61.84 f
+                                                          0.16      62.16 r
+  U2399/Y (AO22X1_RVT)                                    0.24 *    62.40 r
   cluster_header/I0/dbginit_repeater/syncff/i0/q_reg/D (DFFX1_RVT)
-                                                          0.01 *    61.84 f
-  data arrival time                                                 61.84
+                                                          0.01 *    62.41 r
+  data arrival time                                                 62.41
 
   clock ideal_clock (rise edge)                         123.00     123.00
-  clock network delay (ideal)                             0.00     123.00
+  clock network delay (propagated)                        0.53     123.53
   cluster_header/I0/dbginit_repeater/syncff/i0/q_reg/CLK (DFFX1_RVT)
-                                                          0.00     123.00 r
-  library setup time                                     -0.15     122.85
-  data required time                                               122.85
+                                                          0.00     123.53 r
+  library setup time                                     -0.10     123.42
+  data required time                                               123.42
   --------------------------------------------------------------------------
-  data required time                                               122.85
-  data arrival time                                                -61.84
+  data required time                                               123.42
+  data arrival time                                                -62.41
   --------------------------------------------------------------------------
-  slack (MET)                                                       61.01
-
-
-  Startpoint: cluster_header/I0/rst_repeater/lockup/so_l_reg
-              (positive level-sensitive latch clocked by ideal_clock')
-  Endpoint: cluster_header/I0/rst_repeater/syncff/i0/q_reg
-            (rising edge-triggered flip-flop clocked by ideal_clock)
-  Path Group: ideal_clock
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
-  cluster_header/I0/rst_repeater/lockup/so_l_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  cluster_header/I0/rst_repeater/lockup/so_l_reg/QN (LATCHX1_RVT)
-                                                          0.13      61.63 r
-  U2398/Y (OA221X1_RVT)                                   0.09 *    61.72 r
-  cluster_header/I0/rst_repeater/syncff/i0/q_reg/D (DFFARX1_RVT)
-                                                          0.00 *    61.72 r
-  data arrival time                                                 61.72
-
-  clock ideal_clock (rise edge)                         123.00     123.00
-  clock network delay (ideal)                             0.00     123.00
-  cluster_header/I0/rst_repeater/syncff/i0/q_reg/CLK (DFFARX1_RVT)
-                                                          0.00     123.00 r
-  library setup time                                     -0.08     122.92
-  data required time                                               122.92
-  --------------------------------------------------------------------------
-  data required time                                               122.92
-  data arrival time                                                -61.72
-  --------------------------------------------------------------------------
-  slack (MET)                                                       61.21
+  slack (MET)                                                       61.02
 
 
   Startpoint: cluster_header/I0/rst_repeater/repeater/i0/q_reg
@@ -503,36 +470,70 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
   cluster_header/I0/rst_repeater/repeater/i0/q_reg/CLK (DFFARX1_RVT)
-                                                          0.00       0.00 r
+                                                          0.00       0.52 r
   cluster_header/I0/rst_repeater/repeater/i0/q_reg/Q (DFFARX1_RVT)
-                                                          0.18       0.18 r
-  U2648/Y (NOR2X0_RVT)                                    0.08 *     0.27 f
+                                                          0.22       0.75 r
+  U2648/Y (NOR2X0_RVT)                                    0.08 *     0.83 f
   cluster_header/I0/rst_repeater/lockup/so_l_reg/D (LATCHX1_RVT)
-                                                          0.00 *     0.27 f
-  data arrival time                                                  0.27
+                                                          0.00 *     0.83 f
+  data arrival time                                                  0.83
 
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.50      62.00
   cluster_header/I0/rst_repeater/lockup/so_l_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
+                                                          0.00      62.00 r
+  time borrowed from endpoint                             0.00      62.00
+  data required time                                                62.00
   --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -0.27
+  data required time                                                62.00
+  data arrival time                                                 -0.83
   --------------------------------------------------------------------------
-  slack (MET)                                                       61.23
+  slack (MET)                                                       61.17
 
   Time Borrowing Information
   --------------------------------------------------------------
   ideal_clock' nominal pulse width                       61.50   
+  clock latency difference                               -0.01   
   library setup time                                     -0.06   
   --------------------------------------------------------------
-  max time borrow                                        61.44   
+  max time borrow                                        61.43   
   actual time borrow                                      0.00   
   --------------------------------------------------------------
+
+
+  Startpoint: cluster_header/I0/rst_repeater/lockup/so_l_reg
+              (positive level-sensitive latch clocked by ideal_clock')
+  Endpoint: cluster_header/I0/rst_repeater/syncff/i0/q_reg
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock' (rise edge)                         61.50      61.50
+  clock network delay (propagated)                        0.50      62.00
+  cluster_header/I0/rst_repeater/lockup/so_l_reg/CLK (LATCHX1_RVT)
+                                                          0.00      62.00 r
+  cluster_header/I0/rst_repeater/lockup/so_l_reg/QN (LATCHX1_RVT)
+                                                          0.16      62.16 r
+  U2398/Y (OA221X1_RVT)                                   0.09 *    62.25 r
+  cluster_header/I0/rst_repeater/syncff/i0/q_reg/D (DFFARX1_RVT)
+                                                          0.00 *    62.25 r
+  data arrival time                                                 62.25
+
+  clock ideal_clock (rise edge)                         123.00     123.00
+  clock network delay (propagated)                        0.52     123.52
+  cluster_header/I0/rst_repeater/syncff/i0/q_reg/CLK (DFFARX1_RVT)
+                                                          0.00     123.52 r
+  library setup time                                     -0.06     123.45
+  data required time                                               123.45
+  --------------------------------------------------------------------------
+  data required time                                               123.45
+  data arrival time                                                -62.25
+  --------------------------------------------------------------------------
+  slack (MET)                                                       61.20
 
 
   Startpoint: cluster_header/I0/dbginit_repeater/repeater/i0/q_reg
@@ -545,34 +546,35 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
   cluster_header/I0/dbginit_repeater/repeater/i0/q_reg/CLK (DFFSSRX1_RVT)
-                                                          0.00       0.00 r
+                                                          0.00       0.52 r
   cluster_header/I0/dbginit_repeater/repeater/i0/q_reg/QN (DFFSSRX1_RVT)
-                                                          0.13       0.13 f
-  U2647/Y (NOR2X0_RVT)                                    0.10 *     0.23 r
+                                                          0.17       0.69 f
+  U2647/Y (NOR2X0_RVT)                                    0.10 *     0.79 r
   cluster_header/I0/dbginit_repeater/lockup/so_l_reg/D (LATCHX1_RVT)
-                                                          0.00 *     0.23 r
-  data arrival time                                                  0.23
+                                                          0.00 *     0.79 r
+  data arrival time                                                  0.79
 
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.50      62.00
   cluster_header/I0/dbginit_repeater/lockup/so_l_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
+                                                          0.00      62.00 r
+  time borrowed from endpoint                             0.00      62.00
+  data required time                                                62.00
   --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -0.23
+  data required time                                                62.00
+  data arrival time                                                 -0.79
   --------------------------------------------------------------------------
-  slack (MET)                                                       61.27
+  slack (MET)                                                       61.21
 
   Time Borrowing Information
   --------------------------------------------------------------
   ideal_clock' nominal pulse width                       61.50   
-  library setup time                                     -0.07   
+  clock latency difference                               -0.01   
+  library setup time                                     -0.03   
   --------------------------------------------------------------
-  max time borrow                                        61.43   
+  max time borrow                                        61.46   
   actual time borrow                                      0.00   
   --------------------------------------------------------------
 
@@ -587,559 +589,36 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
   cluster_header/I0/sync_cluster_master/q_r_reg/CLK (DFFX1_RVT)
-                                                          0.00       0.00 r
+                                                          0.00       0.52 r
   cluster_header/I0/sync_cluster_master/q_r_reg/QN (DFFX1_RVT)
-                                                          0.17       0.17 r
+                                                          0.21       0.74 r
   cluster_header/I0/sync_cluster_slave/so_l_reg/D (LATCHX1_RVT)
-                                                          0.00 *     0.17 r
-  data arrival time                                                  0.17
+                                                          0.00 *     0.74 r
+  data arrival time                                                  0.74
 
   clock ideal_clock' (rise edge)                         61.50      61.50
-  clock network delay (ideal)                             0.00      61.50
+  clock network delay (propagated)                        0.50      62.00
   cluster_header/I0/sync_cluster_slave/so_l_reg/CLK (LATCHX1_RVT)
-                                                          0.00      61.50 r
-  time borrowed from endpoint                             0.00      61.50
-  data required time                                                61.50
+                                                          0.00      62.00 r
+  time borrowed from endpoint                             0.00      62.00
+  data required time                                                62.00
   --------------------------------------------------------------------------
-  data required time                                                61.50
-  data arrival time                                                 -0.17
+  data required time                                                62.00
+  data arrival time                                                 -0.74
   --------------------------------------------------------------------------
-  slack (MET)                                                       61.33
+  slack (MET)                                                       61.26
 
   Time Borrowing Information
   --------------------------------------------------------------
   ideal_clock' nominal pulse width                       61.50   
-  library setup time                                     -0.09   
+  clock latency difference                               -0.01   
+  library setup time                                     -0.05   
   --------------------------------------------------------------
-  max time borrow                                        61.41   
+  max time borrow                                        61.44   
   actual time borrow                                      0.00   
   --------------------------------------------------------------
-
-
-  Startpoint: fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]
-              (rising edge-triggered flip-flop clocked by ideal_clock)
-  Endpoint: fpu_mul/i_m4stg_frac/out_dff/q_reg[73]
-            (rising edge-triggered flip-flop clocked by ideal_clock)
-  Path Group: ideal_clock
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]/CLK (DFFX1_RVT)
-                                                          0.00       0.00 r
-  fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]/Q (DFFX1_RVT)
-                                                          0.16       0.16 r
-  fpu_mul/i_m4stg_frac/U61/Y (NAND4X0_RVT)                0.09 *     0.25 f
-  fpu_mul/i_m4stg_frac/U62/Y (INVX1_RVT)                  0.07 *     0.33 r
-  fpu_mul/i_m4stg_frac/U1030/Y (AO222X1_RVT)              0.16 *     0.48 r
-  fpu_mul/i_m4stg_frac/intadd_4/U13/CO (FADDX1_RVT)       0.11 *     0.59 r
-  fpu_mul/i_m4stg_frac/intadd_4/U12/CO (FADDX1_RVT)       0.11 *     0.70 r
-  fpu_mul/i_m4stg_frac/intadd_4/U11/CO (FADDX1_RVT)       0.11 *     0.81 r
-  fpu_mul/i_m4stg_frac/intadd_4/U10/CO (FADDX1_RVT)       0.11 *     0.91 r
-  fpu_mul/i_m4stg_frac/intadd_4/U9/CO (FADDX1_RVT)        0.11 *     1.02 r
-  fpu_mul/i_m4stg_frac/intadd_4/U8/CO (FADDX1_RVT)        0.11 *     1.13 r
-  fpu_mul/i_m4stg_frac/intadd_4/U7/CO (FADDX1_RVT)        0.11 *     1.24 r
-  fpu_mul/i_m4stg_frac/intadd_4/U6/CO (FADDX1_RVT)        0.11 *     1.35 r
-  fpu_mul/i_m4stg_frac/intadd_4/U5/CO (FADDX1_RVT)        0.11 *     1.46 r
-  fpu_mul/i_m4stg_frac/intadd_4/U4/CO (FADDX1_RVT)        0.11 *     1.57 r
-  fpu_mul/i_m4stg_frac/intadd_4/U3/CO (FADDX1_RVT)        0.11 *     1.67 r
-  fpu_mul/i_m4stg_frac/intadd_4/U2/CO (FADDX1_RVT)        0.10 *     1.78 r
-  fpu_mul/i_m4stg_frac/U106/Y (NAND2X0_RVT)               0.05 *     1.83 f
-  fpu_mul/i_m4stg_frac/U107/Y (INVX1_RVT)                 0.05 *     1.88 r
-  fpu_mul/i_m4stg_frac/U1031/Y (AO222X1_RVT)              0.15 *     2.03 r
-  fpu_mul/i_m4stg_frac/intadd_3/U15/CO (FADDX1_RVT)       0.11 *     2.14 r
-  fpu_mul/i_m4stg_frac/intadd_3/U14/CO (FADDX1_RVT)       0.14 *     2.28 r
-  fpu_mul/i_m4stg_frac/intadd_3/U13/CO (FADDX1_RVT)       0.12 *     2.40 r
-  fpu_mul/i_m4stg_frac/intadd_3/U12/CO (FADDX1_RVT)       0.11 *     2.51 r
-  fpu_mul/i_m4stg_frac/intadd_3/U11/CO (FADDX1_RVT)       0.11 *     2.62 r
-  fpu_mul/i_m4stg_frac/intadd_3/U10/CO (FADDX1_RVT)       0.11 *     2.72 r
-  fpu_mul/i_m4stg_frac/intadd_3/U9/CO (FADDX1_RVT)        0.11 *     2.84 r
-  fpu_mul/i_m4stg_frac/intadd_3/U8/CO (FADDX1_RVT)        0.11 *     2.94 r
-  fpu_mul/i_m4stg_frac/intadd_3/U7/CO (FADDX1_RVT)        0.11 *     3.05 r
-  fpu_mul/i_m4stg_frac/intadd_3/U6/CO (FADDX1_RVT)        0.11 *     3.17 r
-  fpu_mul/i_m4stg_frac/intadd_3/U5/CO (FADDX1_RVT)        0.11 *     3.28 r
-  fpu_mul/i_m4stg_frac/intadd_3/U4/CO (FADDX1_RVT)        0.13 *     3.40 r
-  fpu_mul/i_m4stg_frac/intadd_3/U3/CO (FADDX1_RVT)        0.12 *     3.52 r
-  fpu_mul/i_m4stg_frac/intadd_3/U2/CO (FADDX1_RVT)        0.12 *     3.64 r
-  fpu_mul/i_m4stg_frac/intadd_2/U43/CO (FADDX1_RVT)       0.11 *     3.75 r
-  fpu_mul/i_m4stg_frac/intadd_2/U42/CO (FADDX1_RVT)       0.11 *     3.86 r
-  fpu_mul/i_m4stg_frac/intadd_2/U41/CO (FADDX1_RVT)       0.11 *     3.97 r
-  fpu_mul/i_m4stg_frac/intadd_2/U40/CO (FADDX1_RVT)       0.12 *     4.08 r
-  fpu_mul/i_m4stg_frac/intadd_2/U39/CO (FADDX1_RVT)       0.11 *     4.19 r
-  fpu_mul/i_m4stg_frac/intadd_2/U38/CO (FADDX1_RVT)       0.11 *     4.30 r
-  fpu_mul/i_m4stg_frac/intadd_2/U37/CO (FADDX1_RVT)       0.11 *     4.41 r
-  fpu_mul/i_m4stg_frac/intadd_2/U36/CO (FADDX1_RVT)       0.11 *     4.52 r
-  fpu_mul/i_m4stg_frac/intadd_2/U35/CO (FADDX1_RVT)       0.11 *     4.63 r
-  fpu_mul/i_m4stg_frac/intadd_2/U34/CO (FADDX1_RVT)       0.11 *     4.74 r
-  fpu_mul/i_m4stg_frac/intadd_2/U33/CO (FADDX1_RVT)       0.11 *     4.84 r
-  fpu_mul/i_m4stg_frac/intadd_2/U32/CO (FADDX1_RVT)       0.12 *     4.96 r
-  fpu_mul/i_m4stg_frac/intadd_2/U31/CO (FADDX1_RVT)       0.11 *     5.07 r
-  fpu_mul/i_m4stg_frac/intadd_2/U30/CO (FADDX1_RVT)       0.10 *     5.17 r
-  fpu_mul/i_m4stg_frac/intadd_2/U29/CO (FADDX1_RVT)       0.11 *     5.28 r
-  fpu_mul/i_m4stg_frac/intadd_2/U28/CO (FADDX1_RVT)       0.11 *     5.40 r
-  fpu_mul/i_m4stg_frac/intadd_2/U27/CO (FADDX1_RVT)       0.12 *     5.52 r
-  fpu_mul/i_m4stg_frac/intadd_2/U26/CO (FADDX1_RVT)       0.11 *     5.62 r
-  fpu_mul/i_m4stg_frac/intadd_2/U25/CO (FADDX1_RVT)       0.11 *     5.73 r
-  fpu_mul/i_m4stg_frac/intadd_2/U24/CO (FADDX1_RVT)       0.11 *     5.84 r
-  fpu_mul/i_m4stg_frac/intadd_2/U23/CO (FADDX1_RVT)       0.11 *     5.95 r
-  fpu_mul/i_m4stg_frac/intadd_2/U22/CO (FADDX1_RVT)       0.11 *     6.06 r
-  fpu_mul/i_m4stg_frac/intadd_2/U21/CO (FADDX1_RVT)       0.11 *     6.16 r
-  fpu_mul/i_m4stg_frac/intadd_2/U20/CO (FADDX1_RVT)       0.11 *     6.27 r
-  fpu_mul/i_m4stg_frac/intadd_2/U19/CO (FADDX1_RVT)       0.11 *     6.38 r
-  fpu_mul/i_m4stg_frac/intadd_2/U18/CO (FADDX1_RVT)       0.11 *     6.48 r
-  fpu_mul/i_m4stg_frac/intadd_2/U17/CO (FADDX1_RVT)       0.11 *     6.59 r
-  fpu_mul/i_m4stg_frac/intadd_2/U16/CO (FADDX1_RVT)       0.11 *     6.70 r
-  fpu_mul/i_m4stg_frac/intadd_2/U15/CO (FADDX1_RVT)       0.11 *     6.81 r
-  fpu_mul/i_m4stg_frac/intadd_2/U14/CO (FADDX1_RVT)       0.11 *     6.92 r
-  fpu_mul/i_m4stg_frac/intadd_2/U13/CO (FADDX1_RVT)       0.11 *     7.04 r
-  fpu_mul/i_m4stg_frac/intadd_2/U12/CO (FADDX1_RVT)       0.11 *     7.15 r
-  fpu_mul/i_m4stg_frac/intadd_2/U11/CO (FADDX1_RVT)       0.11 *     7.26 r
-  fpu_mul/i_m4stg_frac/intadd_2/U10/CO (FADDX1_RVT)       0.11 *     7.36 r
-  fpu_mul/i_m4stg_frac/intadd_2/U9/CO (FADDX1_RVT)        0.11 *     7.47 r
-  fpu_mul/i_m4stg_frac/intadd_2/U8/CO (FADDX1_RVT)        0.11 *     7.59 r
-  fpu_mul/i_m4stg_frac/intadd_2/U7/CO (FADDX1_RVT)        0.11 *     7.69 r
-  fpu_mul/i_m4stg_frac/intadd_2/U6/CO (FADDX1_RVT)        0.11 *     7.80 r
-  fpu_mul/i_m4stg_frac/intadd_2/U5/CO (FADDX1_RVT)        0.11 *     7.91 r
-  fpu_mul/i_m4stg_frac/intadd_2/U4/CO (FADDX1_RVT)        0.11 *     8.02 r
-  fpu_mul/i_m4stg_frac/intadd_2/U3/CO (FADDX1_RVT)        0.10 *     8.11 r
-  fpu_mul/i_m4stg_frac/U1069/Y (XOR2X1_RVT)               0.14 *     8.26 f
-  fpu_mul/i_m4stg_frac/U1070/Y (AND2X1_RVT)               0.07 *     8.33 f
-  fpu_mul/i_m4stg_frac/out_dff/q_reg[73]/D (DFFX1_RVT)
-                                                          0.00 *     8.33 f
-  data arrival time                                                  8.33
-
-  clock ideal_clock (rise edge)                         123.00     123.00
-  clock network delay (ideal)                             0.00     123.00
-  fpu_mul/i_m4stg_frac/out_dff/q_reg[73]/CLK (DFFX1_RVT)
-                                                          0.00     123.00 r
-  library setup time                                     -0.06     122.94
-  data required time                                               122.94
-  --------------------------------------------------------------------------
-  data required time                                               122.94
-  data arrival time                                                 -8.33
-  --------------------------------------------------------------------------
-  slack (MET)                                                      114.62
-
-
-  Startpoint: fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]
-              (rising edge-triggered flip-flop clocked by ideal_clock)
-  Endpoint: fpu_mul/i_m4stg_frac/out_dff/q_reg[72]
-            (rising edge-triggered flip-flop clocked by ideal_clock)
-  Path Group: ideal_clock
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]/CLK (DFFX1_RVT)
-                                                          0.00       0.00 r
-  fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]/Q (DFFX1_RVT)
-                                                          0.16       0.16 r
-  fpu_mul/i_m4stg_frac/U61/Y (NAND4X0_RVT)                0.09 *     0.25 f
-  fpu_mul/i_m4stg_frac/U62/Y (INVX1_RVT)                  0.07 *     0.33 r
-  fpu_mul/i_m4stg_frac/U1030/Y (AO222X1_RVT)              0.16 *     0.48 r
-  fpu_mul/i_m4stg_frac/intadd_4/U13/CO (FADDX1_RVT)       0.11 *     0.59 r
-  fpu_mul/i_m4stg_frac/intadd_4/U12/CO (FADDX1_RVT)       0.11 *     0.70 r
-  fpu_mul/i_m4stg_frac/intadd_4/U11/CO (FADDX1_RVT)       0.11 *     0.81 r
-  fpu_mul/i_m4stg_frac/intadd_4/U10/CO (FADDX1_RVT)       0.11 *     0.91 r
-  fpu_mul/i_m4stg_frac/intadd_4/U9/CO (FADDX1_RVT)        0.11 *     1.02 r
-  fpu_mul/i_m4stg_frac/intadd_4/U8/CO (FADDX1_RVT)        0.11 *     1.13 r
-  fpu_mul/i_m4stg_frac/intadd_4/U7/CO (FADDX1_RVT)        0.11 *     1.24 r
-  fpu_mul/i_m4stg_frac/intadd_4/U6/CO (FADDX1_RVT)        0.11 *     1.35 r
-  fpu_mul/i_m4stg_frac/intadd_4/U5/CO (FADDX1_RVT)        0.11 *     1.46 r
-  fpu_mul/i_m4stg_frac/intadd_4/U4/CO (FADDX1_RVT)        0.11 *     1.57 r
-  fpu_mul/i_m4stg_frac/intadd_4/U3/CO (FADDX1_RVT)        0.11 *     1.67 r
-  fpu_mul/i_m4stg_frac/intadd_4/U2/CO (FADDX1_RVT)        0.10 *     1.78 r
-  fpu_mul/i_m4stg_frac/U106/Y (NAND2X0_RVT)               0.05 *     1.83 f
-  fpu_mul/i_m4stg_frac/U107/Y (INVX1_RVT)                 0.05 *     1.88 r
-  fpu_mul/i_m4stg_frac/U1031/Y (AO222X1_RVT)              0.15 *     2.03 r
-  fpu_mul/i_m4stg_frac/intadd_3/U15/CO (FADDX1_RVT)       0.11 *     2.14 r
-  fpu_mul/i_m4stg_frac/intadd_3/U14/CO (FADDX1_RVT)       0.14 *     2.28 r
-  fpu_mul/i_m4stg_frac/intadd_3/U13/CO (FADDX1_RVT)       0.12 *     2.40 r
-  fpu_mul/i_m4stg_frac/intadd_3/U12/CO (FADDX1_RVT)       0.11 *     2.51 r
-  fpu_mul/i_m4stg_frac/intadd_3/U11/CO (FADDX1_RVT)       0.11 *     2.62 r
-  fpu_mul/i_m4stg_frac/intadd_3/U10/CO (FADDX1_RVT)       0.11 *     2.72 r
-  fpu_mul/i_m4stg_frac/intadd_3/U9/CO (FADDX1_RVT)        0.11 *     2.84 r
-  fpu_mul/i_m4stg_frac/intadd_3/U8/CO (FADDX1_RVT)        0.11 *     2.94 r
-  fpu_mul/i_m4stg_frac/intadd_3/U7/CO (FADDX1_RVT)        0.11 *     3.05 r
-  fpu_mul/i_m4stg_frac/intadd_3/U6/CO (FADDX1_RVT)        0.11 *     3.17 r
-  fpu_mul/i_m4stg_frac/intadd_3/U5/CO (FADDX1_RVT)        0.11 *     3.28 r
-  fpu_mul/i_m4stg_frac/intadd_3/U4/CO (FADDX1_RVT)        0.13 *     3.40 r
-  fpu_mul/i_m4stg_frac/intadd_3/U3/CO (FADDX1_RVT)        0.12 *     3.52 r
-  fpu_mul/i_m4stg_frac/intadd_3/U2/CO (FADDX1_RVT)        0.12 *     3.64 r
-  fpu_mul/i_m4stg_frac/intadd_2/U43/CO (FADDX1_RVT)       0.11 *     3.75 r
-  fpu_mul/i_m4stg_frac/intadd_2/U42/CO (FADDX1_RVT)       0.11 *     3.86 r
-  fpu_mul/i_m4stg_frac/intadd_2/U41/CO (FADDX1_RVT)       0.11 *     3.97 r
-  fpu_mul/i_m4stg_frac/intadd_2/U40/CO (FADDX1_RVT)       0.12 *     4.08 r
-  fpu_mul/i_m4stg_frac/intadd_2/U39/CO (FADDX1_RVT)       0.11 *     4.19 r
-  fpu_mul/i_m4stg_frac/intadd_2/U38/CO (FADDX1_RVT)       0.11 *     4.30 r
-  fpu_mul/i_m4stg_frac/intadd_2/U37/CO (FADDX1_RVT)       0.11 *     4.41 r
-  fpu_mul/i_m4stg_frac/intadd_2/U36/CO (FADDX1_RVT)       0.11 *     4.52 r
-  fpu_mul/i_m4stg_frac/intadd_2/U35/CO (FADDX1_RVT)       0.11 *     4.63 r
-  fpu_mul/i_m4stg_frac/intadd_2/U34/CO (FADDX1_RVT)       0.11 *     4.74 r
-  fpu_mul/i_m4stg_frac/intadd_2/U33/CO (FADDX1_RVT)       0.11 *     4.84 r
-  fpu_mul/i_m4stg_frac/intadd_2/U32/CO (FADDX1_RVT)       0.12 *     4.96 r
-  fpu_mul/i_m4stg_frac/intadd_2/U31/CO (FADDX1_RVT)       0.11 *     5.07 r
-  fpu_mul/i_m4stg_frac/intadd_2/U30/CO (FADDX1_RVT)       0.10 *     5.17 r
-  fpu_mul/i_m4stg_frac/intadd_2/U29/CO (FADDX1_RVT)       0.11 *     5.28 r
-  fpu_mul/i_m4stg_frac/intadd_2/U28/CO (FADDX1_RVT)       0.11 *     5.40 r
-  fpu_mul/i_m4stg_frac/intadd_2/U27/CO (FADDX1_RVT)       0.12 *     5.52 r
-  fpu_mul/i_m4stg_frac/intadd_2/U26/CO (FADDX1_RVT)       0.11 *     5.62 r
-  fpu_mul/i_m4stg_frac/intadd_2/U25/CO (FADDX1_RVT)       0.11 *     5.73 r
-  fpu_mul/i_m4stg_frac/intadd_2/U24/CO (FADDX1_RVT)       0.11 *     5.84 r
-  fpu_mul/i_m4stg_frac/intadd_2/U23/CO (FADDX1_RVT)       0.11 *     5.95 r
-  fpu_mul/i_m4stg_frac/intadd_2/U22/CO (FADDX1_RVT)       0.11 *     6.06 r
-  fpu_mul/i_m4stg_frac/intadd_2/U21/CO (FADDX1_RVT)       0.11 *     6.16 r
-  fpu_mul/i_m4stg_frac/intadd_2/U20/CO (FADDX1_RVT)       0.11 *     6.27 r
-  fpu_mul/i_m4stg_frac/intadd_2/U19/CO (FADDX1_RVT)       0.11 *     6.38 r
-  fpu_mul/i_m4stg_frac/intadd_2/U18/CO (FADDX1_RVT)       0.11 *     6.48 r
-  fpu_mul/i_m4stg_frac/intadd_2/U17/CO (FADDX1_RVT)       0.11 *     6.59 r
-  fpu_mul/i_m4stg_frac/intadd_2/U16/CO (FADDX1_RVT)       0.11 *     6.70 r
-  fpu_mul/i_m4stg_frac/intadd_2/U15/CO (FADDX1_RVT)       0.11 *     6.81 r
-  fpu_mul/i_m4stg_frac/intadd_2/U14/CO (FADDX1_RVT)       0.11 *     6.92 r
-  fpu_mul/i_m4stg_frac/intadd_2/U13/CO (FADDX1_RVT)       0.11 *     7.04 r
-  fpu_mul/i_m4stg_frac/intadd_2/U12/CO (FADDX1_RVT)       0.11 *     7.15 r
-  fpu_mul/i_m4stg_frac/intadd_2/U11/CO (FADDX1_RVT)       0.11 *     7.26 r
-  fpu_mul/i_m4stg_frac/intadd_2/U10/CO (FADDX1_RVT)       0.11 *     7.36 r
-  fpu_mul/i_m4stg_frac/intadd_2/U9/CO (FADDX1_RVT)        0.11 *     7.47 r
-  fpu_mul/i_m4stg_frac/intadd_2/U8/CO (FADDX1_RVT)        0.11 *     7.59 r
-  fpu_mul/i_m4stg_frac/intadd_2/U7/CO (FADDX1_RVT)        0.11 *     7.69 r
-  fpu_mul/i_m4stg_frac/intadd_2/U6/CO (FADDX1_RVT)        0.11 *     7.80 r
-  fpu_mul/i_m4stg_frac/intadd_2/U5/CO (FADDX1_RVT)        0.11 *     7.91 r
-  fpu_mul/i_m4stg_frac/intadd_2/U4/CO (FADDX1_RVT)        0.11 *     8.02 r
-  fpu_mul/i_m4stg_frac/intadd_2/U3/S (FADDX1_RVT)         0.17 *     8.19 f
-  fpu_mul/i_m4stg_frac/U167/Y (AND2X1_RVT)                0.07 *     8.26 f
-  fpu_mul/i_m4stg_frac/out_dff/q_reg[72]/D (DFFX1_RVT)
-                                                          0.00 *     8.26 f
-  data arrival time                                                  8.26
-
-  clock ideal_clock (rise edge)                         123.00     123.00
-  clock network delay (ideal)                             0.00     123.00
-  fpu_mul/i_m4stg_frac/out_dff/q_reg[72]/CLK (DFFX1_RVT)
-                                                          0.00     123.00 r
-  library setup time                                     -0.06     122.94
-  data required time                                               122.94
-  --------------------------------------------------------------------------
-  data required time                                               122.94
-  data arrival time                                                 -8.26
-  --------------------------------------------------------------------------
-  slack (MET)                                                      114.68
-
-
-  Startpoint: fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]
-              (rising edge-triggered flip-flop clocked by ideal_clock)
-  Endpoint: fpu_mul/i_m4stg_frac/out_dff/q_reg[71]
-            (rising edge-triggered flip-flop clocked by ideal_clock)
-  Path Group: ideal_clock
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]/CLK (DFFX1_RVT)
-                                                          0.00       0.00 r
-  fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]/Q (DFFX1_RVT)
-                                                          0.16       0.16 r
-  fpu_mul/i_m4stg_frac/U61/Y (NAND4X0_RVT)                0.09 *     0.25 f
-  fpu_mul/i_m4stg_frac/U62/Y (INVX1_RVT)                  0.07 *     0.33 r
-  fpu_mul/i_m4stg_frac/U1030/Y (AO222X1_RVT)              0.16 *     0.48 r
-  fpu_mul/i_m4stg_frac/intadd_4/U13/CO (FADDX1_RVT)       0.11 *     0.59 r
-  fpu_mul/i_m4stg_frac/intadd_4/U12/CO (FADDX1_RVT)       0.11 *     0.70 r
-  fpu_mul/i_m4stg_frac/intadd_4/U11/CO (FADDX1_RVT)       0.11 *     0.81 r
-  fpu_mul/i_m4stg_frac/intadd_4/U10/CO (FADDX1_RVT)       0.11 *     0.91 r
-  fpu_mul/i_m4stg_frac/intadd_4/U9/CO (FADDX1_RVT)        0.11 *     1.02 r
-  fpu_mul/i_m4stg_frac/intadd_4/U8/CO (FADDX1_RVT)        0.11 *     1.13 r
-  fpu_mul/i_m4stg_frac/intadd_4/U7/CO (FADDX1_RVT)        0.11 *     1.24 r
-  fpu_mul/i_m4stg_frac/intadd_4/U6/CO (FADDX1_RVT)        0.11 *     1.35 r
-  fpu_mul/i_m4stg_frac/intadd_4/U5/CO (FADDX1_RVT)        0.11 *     1.46 r
-  fpu_mul/i_m4stg_frac/intadd_4/U4/CO (FADDX1_RVT)        0.11 *     1.57 r
-  fpu_mul/i_m4stg_frac/intadd_4/U3/CO (FADDX1_RVT)        0.11 *     1.67 r
-  fpu_mul/i_m4stg_frac/intadd_4/U2/CO (FADDX1_RVT)        0.10 *     1.78 r
-  fpu_mul/i_m4stg_frac/U106/Y (NAND2X0_RVT)               0.05 *     1.83 f
-  fpu_mul/i_m4stg_frac/U107/Y (INVX1_RVT)                 0.05 *     1.88 r
-  fpu_mul/i_m4stg_frac/U1031/Y (AO222X1_RVT)              0.15 *     2.03 r
-  fpu_mul/i_m4stg_frac/intadd_3/U15/CO (FADDX1_RVT)       0.11 *     2.14 r
-  fpu_mul/i_m4stg_frac/intadd_3/U14/CO (FADDX1_RVT)       0.14 *     2.28 r
-  fpu_mul/i_m4stg_frac/intadd_3/U13/CO (FADDX1_RVT)       0.12 *     2.40 r
-  fpu_mul/i_m4stg_frac/intadd_3/U12/CO (FADDX1_RVT)       0.11 *     2.51 r
-  fpu_mul/i_m4stg_frac/intadd_3/U11/CO (FADDX1_RVT)       0.11 *     2.62 r
-  fpu_mul/i_m4stg_frac/intadd_3/U10/CO (FADDX1_RVT)       0.11 *     2.72 r
-  fpu_mul/i_m4stg_frac/intadd_3/U9/CO (FADDX1_RVT)        0.11 *     2.84 r
-  fpu_mul/i_m4stg_frac/intadd_3/U8/CO (FADDX1_RVT)        0.11 *     2.94 r
-  fpu_mul/i_m4stg_frac/intadd_3/U7/CO (FADDX1_RVT)        0.11 *     3.05 r
-  fpu_mul/i_m4stg_frac/intadd_3/U6/CO (FADDX1_RVT)        0.11 *     3.17 r
-  fpu_mul/i_m4stg_frac/intadd_3/U5/CO (FADDX1_RVT)        0.11 *     3.28 r
-  fpu_mul/i_m4stg_frac/intadd_3/U4/CO (FADDX1_RVT)        0.13 *     3.40 r
-  fpu_mul/i_m4stg_frac/intadd_3/U3/CO (FADDX1_RVT)        0.12 *     3.52 r
-  fpu_mul/i_m4stg_frac/intadd_3/U2/CO (FADDX1_RVT)        0.12 *     3.64 r
-  fpu_mul/i_m4stg_frac/intadd_2/U43/CO (FADDX1_RVT)       0.11 *     3.75 r
-  fpu_mul/i_m4stg_frac/intadd_2/U42/CO (FADDX1_RVT)       0.11 *     3.86 r
-  fpu_mul/i_m4stg_frac/intadd_2/U41/CO (FADDX1_RVT)       0.11 *     3.97 r
-  fpu_mul/i_m4stg_frac/intadd_2/U40/CO (FADDX1_RVT)       0.12 *     4.08 r
-  fpu_mul/i_m4stg_frac/intadd_2/U39/CO (FADDX1_RVT)       0.11 *     4.19 r
-  fpu_mul/i_m4stg_frac/intadd_2/U38/CO (FADDX1_RVT)       0.11 *     4.30 r
-  fpu_mul/i_m4stg_frac/intadd_2/U37/CO (FADDX1_RVT)       0.11 *     4.41 r
-  fpu_mul/i_m4stg_frac/intadd_2/U36/CO (FADDX1_RVT)       0.11 *     4.52 r
-  fpu_mul/i_m4stg_frac/intadd_2/U35/CO (FADDX1_RVT)       0.11 *     4.63 r
-  fpu_mul/i_m4stg_frac/intadd_2/U34/CO (FADDX1_RVT)       0.11 *     4.74 r
-  fpu_mul/i_m4stg_frac/intadd_2/U33/CO (FADDX1_RVT)       0.11 *     4.84 r
-  fpu_mul/i_m4stg_frac/intadd_2/U32/CO (FADDX1_RVT)       0.12 *     4.96 r
-  fpu_mul/i_m4stg_frac/intadd_2/U31/CO (FADDX1_RVT)       0.11 *     5.07 r
-  fpu_mul/i_m4stg_frac/intadd_2/U30/CO (FADDX1_RVT)       0.10 *     5.17 r
-  fpu_mul/i_m4stg_frac/intadd_2/U29/CO (FADDX1_RVT)       0.11 *     5.28 r
-  fpu_mul/i_m4stg_frac/intadd_2/U28/CO (FADDX1_RVT)       0.11 *     5.40 r
-  fpu_mul/i_m4stg_frac/intadd_2/U27/CO (FADDX1_RVT)       0.12 *     5.52 r
-  fpu_mul/i_m4stg_frac/intadd_2/U26/CO (FADDX1_RVT)       0.11 *     5.62 r
-  fpu_mul/i_m4stg_frac/intadd_2/U25/CO (FADDX1_RVT)       0.11 *     5.73 r
-  fpu_mul/i_m4stg_frac/intadd_2/U24/CO (FADDX1_RVT)       0.11 *     5.84 r
-  fpu_mul/i_m4stg_frac/intadd_2/U23/CO (FADDX1_RVT)       0.11 *     5.95 r
-  fpu_mul/i_m4stg_frac/intadd_2/U22/CO (FADDX1_RVT)       0.11 *     6.06 r
-  fpu_mul/i_m4stg_frac/intadd_2/U21/CO (FADDX1_RVT)       0.11 *     6.16 r
-  fpu_mul/i_m4stg_frac/intadd_2/U20/CO (FADDX1_RVT)       0.11 *     6.27 r
-  fpu_mul/i_m4stg_frac/intadd_2/U19/CO (FADDX1_RVT)       0.11 *     6.38 r
-  fpu_mul/i_m4stg_frac/intadd_2/U18/CO (FADDX1_RVT)       0.11 *     6.48 r
-  fpu_mul/i_m4stg_frac/intadd_2/U17/CO (FADDX1_RVT)       0.11 *     6.59 r
-  fpu_mul/i_m4stg_frac/intadd_2/U16/CO (FADDX1_RVT)       0.11 *     6.70 r
-  fpu_mul/i_m4stg_frac/intadd_2/U15/CO (FADDX1_RVT)       0.11 *     6.81 r
-  fpu_mul/i_m4stg_frac/intadd_2/U14/CO (FADDX1_RVT)       0.11 *     6.92 r
-  fpu_mul/i_m4stg_frac/intadd_2/U13/CO (FADDX1_RVT)       0.11 *     7.04 r
-  fpu_mul/i_m4stg_frac/intadd_2/U12/CO (FADDX1_RVT)       0.11 *     7.15 r
-  fpu_mul/i_m4stg_frac/intadd_2/U11/CO (FADDX1_RVT)       0.11 *     7.26 r
-  fpu_mul/i_m4stg_frac/intadd_2/U10/CO (FADDX1_RVT)       0.11 *     7.36 r
-  fpu_mul/i_m4stg_frac/intadd_2/U9/CO (FADDX1_RVT)        0.11 *     7.47 r
-  fpu_mul/i_m4stg_frac/intadd_2/U8/CO (FADDX1_RVT)        0.11 *     7.59 r
-  fpu_mul/i_m4stg_frac/intadd_2/U7/CO (FADDX1_RVT)        0.11 *     7.69 r
-  fpu_mul/i_m4stg_frac/intadd_2/U6/CO (FADDX1_RVT)        0.11 *     7.80 r
-  fpu_mul/i_m4stg_frac/intadd_2/U5/CO (FADDX1_RVT)        0.11 *     7.91 r
-  fpu_mul/i_m4stg_frac/intadd_2/U4/S (FADDX1_RVT)         0.17 *     8.08 f
-  fpu_mul/i_m4stg_frac/U166/Y (AND2X1_RVT)                0.07 *     8.15 f
-  fpu_mul/i_m4stg_frac/out_dff/q_reg[71]/D (DFFX1_RVT)
-                                                          0.00 *     8.15 f
-  data arrival time                                                  8.15
-
-  clock ideal_clock (rise edge)                         123.00     123.00
-  clock network delay (ideal)                             0.00     123.00
-  fpu_mul/i_m4stg_frac/out_dff/q_reg[71]/CLK (DFFX1_RVT)
-                                                          0.00     123.00 r
-  library setup time                                     -0.06     122.94
-  data required time                                               122.94
-  --------------------------------------------------------------------------
-  data required time                                               122.94
-  data arrival time                                                 -8.15
-  --------------------------------------------------------------------------
-  slack (MET)                                                      114.79
-
-
-  Startpoint: fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]
-              (rising edge-triggered flip-flop clocked by ideal_clock)
-  Endpoint: fpu_mul/i_m4stg_frac/out_dff/q_reg[70]
-            (rising edge-triggered flip-flop clocked by ideal_clock)
-  Path Group: ideal_clock
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]/CLK (DFFX1_RVT)
-                                                          0.00       0.00 r
-  fpu_mul/i_m4stg_frac/a2sum_dff/q_reg[0]/Q (DFFX1_RVT)
-                                                          0.16       0.16 r
-  fpu_mul/i_m4stg_frac/U61/Y (NAND4X0_RVT)                0.09 *     0.25 f
-  fpu_mul/i_m4stg_frac/U62/Y (INVX1_RVT)                  0.07 *     0.33 r
-  fpu_mul/i_m4stg_frac/U1030/Y (AO222X1_RVT)              0.16 *     0.48 r
-  fpu_mul/i_m4stg_frac/intadd_4/U13/CO (FADDX1_RVT)       0.11 *     0.59 r
-  fpu_mul/i_m4stg_frac/intadd_4/U12/CO (FADDX1_RVT)       0.11 *     0.70 r
-  fpu_mul/i_m4stg_frac/intadd_4/U11/CO (FADDX1_RVT)       0.11 *     0.81 r
-  fpu_mul/i_m4stg_frac/intadd_4/U10/CO (FADDX1_RVT)       0.11 *     0.91 r
-  fpu_mul/i_m4stg_frac/intadd_4/U9/CO (FADDX1_RVT)        0.11 *     1.02 r
-  fpu_mul/i_m4stg_frac/intadd_4/U8/CO (FADDX1_RVT)        0.11 *     1.13 r
-  fpu_mul/i_m4stg_frac/intadd_4/U7/CO (FADDX1_RVT)        0.11 *     1.24 r
-  fpu_mul/i_m4stg_frac/intadd_4/U6/CO (FADDX1_RVT)        0.11 *     1.35 r
-  fpu_mul/i_m4stg_frac/intadd_4/U5/CO (FADDX1_RVT)        0.11 *     1.46 r
-  fpu_mul/i_m4stg_frac/intadd_4/U4/CO (FADDX1_RVT)        0.11 *     1.57 r
-  fpu_mul/i_m4stg_frac/intadd_4/U3/CO (FADDX1_RVT)        0.11 *     1.67 r
-  fpu_mul/i_m4stg_frac/intadd_4/U2/CO (FADDX1_RVT)        0.10 *     1.78 r
-  fpu_mul/i_m4stg_frac/U106/Y (NAND2X0_RVT)               0.05 *     1.83 f
-  fpu_mul/i_m4stg_frac/U107/Y (INVX1_RVT)                 0.05 *     1.88 r
-  fpu_mul/i_m4stg_frac/U1031/Y (AO222X1_RVT)              0.15 *     2.03 r
-  fpu_mul/i_m4stg_frac/intadd_3/U15/CO (FADDX1_RVT)       0.11 *     2.14 r
-  fpu_mul/i_m4stg_frac/intadd_3/U14/CO (FADDX1_RVT)       0.14 *     2.28 r
-  fpu_mul/i_m4stg_frac/intadd_3/U13/CO (FADDX1_RVT)       0.12 *     2.40 r
-  fpu_mul/i_m4stg_frac/intadd_3/U12/CO (FADDX1_RVT)       0.11 *     2.51 r
-  fpu_mul/i_m4stg_frac/intadd_3/U11/CO (FADDX1_RVT)       0.11 *     2.62 r
-  fpu_mul/i_m4stg_frac/intadd_3/U10/CO (FADDX1_RVT)       0.11 *     2.72 r
-  fpu_mul/i_m4stg_frac/intadd_3/U9/CO (FADDX1_RVT)        0.11 *     2.84 r
-  fpu_mul/i_m4stg_frac/intadd_3/U8/CO (FADDX1_RVT)        0.11 *     2.94 r
-  fpu_mul/i_m4stg_frac/intadd_3/U7/CO (FADDX1_RVT)        0.11 *     3.05 r
-  fpu_mul/i_m4stg_frac/intadd_3/U6/CO (FADDX1_RVT)        0.11 *     3.17 r
-  fpu_mul/i_m4stg_frac/intadd_3/U5/CO (FADDX1_RVT)        0.11 *     3.28 r
-  fpu_mul/i_m4stg_frac/intadd_3/U4/CO (FADDX1_RVT)        0.13 *     3.40 r
-  fpu_mul/i_m4stg_frac/intadd_3/U3/CO (FADDX1_RVT)        0.12 *     3.52 r
-  fpu_mul/i_m4stg_frac/intadd_3/U2/CO (FADDX1_RVT)        0.12 *     3.64 r
-  fpu_mul/i_m4stg_frac/intadd_2/U43/CO (FADDX1_RVT)       0.11 *     3.75 r
-  fpu_mul/i_m4stg_frac/intadd_2/U42/CO (FADDX1_RVT)       0.11 *     3.86 r
-  fpu_mul/i_m4stg_frac/intadd_2/U41/CO (FADDX1_RVT)       0.11 *     3.97 r
-  fpu_mul/i_m4stg_frac/intadd_2/U40/CO (FADDX1_RVT)       0.12 *     4.08 r
-  fpu_mul/i_m4stg_frac/intadd_2/U39/CO (FADDX1_RVT)       0.11 *     4.19 r
-  fpu_mul/i_m4stg_frac/intadd_2/U38/CO (FADDX1_RVT)       0.11 *     4.30 r
-  fpu_mul/i_m4stg_frac/intadd_2/U37/CO (FADDX1_RVT)       0.11 *     4.41 r
-  fpu_mul/i_m4stg_frac/intadd_2/U36/CO (FADDX1_RVT)       0.11 *     4.52 r
-  fpu_mul/i_m4stg_frac/intadd_2/U35/CO (FADDX1_RVT)       0.11 *     4.63 r
-  fpu_mul/i_m4stg_frac/intadd_2/U34/CO (FADDX1_RVT)       0.11 *     4.74 r
-  fpu_mul/i_m4stg_frac/intadd_2/U33/CO (FADDX1_RVT)       0.11 *     4.84 r
-  fpu_mul/i_m4stg_frac/intadd_2/U32/CO (FADDX1_RVT)       0.12 *     4.96 r
-  fpu_mul/i_m4stg_frac/intadd_2/U31/CO (FADDX1_RVT)       0.11 *     5.07 r
-  fpu_mul/i_m4stg_frac/intadd_2/U30/CO (FADDX1_RVT)       0.10 *     5.17 r
-  fpu_mul/i_m4stg_frac/intadd_2/U29/CO (FADDX1_RVT)       0.11 *     5.28 r
-  fpu_mul/i_m4stg_frac/intadd_2/U28/CO (FADDX1_RVT)       0.11 *     5.40 r
-  fpu_mul/i_m4stg_frac/intadd_2/U27/CO (FADDX1_RVT)       0.12 *     5.52 r
-  fpu_mul/i_m4stg_frac/intadd_2/U26/CO (FADDX1_RVT)       0.11 *     5.62 r
-  fpu_mul/i_m4stg_frac/intadd_2/U25/CO (FADDX1_RVT)       0.11 *     5.73 r
-  fpu_mul/i_m4stg_frac/intadd_2/U24/CO (FADDX1_RVT)       0.11 *     5.84 r
-  fpu_mul/i_m4stg_frac/intadd_2/U23/CO (FADDX1_RVT)       0.11 *     5.95 r
-  fpu_mul/i_m4stg_frac/intadd_2/U22/CO (FADDX1_RVT)       0.11 *     6.06 r
-  fpu_mul/i_m4stg_frac/intadd_2/U21/CO (FADDX1_RVT)       0.11 *     6.16 r
-  fpu_mul/i_m4stg_frac/intadd_2/U20/CO (FADDX1_RVT)       0.11 *     6.27 r
-  fpu_mul/i_m4stg_frac/intadd_2/U19/CO (FADDX1_RVT)       0.11 *     6.38 r
-  fpu_mul/i_m4stg_frac/intadd_2/U18/CO (FADDX1_RVT)       0.11 *     6.48 r
-  fpu_mul/i_m4stg_frac/intadd_2/U17/CO (FADDX1_RVT)       0.11 *     6.59 r
-  fpu_mul/i_m4stg_frac/intadd_2/U16/CO (FADDX1_RVT)       0.11 *     6.70 r
-  fpu_mul/i_m4stg_frac/intadd_2/U15/CO (FADDX1_RVT)       0.11 *     6.81 r
-  fpu_mul/i_m4stg_frac/intadd_2/U14/CO (FADDX1_RVT)       0.11 *     6.92 r
-  fpu_mul/i_m4stg_frac/intadd_2/U13/CO (FADDX1_RVT)       0.11 *     7.04 r
-  fpu_mul/i_m4stg_frac/intadd_2/U12/CO (FADDX1_RVT)       0.11 *     7.15 r
-  fpu_mul/i_m4stg_frac/intadd_2/U11/CO (FADDX1_RVT)       0.11 *     7.26 r
-  fpu_mul/i_m4stg_frac/intadd_2/U10/CO (FADDX1_RVT)       0.11 *     7.36 r
-  fpu_mul/i_m4stg_frac/intadd_2/U9/CO (FADDX1_RVT)        0.11 *     7.47 r
-  fpu_mul/i_m4stg_frac/intadd_2/U8/CO (FADDX1_RVT)        0.11 *     7.59 r
-  fpu_mul/i_m4stg_frac/intadd_2/U7/CO (FADDX1_RVT)        0.11 *     7.69 r
-  fpu_mul/i_m4stg_frac/intadd_2/U6/CO (FADDX1_RVT)        0.11 *     7.80 r
-  fpu_mul/i_m4stg_frac/intadd_2/U5/S (FADDX1_RVT)         0.17 *     7.97 f
-  fpu_mul/i_m4stg_frac/U165/Y (AND2X1_RVT)                0.08 *     8.05 f
-  fpu_mul/i_m4stg_frac/out_dff/q_reg[70]/D (DFFX1_RVT)
-                                                          0.00 *     8.05 f
-  data arrival time                                                  8.05
-
-  clock ideal_clock (rise edge)                         123.00     123.00
-  clock network delay (ideal)                             0.00     123.00
-  fpu_mul/i_m4stg_frac/out_dff/q_reg[70]/CLK (DFFX1_RVT)
-                                                          0.00     123.00 r
-  library setup time                                     -0.06     122.94
-  data required time                                               122.94
-  --------------------------------------------------------------------------
-  data required time                                               122.94
-  data arrival time                                                 -8.05
-  --------------------------------------------------------------------------
-  slack (MET)                                                      114.89
-
-
-  Startpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]
-              (rising edge-triggered flip-flop clocked by ideal_clock)
-  Endpoint: fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[15]
-            (rising edge-triggered flip-flop clocked by ideal_clock)
-  Path Group: ideal_clock
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
-  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/Q (DFFX1_RVT)
-                                                          0.18       0.18 r
-  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.12 *     0.30 r
-  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.41 r
-  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.12 *     0.53 r
-  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     0.64 r
-  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     0.75 r
-  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.10 *     0.85 r
-  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     0.96 r
-  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.07 r
-  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.17 r
-  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.30 r
-  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.41 r
-  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     1.53 r
-  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     1.64 r
-  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     1.75 r
-  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.11 *     1.86 r
-  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     1.97 r
-  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.10 *     2.07 r
-  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.18 r
-  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.28 r
-  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.10 *     2.39 r
-  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     2.50 r
-  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     2.60 r
-  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.10 *     2.71 r
-  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     2.81 r
-  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     2.92 r
-  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.10 *     3.02 r
-  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.10 *     3.13 r
-  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.10 *     3.23 r
-  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.34 r
-  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     3.45 r
-  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     3.56 r
-  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     3.66 r
-  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.11 *     3.77 r
-  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     3.88 r
-  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     3.98 r
-  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.09 r
-  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.20 r
-  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.30 r
-  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     4.42 r
-  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     4.53 r
-  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     4.64 r
-  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.10 *     4.74 r
-  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     4.85 r
-  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     4.95 r
-  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.06 r
-  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.17 r
-  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.28 r
-  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.38 r
-  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.10 *     5.49 r
-  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     5.59 r
-  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     5.70 r
-  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     5.81 r
-  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.10 *     5.92 r
-  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.11 *     6.02 r
-  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.13 r
-  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.24 r
-  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.35 r
-  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     6.46 r
-  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     6.56 r
-  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     6.67 r
-  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     6.78 r
-  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     6.89 r
-  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.10 *     6.99 r
-  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.02 f
-  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.19 *     7.21 r
-  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.13 *     7.34 f
-  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.22 *     7.56 f
-  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.21 *     7.77 f
-  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.15 *     7.92 f
-  fpu_add/fpu_add_frac_dp/U1393/Y (AND2X1_RVT)            0.10 *     8.02 f
-  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[15]/D (DFFX1_RVT)
-                                                          0.00 *     8.02 f
-  data arrival time                                                  8.02
-
-  clock ideal_clock (rise edge)                         123.00     123.00
-  clock network delay (ideal)                             0.00     123.00
-  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[15]/CLK (DFFX1_RVT)
-                                                          0.00     123.00 r
-  library setup time                                     -0.06     122.94
-  data required time                                               122.94
-  --------------------------------------------------------------------------
-  data required time                                               122.94
-  data arrival time                                                 -8.02
-  --------------------------------------------------------------------------
-  slack (MET)                                                      114.92
 
 
   Startpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]
@@ -1152,96 +631,504 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
   fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
+                                                          0.00       0.52 r
   fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/Q (DFFX1_RVT)
-                                                          0.18       0.18 r
-  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.12 *     0.30 r
-  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.41 r
-  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.12 *     0.53 r
-  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     0.64 r
-  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     0.75 r
-  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.10 *     0.85 r
-  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     0.96 r
-  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.07 r
-  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.17 r
-  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.30 r
-  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.41 r
-  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     1.53 r
-  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     1.64 r
-  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     1.75 r
-  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.11 *     1.86 r
-  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     1.97 r
-  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.10 *     2.07 r
-  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.18 r
-  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.28 r
-  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.10 *     2.39 r
-  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     2.50 r
-  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     2.60 r
-  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.10 *     2.71 r
-  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     2.81 r
-  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     2.92 r
-  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.10 *     3.02 r
-  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.10 *     3.13 r
-  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.10 *     3.23 r
-  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.34 r
-  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     3.45 r
-  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     3.56 r
-  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     3.66 r
-  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.11 *     3.77 r
-  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     3.88 r
-  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     3.98 r
-  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.09 r
-  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.20 r
-  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.30 r
-  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     4.42 r
-  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     4.53 r
-  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     4.64 r
-  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.10 *     4.74 r
-  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     4.85 r
-  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     4.95 r
-  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.06 r
-  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.17 r
-  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.28 r
-  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.38 r
-  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.10 *     5.49 r
-  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     5.59 r
-  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     5.70 r
-  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     5.81 r
-  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.10 *     5.92 r
-  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.11 *     6.02 r
-  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.13 r
-  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.24 r
-  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.35 r
-  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     6.46 r
-  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     6.56 r
-  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     6.67 r
-  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     6.78 r
-  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     6.89 r
-  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.10 *     6.99 r
-  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.02 f
-  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.19 *     7.21 r
-  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.13 *     7.34 f
-  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.22 *     7.56 f
-  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.21 *     7.77 f
-  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.15 *     7.92 f
-  fpu_add/fpu_add_frac_dp/U1437/Y (AND2X1_RVT)            0.10 *     8.02 f
+                                                          0.23       0.75 r
+  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.13 *     0.87 r
+  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.99 r
+  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.11 *     1.10 r
+  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     1.21 r
+  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     1.32 r
+  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.11 *     1.43 r
+  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     1.54 r
+  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.64 r
+  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.75 r
+  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.88 r
+  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.99 r
+  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     2.11 r
+  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     2.22 r
+  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     2.33 r
+  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.10 *     2.43 r
+  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     2.54 r
+  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.11 *     2.65 r
+  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.75 r
+  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.86 r
+  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.11 *     2.96 r
+  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     3.07 r
+  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     3.18 r
+  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.11 *     3.28 r
+  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     3.40 r
+  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     3.51 r
+  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.11 *     3.61 r
+  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.11 *     3.72 r
+  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.11 *     3.82 r
+  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.93 r
+  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     4.04 r
+  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     4.15 r
+  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     4.25 r
+  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.10 *     4.36 r
+  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     4.46 r
+  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     4.57 r
+  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.68 r
+  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.79 r
+  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.90 r
+  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     5.01 r
+  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     5.12 r
+  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     5.22 r
+  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.11 *     5.33 r
+  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     5.44 r
+  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     5.54 r
+  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.65 r
+  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.76 r
+  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.87 r
+  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.98 r
+  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.11 *     6.08 r
+  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     6.19 r
+  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     6.30 r
+  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     6.41 r
+  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.11 *     6.51 r
+  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.10 *     6.62 r
+  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.72 r
+  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.83 r
+  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.94 r
+  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     7.05 r
+  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     7.16 r
+  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     7.26 r
+  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     7.37 r
+  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     7.48 r
+  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.09 *     7.57 r
+  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.61 f
+  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.18 *     7.78 r
+  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.11 *     7.90 f
+  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.21 *     8.11 f
+  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.39 *     8.50 f
+  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.28 *     8.78 f
+  fpu_add/fpu_add_frac_dp/U1437/Y (AND2X1_RVT)            0.13 *     8.91 f
   fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[24]/D (DFFX1_RVT)
-                                                          0.00 *     8.02 f
-  data arrival time                                                  8.02
+                                                          0.00 *     8.91 f
+  data arrival time                                                  8.91
 
   clock ideal_clock (rise edge)                         123.00     123.00
-  clock network delay (ideal)                             0.00     123.00
+  clock network delay (propagated)                        0.50     123.50
   fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[24]/CLK (DFFX1_RVT)
-                                                          0.00     123.00 r
-  library setup time                                     -0.06     122.94
-  data required time                                               122.94
+                                                          0.00     123.50 r
+  library setup time                                     -0.03     123.47
+  data required time                                               123.47
   --------------------------------------------------------------------------
-  data required time                                               122.94
-  data arrival time                                                 -8.02
+  data required time                                               123.47
+  data arrival time                                                 -8.91
   --------------------------------------------------------------------------
-  slack (MET)                                                      114.92
+  slack (MET)                                                      114.56
+
+
+  Startpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[25]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.23       0.75 r
+  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.13 *     0.87 r
+  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.99 r
+  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.11 *     1.10 r
+  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     1.21 r
+  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     1.32 r
+  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.11 *     1.43 r
+  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     1.54 r
+  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.64 r
+  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.75 r
+  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.88 r
+  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.99 r
+  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     2.11 r
+  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     2.22 r
+  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     2.33 r
+  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.10 *     2.43 r
+  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     2.54 r
+  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.11 *     2.65 r
+  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.75 r
+  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.86 r
+  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.11 *     2.96 r
+  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     3.07 r
+  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     3.18 r
+  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.11 *     3.28 r
+  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     3.40 r
+  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     3.51 r
+  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.11 *     3.61 r
+  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.11 *     3.72 r
+  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.11 *     3.82 r
+  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.93 r
+  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     4.04 r
+  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     4.15 r
+  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     4.25 r
+  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.10 *     4.36 r
+  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     4.46 r
+  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     4.57 r
+  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.68 r
+  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.79 r
+  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.90 r
+  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     5.01 r
+  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     5.12 r
+  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     5.22 r
+  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.11 *     5.33 r
+  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     5.44 r
+  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     5.54 r
+  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.65 r
+  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.76 r
+  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.87 r
+  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.98 r
+  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.11 *     6.08 r
+  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     6.19 r
+  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     6.30 r
+  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     6.41 r
+  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.11 *     6.51 r
+  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.10 *     6.62 r
+  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.72 r
+  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.83 r
+  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.94 r
+  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     7.05 r
+  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     7.16 r
+  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     7.26 r
+  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     7.37 r
+  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     7.48 r
+  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.09 *     7.57 r
+  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.61 f
+  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.18 *     7.78 r
+  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.11 *     7.90 f
+  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.21 *     8.11 f
+  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.39 *     8.50 f
+  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.28 *     8.78 f
+  fpu_add/fpu_add_frac_dp/U2542/Y (AND2X1_RVT)            0.13 *     8.91 f
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[25]/D (DFFX1_RVT)
+                                                          0.00 *     8.91 f
+  data arrival time                                                  8.91
+
+  clock ideal_clock (rise edge)                         123.00     123.00
+  clock network delay (propagated)                        0.50     123.50
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[25]/CLK (DFFX1_RVT)
+                                                          0.00     123.50 r
+  library setup time                                     -0.03     123.47
+  data required time                                               123.47
+  --------------------------------------------------------------------------
+  data required time                                               123.47
+  data arrival time                                                 -8.91
+  --------------------------------------------------------------------------
+  slack (MET)                                                      114.56
+
+
+  Startpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[32]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.23       0.75 r
+  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.13 *     0.87 r
+  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.99 r
+  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.11 *     1.10 r
+  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     1.21 r
+  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     1.32 r
+  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.11 *     1.43 r
+  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     1.54 r
+  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.64 r
+  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.75 r
+  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.88 r
+  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.99 r
+  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     2.11 r
+  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     2.22 r
+  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     2.33 r
+  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.10 *     2.43 r
+  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     2.54 r
+  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.11 *     2.65 r
+  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.75 r
+  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.86 r
+  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.11 *     2.96 r
+  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     3.07 r
+  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     3.18 r
+  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.11 *     3.28 r
+  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     3.40 r
+  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     3.51 r
+  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.11 *     3.61 r
+  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.11 *     3.72 r
+  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.11 *     3.82 r
+  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.93 r
+  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     4.04 r
+  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     4.15 r
+  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     4.25 r
+  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.10 *     4.36 r
+  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     4.46 r
+  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     4.57 r
+  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.68 r
+  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.79 r
+  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.90 r
+  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     5.01 r
+  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     5.12 r
+  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     5.22 r
+  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.11 *     5.33 r
+  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     5.44 r
+  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     5.54 r
+  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.65 r
+  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.76 r
+  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.87 r
+  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.98 r
+  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.11 *     6.08 r
+  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     6.19 r
+  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     6.30 r
+  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     6.41 r
+  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.11 *     6.51 r
+  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.10 *     6.62 r
+  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.72 r
+  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.83 r
+  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.94 r
+  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     7.05 r
+  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     7.16 r
+  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     7.26 r
+  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     7.37 r
+  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     7.48 r
+  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.09 *     7.57 r
+  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.61 f
+  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.18 *     7.78 r
+  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.11 *     7.90 f
+  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.21 *     8.11 f
+  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.39 *     8.50 f
+  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.28 *     8.78 f
+  fpu_add/fpu_add_frac_dp/U1431/Y (AND2X1_RVT)            0.13 *     8.91 f
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[32]/D (DFFX1_RVT)
+                                                          0.00 *     8.91 f
+  data arrival time                                                  8.91
+
+  clock ideal_clock (rise edge)                         123.00     123.00
+  clock network delay (propagated)                        0.50     123.50
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[32]/CLK (DFFX1_RVT)
+                                                          0.00     123.50 r
+  library setup time                                     -0.03     123.47
+  data required time                                               123.47
+  --------------------------------------------------------------------------
+  data required time                                               123.47
+  data arrival time                                                 -8.91
+  --------------------------------------------------------------------------
+  slack (MET)                                                      114.56
+
+
+  Startpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[27]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.23       0.75 r
+  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.13 *     0.87 r
+  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.99 r
+  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.11 *     1.10 r
+  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     1.21 r
+  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     1.32 r
+  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.11 *     1.43 r
+  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     1.54 r
+  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.64 r
+  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.75 r
+  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.88 r
+  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.99 r
+  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     2.11 r
+  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     2.22 r
+  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     2.33 r
+  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.10 *     2.43 r
+  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     2.54 r
+  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.11 *     2.65 r
+  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.75 r
+  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.86 r
+  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.11 *     2.96 r
+  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     3.07 r
+  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     3.18 r
+  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.11 *     3.28 r
+  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     3.40 r
+  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     3.51 r
+  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.11 *     3.61 r
+  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.11 *     3.72 r
+  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.11 *     3.82 r
+  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.93 r
+  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     4.04 r
+  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     4.15 r
+  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     4.25 r
+  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.10 *     4.36 r
+  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     4.46 r
+  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     4.57 r
+  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.68 r
+  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.79 r
+  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.90 r
+  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     5.01 r
+  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     5.12 r
+  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     5.22 r
+  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.11 *     5.33 r
+  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     5.44 r
+  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     5.54 r
+  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.65 r
+  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.76 r
+  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.87 r
+  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.98 r
+  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.11 *     6.08 r
+  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     6.19 r
+  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     6.30 r
+  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     6.41 r
+  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.11 *     6.51 r
+  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.10 *     6.62 r
+  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.72 r
+  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.83 r
+  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.94 r
+  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     7.05 r
+  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     7.16 r
+  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     7.26 r
+  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     7.37 r
+  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     7.48 r
+  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.09 *     7.57 r
+  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.61 f
+  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.18 *     7.78 r
+  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.11 *     7.90 f
+  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.21 *     8.11 f
+  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.39 *     8.50 f
+  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.28 *     8.78 f
+  fpu_add/fpu_add_frac_dp/U2543/Y (AND2X1_RVT)            0.12 *     8.91 f
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[27]/D (DFFX1_RVT)
+                                                          0.00 *     8.91 f
+  data arrival time                                                  8.91
+
+  clock ideal_clock (rise edge)                         123.00     123.00
+  clock network delay (propagated)                        0.50     123.50
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[27]/CLK (DFFX1_RVT)
+                                                          0.00     123.50 r
+  library setup time                                     -0.03     123.47
+  data required time                                               123.47
+  --------------------------------------------------------------------------
+  data required time                                               123.47
+  data arrival time                                                 -8.91
+  --------------------------------------------------------------------------
+  slack (MET)                                                      114.56
+
+
+  Startpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[31]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.23       0.75 r
+  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.13 *     0.87 r
+  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.99 r
+  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.11 *     1.10 r
+  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     1.21 r
+  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     1.32 r
+  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.11 *     1.43 r
+  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     1.54 r
+  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.64 r
+  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.75 r
+  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.88 r
+  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.99 r
+  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     2.11 r
+  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     2.22 r
+  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     2.33 r
+  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.10 *     2.43 r
+  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     2.54 r
+  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.11 *     2.65 r
+  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.75 r
+  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.86 r
+  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.11 *     2.96 r
+  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     3.07 r
+  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     3.18 r
+  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.11 *     3.28 r
+  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     3.40 r
+  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     3.51 r
+  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.11 *     3.61 r
+  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.11 *     3.72 r
+  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.11 *     3.82 r
+  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.93 r
+  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     4.04 r
+  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     4.15 r
+  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     4.25 r
+  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.10 *     4.36 r
+  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     4.46 r
+  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     4.57 r
+  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.68 r
+  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.79 r
+  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.90 r
+  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     5.01 r
+  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     5.12 r
+  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     5.22 r
+  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.11 *     5.33 r
+  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     5.44 r
+  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     5.54 r
+  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.65 r
+  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.76 r
+  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.87 r
+  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.98 r
+  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.11 *     6.08 r
+  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     6.19 r
+  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     6.30 r
+  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     6.41 r
+  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.11 *     6.51 r
+  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.10 *     6.62 r
+  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.72 r
+  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.83 r
+  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.94 r
+  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     7.05 r
+  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     7.16 r
+  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     7.26 r
+  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     7.37 r
+  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     7.48 r
+  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.09 *     7.57 r
+  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.61 f
+  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.18 *     7.78 r
+  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.11 *     7.90 f
+  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.21 *     8.11 f
+  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.39 *     8.50 f
+  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.28 *     8.78 f
+  fpu_add/fpu_add_frac_dp/U2545/Y (AND2X1_RVT)            0.12 *     8.90 f
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[31]/D (DFFX1_RVT)
+                                                          0.00 *     8.90 f
+  data arrival time                                                  8.90
+
+  clock ideal_clock (rise edge)                         123.00     123.00
+  clock network delay (propagated)                        0.50     123.50
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[31]/CLK (DFFX1_RVT)
+                                                          0.00     123.50 r
+  library setup time                                     -0.03     123.47
+  data required time                                               123.47
+  --------------------------------------------------------------------------
+  data required time                                               123.47
+  data arrival time                                                 -8.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                      114.57
 
 
   Startpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]
@@ -1254,96 +1141,198 @@ Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock ideal_clock (rise edge)                           0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
   fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/CLK (DFFX1_RVT)
-                                                          0.00 #     0.00 r
+                                                          0.00       0.52 r
   fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/Q (DFFX1_RVT)
-                                                          0.18       0.18 r
-  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.12 *     0.30 r
-  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.41 r
-  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.12 *     0.53 r
-  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     0.64 r
-  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     0.75 r
-  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.10 *     0.85 r
-  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     0.96 r
-  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.07 r
-  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.17 r
-  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.30 r
-  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.41 r
-  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     1.53 r
-  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     1.64 r
-  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     1.75 r
-  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.11 *     1.86 r
-  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     1.97 r
-  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.10 *     2.07 r
-  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.18 r
-  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.28 r
-  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.10 *     2.39 r
-  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     2.50 r
-  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     2.60 r
-  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.10 *     2.71 r
-  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     2.81 r
-  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     2.92 r
-  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.10 *     3.02 r
-  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.10 *     3.13 r
-  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.10 *     3.23 r
-  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.34 r
-  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     3.45 r
-  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     3.56 r
-  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     3.66 r
-  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.11 *     3.77 r
-  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     3.88 r
-  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     3.98 r
-  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.09 r
-  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.20 r
-  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.30 r
-  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     4.42 r
-  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     4.53 r
-  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     4.64 r
-  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.10 *     4.74 r
-  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     4.85 r
-  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     4.95 r
-  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.06 r
-  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.17 r
-  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.28 r
-  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.38 r
-  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.10 *     5.49 r
-  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     5.59 r
-  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     5.70 r
-  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     5.81 r
-  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.10 *     5.92 r
-  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.11 *     6.02 r
-  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.13 r
-  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.24 r
-  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.35 r
-  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     6.46 r
-  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     6.56 r
-  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     6.67 r
-  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     6.78 r
-  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     6.89 r
-  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.10 *     6.99 r
-  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.02 f
-  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.19 *     7.21 r
-  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.13 *     7.34 f
-  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.22 *     7.56 f
-  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.21 *     7.77 f
-  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.15 *     7.92 f
-  fpu_add/fpu_add_frac_dp/U1373/Y (AND2X1_RVT)            0.10 *     8.02 f
+                                                          0.23       0.75 r
+  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.13 *     0.87 r
+  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.99 r
+  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.11 *     1.10 r
+  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     1.21 r
+  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     1.32 r
+  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.11 *     1.43 r
+  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     1.54 r
+  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.64 r
+  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.75 r
+  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.88 r
+  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.99 r
+  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     2.11 r
+  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     2.22 r
+  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     2.33 r
+  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.10 *     2.43 r
+  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     2.54 r
+  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.11 *     2.65 r
+  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.75 r
+  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.86 r
+  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.11 *     2.96 r
+  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     3.07 r
+  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     3.18 r
+  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.11 *     3.28 r
+  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     3.40 r
+  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     3.51 r
+  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.11 *     3.61 r
+  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.11 *     3.72 r
+  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.11 *     3.82 r
+  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.93 r
+  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     4.04 r
+  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     4.15 r
+  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     4.25 r
+  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.10 *     4.36 r
+  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     4.46 r
+  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     4.57 r
+  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.68 r
+  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.79 r
+  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.90 r
+  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     5.01 r
+  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     5.12 r
+  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     5.22 r
+  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.11 *     5.33 r
+  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     5.44 r
+  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     5.54 r
+  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.65 r
+  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.76 r
+  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.87 r
+  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.98 r
+  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.11 *     6.08 r
+  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     6.19 r
+  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     6.30 r
+  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     6.41 r
+  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.11 *     6.51 r
+  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.10 *     6.62 r
+  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.72 r
+  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.83 r
+  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.94 r
+  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     7.05 r
+  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     7.16 r
+  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     7.26 r
+  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     7.37 r
+  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     7.48 r
+  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.09 *     7.57 r
+  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.61 f
+  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.18 *     7.78 r
+  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.11 *     7.90 f
+  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.21 *     8.11 f
+  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.39 *     8.50 f
+  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.28 *     8.78 f
+  fpu_add/fpu_add_frac_dp/U1373/Y (AND2X1_RVT)            0.12 *     8.90 f
   fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[28]/D (DFFX1_RVT)
-                                                          0.00 *     8.02 f
-  data arrival time                                                  8.02
+                                                          0.00 *     8.90 f
+  data arrival time                                                  8.90
 
   clock ideal_clock (rise edge)                         123.00     123.00
-  clock network delay (ideal)                             0.00     123.00
+  clock network delay (propagated)                        0.50     123.50
   fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[28]/CLK (DFFX1_RVT)
-                                                          0.00     123.00 r
-  library setup time                                     -0.06     122.94
-  data required time                                               122.94
+                                                          0.00     123.50 r
+  library setup time                                     -0.03     123.47
+  data required time                                               123.47
   --------------------------------------------------------------------------
-  data required time                                               122.94
-  data arrival time                                                 -8.02
+  data required time                                               123.47
+  data arrival time                                                 -8.90
   --------------------------------------------------------------------------
-  slack (MET)                                                      114.92
+  slack (MET)                                                      114.57
+
+
+  Startpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[6]
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.52       0.52
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/CLK (DFFX1_RVT)
+                                                          0.00       0.52 r
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/Q (DFFX1_RVT)
+                                                          0.23       0.75 r
+  fpu_add/fpu_add_frac_dp/U1366/CO (FADDX1_RVT)           0.13 *     0.87 r
+  fpu_add/fpu_add_frac_dp/U1382/CO (FADDX1_RVT)           0.11 *     0.99 r
+  fpu_add/fpu_add_frac_dp/U1407/CO (FADDX1_RVT)           0.11 *     1.10 r
+  fpu_add/fpu_add_frac_dp/U1438/CO (FADDX1_RVT)           0.11 *     1.21 r
+  fpu_add/fpu_add_frac_dp/U1414/CO (FADDX1_RVT)           0.11 *     1.32 r
+  fpu_add/fpu_add_frac_dp/U1435/CO (FADDX1_RVT)           0.11 *     1.43 r
+  fpu_add/fpu_add_frac_dp/U1376/CO (FADDX1_RVT)           0.11 *     1.54 r
+  fpu_add/fpu_add_frac_dp/U1409/CO (FADDX1_RVT)           0.11 *     1.64 r
+  fpu_add/fpu_add_frac_dp/U1378/CO (FADDX1_RVT)           0.11 *     1.75 r
+  fpu_add/fpu_add_frac_dp/U1390/CO (FADDX1_RVT)           0.12 *     1.88 r
+  fpu_add/fpu_add_frac_dp/U1388/CO (FADDX1_RVT)           0.12 *     1.99 r
+  fpu_add/fpu_add_frac_dp/U1380/CO (FADDX1_RVT)           0.12 *     2.11 r
+  fpu_add/fpu_add_frac_dp/U1428/CO (FADDX1_RVT)           0.11 *     2.22 r
+  fpu_add/fpu_add_frac_dp/U1364/CO (FADDX1_RVT)           0.11 *     2.33 r
+  fpu_add/fpu_add_frac_dp/U1392/CO (FADDX1_RVT)           0.10 *     2.43 r
+  fpu_add/fpu_add_frac_dp/U1394/CO (FADDX1_RVT)           0.11 *     2.54 r
+  fpu_add/fpu_add_frac_dp/U1418/CO (FADDX1_RVT)           0.11 *     2.65 r
+  fpu_add/fpu_add_frac_dp/U1400/CO (FADDX1_RVT)           0.11 *     2.75 r
+  fpu_add/fpu_add_frac_dp/U1396/CO (FADDX1_RVT)           0.11 *     2.86 r
+  fpu_add/fpu_add_frac_dp/U1360/CO (FADDX1_RVT)           0.11 *     2.96 r
+  fpu_add/fpu_add_frac_dp/U1432/CO (FADDX1_RVT)           0.11 *     3.07 r
+  fpu_add/fpu_add_frac_dp/U1426/CO (FADDX1_RVT)           0.11 *     3.18 r
+  fpu_add/fpu_add_frac_dp/U2482/CO (FADDX1_RVT)           0.11 *     3.28 r
+  fpu_add/fpu_add_frac_dp/U1436/CO (FADDX1_RVT)           0.11 *     3.40 r
+  fpu_add/fpu_add_frac_dp/U2485/CO (FADDX1_RVT)           0.11 *     3.51 r
+  fpu_add/fpu_add_frac_dp/U1368/CO (FADDX1_RVT)           0.11 *     3.61 r
+  fpu_add/fpu_add_frac_dp/U2488/CO (FADDX1_RVT)           0.11 *     3.72 r
+  fpu_add/fpu_add_frac_dp/U1372/CO (FADDX1_RVT)           0.11 *     3.82 r
+  fpu_add/fpu_add_frac_dp/U2491/CO (FADDX1_RVT)           0.11 *     3.93 r
+  fpu_add/fpu_add_frac_dp/U1416/CO (FADDX1_RVT)           0.11 *     4.04 r
+  fpu_add/fpu_add_frac_dp/U2494/CO (FADDX1_RVT)           0.11 *     4.15 r
+  fpu_add/fpu_add_frac_dp/U1430/CO (FADDX1_RVT)           0.11 *     4.25 r
+  fpu_add/fpu_add_frac_dp/U2497/CO (FADDX1_RVT)           0.10 *     4.36 r
+  fpu_add/fpu_add_frac_dp/U1424/CO (FADDX1_RVT)           0.11 *     4.46 r
+  fpu_add/fpu_add_frac_dp/U2500/CO (FADDX1_RVT)           0.11 *     4.57 r
+  fpu_add/fpu_add_frac_dp/U1413/CO (FADDX1_RVT)           0.11 *     4.68 r
+  fpu_add/fpu_add_frac_dp/U2503/CO (FADDX1_RVT)           0.11 *     4.79 r
+  fpu_add/fpu_add_frac_dp/U1384/CO (FADDX1_RVT)           0.11 *     4.90 r
+  fpu_add/fpu_add_frac_dp/U2506/CO (FADDX1_RVT)           0.11 *     5.01 r
+  fpu_add/fpu_add_frac_dp/U1386/CO (FADDX1_RVT)           0.11 *     5.12 r
+  fpu_add/fpu_add_frac_dp/U2509/CO (FADDX1_RVT)           0.11 *     5.22 r
+  fpu_add/fpu_add_frac_dp/U1411/CO (FADDX1_RVT)           0.11 *     5.33 r
+  fpu_add/fpu_add_frac_dp/U2512/CO (FADDX1_RVT)           0.11 *     5.44 r
+  fpu_add/fpu_add_frac_dp/U1422/CO (FADDX1_RVT)           0.11 *     5.54 r
+  fpu_add/fpu_add_frac_dp/U2515/CO (FADDX1_RVT)           0.11 *     5.65 r
+  fpu_add/fpu_add_frac_dp/U1433/CO (FADDX1_RVT)           0.11 *     5.76 r
+  fpu_add/fpu_add_frac_dp/U2518/CO (FADDX1_RVT)           0.11 *     5.87 r
+  fpu_add/fpu_add_frac_dp/U1405/CO (FADDX1_RVT)           0.11 *     5.98 r
+  fpu_add/fpu_add_frac_dp/U2521/CO (FADDX1_RVT)           0.11 *     6.08 r
+  fpu_add/fpu_add_frac_dp/U1402/CO (FADDX1_RVT)           0.11 *     6.19 r
+  fpu_add/fpu_add_frac_dp/U2524/CO (FADDX1_RVT)           0.11 *     6.30 r
+  fpu_add/fpu_add_frac_dp/U1403/CO (FADDX1_RVT)           0.11 *     6.41 r
+  fpu_add/fpu_add_frac_dp/U2527/CO (FADDX1_RVT)           0.11 *     6.51 r
+  fpu_add/fpu_add_frac_dp/U1398/CO (FADDX1_RVT)           0.10 *     6.62 r
+  fpu_add/fpu_add_frac_dp/U2530/CO (FADDX1_RVT)           0.11 *     6.72 r
+  fpu_add/fpu_add_frac_dp/U1420/CO (FADDX1_RVT)           0.11 *     6.83 r
+  fpu_add/fpu_add_frac_dp/U2533/CO (FADDX1_RVT)           0.11 *     6.94 r
+  fpu_add/fpu_add_frac_dp/U1374/CO (FADDX1_RVT)           0.11 *     7.05 r
+  fpu_add/fpu_add_frac_dp/U2536/CO (FADDX1_RVT)           0.11 *     7.16 r
+  fpu_add/fpu_add_frac_dp/U1370/CO (FADDX1_RVT)           0.11 *     7.26 r
+  fpu_add/fpu_add_frac_dp/U2539/CO (FADDX1_RVT)           0.11 *     7.37 r
+  fpu_add/fpu_add_frac_dp/U1361/CO (FADDX1_RVT)           0.11 *     7.48 r
+  fpu_add/fpu_add_frac_dp/U1357/CO (FADDX1_RVT)           0.09 *     7.57 r
+  fpu_add/fpu_add_frac_dp/U182/Y (INVX0_RVT)              0.03 *     7.61 f
+  fpu_add/fpu_add_frac_dp/U973/Y (XNOR2X1_RVT)            0.18 *     7.78 r
+  fpu_add/fpu_add_frac_dp/U180/Y (INVX1_RVT)              0.11 *     7.90 f
+  fpu_add/fpu_add_frac_dp/U1362/Y (AND4X1_RVT)            0.21 *     8.11 f
+  fpu_add/fpu_add_frac_dp/U364/Y (OA222X1_RVT)            0.39 *     8.50 f
+  fpu_add/fpu_add_frac_dp/U123/Y (NBUFFX2_RVT)            0.28 *     8.78 f
+  fpu_add/fpu_add_frac_dp/U393/Y (AND2X1_RVT)             0.12 *     8.90 f
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[6]/D (DFFX1_RVT)
+                                                          0.00 *     8.90 f
+  data arrival time                                                  8.90
+
+  clock ideal_clock (rise edge)                         123.00     123.00
+  clock network delay (propagated)                        0.50     123.50
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre3/q_reg[6]/CLK (DFFX1_RVT)
+                                                          0.00     123.50 r
+  library setup time                                     -0.03     123.47
+  data required time                                               123.47
+  --------------------------------------------------------------------------
+  data required time                                               123.47
+  data arrival time                                                 -8.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                      114.57
 
 
 1

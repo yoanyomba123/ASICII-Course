@@ -1,38 +1,36 @@
-Information: Updating graph... (UID-83)
-Warning: Design 'fpu' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
  
 ****************************************
 Report : qor
 Design : fpu
 Version: L-2016.03-SP5-1
-Date   : Wed May  8 21:34:41 2019
+Date   : Wed May  8 22:12:17 2019
 ****************************************
 
 
   Timing Path Group 'ideal_clock'
   -----------------------------------
-  Levels of Logic:              10.00
-  Critical Path Length:          2.05
-  Critical Path Slack:          59.45
+  Levels of Logic:               9.00
+  Critical Path Length:          2.26
+  Critical Path Slack:          59.25
   Critical Path Clk Period:    123.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
-  Worst Hold Violation:         -9.48
-  Total Hold Violation:      -1894.80
-  No. of Hold Violations:      590.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
   -----------------------------------
 
 
   Cell Count
   -----------------------------------
   Hierarchical Cell Count:         10
-  Hierarchical Port Count:       3205
-  Leaf Cell Count:              28605
-  Buf/Inv Cell Count:            1752
-  Buf Cell Count:                 486
-  Inv Cell Count:                1266
-  CT Buf/Inv Cell Count:            8
-  Combinational Cell Count:     21418
+  Hierarchical Port Count:       3232
+  Leaf Cell Count:              28385
+  Buf/Inv Cell Count:            1532
+  Buf Cell Count:                 288
+  Inv Cell Count:                1244
+  CT Buf/Inv Cell Count:           70
+  Combinational Cell Count:     21198
   Sequential Cell Count:         7187
   Macro Count:                      0
   -----------------------------------
@@ -40,27 +38,27 @@ Date   : Wed May  8 21:34:41 2019
 
   Area
   -----------------------------------
-  Combinational Area:    54000.008936
+  Combinational Area:    53270.869778
   Noncombinational Area: 43460.658189
-  Buf/Inv Area:           2862.169784
-  Total Buffer Area:          1065.88
-  Total Inverter Area:        1796.29
+  Buf/Inv Area:           2315.506020
+  Total Buffer Area:           611.47
+  Total Inverter Area:        1704.04
   Macro/Black Box Area:      0.000000
-  Net Area:              62031.547568
-  Net XLength        :      339011.53
-  Net YLength        :      380274.50
+  Net Area:              62305.565602
+  Net XLength        :      353162.62
+  Net YLength        :      394167.81
   -----------------------------------
-  Cell Area:             97460.667126
-  Design Area:          159492.214694
-  Net Length        :       719286.00
+  Cell Area:             96731.527968
+  Design Area:          159037.093570
+  Net Length        :       747330.44
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:         30901
-  Nets With Violations:             0
+  Total Number of Nets:         30735
+  Nets With Violations:             7
   Max Trans Violations:             0
-  Max Cap Violations:               0
+  Max Cap Violations:               7
   -----------------------------------
 
 
@@ -70,17 +68,17 @@ Date   : Wed May  8 21:34:41 2019
   -----------------------------------------
   Resource Sharing:                    0.00
   Logic Optimization:                  0.00
-  Mapping Optimization:                4.07
+  Mapping Optimization:               25.77
   -----------------------------------------
-  Overall Compile Time:                4.30
-  Overall Compile Wall Clock Time:     4.68
+  Overall Compile Time:               26.55
+  Overall Compile Wall Clock Time:    27.73
 
   --------------------------------------------------------------------
 
   Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
 
 
-  Design (Hold)  WNS: 9.48  TNS: 1894.80  Number of Violating Paths: 590
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
 
   --------------------------------------------------------------------
 
