@@ -48,8 +48,12 @@ route_opt -skip_initial_route -effort high -concurrent_clock_and_data -xtalk_red
 # enables block interface optimization and runs incremental optimization
 set_host_options -pool LSF -name "LSF_hosts"
 set_top_implementation_options -optimize_block_interface true -host_options "LSF_hosts"
-route_opt -incremental
+route_opt -effort high -incremental
 
+# repair any additional problems encountered
+route_search_repair -rerun_drc -loop "100"
+
+insert_stdcell_filler -cell_without_metal "FILL8 FILL4 FILL2 FILL" -connect_to_power "VDDA" -connect_to_ground "VSS"
 
 #iiiave the cel and report timing
 write_verilog "./output/res.v"

@@ -1,8 +1,266 @@
 Initializing gui preferences from file  /home/dm3233@drexel.edu/.synopsys_icc_prefs.tcl
-icc_shell> man routing
-Error: No manual entry for 'routing' (CMD-025)
-icc_shell> man routeability
-Error: No manual entry for 'routeability' (CMD-025)
+icc_shell> man clock_opt_feasibility
+2.  Synopsys Commands                                        Command Reference
+                             clock_opt_feasibility
+
+NAME
+       clock_opt_feasibility
+              Performs  optimization  feasibility analysis on the design after
+              clock tree synthesis.
+
+SYNTAX
+       status clock_opt_feasibility
+               [-congestion]
+               [-clock_route]
+               [-only_psyn]
+               [-fix_hold_all_clocks]
+               [-inter_clock_balance]
+               [-update_clock_latency]
+               [-operating_condition   min | max | min_max]
+               [-only_cts]
+               [-optimize_dft]
+               [-continue_on_missing_scandef]
+               [-no_clock_route]
+               [-only_hold_time]
+               [-area_recovery]
+               [-size_only]
+               [-in_place_size_only]
+               [-power]
+               [-no_legalize_large_displacement]
+               [-large_displacement_threshold number_of_cell_rows]
+
+   Data Types
+       number_of_cell_rows     int
+
+ARGUMENTS
+       -congestion
+              Performs congestion removal during the optimization  feasibility
+              flow.
+
+              By default, the command does not perform congestion removal.
+
+       -clock_route
+              Performs clock net routing after optimization.
+
+              By default, the command does not perform clock routing.
+
+       -only_psyn
+              Performs optimization only.
+
+       -fix_hold_all_clocks
+              Performs hold time violation fixing for all clocks during incre-
+              mental optimization.
+
+              By default, the command does not perform hold fixing.
+
+       -inter_clock_balance
+              Performs interclock delay balancing.
+
+              By default, the command does not perform interclock  delay  bal-
+              ancing.
+
+       -update_clock_latency
+              Updates  the  latencies  on real and virtual clock objects after
+              clock tree synthesis, clock tree optimization, interclock  delay
+              balancing (if enabled), and clock tree detail routing.
+
+              This  effectively  executes the set_clock_latency command inter-
+              nally for the clock objects and uses the insertion delay of  the
+              clock   tree   as   the   latency   value.   If   you   run  the
+              set_latency_adjustment_options command before the clock_opt_fea-
+              sibility  command,  the  directives  are  obeyed.  If you do not
+              specify any directives, only the latencies of real clock objects
+              are  updated.  The  update mechanism uses the insertion delay of
+              the clock tree as the latency value.
+
+       -operating_condition  min | max | min_max
+              Specifies the operating condition.
+
+              The default is max.
+
+       -only_cts
+              Performs only clock tree synthesis and clock tree  optimization.
+
+       -optimize_dft
+              Enables clock-aware scan reordering.
+
+              The  reordering tries to minimize the number of buffer crossings
+              in the scan chains. Minimizing the number  of  buffer  crossings
+              can reduce hold time violations in the scan chains.
+
+              When  you  specify  this  option, you must load the SCANDEF data
+              that defines the scan chains before running the  clock_opt  com-
+              mand.   You  can use the get_scan_chains command to check if the
+              SCANDEF data is available.
+
+              For best results, first use the place_opt -optimize_dft  command
+              to perform placement-aware scan reordering.
+
+       -continue_on_missing_scandef
+              Continues  placement when the design contains scan chains but no
+              SCANDEF data.
+
+              By default, missing SCANDEF data causes the command to exit with
+              an  error  message. If you specify this option, the command con-
+              tinues with a warning and results in reduced  quality-of-results
+              (QoR).
+
+       -no_clock_route
+              Disables routing of clock nets. This is the default behavior.
+
+       -only_hold_time
+              Performs only hold time fixing after clock tree synthesis.
+
+              If  you  specify the -fix_hold_all_clocks option, the tool fixes
+              hold time violations for all clocks.  Otherwise, the tool  fixes
+              hold  time  violations  only  for  the clocks specified with the
+              set_fix_hold command.
+
+       -area_recovery
+              Enables area recovery for the cells not on the  timing  critical
+              paths.
+
+       -size_only
+              Restricts  post  clock  tree  synthesis  optimization  to sizing
+              changes only.  Optimization procedures that insert new cells and
+              remove cells are disabled.
+
+              The  -size_only  and  -in_place_size_only  options  are mutually
+              exclusive.  See  the  description  for  the  -in_place_size_only
+              option for additional information about how to further constrain
+              sizing changes.
+
+       -in_place_size_only
+              Restricts post clock tree  synthesis  optimization  to  in-place
+              sizing  changes  only.   Optimization procedures that insert new
+              cells and remove cells are disabled.
+
+              With the -in_place_size_only option, sizing changes are  further
+              constrained for minimal engineering change order (ECO) placement
+              changes.  For example, a cell is  sized  to  improve  timing  or
+              design  rule costs only if the newly-sized cell can fit into any
+              available space adjacent to the  original  cell  location.   The
+              resulting transformation is verified to ensure that it is legal.
+
+       -power
+              Performs the enabled clock tree power optimizations before clock
+              tree  synthesis,  as  well  as  leakage-power optimization after
+              clock tree synthesis.
+
+              The supported clock tree  power  optimizations  are  power-aware
+              placement  and  clock  gate restructuring. To enable power-aware
+              placement, use the set_optimize_pre_cts_power_options command to
+              set  the  -low_power_placement  option  to true. When you enable
+              power-aware placement, the tool performs incremental  switching-
+              activity-based  power-aware placement. For the best results from
+              power-aware placement, you should specify the same coarse place-
+              ment  setup, such as the placer_max_cell_density_threshold vari-
+              able,  used  in  the  place_opt  command  before   running   the
+              clock_opt_feasibility command.
+
+              To   enable   clock   gate   restructuring,  use  the  set_opti-
+              mize_pre_cts_power_options command to set the -merge_clock_gates
+              option to true.
+
+              The  clock_opt_feasibility  command  can  perform  leakage-power
+              optimization based on either the multiple-threshold-voltage con-
+              straint  or  the leakage values of the library cells. To perform
+              leakage-power optimization based on the multiple-threshold-volt-
+              age  constraint,  use  the  set_multi_vth_constraint  command to
+              define this constraint before running the  clock_opt_feasibility
+              command.  If  this constraint is not defined, the tool bases the
+              leakage-power optimization on the leakage values of the  library
+              cells.
+
+              When you specify this option for a multicorner-multimode design,
+              you must use the  set_scenario_options  command  to  select  the
+              leakage  scenarios before running the clock_opt_feasibility com-
+              mand.
+
+              When you use the -power option with the  -only_cts  option,  the
+              enabled  clock  tree  power  optimizations  are performed before
+              clock tree synthesis; leakage-power  optimization  is  not  per-
+              formed.
+
+              When you use the -power option with the -only_psyn option, leak-
+              age-power optimization is performed but  the  clock  tree  power
+              optimizations are not performed.
+
+       -no_legalize_large_displacement
+              Does  not  move cells beyond the distance threshold specified by
+              the -large_displacement_threshold option during legalization.
+
+              Those cells that are not legalized are  kept  at  their  illegal
+              location.  You can run the legalize_placement command after fea-
+              sibility analysis to legalize these illegal cells.
+
+       -large_displacement_threshold number_of_cell_rows
+              Specifies  the  displacement  threshold   for   the   -no_legal-
+              ize_large_displacement  option.  The unit for this option is the
+              cell row height.
+
+              By default, the displacement threshold is the height of 10  cell
+              rows.
+
+DESCRIPTION
+       The  clock_opt_feasibility  command  performs  optimization feasibility
+       analysis after clock tree synthesis. You  should  run  the  feasibility
+       flow  during  the  early  stages of the design flow to debug the design
+       constraints.  Both the setup and hold timing optimization  engines  are
+       designed for fast runtimes and are less exhaustive.
+
+       Run  this command on a design with initial constraints, such as latency
+       settings,   and   cross-clock-domain-related   timing   issues.     The
+       clock_opt_feasibility  flow  runs  faster than the comparable clock_opt
+       flow and produces reasonable QoR correlation.
+
+       By default, the clock_opt_feasibility command does not perform  conges-
+       tion removal to save runtime. You can specify the -congestion option to
+       perform the congestion removal step or you can run the psynopt -conges-
+       tion command separately.
+
+       By  default,  the  clock_opt_feasibility command does not perform clock
+       routing to save runtime. You can specify  the  -clock_route  option  to
+       perform   clock   routing   or   you   can   run   the  route_zrt_group
+       -all_clock_nets command separately.
+
+       By default, the  clock_opt_feasibility  command  does  not  change  the
+       placer_max_cell_density_threshold variable if it is already set.  If it
+       is not set, the clock_opt_feasibility command uses a value of  0.8  for
+       the   variable   when   you   use   the  -congestion  option.  Set  the
+       placer_max_cell_density_threshold variable to its default of -1 if  you
+       do not want to use the variable.
+
+   Multicorner-Multimode Support
+       This  command uses information from the clock tree synthesis scenarios.
+       All scenarios enabled as clock tree synthesis scenarios  are  activated
+       for  clock  tree  synthesis  and  are  returned  to their current state
+       (active or inactive) after clock tree synthesis.  If you  enable  power
+       optimization,  you must select the leakage scenarios before running the
+       clock_opt_feasibility command.
+
+EXAMPLES
+       The following command performs optimization for feasibility analysis:
+
+         prompt> clock_opt_feasibility -only_psyn
+
+SEE ALSO
+       clock_opt(2)
+       read_saif(2)
+       set_clock_tree_options(2)
+       set_inter_clock_delay_options(2)
+       set_latency_adjustment_options(2)
+       set_multi_vth_constraint(2)
+       set_scenario_options(2)
+
+                         Version L-2016.03-SP5-1
+            Copyright (c) 2016 Synopsys, Inc. All rights reserved.
+icc_shell> 
+icc_shell> ls
+.                    cts_icc.tcl        icc_output.txt       signoff_icc.tcl
+..                   extract_icc.tcl    init_design_icc.tcl  test.tcl
+chip_finish_icc.tcl  filenames.log      place_icc.tcl
+command.log          floorplan_icc.tcl  route_icc.tcl
 icc_shell> exit
 
 Thank you...

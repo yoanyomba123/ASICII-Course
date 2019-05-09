@@ -6,7 +6,7 @@ Report : timing
         -max_paths 100
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Wed May  8 21:01:55 2019
+Date   : Thu May  9 13:39:19 2019
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.

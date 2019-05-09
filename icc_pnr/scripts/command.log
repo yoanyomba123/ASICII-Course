@@ -1,9 +1,9 @@
 #@ # 
 #@ # Running icc_shell Version L-2016.03-SP5-1 for linux64 -- Dec 12, 2016
-#@ # Date:   Wed May  8 19:38:15 2019
+#@ # Date:   Thu May  9 16:35:16 2019
 #@ # Run by: dm3233@xunil-03.coe.drexel.edu
 #@ 
 
-man routing
-man routeability
+man clock_opt_feasibility
+ls
 exit
