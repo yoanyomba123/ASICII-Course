@@ -10,14 +10,14 @@ Report : timing
 	-sort_by slack
 Design : fpu
 Version: L-2016.06-SP3-1
-Date   : Wed May  1 15:39:02 2019
+Date   : Fri May  3 16:46:53 2019
 ****************************************
 
-Warning: There are 12 invalid end points for constrained paths. (UITE-416)
+Warning: There are 4 invalid end points for constrained paths. (UITE-416)
 
-  Startpoint: fpu_mul/fpu_mul_ctl/i_m1stg_dblop/q_reg[0]
+  Startpoint: fpu_mul/fpu_mul_frac_dp/i_mstg_xtra_regs/q_reg[42]
                (rising edge-triggered flip-flop clocked by ideal_clock)
-  Endpoint: fpu_mul/fpu_mul_ctl/i_m2stg_ld0_2/q_reg[0]
+  Endpoint: fpu_mul/fpu_mul_frac_dp/i_m5stg_frac_pre2/q_reg[30]
                (rising edge-triggered flip-flop clocked by ideal_clock)
   Path Group: ideal_clock
   Path Type: max
@@ -26,112 +26,73 @@ Warning: There are 12 invalid end points for constrained paths. (UITE-416)
   -----------------------------------------------------------------------------
   clock ideal_clock (rise edge)                   0.00       0.00       0.00
   clock network delay (ideal)                                0.00       0.00
-  fpu_mul/fpu_mul_ctl/i_m1stg_dblop/q_reg[0]/CLK (DFFX1_RVT)
+  fpu_mul/fpu_mul_frac_dp/i_mstg_xtra_regs/q_reg[42]/CLK (DFFX1_RVT)
                                                   0.00       0.00       0.00 r
-  fpu_mul/fpu_mul_ctl/i_m1stg_dblop/q_reg[0]/Q (DFFX1_RVT)
-                                                  0.03       0.16       0.16 f
-  fpu_mul/m1stg_dblop (net)      3     1.52 
-  fpu_mul/U85/A (NBUFFX2_RVT)                     0.03       0.13       0.28 f
-  fpu_mul/U85/Y (NBUFFX2_RVT)                     0.10       0.10       0.39 f
-  fpu_mul/n9 (net)              44    20.92 
-  fpu_mul/fpu_mul_frac_dp/U27/A (IBUFFX2_RVT)     0.10     128.91     129.30 f
-  fpu_mul/fpu_mul_frac_dp/U27/Y (IBUFFX2_RVT)     0.03       0.10     129.40 r
-  fpu_mul/fpu_mul_frac_dp/n601 (net)
-                                 3     1.59 
-  fpu_mul/fpu_mul_frac_dp/U34/A (NBUFFX2_RVT)     0.03       0.13     129.53 r
-  fpu_mul/fpu_mul_frac_dp/U34/Y (NBUFFX2_RVT)     0.04       0.06     129.59 r
-  fpu_mul/fpu_mul_frac_dp/n4 (net)
-                                13     6.14 
-  fpu_mul/fpu_mul_frac_dp/U15/A1 (OA22X2_RVT)     0.04       4.07     133.66 r
-  fpu_mul/fpu_mul_frac_dp/U15/Y (OA22X2_RVT)      0.04       0.10     133.76 r
-  fpu_mul/fpu_mul_frac_dp/n1843 (net)
+  fpu_mul/fpu_mul_frac_dp/i_mstg_xtra_regs/q_reg[42]/Q (DFFX1_RVT)
+                                                  0.03       0.15       0.15 f
+  fpu_mul/fpu_mul_frac_dp/m4stg_sh_cnt[4] (net)
+                                 2     1.02 
+  fpu_mul/fpu_mul_frac_dp/U144/A (NBUFFX2_RVT)
+                                                  0.03       0.05       0.20 f
+  fpu_mul/fpu_mul_frac_dp/U144/Y (NBUFFX2_RVT)
+                                                  0.08       0.09       0.29 f
+  fpu_mul/fpu_mul_frac_dp/n41 (net)
+                                31    15.13 
+  fpu_mul/fpu_mul_frac_dp/U229/A1 (AND2X1_RVT)
+                                                  0.08      48.49      48.78 f
+  fpu_mul/fpu_mul_frac_dp/U229/Y (AND2X1_RVT)     0.15       0.17      48.94 f
+  fpu_mul/fpu_mul_frac_dp/n1002 (net)
+                                32    16.86 
+  fpu_mul/fpu_mul_frac_dp/U301/A3 (AO22X1_RVT)
+                                                  0.15      56.63     105.57 f
+  fpu_mul/fpu_mul_frac_dp/U301/Y (AO22X1_RVT)     0.04       0.10     105.67 f
+  fpu_mul/fpu_mul_frac_dp/n108 (net)
+                                 1     0.61 
+  fpu_mul/fpu_mul_frac_dp/U302/A2 (OR2X1_RVT)     0.04       0.01     105.68 f
+  fpu_mul/fpu_mul_frac_dp/U302/Y (OR2X1_RVT)      0.02       0.06     105.74 f
+  fpu_mul/fpu_mul_frac_dp/n110 (net)
+                                 2     0.96 
+  fpu_mul/fpu_mul_frac_dp/U138/A3 (AO21X1_RVT)
+                                                  0.02       0.05     105.79 f
+  fpu_mul/fpu_mul_frac_dp/U138/Y (AO21X1_RVT)     0.03       0.05     105.84 f
+  fpu_mul/fpu_mul_frac_dp/m4stg_shl_55 (net)
                                  2     1.00 
-  fpu_mul/fpu_mul_frac_dp/U1136/A2 (AND2X1_RVT)
-                                                  0.04       0.05     133.81 r
-  fpu_mul/fpu_mul_frac_dp/U1136/Y (AND2X1_RVT)
-                                                  0.02       0.06     133.87 r
-  fpu_mul/fpu_mul_frac_dp/n633 (net)
-                                 1     0.41 
-  fpu_mul/fpu_mul_frac_dp/U1137/A3 (OA21X1_RVT)
-                                                  0.02       0.01     133.88 r
-  fpu_mul/fpu_mul_frac_dp/U1137/Y (OA21X1_RVT)
-                                                  0.03       0.06     133.94 r
-  fpu_mul/fpu_mul_frac_dp/n719 (net)
-                                 2     1.03 
-  fpu_mul/fpu_mul_frac_dp/U1143/A1 (AND2X1_RVT)
-                                                  0.03       0.05     133.99 r
-  fpu_mul/fpu_mul_frac_dp/U1143/Y (AND2X1_RVT)
-                                                  0.02       0.05     134.04 r
-  fpu_mul/fpu_mul_frac_dp/n652 (net)
-                                 2     0.90 
-  fpu_mul/fpu_mul_frac_dp/U1155/A1 (NAND2X0_RVT)
-                                                  0.02       0.04     134.09 r
-  fpu_mul/fpu_mul_frac_dp/U1155/Y (NAND2X0_RVT)
-                                                  0.06       0.05     134.14 f
-  fpu_mul/fpu_mul_frac_dp/n1845 (net)
-                                 3     1.65 
-  fpu_mul/fpu_mul_frac_dp/U1156/A2 (NOR2X0_RVT)
-                                                  0.06       0.13     134.27 f
-  fpu_mul/fpu_mul_frac_dp/U1156/Y (NOR2X0_RVT)
-                                                  0.02       0.09     134.36 r
-  fpu_mul/fpu_mul_frac_dp/n1857 (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/U1157/A2 (NAND2X0_RVT)
-                                                  0.02       0.04     134.40 r
-  fpu_mul/fpu_mul_frac_dp/U1157/Y (NAND2X0_RVT)
-                                                  0.06       0.05     134.45 f
-  fpu_mul/fpu_mul_frac_dp/n714 (net)
-                                 3     1.66 
-  fpu_mul/fpu_mul_frac_dp/U1158/A (INVX1_RVT)     0.06       0.13     134.58 f
-  fpu_mul/fpu_mul_frac_dp/U1158/Y (INVX1_RVT)     0.04       0.05     134.63 r
-  fpu_mul/fpu_mul_frac_dp/n1836 (net)
-                                 4     1.95 
-  fpu_mul/fpu_mul_frac_dp/U1168/A1 (AND2X1_RVT)
-                                                  0.04       0.22     134.85 r
-  fpu_mul/fpu_mul_frac_dp/U1168/Y (AND2X1_RVT)
-                                                  0.03       0.06     134.91 r
-  fpu_mul/fpu_mul_frac_dp/n658 (net)
-                                 2     1.03 
-  fpu_mul/fpu_mul_frac_dp/U1176/A1 (AND2X1_RVT)
-                                                  0.03       0.05     134.96 r
-  fpu_mul/fpu_mul_frac_dp/U1176/Y (AND2X1_RVT)
-                                                  0.03       0.06     135.02 r
-  fpu_mul/fpu_mul_frac_dp/n1825 (net)
-                                 4     1.91 
-  fpu_mul/fpu_mul_frac_dp/U1177/A2 (NAND2X0_RVT)
-                                                  0.03       0.22     135.24 r
-  fpu_mul/fpu_mul_frac_dp/U1177/Y (NAND2X0_RVT)
-                                                  0.08       0.07     135.30 f
-  fpu_mul/fpu_mul_frac_dp/n1862 (net)
-                                 5     2.61 
-  fpu_mul/fpu_mul_frac_dp/U1220/A (INVX1_RVT)     0.08       0.40     135.70 f
-  fpu_mul/fpu_mul_frac_dp/U1220/Y (INVX1_RVT)     0.05       0.05     135.76 r
-  fpu_mul/fpu_mul_frac_dp/m1stg_ld0_2[5] (net)
-                                 4     1.86 
-  fpu_mul/fpu_mul_frac_dp/U2464/A1 (AO222X1_RVT)
-                                                  0.05       0.22     135.98 r
-  fpu_mul/fpu_mul_frac_dp/U2464/Y (AO222X1_RVT)
-                                                  0.04       0.13     136.11 r
-  fpu_mul/fpu_mul_frac_dp/m1stg_ld0_2[0] (net)
-                                 1     0.52 
-  fpu_mul/U2428/A4 (AO22X1_RVT)                   0.04       0.01     136.12 r
-  fpu_mul/U2428/Y (AO22X1_RVT)                    0.03       0.07     136.19 r
-  fpu_mul/n320 (net)             1     0.50 
-  fpu_mul/fpu_mul_ctl/i_m2stg_ld0_2/q_reg[0]/D (DFFX1_RVT)
-                                                  0.03       0.01     136.20 r
-  data arrival time                                                   136.20
+  fpu_mul/fpu_mul_frac_dp/U34/A1 (OA21X1_RVT)     0.03       0.05     105.89 f
+  fpu_mul/fpu_mul_frac_dp/U34/Y (OA21X1_RVT)      0.10       0.13     106.02 f
+  fpu_mul/fpu_mul_frac_dp/n1444 (net)
+                                17     9.98 
+  fpu_mul/fpu_mul_frac_dp/U88/A (INVX0_RVT)       0.10      10.94     116.97 f
+  fpu_mul/fpu_mul_frac_dp/U88/Y (INVX0_RVT)       0.10       0.11     117.07 r
+  fpu_mul/fpu_mul_frac_dp/n1446 (net)
+                                11     5.45 
+  fpu_mul/fpu_mul_frac_dp/U175/A (NBUFFX2_RVT)
+                                                  0.10       2.70     119.77 r
+  fpu_mul/fpu_mul_frac_dp/U175/Y (NBUFFX2_RVT)
+                                                  0.04       0.08     119.85 r
+  fpu_mul/fpu_mul_frac_dp/n68 (net)
+                                10     4.78 
+  fpu_mul/fpu_mul_frac_dp/U1874/A1 (NAND2X0_RVT)
+                                                  0.04       2.02     121.87 r
+  fpu_mul/fpu_mul_frac_dp/U1874/Y (NAND2X0_RVT)
+                                                  0.04       0.04     121.91 f
+  fpu_mul/fpu_mul_frac_dp/i_m5stg_frac_pre2/N33 (net)
+                                 1     0.50 
+  fpu_mul/fpu_mul_frac_dp/i_m5stg_frac_pre2/q_reg[30]/D (DFFX1_RVT)
+                                                  0.04       0.01     121.92 f
+  data arrival time                                                   121.92
 
-  clock ideal_clock (rise edge)                   0.00       4.00       4.00
-  clock network delay (ideal)                                0.00       4.00
-  clock reconvergence pessimism                              0.00       4.00
-  fpu_mul/fpu_mul_ctl/i_m2stg_ld0_2/q_reg[0]/CLK (DFFX1_RVT)            4.00 r
-  library setup time                                        -0.06       3.94
-  data required time                                                    3.94
+  clock ideal_clock (rise edge)                   0.00     123.00     123.00
+  clock network delay (ideal)                                0.00     123.00
+  clock reconvergence pessimism                              0.00     123.00
+  fpu_mul/fpu_mul_frac_dp/i_m5stg_frac_pre2/q_reg[30]/CLK (DFFX1_RVT)
+                                                                      123.00 r
+  library setup time                                        -0.06     122.94
+  data required time                                                  122.94
   -----------------------------------------------------------------------------
-  data required time                                                    3.94
-  data arrival time                                                  -136.20
+  data required time                                                  122.94
+  data arrival time                                                  -121.92
   -----------------------------------------------------------------------------
-  slack (VIOLATED)                                                   -132.27
+  slack (MET)                                                           1.02
 
 
 1

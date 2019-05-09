@@ -12,6 +12,8 @@ set_tlu_plus_files -max_tluplus /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/
 
 place_opt -congestion
 
+# checks a design's prerequisite for detail routing and must be done before routing. Will normally output a list of violations if any
+# check_routeability
 save_mw_cel -as ${design}
 
 ### Reports 

@@ -1140,9 +1140,9 @@ check_design  > reports/synth_check_design.rpt
 set default_clk gclk
 gclk
 reset_design
-1
-#create clocK
-create_clock -name ideal_clock -period 4 [get_ports gclk]
+
+Received Signal 1 from: PID=11320 (UID=945019985)
+iod 4 [get_ports gclk]
 1
 ### Create Constraints
 #set default_clk_freq 1204.82

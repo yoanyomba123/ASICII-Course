@@ -259,3 +259,10 @@ Saving variable information.....
 Information: Defining new variable 'design'. (CMD-041)
 1
 pt_shell> 
+Received Signal 1 from: PID=11320 (UID=945019985)
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 650.90 MB
+CPU usage for this session: 14 seconds 
+Elapsed time for this session: 1689 seconds

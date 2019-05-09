@@ -30,7 +30,7 @@ check_design  > reports/synth_check_design.rpt
 set default_clk gclk
 reset_design
 #create clocK
-create_clock -name ideal_clock -period 4 [get_ports gclk]
+create_clock -name ideal_clock -period 123 [get_ports gclk]
 ### Create Constraints
 #set default_clk_freq 1204.82
 #set default_setup_skew 0.086

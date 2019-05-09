@@ -28,10 +28,10 @@ grep -i "slack" timing.rpt > timing.log
 # print out the slack values
 cat timing.log 
 
-cd ../../icc_pnr 
-icc_shell -f scripts/init_design.tcl
-icc_shell -f scripts/floorplan.tcl
-icc_shell -f scripts/cts_icc.tcl
-icc_shell -f scripts/route.tcl
-icc_shell -f scripts/extract.tcl
+#cd ../../icc_pnr 
+#icc_shell -f scripts/init_design.tcl
+#icc_shell -f scripts/floorplan.tcl
+#icc_shell -f scripts/cts_icc.tcl
+#icc_shell -f scripts/route.tcl
+#icc_shell -f scripts/extract.tcl
 

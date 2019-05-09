@@ -1,2 +1,9 @@
 Initializing gui preferences from file  /home/dm3233@drexel.edu/.synopsys_icc_prefs.tcl
-icc_shell> source init_design_icc.tcl
+icc_shell> man routing
+Error: No manual entry for 'routing' (CMD-025)
+icc_shell> man routeability
+Error: No manual entry for 'routeability' (CMD-025)
+icc_shell> exit
+
+Thank you...
+

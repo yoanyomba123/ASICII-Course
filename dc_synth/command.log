@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version M-2016.12-SP1 for linux64 -- Jan 13, 2017
-#@ # Date:   Wed May  1 15:32:25 2019
+#@ # Date:   Fri May  3 16:40:40 2019
 #@ # Run by: dm3233@xunil-03.coe.drexel.edu
 #@ 
 
@@ -5612,7 +5612,7 @@ source -echo -verbose /home/dm3233@drexel.edu/ecec574/ASICII/dc_synth/dc_synth.t
 #@ set default_clk gclk
 #@ reset_design
 #@ #create clocK
-#@ create_clock -name ideal_clock -period 4 [get_ports gclk]
+#@ create_clock -name ideal_clock -period 123 [get_ports gclk]
 #@ ### Create Constraints
 #@ #set default_clk_freq 1204.82
 #@ #set default_setup_skew 0.086
