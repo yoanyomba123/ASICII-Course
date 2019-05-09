@@ -43,12 +43,15 @@ route_zrt_group \
 	-reuse_existing_global_route true
 
 route_opt -initial_route_only
-route_opt -skip_initial_route -effort low -concurrent_clock_and_data
+route_opt -skip_initial_route -effort high -concurrent_clock_and_data -xtalk_reduction -area_recovery -wire_size -optimize_wire_via -num_cpus 16
 # optimizes routing and performs incremental timing fixes
+# enables block interface optimization and runs incremental optimization
+set_host_options -pool LSF -name "LSF_hosts"
+set_top_implementation_options -optimize_block_interface true -host_options "LSF_hosts"
 route_opt -incremental
 
 
-iiiave the cel and report timing
+#iiiave the cel and report timing
 write_verilog "./output/res.v"
 
 ## Generate rc parasitics
