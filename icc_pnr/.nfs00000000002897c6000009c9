@@ -1,3 +1,0 @@
-#!/bin/bash
-source ~/sensei
-icc_shell | sudo start_gui
