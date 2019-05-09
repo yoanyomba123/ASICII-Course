@@ -1,0 +1,9 @@
+Initializing gui preferences from file  /home/dm3233@drexel.edu/.synopsys_icc_prefs.tcl
+Information: Visibility is turned ON for cells and cell contents because the task is set to Block Implementation (GUI-026)
+Error: could not open script file "/home/dm3233@drexel.edu/ecec574/ASICII/pt_pre/reports/scripts/init_design.tcl" (CMD-015)
+icc_shell> ls
+.   command.log    icc_output.txt  timing.log  timing.tran.cap.rpt
+..  filenames.log  out.txt         timing.rpt  timing1.log
+icc_shell> pwd
+/home/dm3233@drexel.edu/ecec574/ASICII/pt_pre/reports
+icc_shell> 

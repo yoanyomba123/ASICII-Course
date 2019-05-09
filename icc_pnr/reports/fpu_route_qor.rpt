@@ -1,20 +1,25 @@
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+Information: Input delay ('rise') on clock port 'ideal_clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'ideal_clock' will be added to the clock's propagated skew. (TIM-112)
+Warning: Extrapolations far outside the librarycharacterization range have been detected 11660 times during delay calculation. (RCCALC-014)
  
 ****************************************
 Report : qor
 Design : fpu
 Version: L-2016.03-SP5-1
-Date   : Fri Apr 26 00:13:16 2019
+Date   : Thu May  9 18:04:00 2019
 ****************************************
 
 
   Timing Path Group 'ideal_clock'
   -----------------------------------
-  Levels of Logic:              17.00
-  Critical Path Length:          3.93
-  Critical Path Slack:          -1.99
-  Critical Path Clk Period:      2.00
-  Total Negative Slack:        -73.44
-  No. of Violating Paths:       92.00
+  Levels of Logic:              10.00
+  Critical Path Length:          2.43
+  Critical Path Slack:          59.06
+  Critical Path Clk Period:    123.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
   Worst Hold Violation:          0.00
   Total Hold Violation:          0.00
   No. of Hold Violations:        0.00
@@ -23,14 +28,14 @@ Date   : Fri Apr 26 00:13:16 2019
 
   Cell Count
   -----------------------------------
-  Hierarchical Cell Count:          9
-  Hierarchical Port Count:       2842
-  Leaf Cell Count:              31147
-  Buf/Inv Cell Count:            2185
-  Buf Cell Count:                 338
-  Inv Cell Count:                1847
-  CT Buf/Inv Cell Count:           68
-  Combinational Cell Count:     23960
+  Hierarchical Cell Count:         10
+  Hierarchical Port Count:       3245
+  Leaf Cell Count:              28391
+  Buf/Inv Cell Count:            1538
+  Buf Cell Count:                 290
+  Inv Cell Count:                1248
+  CT Buf/Inv Cell Count:           74
+  Combinational Cell Count:     21204
   Sequential Cell Count:         7187
   Macro Count:                      0
   -----------------------------------
@@ -38,24 +43,24 @@ Date   : Fri Apr 26 00:13:16 2019
 
   Area
   -----------------------------------
-  Combinational Area:    59225.463690
-  Noncombinational Area: 43540.713535
-  Buf/Inv Area:           3347.838955
-  Total Buffer Area:           726.09
-  Total Inverter Area:        2621.75
+  Combinational Area:    53337.455508
+  Noncombinational Area: 43460.658189
+  Buf/Inv Area:           2382.091750
+  Total Buffer Area:           624.18
+  Total Inverter Area:        1757.91
   Macro/Black Box Area:      0.000000
-  Net Area:              62727.191360
-  Net XLength        :      348434.78
-  Net YLength        :      407793.16
+  Net Area:              62283.403114
+  Net XLength        :      348178.72
+  Net YLength        :      399157.31
   -----------------------------------
-  Cell Area:            102766.177225
-  Design Area:          165493.368585
-  Net Length        :       756227.94
+  Cell Area:             96798.113697
+  Design Area:          159081.516811
+  Net Length        :       747336.00
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:         33117
+  Total Number of Nets:         30740
   Nets With Violations:             4
   Max Trans Violations:             0
   Max Cap Violations:               4
@@ -68,14 +73,14 @@ Date   : Fri Apr 26 00:13:16 2019
   -----------------------------------------
   Resource Sharing:                    0.00
   Logic Optimization:                  0.00
-  Mapping Optimization:              103.34
+  Mapping Optimization:               54.39
   -----------------------------------------
-  Overall Compile Time:              104.72
-  Overall Compile Wall Clock Time:   108.77
+  Overall Compile Time:               60.23
+  Overall Compile Wall Clock Time:    63.48
 
   --------------------------------------------------------------------
 
-  Design  WNS: 1.99  TNS: 73.44  Number of Violating Paths: 92
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
 
 
   Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0

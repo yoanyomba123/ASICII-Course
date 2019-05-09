@@ -1,0 +1,210 @@
+Warning: Clock skews computed at this point may not be accurate since clock routes are not valid. (TIM-231)
+Warning: Clock skews computed at this point may not be accurate since clock routes are not valid. (TIM-231)
+
+  Loading design 'fpu'
+Information: The library cell 'PMT3_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NBUFFX8_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NBUFFX4_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NBUFFX32_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NBUFFX16_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'IBUFFX8_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'IBUFFX4_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'IBUFFX32_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'IBUFFX16_RVT' in the library 'saed32rvt_ss0p95v25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+
+Warning: Port 'pcx_fpio_data_px2[71]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[70]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[69]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[68]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[81]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[80]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[89]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[88]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[87]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[86]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[85]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[84]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[83]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[82]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[97]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[96]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[95]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[94]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[93]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[92]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[91]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[90]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[105]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[104]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[103]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[102]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[101]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[100]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[99]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[98]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[111]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[110]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[109]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[108]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[107]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[106]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'pcx_fpio_data_px2[117]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'si' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+
+
+Information: Library Manufacturing Grid(GridResolution) : 1
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Warning: Mismatch in the main library and the Milkyway library resistance units. In the main library it is 1000.000 kohm and in the Milkyway design library it is 1.000 kohm. Check and correct the resistance units in the .tf and .db files. (PSYN-476)
+Information: Capacitance Unit from Milkyway design library: 'ff' 
+Information: Design Library and main library capacitance units are matched - 0.001 pf. 
+Warning: Inconsistent library data found for layer PO. (RCEX-018)
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is detail route TLU+. (RCEX-015)
+Information: Start mixed mode parasitic extraction. (RCEX-023)
+Information: Start rc extraction...
+Warning: Not enough nets are routed (84/30540 < 0.66667); will do extraction by using placement congestion map as background. (RCEX-047)
+Information: Parasitic source is LPE. (RCEX-040)
+Information: Parasitic mode is RealRVirtualC. (RCEX-041)
+Information: Using virtual shield extraction. (RCEX-081)
+Information: Extraction mode is MIN_MAX. (RCEX-042)
+Information: Extraction derate is 125/125/125. (RCEX-043)
+Information: Start back annotation for parasitic extraction. (RCEX-023)
+Information: End back annotation for parasitic extraction. (RCEX-023)
+Information: Start timing update for parasitic extraction. (RCEX-023)
+Information: End timing update for parasitic extraction. (RCEX-023)
+Information: End parasitic extraction. (RCEX-023)
+Information: Start rc update...
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer M1 : 0.16 0.14 (RCEX-011)
+Information: Library Derived Res for layer M1 : 2e-06 2e-06 (RCEX-011)
+Information: Library Derived Cap for layer M2 : 0.17 0.15 (RCEX-011)
+Information: Library Derived Res for layer M2 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M3 : 0.11 0.096 (RCEX-011)
+Information: Library Derived Res for layer M3 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M4 : 0.11 0.096 (RCEX-011)
+Information: Library Derived Res for layer M4 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M5 : 0.094 0.079 (RCEX-011)
+Information: Library Derived Res for layer M5 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M6 : 0.094 0.079 (RCEX-011)
+Information: Library Derived Res for layer M6 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M7 : 0.092 0.076 (RCEX-011)
+Information: Library Derived Res for layer M7 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M8 : 0.092 0.076 (RCEX-011)
+Information: Library Derived Res for layer M8 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M9 : 0.11 0.088 (RCEX-011)
+Information: Library Derived Res for layer M9 : 1.7e-06 1.7e-06 (RCEX-011)
+Information: Library Derived Cap for layer MRDL : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer MRDL : 1.8e-07 1.8e-07 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.11 0.096 (RCEX-011)
+Information: Library Derived Horizontal Res : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.11 0.1 (RCEX-011)
+Information: Library Derived Vertical Res : 1.5e-06 1.5e-06 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 4.6e-07 4.6e-07 (RCEX-011)
+Information: End rc update.
+Information: The mixed mode parasitic extraction has been performed. (RCEX-202)
+Information: Updating graph... (UID-83)
+Information: Input delay ('rise') on clock port 'ideal_clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'ideal_clock' will be added to the clock's propagated skew. (TIM-112)
+Warning: Extrapolations far outside the librarycharacterization range have been detected 2756 times during delay calculation. (RCCALC-014)
+ 
+****************************************
+Report : clock tree
+Design : fpu
+Version: L-2016.03-SP5-1
+Date   : Thu May  9 17:47:07 2019
+****************************************
+
+Information: Float pin scale factor for the 'max' operating condition of scenario 'default' is set to 1.000 (CTS-375)
+
+============ Global Skew Report ================
+
+Clock Tree Name                : "ideal_clock"
+Clock Period                   : 123.00000      
+Clock Tree root pin            : "gclk"
+Number of Levels               : 8
+Number of Sinks                : 4552
+Number of CT Buffers           : 66
+Number of CTS added gates      : 0
+Number of Preexisting Gates    : 9
+Number of Preexisting Buf/Inv  : 8
+Total Number of Clock Cells    : 83
+Total Area of CT Buffers       : 289.21594      
+Total Area of CT cells         : 334.70770      
+Max Global Skew                : 0.11624   
+Number of MaxTran Violators    : 0
+Number of MaxCap Violators     : 1
+Number of MaxFanout Violators  : 0
+
+
+Operating Condition               worst
+Clock global Skew                 0.116
+Longest path delay                0.523
+Shortest path delay               0.406
+
+The longest path delay end pin: cluster_header/I0/dbginit_repeater/repeater/i0/q_reg/CLK
+The shortest path delay end pin: fpu_div/fpu_div_frac_dp/ckbuf_div_frac_dp/clken_reg/CLK
+
+The longest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+gclk                                        0.000            1  0.000     0.000     0.000     r
+gclk                                        19.956           2  0.000     0.000     0.000     r
+CTS_ideal_clock_CTO_delay25/A               19.956           1  0.000     0.000     0.000     r
+CTS_ideal_clock_CTO_delay25/Y               1.461            1  0.023     0.037     0.038     r
+CTS_ideal_clock_CTO_delay12/A               1.461            1  0.023     0.000     0.038     r
+CTS_ideal_clock_CTO_delay12/Y               1.414            1  0.024     0.046     0.084     r
+CTS_ideal_clock_CTO_delay1/A                1.414            1  0.024     0.000     0.084     r
+CTS_ideal_clock_CTO_delay1/Y                4.156            1  0.035     0.054     0.138     r
+CTS_ideal_clock_CTO_delay8/A                4.156            1  0.035     0.000     0.138     r
+CTS_ideal_clock_CTO_delay8/Y                3.079            1  0.052     0.076     0.214     r
+NBUFFX2_RVT_G1B1I1/A                        3.079            1  0.052     0.000     0.214     r
+NBUFFX2_RVT_G1B1I1/Y                        2.415            1  0.055     0.079     0.293     r
+IBUFFX4_RVT_G1B3I1_1/A                      2.415            1  0.055     0.000     0.293     r
+IBUFFX4_RVT_G1B3I1_1/Y                      21.772           1  0.331     0.188     0.481     f
+INVX0_RVT_G1B4I1/A                          21.772           1  0.331     0.001     0.482     f
+INVX0_RVT_G1B4I1/Y                          3.920            3  0.100     0.040     0.523     r
+cluster_header/I0/dbginit_repeater/repeater/i0/q_reg/CLK
+                                            3.920            0  0.100     0.000     0.523     r
+[clock delay]                                                                       0.523
+----------------------------------------------------------------------------------------------------
+
+The Shortest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+gclk                                        0.000            1  0.000     0.000     0.000     r
+gclk                                        19.956           2  0.000     0.000     0.000     r
+U2144/A                                     19.956           1  0.005     0.004     0.004     r
+U2144/Y                                     13.447           2  -0.017    0.071     0.075     f
+U2145/A2                                    13.447           1  0.017     0.001     0.076     f
+U2145/Y                                     15.809           4  0.060     0.115     0.191     r
+INVX4_RVT_G3B1I1/A                          15.809           1  0.060     0.000     0.192     r
+INVX4_RVT_G3B1I1/Y                          19.896           1  0.041     0.035     0.226     f
+INVX16_RVT_G3B2I1_1/A                       19.896           1  0.041     0.000     0.226     f
+INVX16_RVT_G3B2I1_1/Y                       59.432           9  0.030     0.032     0.258     r
+CTS_ideal_clock_CTO_delay111/A              59.432           1  0.030     0.001     0.260     r
+CTS_ideal_clock_CTO_delay111/Y              5.948            2  0.006     0.068     0.327     r
+CTS_ideal_clock_CTO_delay20/A               5.948            1  0.006     0.000     0.327     r
+CTS_ideal_clock_CTO_delay20/Y               25.245           5  0.009     0.061     0.388     r
+fpu_div/fpu_div_frac_dp/U196/A              25.245           1  0.010     0.001     0.390     r
+fpu_div/fpu_div_frac_dp/U196/Y              0.902            1  0.018     0.017     0.406     f
+fpu_div/fpu_div_frac_dp/ckbuf_div_frac_dp/clken_reg/CLK
+                                            0.902            0  0.018     0.000     0.406     f
+[clock delay]                                                                       0.406
+----------------------------------------------------------------------------------------------------
+
+1

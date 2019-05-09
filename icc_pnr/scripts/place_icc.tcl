@@ -33,9 +33,9 @@ report_timing -delay min -max_paths 20 > output/${design}.hold.rpt
 
 ### Perform clock optimization
 # useful to prevent the upsizing of exisitng clock gates before clustering
-cts_prects_upsize_gates false
+cts_prects_upsize_gates 'false'
 # prevent moving of existing clock gates prior to clustering
-cts_move_clock_gate false
+cts_move_clock_gate 'false'
 
 
 # perform clock tree synthesis as well as other things such as optimization and hold time violation fixing.  Additionally no-route stops actual routing from being performed so that we can see what the clock tree will look like before the routing steps
@@ -52,7 +52,7 @@ update_clock_latency
 balance_inter_clock_delay
 
 # optimize the scan chains by reordering the chains to minimize the number of buffer crossings in the scan chai
-clock_opt -optimze_dft
+# clock_opt -optimze_dft
 
 # run placement and timing optimization
 psynopt

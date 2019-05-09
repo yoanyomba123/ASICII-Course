@@ -3,24 +3,24 @@
   Report : Chip Summary
   Design : fpu
   Version: L-2016.03-SP5-1
-  Date   : Wed May  8 22:32:41 2019
+  Date   : Thu May  9 17:41:48 2019
 ****************************************
-Std cell utilization: 59.96%  (380617/(634800-0))
+Std cell utilization: 60.00%  (380879/(634800-0))
 (Non-fixed + Fixed)
-Std cell utilization: 59.89%  (379549/(634800-1068))
+Std cell utilization: 59.92%  (379562/(634800-1321))
 (Non-fixed only)
-Chip area:            634800   sites, bbox (5.00 5.00 407.04 406.28) um
-Std cell area:        380617   sites, (non-fixed:379549 fixed:1068)
-                      28385    cells, (non-fixed:28306  fixed:79)
+Chip area:            634800   sites, bbox (15.00 15.00 417.04 416.28) um
+Std cell area:        380879   sites, (non-fixed:379562 fixed:1317)
+                      28391    cells, (non-fixed:28308  fixed:83)
 Macro cell area:      0        sites
                       0        cells
 Placement blockages:  0        sites, (excluding fixed std cells)
-                      1068     sites, (include fixed std cells & chimney area)
+                      1321     sites, (include fixed std cells & chimney area)
                       0        sites, (complete p/g net blockages)
 Routing blockages:    0        sites, (partial p/g net blockages)
                       0        sites, (routing blockages and signal pre-route)
 Lib cell count:       43 
-Avg. std cell width:  1.94 um 
+Avg. std cell width:  1.95 um 
 Site array:           unit     (width: 0.152 um, height: 1.672 um, rows: 240)
 Physical DB scale:    1000 db_unit = 1 um 
 
@@ -29,7 +29,7 @@ Physical DB scale:    1000 db_unit = 1 um
   Report : pnet options
   Design : fpu
   Version: L-2016.03-SP5-1
-  Date   : Wed May  8 22:32:41 2019
+  Date   : Thu May  9 17:41:48 2019
 ****************************************
 
 
@@ -51,11 +51,11 @@ MRDL       none          ---         ---       via additive      ---
       Sub-Region Utilization      
 **********************************
 Number of regions with placement utilization 0 - 0.125 is 0 (0.00%)
-Number of regions with placement utilization 0.125 - 0.25 is 5 (0.21%)
-Number of regions with placement utilization 0.25 - 0.375 is 111 (4.72%)
-Number of regions with placement utilization 0.375 - 0.5 is 258 (10.97%)
-Number of regions with placement utilization 0.5 - 0.625 is 701 (29.80%)
-Number of regions with placement utilization 0.625 - 0.75 is 1271 (54.04%)
-Number of regions with placement utilization 0.75 - 0.875 is 6 (0.26%)
+Number of regions with placement utilization 0.125 - 0.25 is 2 (0.09%)
+Number of regions with placement utilization 0.25 - 0.375 is 21 (0.89%)
+Number of regions with placement utilization 0.375 - 0.5 is 164 (6.97%)
+Number of regions with placement utilization 0.5 - 0.625 is 1265 (53.78%)
+Number of regions with placement utilization 0.625 - 0.75 is 898 (38.18%)
+Number of regions with placement utilization 0.75 - 0.875 is 2 (0.09%)
 Number of regions with placement utilization 0.875 - 1 is 0 (0.00%)
 1

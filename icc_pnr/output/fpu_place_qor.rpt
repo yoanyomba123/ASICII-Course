@@ -3,15 +3,15 @@
 Report : qor
 Design : fpu
 Version: L-2016.03-SP5-1
-Date   : Wed May  8 22:32:42 2019
+Date   : Thu May  9 17:41:49 2019
 ****************************************
 
 
   Timing Path Group 'ideal_clock'
   -----------------------------------
-  Levels of Logic:               9.00
-  Critical Path Length:          2.26
-  Critical Path Slack:          59.25
+  Levels of Logic:              10.00
+  Critical Path Length:          2.58
+  Critical Path Slack:          58.91
   Critical Path Clk Period:    123.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
@@ -24,13 +24,13 @@ Date   : Wed May  8 22:32:42 2019
   Cell Count
   -----------------------------------
   Hierarchical Cell Count:         10
-  Hierarchical Port Count:       3232
-  Leaf Cell Count:              28385
-  Buf/Inv Cell Count:            1532
-  Buf Cell Count:                 288
-  Inv Cell Count:                1244
-  CT Buf/Inv Cell Count:           70
-  Combinational Cell Count:     21198
+  Hierarchical Port Count:       3245
+  Leaf Cell Count:              28391
+  Buf/Inv Cell Count:            1538
+  Buf Cell Count:                 290
+  Inv Cell Count:                1248
+  CT Buf/Inv Cell Count:           74
+  Combinational Cell Count:     21204
   Sequential Cell Count:         7187
   Macro Count:                      0
   -----------------------------------
@@ -38,27 +38,27 @@ Date   : Wed May  8 22:32:42 2019
 
   Area
   -----------------------------------
-  Combinational Area:    53270.869778
+  Combinational Area:    53337.455508
   Noncombinational Area: 43460.658189
-  Buf/Inv Area:           2315.506020
-  Total Buffer Area:           611.47
-  Total Inverter Area:        1704.04
+  Buf/Inv Area:           2382.091750
+  Total Buffer Area:           624.18
+  Total Inverter Area:        1757.91
   Macro/Black Box Area:      0.000000
-  Net Area:              62305.565602
-  Net XLength        :      353162.62
-  Net YLength        :      394167.81
+  Net Area:              62283.403114
+  Net XLength        :      362633.06
+  Net YLength        :      381348.38
   -----------------------------------
-  Cell Area:             96731.527968
-  Design Area:          159037.093570
-  Net Length        :       747330.44
+  Cell Area:             96798.113697
+  Design Area:          159081.516811
+  Net Length        :       743981.44
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:         30735
-  Nets With Violations:             7
+  Total Number of Nets:         30740
+  Nets With Violations:             4
   Max Trans Violations:             0
-  Max Cap Violations:               7
+  Max Cap Violations:               4
   -----------------------------------
 
 
@@ -68,10 +68,10 @@ Date   : Wed May  8 22:32:42 2019
   -----------------------------------------
   Resource Sharing:                    0.00
   Logic Optimization:                  0.00
-  Mapping Optimization:               25.81
+  Mapping Optimization:               25.40
   -----------------------------------------
-  Overall Compile Time:               26.60
-  Overall Compile Wall Clock Time:    27.81
+  Overall Compile Time:               26.18
+  Overall Compile Wall Clock Time:    27.40
 
   --------------------------------------------------------------------
 

@@ -28,7 +28,7 @@ grep -i "slack" timing.rpt > timing.log
 # print out the slack values
 cat timing.log 
 
-cd ../icc_pnr 
+cd ../../icc_pnr 
 icc_shell -gui -f scripts/init_design.tcl
 icc_shell -gui -f scripts/floorplan.tcl
 icc_shell -gui -f scripts/cts_icc.tcl
