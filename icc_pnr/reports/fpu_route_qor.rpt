@@ -8,7 +8,7 @@ Warning: Extrapolations far outside the librarycharacterization range have been 
 Report : qor
 Design : fpu
 Version: L-2016.03-SP5-1
-Date   : Thu May  9 18:04:00 2019
+Date   : Fri May 10 00:04:54 2019
 ****************************************
 
 
@@ -73,10 +73,10 @@ Date   : Thu May  9 18:04:00 2019
   -----------------------------------------
   Resource Sharing:                    0.00
   Logic Optimization:                  0.00
-  Mapping Optimization:               54.39
+  Mapping Optimization:               56.35
   -----------------------------------------
-  Overall Compile Time:               60.23
-  Overall Compile Wall Clock Time:    63.48
+  Overall Compile Time:               62.60
+  Overall Compile Wall Clock Time:    66.10
 
   --------------------------------------------------------------------
 

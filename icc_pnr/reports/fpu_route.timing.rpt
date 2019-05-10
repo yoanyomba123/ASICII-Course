@@ -1,0 +1,77 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fpu
+Version: L-2016.03-SP5-1
+Date   : Fri May 10 00:04:55 2019
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 125/125/125
+
+Information: Percent of Arnoldi-based delays = 12.74%
+
+Information: Percent of CCS-based delays = 12.54%
+
+  Startpoint: fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/clken_reg
+            (positive level-sensitive latch clocked by ideal_clock')
+  Path Group: ideal_clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock (rise edge)                           0.00       0.00
+  clock network delay (propagated)                        0.44       0.44
+  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/CLK (DFFX1_RVT)
+                                                          0.00       0.44 r
+  fpu_in/fpu_in_ctl/i_fp_type_in/q_reg[1]/Q (DFFX1_RVT)
+                                                          0.19       0.63 r
+  U1657/Y (NAND4X0_RVT)                                   0.49 &     1.12 f
+  U1443/Y (NOR3X0_RVT)                                    0.34 &     1.46 r
+  U1442/Y (AND3X1_RVT)                                    0.22 &     1.68 r
+  U1441/Y (AND3X1_RVT)                                    0.10 &     1.79 r
+  U1461/Y (NAND3X0_RVT)                                   0.08 &     1.87 f
+  U1638/Y (OAI21X1_RVT)                                   0.23 &     2.09 r
+  U1513/Y (INVX0_RVT)                                     0.09 &     2.19 f
+  U1433/Y (AO22X1_RVT)                                    0.28 &     2.47 f
+  U2651/Y (NOR4X1_RVT)                                    0.29 &     2.76 r
+  fpu_add/fadd_clken_l (fpu_add)                          0.00       2.76 r
+  fpu_add/U845/Y (NAND2X0_RVT)                            0.11 &     2.87 f
+  fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/clken_reg/D (LATCHX1_RVT)
+                                                          0.00 &     2.87 f
+  data arrival time                                                  2.87
+
+  clock ideal_clock' (rise edge)                         61.50      61.50
+  clock network delay (propagated)                        0.43      61.93
+  fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/clken_reg/CLK (LATCHX1_RVT)
+                                                          0.00      61.93 r
+  time borrowed from endpoint                             0.00      61.93
+  data required time                                                61.93
+  --------------------------------------------------------------------------
+  data required time                                                61.93
+  data arrival time                                                 -2.87
+  --------------------------------------------------------------------------
+  slack (MET)                                                       59.06
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  ideal_clock' nominal pulse width                       61.50   
+  clock latency difference                               -0.02   
+  library setup time                                     -0.12   
+  --------------------------------------------------------------
+  max time borrow                                        61.36   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+1

@@ -65,4 +65,4 @@ clock_opt_feasibility -only_psyn
 
 # report the actual clock tree synthesis
 report_clock_tree -clock_tree [get_clocks ideal_clock] > output/${design}.cts.rpt
-return
+exit

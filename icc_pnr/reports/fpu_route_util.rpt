@@ -3,7 +3,7 @@
   Report : Chip Summary
   Design : fpu
   Version: L-2016.03-SP5-1
-  Date   : Thu May  9 18:03:53 2019
+  Date   : Fri May 10 00:04:48 2019
 ****************************************
 Std cell utilization: 60.00%  (380879/(634800-0))
 (Non-fixed + Fixed)
@@ -29,7 +29,7 @@ Physical DB scale:    1000 db_unit = 1 um
   Report : pnet options
   Design : fpu
   Version: L-2016.03-SP5-1
-  Date   : Thu May  9 18:03:53 2019
+  Date   : Fri May 10 00:04:48 2019
 ****************************************
 
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# https://freesoft.dev/program/133134233
 # execute source sensei
 source ~/sensei
 
@@ -29,9 +29,5 @@ grep -i "slack" timing.rpt > timing.log
 cat timing.log 
 
 cd ../../icc_pnr 
-icc_shell -gui -f scripts/init_design.tcl
-icc_shell -gui -f scripts/floorplan.tcl
-icc_shell -gui -f scripts/cts_icc.tcl
-icc_shell -gui -f scripts/route.tcl
-icc_shell -gui -f scripts/extract.tcl
+icc_shell -gui -f scripts/run.tcl
 
