@@ -32,9 +32,9 @@ report_design
 report_reference
 
 report_timing -from [all_inputs] -max_paths 100 -slack_lesser_than 100 -to [all_registers -data_pins] > reports/timing.rpt
-report_timing -from [all_register -clock_pins] -max_paths 100 -to [all_registers -data_pins]  >> reports/timing.rpt
-report_timing -from [all_registers -clock_pins] -max_paths 100 -to [all_outputs] >> reports/timing.rpt
-report_timing -from [all_inputs] -to [all_outputs] -max_paths 100 >> reports/timing.rpt
+report_timing -from [all_register -clock_pins] -max_paths 100 -slack_lesser_than 100 -to [all_registers -data_pins]  >> reports/timing.rpt
+report_timing -from [all_registers -clock_pins] -max_paths 100 -slack_lesser_than 100 -to [all_outputs] >> reports/timing.rpt
+report_timing -from [all_inputs] -to [all_outputs] -max_paths 100 -slack_lesser_than 100 >> reports/timing.rpt
 report_timing -from [all_registers -clock_pins] -to [all_registers -data_pins] -delay_type max  >> reports/timing.rpt
 report_timing -from [all_registers -clock_pins] -to [all_registers -data_pins] -delay_type min  >> reports/timing.rpt
 

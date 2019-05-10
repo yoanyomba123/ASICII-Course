@@ -31,6 +31,10 @@ set default_clk gclk
 reset_design
 #create clocK
 create_clock -name ideal_clock -period 123 [get_ports gclk]
+set_clock_uncertainty 0.1 [get_clocks ideal_clock]
+set_clock_latency -max 0.4 [get_clocks ideal_clock]
+set_load 0.3 [all_outputs]
+
 ### Create Constraints
 #set default_clk_freq 1204.82
 #set default_setup_skew 0.086
@@ -50,7 +54,7 @@ create_clock -name ideal_clock -period 123 [get_ports gclk]
 ### Compilation
 ### you can change medium to either low or high
 # compile -area_effort medium -map_effort medium -power_effort medium
-compile_ultra
+compile_ultra -gate_clock -retime 
 
 #
 #

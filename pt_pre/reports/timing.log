@@ -1,14 +1,113 @@
 	-slack_lesser_than 100.00
 	-sort_by slack
 No paths with slack less than 100.00.
-	-slack_lesser_than 0.00
+	-slack_lesser_than 100.00
 	-sort_by slack
-No paths with slack less than 0.00.
-	-slack_lesser_than 0.00
+  slack (MET)                                                        0.43
+  slack (MET)                                                        0.44
+  slack (MET)                                                        0.44
+  slack (MET)                                                        0.44
+  slack (MET)                                                        0.45
+  slack (MET)                                                        0.45
+  slack (MET)                                                        0.57
+  slack (MET)                                                        0.57
+  slack (MET)                                                        0.68
+  slack (MET)                                                        0.68
+  slack (MET)                                                        0.69
+  slack (MET)                                                        0.71
+  slack (MET)                                                        0.75
+  slack (MET)                                                        0.77
+  slack (MET)                                                        0.77
+  slack (MET)                                                        0.81
+  slack (MET)                                                        0.81
+  slack (MET)                                                        0.81
+  slack (MET)                                                        0.82
+  slack (MET)                                                        0.83
+  slack (MET)                                                        0.85
+  slack (MET)                                                        0.85
+  slack (MET)                                                        0.85
+  slack (MET)                                                        2.01
+  slack (MET)                                                        2.01
+  slack (MET)                                                        2.01
+  slack (MET)                                                        2.02
+  slack (MET)                                                        2.02
+  slack (MET)                                                        2.02
+  slack (MET)                                                        2.03
+  slack (MET)                                                        2.03
+  slack (MET)                                                        2.04
+  slack (MET)                                                        2.05
+  slack (MET)                                                        2.05
+  slack (MET)                                                        2.08
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.61
+  slack (MET)                                                        2.62
+  slack (MET)                                                        2.62
+  slack (MET)                                                        2.62
+  slack (MET)                                                        2.62
+  slack (MET)                                                        2.62
+  slack (MET)                                                        2.62
+  slack (MET)                                                        2.63
+  slack (MET)                                                        2.63
+  slack (MET)                                                        2.63
+  slack (MET)                                                        2.63
+  slack (MET)                                                        2.64
+  slack (MET)                                                        2.64
+  slack (MET)                                                        2.64
+  slack (MET)                                                        2.64
+  slack (MET)                                                        2.64
+  slack (MET)                                                        2.64
+  slack (MET)                                                        2.64
+  slack (MET)                                                        2.64
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.65
+  slack (MET)                                                        2.67
+  slack (MET)                                                        2.67
+  slack (MET)                                                        2.67
+  slack (MET)                                                        2.67
+  slack (MET)                                                        2.67
+  slack (MET)                                                        2.68
+  slack (MET)                                                        2.68
+  slack (MET)                                                        2.68
+  slack (MET)                                                        2.71
+  slack (MET)                                                        2.72
+  slack (MET)                                                        2.74
+  slack (MET)                                                        2.78
+  slack (MET)                                                        2.78
+  slack (MET)                                                        2.82
+  slack (MET)                                                        2.82
+  slack (MET)                                                        2.82
+  slack (MET)                                                        2.82
+  slack (MET)                                                        2.82
+  slack (MET)                                                        2.82
+  slack (MET)                                                        2.82
+  slack (MET)                                                        2.82
+  slack (MET)                                                        2.82
+  slack (MET)                                                        2.82
+	-slack_lesser_than 100.00
 	-sort_by slack
-	-slack_lesser_than 0.00
+	-slack_lesser_than 100.00
 	-sort_by slack
 	-sort_by slack
-  slack (MET)                                                        1.02
+  slack (MET)                                                        0.43
 	-sort_by slack
-  slack (MET)                                                        0.18
+  slack (VIOLATED)                                                  -0.29
