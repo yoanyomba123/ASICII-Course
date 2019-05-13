@@ -229,15 +229,15 @@ Aggresor/victim nets with overlapping timing windows can cause crosstalk induced
 
 #### Crosstalk Prevention IC Compiler
 
-During placement and optimization
-_ `set_max_transition`
-_ `set_congestion_options`
-_ `area_recovery_critical_range` and `power_recovery_critical_range`
+During placement and optimization\
+_ `set_max_transition`\
+_ `set_congestion_options`\
+_ `area_recovery_critical_range` and `power_recovery_critical_range`\
 _ recommended to use 15% of main clock period
-During Clock tress synthesis use non default routing rules
+During Clock tress synthesis use non default routing rules\
 _ `define_routing_rule my_route_rule -spacings {...} set_clock_tree_options [-clock CLK] -routing_rule my_routing_rule`
-Define Global routing rule and track assign
-_ `set_si_options -delta_delay true -route_xtalk_prevention true`
+Define Global routing rule and track assign\
+_ `set_si_options -delta_delay true -route_xtalk_prevention true`\
 
 The IC Compiler address both crosstalk delta delay and static noise. Crosstalk correction performs both cell-based and route based optimization(i.e. optimized gate placement, gate logic, and routing traces)
 ![crosstalk flow](images/im20.png)
