@@ -4026,3 +4026,1848 @@ ARGUMENTS
               command.  If  this constraint is not defined, the tool bases the
               leakage-power optimization on the leakage values of the  library
               cells.
+
+              When you specify this option for a multicorner-multimode design,
+              you must use the  set_scenario_options  command  to  select  the
+              leakage  scenarios before running the clock_opt_feasibility com-
+              mand.
+
+              When you use the -power option with the  -only_cts  option,  the
+              enabled  clock  tree  power  optimizations  are performed before
+              clock tree synthesis; leakage-power  optimization  is  not  per-
+              formed.
+
+              When you use the -power option with the -only_psyn option, leak-
+              age-power optimization is performed but  the  clock  tree  power
+              optimizations are not performed.
+
+       -no_legalize_large_displacement
+              Does  not  move cells beyond the distance threshold specified by
+              the -large_displacement_threshold option during legalization.
+
+              Those cells that are not legalized are  kept  at  their  illegal
+              location.  You can run the legalize_placement command after fea-
+              sibility analysis to legalize these illegal cells.
+
+       -large_displacement_threshold number_of_cell_rows
+              Specifies  the  displacement  threshold   for   the   -no_legal-
+              ize_large_displacement  option.  The unit for this option is the
+              cell row height.
+
+              By default, the displacement threshold is the height of 10  cell
+              rows.
+
+DESCRIPTION
+       The  clock_opt_feasibility  command  performs  optimization feasibility
+       analysis after clock tree synthesis. You  should  run  the  feasibility
+       flow  during  the  early  stages of the design flow to debug the design
+       constraints.  Both the setup and hold timing optimization  engines  are
+       designed for fast runtimes and are less exhaustive.
+
+       Run  this command on a design with initial constraints, such as latency
+       settings,   and   cross-clock-domain-related   timing   issues.     The
+       clock_opt_feasibility  flow  runs  faster than the comparable clock_opt
+       flow and produces reasonable QoR correlation.
+
+       By default, the clock_opt_feasibility command does not perform  conges-
+       tion removal to save runtime. You can specify the -congestion option to
+       perform the congestion removal step or you can run the psynopt -conges-
+       tion command separately.
+
+       By  default,  the  clock_opt_feasibility command does not perform clock
+       routing to save runtime. You can specify  the  -clock_route  option  to
+       perform   clock   routing   or   you   can   run   the  route_zrt_group
+       -all_clock_nets command separately.
+
+       By default, the  clock_opt_feasibility  command  does  not  change  the
+       placer_max_cell_density_threshold variable if it is already set.  If it
+       is not set, the clock_opt_feasibility command uses a value of  0.8  for
+       the   variable   when   you   use   the  -congestion  option.  Set  the
+       placer_max_cell_density_threshold variable to its default of -1 if  you
+       do not want to use the variable.
+
+   Multicorner-Multimode Support
+       This  command uses information from the clock tree synthesis scenarios.
+       All scenarios enabled as clock tree synthesis scenarios  are  activated
+       for  clock  tree  synthesis  and  are  returned  to their current state
+       (active or inactive) after clock tree synthesis.  If you  enable  power
+       optimization,  you must select the leakage scenarios before running the
+       clock_opt_feasibility command.
+
+EXAMPLES
+       The following command performs optimization for feasibility analysis:
+
+         prompt> clock_opt_feasibility -only_psyn
+
+SEE ALSO
+       clock_opt(2)
+       read_saif(2)
+       set_clock_tree_options(2)
+       set_inter_clock_delay_options(2)
+       set_latency_adjustment_options(2)
+       set_multi_vth_constraint(2)
+       set_scenario_options(2)
+
+                         Version L-2016.03-SP5-1
+            Copyright (c) 2016 Synopsys, Inc. All rights reserved.
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> man preroute_standard_cells
+2.  Synopsys Commands                                        Command Reference
+                            preroute_standard_cells
+
+NAME
+       preroute_standard_cells
+              Connects  standard  cell  power and ground pins to the power and
+              ground rings and straps. Connects power and ground rails in  the
+              standard cells.
+
+SYNTAX
+       status preroute_standard_cells
+               [-mode rail | tie | net]
+               [-connect horizontal | vertical | both]
+               [-nets collection_of_nets]
+               [-route_pins_on_layer layer]
+               [-within rectangle]
+               [-no_routing_outside_working_area]
+               [-ignore_cell_boundary]
+               [-within_voltage_areas collection_of_voltage_areas]
+               [-exclude_voltage_areas collection_of_voltage_areas]
+               [-special_via_rule]
+               [-offset_both_sides_for_special_via]
+               [-special_via_x_offset distance]
+               [-special_via_y_offset distance]
+               [-special_via_x_size distance]
+               [-special_via_y_size distance]
+               [-special_via_x_step distance]
+               [-special_via_y_step distance]
+               [-start_share_via_stack layer]
+               [-advanced_via_rules]
+               [-skip_macro_pins]
+               [-skip_pad_pins]
+               [-remove_floating_pieces]
+               [-pin_width_by_extreme_edges]
+               [-pin_width_by_most_extended_pin]
+               [-tie_mode_max_route_width distance]
+               [-extend_to_boundaries_and_generate_pins]
+               [-force_extend_to_boundaries_and_generate_pins]
+               [-no_via_to_boundary_pin]
+               [-avoid_merging_vias]
+               [-optimize_via_locations]
+               [-snap_shapes_to_tracks]
+               [-do_not_route_over_macros]
+               [-fill_empty_rows]
+               [-fill_empty_sites]
+               [-cut_out_empty_spans]
+               [-extend_for_multiple_connections]
+               [-extension_gap distance]
+               [-max_fanout int_number]
+               [-h_layer layer]
+               [-v_layer layer]
+               [-h_width distance]
+icc_shell> 
+icc_shell> man verify_pg_nets
+2.  Synopsys Commands                                        Command Reference
+                                verify_pg_nets
+
+NAME
+       verify_pg_nets
+              Checks  whether  all  power  and  ground pins of standard cells,
+              macro cells, and pad cells are connected  to  the  corresponding
+              power and ground nets.
+
+SYNTAX
+       status verify_pg_nets
+               [-error_cell view_name]
+               [-std_cell_pin_connection check | ignore]
+               [-macro_pin_connection at_least_one | all | ignore]
+               [-pad_pin_connection at_least_one | all | ignore]
+               [-nets {collection_of_nets}]
+
+   Data Types
+       view_name     string
+
+ARGUMENTS
+       -error_cell view_name
+              Specifies the name of the error view. The error view is saved in
+              the err subdirectory of the current working directory.
+
+              If you do not specify this option, the command creates an  error
+              view named top_cell_name.err.
+
+       -std_cell_pin_connection check | ignore
+              Controls  whether  the  standard  cell  PG  pin  connections are
+              checked.
+
+              By default (check), the command checks the standard cell PG  pin
+              connections.  To ignore these checks, set this option to ignore.
+
+       -macro_pin_connection at_least_one | all | ignore
+              Controls whether (and how) the macro cell PG pin connections are
+              checked.
+
+              By default (at_least_one), the command checks whether each macro
+              cell has at least one pin connected  to  power  and  ground.  To
+              check  that  each  macro  cell has all its power and ground pins
+              connected to power and ground, set this option to all. To ignore
+              these checks, set this option to ignore.
+
+       -pad_pin_connection at_least_one | all | ignore
+              Controls  whether  (and how) the pad cell PG pin connections are
+              checked.
+
+              By default (at_least_one), the command checks whether  each  pad
+              cell  has  at  least  one  pin connected to power and ground. To
+              check that each pad cell has all its power and ground pins  con-
+              nected  to  power  and ground, set this option to all. To ignore
+icc_shell> man set_route_options
+2.  Synopsys Commands                                        Command Reference
+                               set_route_options
+
+NAME
+       set_route_options
+              Sets specific options in the internal router control database.
+
+SYNTAX
+       status set_route_options
+               [-default]
+               [-groute_timing_driven true | false]
+               [-groute_timing_driven_weight number]
+               [-groute_skew_control true | false]
+               [-groute_skew_weight number]
+               [-groute_congestion_weight number]
+               [-groute_clock_routing normal | comb | balanced]
+               [-groute_incremental true | false]
+               [-track_assign_timing_driven true | false]
+               [-track_assign_timing_driven_weight number]
+               [-droute_connect_tie_off true | false]
+               [-droute_connect_open_nets true | false]
+               [-droute_reroute_user_wires true | false]
+               [-droute_CTS_nets normal | minor_change_only]
+               [-droute_single_row_column_via_array center | optimize]
+               [-droute_stack_via_less_than_min_area forbid | add_metal_stub]
+               [-droute_stack_via_less_than_min_area_cost number]
+               [-poly_pin_access auto | off]
+               [-drc_distance diagonal | manhattan]
+               [-same_net_notch ignore | check_and_fix]
+               [-fat_wire_check quick | merge_then_check]
+               [-merge_fat_wire_on preroute_only | preroute_signal | preroute_signal_blockage]
+               [-fat_blockage_as thin_wire | fat_wire]
+               [-wire_contact_eol_rule ignore | check_and_fix]
+               [-enable_user_enter_sub_route_type true | false]
+
+   Data Types
+       number     integer
+
+DATA TYPES
+       number     integer
+
+ARGUMENTS
+       -default
+              Sets the default options.
+
+       -groute_timing_driven true | false
+              Controls whether global routing is timing driven.
+
+              The default is false.
+
+       -groute_timing_driven_weight number
+              Specifies  the  global routing timing weight. You must specify a
+              value between 1 and 7.
+
+              The default value is 4.
+
+       -groute_skew_control true | false
+              Controls whether global routing skew control is enabled.
+
+              The default is false.
+
+       -groute_skew_weight number
+              Specifies the global routing skew weight.  You  must  specify  a
+              value between 0 and 10.
+
+              The default is 5.
+
+       -groute_congestion_weight number
+              Specifies  the global routing congestion weight. You mus specify
+              a value between 1 and 12.
+
+              The default is 4.
+
+       -groute_clock_routing normal | comb | balanced
+              Specifies the global routing clock topology.
+
+              The default is balanced.
+
+       -groute_incremental true | false
+              Controls whether incremental global routing is enabled.
+
+              The default is false.
+
+       -track_assign_timing_driven true | false
+              Controls whether track assignment is timing driven.
+
+              The default is false.
+
+       -track_assign_timing_driven_weight number
+              Specifies the track assignment timing weight. You must specify a
+              value between 1 and 10.
+
+              The default is 1.
+
+       -droute_connect_tie_off true | false
+              Controls whether the detail router connects tie-off nets.
+
+              The default is true.
+
+       -droute_connect_open_nets true | false
+              Controls whether the detail router connects open nets.
+
+              The default is true.
+
+       -droute_reroute_user_wires true | false
+              Controls whether the detail router reroutes user wires.
+
+              The default is false.
+
+       -droute_CTS_nets normal | minor_change_only
+              Control  the  amount  of change the detail router makes to clock
+              nets.
+
+              The default is minor_change_only.
+
+       -droute_single_row_column_via_array center | optimize
+              Controls how the detail router handles single-row via arrays.
+
+              The default is center.
+
+       -droute_stack_via_less_than_min_area forbid | add_metal_stub
+              Controls how the detail router handles stacked  vias  with  less
+              than the minimum area.
+
+              The default is add_metal_stub.
+
+       -droute_stack_via_less_than_min_area_cost number
+              Specifies  the  cost  of  having stacked vias with less than the
+              minimum area.  You must specify a value between 0 and 10.
+
+              The default is 0.
+
+       -poly_pin_access auto | off
+              Controls poly pin access.
+
+              The default is auto.
+
+       -drc_distance diagonal | manhattan
+              Controls whether to calculate DRC distances using  the  diagonal
+              or Manhattan method.
+
+              The default is diagonal.
+
+       -same_net_notch ignore | check_and_fix
+              Controls whether the router checks same net notch rule.
+
+              The default is ignore.
+
+       -fat_wire_check quick | merge_then_check
+              Controls how the router checks fat wires.
+
+              The default is merge_then_check.
+
+       -merge_fat_wire_on  preroute_only  |  preroute_signal  |  preroute_sig-
+       nal_blockage
+              Controls when fat wires are merged.
+
+              The default is preroute_signal.
+
+       -fat_blockage_as thin_wire | fat_wire
+              Controls how the router treats fat blockages.
+
+              The default is fat_wire.
+
+       -wire_contact_eol_rule ignore | check_and_fix
+              Controls whether the router checks the end-of-line rule.
+
+              The default is ignore.
+
+       -enable_user_enter_sub_route_type true | false
+              Controls  whether  the  subroute type attribute is enabled. When
+              this attribute is enabled, you can access its value.
+
+              The default is false.
+
+DESCRIPTION
+       This command does not actually invoke any routing. It only  allows  you
+       to  specify options that are stored in a database for use by subsequent
+       router steps.
+
+       Many of the options that can be set by using the set_route_options com-
+       mand can also be set by the set_droute_options command.
+
+   Multicorner-Multimode Support
+       This command has no dependency on scenario-specific information.
+
+EXAMPLES
+       The following example sets the clock routing topology to balanced.
+
+         prompt> set_route_options -groute_clock_topology balanced
+
+SEE ALSO
+       set_droute_options(2)
+       route_detail(2)
+
+                         Version L-2016.03-SP5-1
+            Copyright (c) 2016 Synopsys, Inc. All rights reserved.
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> man set_route_zrt_common_options
+2.  Synopsys Commands                                        Command Reference
+                         set_route_zrt_common_options
+
+NAME
+       set_route_zrt_common_options
+              Sets the options common to all phases of Zroute routing. Options
+              set are saved with the design.
+
+SYNTAX
+       status set_route_zrt_common_options
+               [-reroute_clock_shapes true | false]
+               [-reroute_user_shapes true | false]
+               [-plan_group_aware off | all_routing | top_level_routing_only]
+               [-reshield_modified_nets off | reshield | unshield]
+               [-child_process_net_threshold int]
+               [-verbose_level int]
+               [-clock_topology normal | comb]
+               [-comb_distance int]
+               [-pg_shield_distance_threshold distance]
+               [-connect_floating_shapes true | false]
+               [-allow_pg_as_shield true | false]
+               [-rc_driven_setup_effort_level off | low | medium | high]
+               [-read_user_metal_blockage_layer true | false]
+               [-wide_macro_pin_as_fat_wire true | false]
+               [-route_top_boundary_mode stay_half_min_space_inside | stay_inside | ignore]
+               [-standard_cell_blockage_as_thin true | false]
+               [-freeze_layer_by_layer_name {{layer true | false}...}]
+               [-freeze_via_to_frozen_layer_by_layer_name {{layer true | false}...}]
+               [-forbid_new_metal_by_layer_name {{layer true | false}...}]
+               [-global_max_layer_mode soft | allow_pin_connection | hard]
+               [-global_min_layer_mode soft | allow_pin_connection | hard]
+               [-ignore_var_spacing_to_blockage true | false]
+               [-ignore_var_spacing_to_pg true | false]
+               [-ignore_var_spacing_to_shield true | false]
+               [-min_edge_offset_for_macro_pin_connection_by_layer_name {{layer offset}...}]
+               [-net_max_layer_mode soft | allow_pin_connection | hard]
+               [-net_min_layer_mode soft | allow_pin_connection | hard]
+               [-net_max_layer_mode_soft_cost low | medium | high]
+               [-net_min_layer_mode_soft_cost low | medium | high]
+               [-extra_preferred_direction_wire_cost_multiplier_by_layer_name {{layer multiplier}...}]
+               [-extra_nonpreferred_direction_wire_cost_multiplier_by_layer_name {{layer multiplier}...}]
+               [-extra_via_cost_multiplier_by_layer_name {{layer multiplier}...}]
+               [-extra_via_off_grid_cost_multiplier_by_layer_name {{layer multiplier}...}]
+               [-number_of_vias_over_global_max_layer int]
+               [-number_of_vias_under_global_min_layer int]
+               [-number_of_vias_over_net_max_layer int]
+               [-number_of_vias_under_net_min_layer int]
+               [-via_array_mode off | swap | rotate | all]
+               [-post_detail_route_redundant_via_insertion off | low | medium | high]
+               [-post_incremental_detail_route_fix_soft_violations true | false]
+               [-concurrent_redundant_via_mode off | reserve_space | insert_at_high_cost
+                  [-concurrent_redundant_via_effort_level low | medium | high]]
+               [-eco_route_concurrent_redundant_via_mode off | reserve_space
+                  [-eco_route_concurrent_redundant_via_effort_level low | medium | high]]
+               [-rotate_default_vias true | false]
+               [-route_soft_rule_effort_level off | min | low | medium | high]
+               [-post_detail_route_fix_soft_violations true | false]
+               [-post_eco_route_fix_soft_violations true | false]
+               [-post_group_route_fix_soft_violations true | false]
+               [-routing_rule_effort_level {{rule {layer {effort_list}}...}...}]
+               [-soft_rule_weight_to_effort_level_map {{weight_level effort_level}...}]
+               [-enforce_voltage_areas off | strict | relaxed]
+               [-voltage_area_weight {{voltage_area_name weight}...}]
+               [-single_connection_to_pins connection_mode]
+               [-mark_clock_nets_minor_change true | false]
+               [-track_auto_fill true | false]
+               [-tie_off_mode all | rail_only]
+               [-connect_within_pins_by_layer_name {{layer mode}...}]
+               [-number_of_secondary_pg_pin_connections int]
+               [-separate_tie_off_from_secondary_pg true | false]
+               [-default true | false]
+               [-shielding_nets pg_net_names]
+               [-report_local_double_pattern_odd_cycles true | false]
+               [-wire_on_grid_by_layer_name {{layer true | false}...}]
+               [-via_on_grid_by_layer_name {{layer true | false}...}]
+               [-min_shield_length_by_layer_name {{layer length}...}]
+
+   Data Types
+       int                   integer
+       layer                 string
+       offset                float
+       multiplier            float
+       rule                  string
+       effort_list           list of strings
+       voltage_area_name     string
+       weight                string
+       connection_mode       string
+       mode                  string
+       pg_net_names          list of strings
+       length                float
+
+ARGUMENTS
+       -reroute_clock_shapes true | false
+              Specifies whether the router can reroute fixed clock  wires  and
+              vias.
+
+              The default is false.
+
+       -reroute_user_shapes true | false
+              Specifies  whether the router can reroute user-created wires and
+              vias.
+
+              The default is false.
+
+       -plan_group_aware off | all_routing | top_level_routing_only
+              Specifies whether the plan-group constraints are  obeyed  during
+              global routing.  This parameter does not affect track assignment
+              or detail routing.
+
+              The definition for each mode is
+
+              o off (the default)
+                The global router ignores plan groups and  routes  the  design
+                flat.
+
+              o all_routing
+                The  global router routes all nets and preserves the hierarchy
+                and pin constraints for the pin-cutting flow.
+
+              o top_level_routing_only
+                The global router preserves the hierarchy and pin constraints,
+                but it ignores intraplan group nets and routes only those nets
+                that have top-level connections. This mode saves CPU time, but
+                might  be  less accurate because it ignores the congestion due
+                to intraplan group nets.
+
+              When you specify a mode other than off, the global router  gives
+              priority  to  clock net routing. During floorplanning, you might
+              want to route the clocks flat to generate clock pins on the mod-
+              ule  boundaries.  You  should  buffer  these clocks later in the
+              flow. The clock nets are routed before any other  nets  so  that
+              their pin placement has priority over normal signal pins. Timing
+              and cross talk optimization are not supported  when  plan  group
+              aware  routing is active. The "comb" topology for clocks is also
+              unsupported in plan group aware routing.
+
+       -reshield_modified_nets off | reshield | unshield
+              Specifies whether to automatically unshield or reshield modified
+              shielded nets during routing.
+
+              The definition for each mode is
+
+              o off (the default)
+                The  router  does  not  unshield or reshield modified shielded
+                nets.
+
+              o reshield
+                The router unshields  modified  shielded  nets,  automatically
+                reshields them, and then reconnects the floating shielding. If
+                the router cannot reconnect the floating shielding, it removes
+                it.  Shielded nets might have been modified by routing or out-
+                side of routing by manual  editing,  route  optimization,  and
+                other commands.
+
+              o unshield
+                The  router deletes existing shielding that is associated with
+                modified shielded nets and reconnects the  floating  shielding
+                if  necessary.  The nets might be reshielded at a later stage.
+
+       -child_process_net_threshold int
+              Specifies the minimum number  of  nets  to  trigger  a  separate
+              router process.
+
+              The  default  is  -1,  which means that the tool decides when to
+              trigger a separate router process based on the number of nets in
+              the  design  and  the peak memory of the parent process when the
+              routing command is run.
+
+       -verbose_level int
+              Sets the verbosity level for the routing log file.
+
+              The value range is from 0 to 2.
+              The default is 0.
+
+       -clock_topology normal | comb
+              Specifies the clock routing topology.  Valid values are
+              o normal (default)
+                Use normal routing for clock nets.
+
+              o comb
+                Use comb routing for clock nets with a mesh or trunk.
+
+       -comb_distance int
+              Specifies the number of global routing  cells  within  which  to
+              connect clock pins to the clock mesh.
+              The range is from 0 to 10.
+              The default is 2.
+
+       -pg_shield_distance_threshold distance
+              Specifies  the  distance  threshold in microns for the router to
+              consider the existing power and ground  structure  as  shielding
+              when  calculating  the shielding ratio. When a PG wire is within
+              the specified distance, it is counted as a shielding wire.
+
+              Note that this option does not change the routing behavior.   It
+              affects  only  the  shielding ratio report generated by the cre-
+              ate_zrt_shield and report_zrt_shield commands.
+
+              The default distance is 0, which means that  the  router  deter-
+              mines the distance threshold.
+
+       -connect_floating_shapes true | false
+              Specifies whether the router should connect just the pins or the
+              pins and all floating shapes.
+
+              When false (the default), the router  connects  just  the  pins.
+              The  router  might use the floating shapes; however, it does not
+              have to connect the floating shapes.
+
+              When true, the router connects the pins and all floating shapes.
+
+       -allow_pg_as_shield true | false
+              Specifies  whether the router should treat power and ground nets
+              as shields.
+
+              When true (the default), the router treats power and ground nets
+              as shields and does not reserve additional space around the nets
+              to be shielded.
+
+              If set to false, the router tries to reserve  space  around  the
+              nets  to be shielded if they are close to a power or ground net.
+
+              Note that this option changes the routing behavior.
+
+       -rc_driven_setup_effort_level off | low | medium | high
+              Enables the router to automatically bias layer preference  based
+              on RC values for better setup timing.
+
+              The default setting is medium.
+
+              This  option  takes  effect  only  if  timing-driven  routing is
+              enabled.
+
+       -read_user_metal_blockage_layer true | false
+              Specifies how the router treats shapes on metal blockage layers.
+
+              When false (the default), the shapes are ignored.
+
+              When true, the shapes are honored.
+
+       -wide_macro_pin_as_fat_wire true | false
+              Specifies  whether  a  wide  macro pin or pad pin should have an
+              implicit depth the same as its width.
+
+              The default value is false.
+
+       -route_top_boundary_mode  stay_half_min_space_inside  |  stay_inside  |
+       ignore
+              Controls the routing behavior near the top boundary.
+
+              The definition for each mode is
+
+              o stay_half_min_space_inside
+                The routing must be inside the boundary by half of the minimum
+                spacing.
+
+              o stay_inside (the default)
+                The routing must be inside or abut the boundary.
+
+              o ignore
+                Wires can extend outside the boundary.
+
+       -standard_cell_blockage_as_thin true | false
+              Specifies  whether  to treat wide blockages in standard cells as
+              thin wires.
+
+              The default is false.
+
+       -freeze_layer_by_layer_name {{layer true | false}...}
+              Controls whether routing layers are frozen to prevent them  from
+              changing  during routing. You must specify the routing layers by
+              using the layer names in the technology file.
+
+              This option can be set only after the cell is open.
+
+              When false (the default), the layer is not frozen.
+
+              When true, the layer is frozen.
+
+       -freeze_via_to_frozen_layer_by_layer_name {{layer true | false}...}
+              Controls the treatment of vias that touch the  specified  frozen
+              layers on one side. You must specify the routing layers by using
+              the layer names in the technology  file.  The  specified  layers
+              should be frozen layers.
+
+              By  default, all the frozen layers are set as false, which indi-
+              cates that the vias whose surroundings on  a  frozen  layer  are
+              enclosed  by  other  metal  shapes can be removed or rerouted as
+              long as they do not make a change on  the  frozen  metal  layer.
+              Special  vias  such  as H-shape vias are not removed or rerouted
+              even though they do not change the frozen metal layer.
+
+              When you set this option to true on one or more  frozen  layers,
+              the  vias  adjacent to these frozen layers are frozen and cannot
+              be changed.  Note that no change is allowed on a cut layer adja-
+              cent to two frozen metal layers.
+
+       -forbid_new_metal_by_layer_name {{layer true | false}...}
+              Controls  whether  ECO  routing  (the route_zrt_eco command) can
+              remove, but not add, metal on the  specified  layers.  You  must
+              specify the routing layers by using the layer names in the tech-
+              nology file.
+
+              Note that for all other routing commands, this option  acts  the
+              same  as  the  -freeze_layer_by_layer_name  option  and controls
+              whether routing cannot add or remove metal on the specified lay-
+              ers.
+
+              When  false  (the  default),  the router can add or remove metal
+              from the layer.
+
+              When true, the ECO router can remove, but not  add,  metal  from
+              the  layer. The ECO router can remove metal if it is dangling or
+              is not fully contained within fixed user shapes, such  as  pins.
+              All  other  routing  phases  cannot add or remove metal from the
+              layer. If the router adds metal on the layer, and that metal  is
+              not  fully  contained  within  a  fixed  user  shape, the router
+              reports a "Forbidden metal" DRC violation.
+
+              You would use this option if you want to  essentially  freeze  a
+              layer  when  running  core commands, such as route_opt, but give
+              the router the flexibility to  remove  some  shapes  during  ECO
+              routing.     If     a     layer     is     frozen    with    the
+              -freeze_layer_by_layer_name option, the router cannot touch  any
+              shapes,  which can result in dangling wires and unfixable shorts
+              if   the   placement   changes    during    ECO.    The    -for-
+              bid_new_metal_by_layer_name  option  gives the router the flexi-
+              bility to remove such shapes while otherwise treating the  layer
+              as frozen.
+
+              If  you  specify  both the -freeze_layer_by_layer_name and -for-
+              bid_new_metal_by_layer_name      options,      the      stricter
+              -freeze_layer_by_layer_name option takes precedence.
+
+              This option can be set only after the cell is open.
+
+       -global_max_layer_mode soft | allow_pin_connection | hard
+              Controls the application of the maximum routing layer constraint
+              set for the design. This global constraint is set by  using  the
+              set_ignored_layers command.
+
+              The definition for each mode is
+
+              o soft (the default)
+                Routing above the maximum layer is discouraged, but not disal-
+                lowed.  DRC violations are not flagged on any metal above  the
+                maximum layer.
+
+              o allow_pin_connection
+                Routing  is  allowed above the maximum layer only for pin con-
+                nections.  DRC violations are flagged on metal above the maxi-
+                mum  layer if the metal is not along a path that connects to a
+                pin. DRC violations are flagged on  metal  above  the  maximum
+                layer  if the metal is along a path that connects to a pin and
+                the path is long. A path is  considered  long  by  the  detail
+                router  if  its  length exceeds approximately 10 average track
+                pitches. A path is considered  long  by  the  verify_zrt_route
+                command  if  its length exceeds approximately 15 average track
+                pitches.
+
+              o hard
+                No routing can occur above the maximum layer.  DRC  violations
+                are flagged on metal above the maximum layer.
+
+              Note  that  the -number_of_vias_over_global_max_layer option can
+              relax the maximum layer constraint, but only for vias.
+
+       -global_min_layer_mode soft | allow_pin_connection | hard
+              Controls the application of the minimum routing layer constraint
+              for  the  design.  This  global  constraint  is set by using the
+              set_ignored_layers command.
+
+              The definition for each mode is
+
+              o soft (the default)
+                Routing below the minimum layer is discouraged, but not disal-
+                lowed.   DRC violations are not flagged on any metal below the
+                minimum layer.
+
+              o allow_pin_connection
+                Routing is allowed below the minimum layer only for  pin  con-
+                nections.  DRC violations are flagged on metal below the mini-
+                mum layer if the metal is not along a path that connects to  a
+                pin.  DRC  violations  are  flagged on metal below the minimum
+                layer if the metal is along a path that connects to a pin  and
+                the  path  is  long.  A  path is considered long by the detail
+                router if its length exceeds approximately  10  average  track
+                pitches.  A  path  is  considered long by the verify_zrt_route
+                command if its length exceeds approximately 15  average  track
+                pitches.
+
+              o hard
+                No  routing can occur below the minimum layer.  DRC violations
+                are flagged on metal below the minimum layer.
+
+              Note that the -number_of_vias_under_global_min_layer option  can
+              relax the minimum layer constraint, but only for vias.
+
+       -ignore_var_spacing_to_blockage true | false
+              Controls  whether  the  spacing  defined in a nondefault routing
+              rule is ignored against blockages.
+
+              The default is false.
+
+       -ignore_var_spacing_to_pg true | false
+              Controls whether the spacing defined  in  a  nondefault  routing
+              rule is ignored against all wires on power and ground nets.
+
+              The default is false.
+
+       -ignore_var_spacing_to_shield true | false
+              Controls  whether  the  spacing  defined in a nondefault routing
+              rule is ignored against shield wires on power and ground nets.
+
+              The default is true.
+
+              This option  has  no  effect  if  the  -ignore_var_spacing_to_pg
+              option is true.
+
+       -min_edge_offset_for_macro_pin_connection_by_layer_name   {{layer  off-
+       set}...}
+              Specifies  the minimum edge offset for macro pin connections for
+              one or more metal layers. The minimum edge for macro pin connec-
+              tion  rule  enforces  exactly  aligned connections between metal
+              wires and macro pins where they connect. If the  macro  pin  and
+              wire  have  different  widths,  the short edges resulting at the
+              connection point must have at least the specified length.
+
+              The settings specified in this option override  the  minEdgeOff-
+              setForMacroPinConnection  values  specified in the Layer section
+              of the technology file for the specified layers. The  technology
+              file  values  are  used  for  any  layers  not specified in this
+              option.
+
+       -net_max_layer_mode soft | allow_pin_connection | hard
+              Defines the default mode for the net-based maximum routing layer
+              constraints  set  by  the set_net_routing_layer_constraints com-
+              mand. This setting applies only to nets  whose  maximum  routing
+              layer  mode  is not set by the set_net_routing_layer_constraints
+              -max_layer_mode command option.
+
+              The definition for each mode is
+
+              o soft
+                Routing above the maximum layer is discouraged, but not disal-
+                lowed.   DRC violations are not flagged on any metal above the
+                maximum layer.
+
+              o allow_pin_connection
+                Routing is allowed above the maximum layer only for  pin  con-
+                nections.  DRC violations are flagged on metal above the maxi-
+                mum layer if the metal is not along a path that connects to  a
+                pin.  DRC  violations  are  flagged on metal above the maximum
+                layer if the metal is along a path that connects to a pin  and
+                the  path  is  long.  A  path is considered long by the detail
+                router if its length exceeds approximately  10  average  track
+                pitches.  A  path  is  considered long by the verify_zrt_route
+                command if its length exceeds approximately 15  average  track
+                pitches.
+
+              o hard (the default)
+                No  routing can occur above the maximum layer.  DRC violations
+                are flagged on metal above the maximum layer.
+
+              Note  that  the  -number_of_vias_over_net_max_layer  option  can
+              relax the maximum layer constraint, but only for vias.
+
+       -net_min_layer_mode soft | allow_pin_connection | hard
+              Defines the default mode for the net-based minimum routing layer
+              constraints set by  the  set_net_routing_layer_constraints  com-
+              mand.  This  setting  applies only to nets whose minimum routing
+              layer mode is not set by  the  set_net_routing_layer_constraints
+              -min_layer_mode command option.
+
+              The definition for each mode is
+
+              o soft (the default)
+                Routing below the minimum layer is discouraged, but not disal-
+                lowed.  DRC violations are not flagged on any metal below  the
+                minimum layer.
+
+              o allow_pin_connection
+                Routing  is  allowed below the minimum layer only for pin con-
+                nections.  DRC violations are flagged on metal below the mini-
+                mum  layer if the metal is not along a path that connects to a
+                pin. DRC violations are flagged on  metal  below  the  minimum
+                layer  if the metal is along a path that connects to a pin and
+                the path is long. A path is  considered  long  by  the  detail
+                router  if  its  length exceeds approximately 10 average track
+                pitches. A path is considered  long  by  the  verify_zrt_route
+                command  if  its length exceeds approximately 15 average track
+                pitches.
+
+              o hard
+                No routing can occur below the minimum layer.  DRC  violations
+                are flagged on metal below the minimum layer.
+
+              Note  that  the  -number_of_vias_under_net_min_layer  option can
+              relax the minimum layer constraint, but only for vias.
+
+       -net_max_layer_mode_soft_cost low | medium | high
+              Defines the default cost for routing above the net-based maximum
+              routing  layer when using the soft maximum layer mode. This set-
+              ting applies only to nets whose soft mode maximum routing  layer
+              cost   is   not  set  by  the  set_net_routing_layer_constraints
+              -max_layer_mode_soft_cost command option.
+
+              The default is medium.
+
+       -net_min_layer_mode_soft_cost low | medium | high
+              Defines the default cost for routing below the net-based minimum
+              routing  layer when using the soft minimum layer mode. This set-
+              ting applies only to nets whose soft mode minimum routing  layer
+              cost   is   not  set  by  the  set_net_routing_layer_constraints
+              -min_layer_mode_soft_cost command option.
+
+              The default is medium.
+
+       -extra_preferred_direction_wire_cost_multiplier_by_layer_name   {{layer
+       multiplier}...}
+              Specifies the cost  multiplier  for  routing  in  the  preferred
+              direction  for  the specified metal layers. You must specify the
+              metal layers by using the layer names in the technology file.
+
+              The multiplier value must be between 0.0 and  20.0;  it  affects
+              the routing cost in the preferred direction as follows:
+              cost = baseCost * (1 + multiplier)
+              The default is 0.0.
+
+              You can set this option only after opening the top-level design.
+
+       -extra_nonpreferred_direction_wire_cost_multiplier_by_layer_name
+       {{layer multiplier}...}
+              Specifies the cost multiplier for routing  in  the  nonpreferred
+              direction  for  the specified metal layers. You must specify the
+              metal layers by using the layer names in the technology file.
+
+              The multiplier value must be between 0.0 and  20.0;  it  affects
+              the routing cost in the nonpreferred direction as follows:
+              cost = baseCost * (1 + multiplier)
+              The default is 0.0.
+
+              Note  that  specifying  large  values  can  prevent nonpreferred
+              direction routing.  If you require nonpreferred direction  rout-
+              ing, you should use smaller values.
+
+              You can set this option only after opening the top-level design.
+
+       -extra_via_cost_multiplier_by_layer_name {{layer multiplier}...}
+              Specifies the cost multiplier for vias on the specified via lay-
+              ers. You must specify the via layers by using the layer names in
+              the technology file.
+
+              The multiplier value must be between 0.0 and  20.0;  it  affects
+              the via cost as follows:
+              viaCost = baseViaCost * (1 + multiplier)
+              The default is 0.0.
+
+              You can set this option only after opening the top-level design.
+
+       -extra_via_off_grid_cost_multiplier_by_layer_name    {{layer     multi-
+       plier}...}
+              Specifies the cost multiplier for vias that are  off  grid  with
+              respect  to  the  specified  metal  layers. You must specify the
+              metal layers by using the layer names in the technology file.
+
+              The multiplier value must be between 0.0 and  20.0;  it  affects
+              the  via  cost on the via layers adjacent to the specified metal
+              layers as follows:
+              viaCost = baseViaCost * (1 + multiplier)
+              The default is 0.0.
+
+              You can set this option only after opening the top-level design.
+
+       -number_of_vias_over_global_max_layer int
+              Allows  the  router  to use stacked vias to access pins or fixed
+              routes above the global maximum layer.  If  the  global  maximum
+              layer  mode  is  set to soft, this option is ignored, because in
+              that case access above the maximum layer is allowed.
+
+              The value range is between 0 and 15. This  value  specifies  the
+              number  of  via layers that may be legally traversed to access a
+              pin.   For example, if the max layer is M6 and a value of  2  is
+              given,  a  violation  will  not be flagged on vias on M6->M7 and
+              M7->M8 if these vias are needed to access pins on  layers  above
+              the max layer.
+
+              The default is 1.
+
+       -number_of_vias_under_global_min_layer int
+              Allows  the  router  to use stacked vias to access pins or fixed
+              routes below the global minimum layer.  If  the  global  minimum
+              layer  mode  is  set to soft, this option is ignored, because in
+              that case access below the minimum layer is allowed.
+
+              The value range is between 0 and 15. This  value  specifies  the
+              number  of  via layers that may be legally traversed to access a
+              pin.   For example, if the min layer is M2 and a value of  1  is
+              given,  a violation will not be flagged on any vias on M1->M2 if
+              these vias are needed to access pins on M1.
+
+              The default is 1.
+
+       -number_of_vias_over_net_max_layer int
+              Allows the router to use stacked vias to access  pins  or  fixed
+              routes above the net-specific maximum layer. If the net-specific
+              maximum layer mode is set  to  soft,  this  option  is  ignored,
+              because  in that case access above the maximum layer is allowed.
+
+              The value range is between 0 and 15.  This value  specifies  the
+              number  of  via layers that may be legally traversed to access a
+              pin.   For example, if the max layer is M6 and a value of  2  is
+              given,  a  violation  will  not be flagged on vias on M6->M7 and
+              M7->M8 if these vias are needed to access pins on  layers  above
+              the max layer.
+
+              The default is 1.
+
+       -number_of_vias_under_net_min_layer int
+              Allows  the  router  to use stacked vias to access pins or fixed
+              routes below the net-specific minimum layer. If the net-specific
+              minimum  layer  mode  is  set  to  soft, this option is ignored,
+              because in that case access below the minimum layer is  allowed.
+
+              The  value  range  is  between 0 and 15. For example, if the min
+              layer is M2 and a value of 1 is given, a violation will  not  be
+              flagged on any vias on M1->M2 if these vias are needed to access
+              pins on M1.
+
+              The default is 1.
+
+       -via_array_mode off | swap | rotate | all
+              Specifies the types of rotated via arrays that can be used  dur-
+              ing  signal  routing  and redundant via insertion when using the
+              default routing rules.
+
+              The definition for each mode is
+
+              o off
+                Do not rotate or swap via arrays.
+
+              o swap
+                Use 1 x N and N x 1 via arrays as rotated equivalent vias.
+
+              o rotate
+                Rotate line via arrays instead of swapping row and column num-
+                bers.
+
+              o all (the default)
+                Use all four possible via arrays.
+
+       -post_detail_route_redundant_via_insertion off | low | medium | high
+              Enables  automatic  redundant  via  insertion  after each detail
+              routing step.
+
+              The default setting is off.
+
+              If the value is set to low, medium, or high, the  tool  performs
+              redundant  via  insertion  after  each  detail  routing  change,
+              including initial detail routing, ECO routing,  and  incremental
+              routing.  Enabling  this  option keeps the redundant vias in the
+              design up-to-date with routing changes.   The  low,  medium,  or
+              high  setting  specifies the effort level used for redundant via
+              insertion.
+
+       -post_incremental_detail_route_fix_soft_violations true | false
+              Enables automatic optimization of soft rules  that  are  fixable
+              postroute, after the incremental routing step.
+
+              The default setting is false.
+
+       -concurrent_redundant_via_mode      off      |      reserve_space     |
+       insert_at_high_cost
+              Specifies  the  concurrent redundant via insertion mode for ini-
+              tial routing.
+
+              The valid modes are
+
+              o off (the default)
+                Concurrent redundant via insertion is turned off.
+
+              o reserve_space
+                Concurrent redundant via insertion reserves space  for  redun-
+                dant vias but does not instantiate them. The space reservation
+                is done by generating internal soft rules for  redundant  vias
+                and   performing  soft-rule-based  optimization.   The  actual
+                instantiation  is  done  later  by  explicitly   calling   the
+                insert_zrt_redundant_vias    command   or   by   setting   the
+                -post_detail_route_redundant_via_insertion    common    Zroute
+                option to a value other than off.
+
+              o insert_at_high_cost
+                Concurrent  redundant  via insertion creates hard design rules
+                for redundant vias and tries to insert them. Use this mode  if
+                only  you  need  a  nearly 100 percent conversion rate. It can
+                lead to very long runtimes if the design is congested  or  the
+                technology parameters are not friendly to redundant via inser-
+                tion. This mode should be used with caution.
+
+       -concurrent_redundant_via_effort_level low | medium | high
+              Specifies the effort level  for  the  concurrent  redundant  via
+              insertion flow.
+
+              The default effort level is low. The higher effort levels result
+              in a better redundant via conversion rate at the expense of run-
+              time.
+
+              This   option   takes  effect  only  if  the  -concurrent_redun-
+              dant_via_mode option is set to a value other than off.
+
+       -eco_route_concurrent_redundant_via_mode off | reserve_space
+              Specifies the concurrent redundant via insertion  mode  for  ECO
+              routing.
+
+              The definition for each mode is
+
+              o off (the default)
+                Concurrent redundant via insertion is turned off.
+
+              o reserve_space
+                Concurrent  redundant  via insertion reserves space for redun-
+                dant vias in ECO routing but does not  instantiate  them.  The
+                space  reservation  is  done by generating internal soft rules
+                for redundant vias and  performing  soft-rule-based  optimiza-
+                tion.  The  actual  instantiation  is done later by explicitly
+                calling the insert_zrt_redundant_vias command  or  by  setting
+                the  -post_detail_route_redundant_via_insertion  common Zroute
+                option to a value other than off.
+
+       -eco_route_concurrent_redundant_via_effort_level low | medium | high
+              Specifies the effort level  for  the  concurrent  redundant  via
+              insertion flow in ECO routing.
+
+              The default effort level is low. The higher effort levels result
+              in a better redundant via conversion rate at the expense of run-
+              time.
+
+              This  option  takes  effect  only  if the -eco_concurrent_redun-
+              dant_via_mode option is set to a value other than off.
+
+       -rotate_default_vias true | false
+              Specifies whether the router can rotate default vias.
+
+              The default is true.
+
+       -route_soft_rule_effort_level off | min | low | medium | high
+              Specifies the effort level for rip up and reroute  to  fix  soft
+              rule design rule violations.
+
+              The definition for each effort level is
+
+              o off
+                Does  not  perform  rip  up and reroute passes to resolve soft
+                rule design rule violations.
+
+              o min
+                Uses the smallest number of  rip  up  and  reroute  passes  to
+                resolve soft rule design rule violations.
+
+              o low
+                Uses  a  small  number of rip up and reroute passes to resolve
+                soft rule design rule violations.
+
+              o medium (the default)
+                Uses a medium number of rip up and reroute passes  to  resolve
+                soft rule design rule violations.
+
+              o high
+                Treats  soft  rule  design rule violations the same as regular
+                design rule violations during rip up and reroute.
+
+       -post_detail_route_fix_soft_violations true | false
+              Enables automatic optimization of soft rules  that  are  fixable
+              postroute, after the detail routing step.
+
+              The default setting is false.
+
+       -post_eco_route_fix_soft_violations true | false
+              Enables  automatic  optimization  of soft rules that are fixable
+              postroute, after the ECO routing step.
+
+              The default setting is false.
+
+       -post_group_route_fix_soft_violations true | false
+              Enables automatic optimization of soft rules  that  are  fixable
+              postroute, after the group routing step.
+
+              The default setting is false.
+
+       -routing_rule_effort_level {{rule {layer {effort_list}}...}...}
+              Specifies  detailed, layer-by-layer effort levels on the various
+              spacings of soft nondefault routing rules. For  each  nondefault
+              routing  rule, you can specify the effort for each spacing value
+              defined for a layer.  The rule name corresponds to a  previously
+              defined  nondefault routing rule.  For each layer defined in the
+              -spacings option of the define_routing_rule command, you specify
+              the  effort  level  for  each  of  the spacings defined for that
+              layer.
+
+              The definition for each effort level is
+              o low
+                Uses a small number of rip up and reroute  passes  to  resolve
+                soft rule design rule violations.
+
+              o med
+                Uses  a  medium number of rip up and reroute passes to resolve
+                soft rule design rule violations.
+
+              o high
+                Treats soft rule design rule violations the  same  as  regular
+                design rule violations during rip up and reroute.
+
+              For  example,  suppose  you  have defined the following two soft
+              routing rules:
+
+                 define_routing_rule soft_rule_1 \
+                         -spacings  {M1 {0.12 0.24 }
+                                     M2 {0.14 0.28 }
+                                     M3 {0.14 0.28 }
+                                     M4 {0.14 0.28 }
+                                     M5 {0.14 0.28 }} \
+                          -spacing_weights {M1 {1 0.9 }
+                                            M2 {1 0.9 }
+icc_shell> 
+icc_shell> man route_zrt_clock_tree
+2.  Synopsys Commands                                        Command Reference
+                             route_zrt_clock_tree
+
+NAME
+       route_zrt_clock_tree
+              Performs routing on the clock nets in the design using Zroute.
+
+SYNTAX
+       status route_zrt_clock_tree
+               [-utilize_dangling_wires false | true]
+               [-reuse_existing_global_route false | true]
+               [-max_detail_route_iterations int]
+
+ARGUMENTS
+       There are no arguments to this command.
+
+DESCRIPTION
+       The  route_zrt_clock_tree  command routes the clock nets in the current
+       design using Zroute.
+
+   Multicorner-Multimode Support
+       This command uses information from all active scenarios.
+
+EXAMPLES
+       The following example routes the clock nets in the current design.
+
+         prompt> route_zrt_clock_tree
+
+SEE ALSO
+       set_route_mode_options(2)
+       route_zrt_group(2)
+
+                         Version L-2016.03-SP5-1
+            Copyright (c) 2016 Synopsys, Inc. All rights reserved.
+icc_shell> man set_route_zrt_detail_options
+2.  Synopsys Commands                                        Command Reference
+                         set_route_zrt_detail_options
+
+NAME
+       set_route_zrt_detail_options
+              Sets the options for Zroute detail routing.
+
+SYNTAX
+       status set_route_zrt_detail_options
+               [-antenna true | false]
+               [-antenna_fixing_preference hop_layers | use_diodes]
+               [-antenna_on_iteration num]
+               [-antenna_verbose_level num]
+               [-check_antenna_on_pg true | false]
+               [-check_patchable_drc_from_fixed_shapes true | false]
+               [-check_pin_min_area_min_length true | false]
+               [-check_port_min_area_min_length true | false]
+               [-continue_after_large_design_rule_value_error true | false]
+               [-default true | false]
+               [-default_diode_protection real]
+               [-default_gate_size real]
+               [-default_port_external_antenna_area real]
+               [-default_port_external_gate_size real]
+               [-detail_route_special_design_rule_fixing_stage none | early_routing | late_routing]
+               [-diagonal_min_width true | false]
+               [-diode_insertion_mode new_and_spare | spare | new]
+               [-diode_libcell_names lib_cells]
+               [-diode_preference none | spare | new]
+               [-drc_convergence_effort_level low | medium | high]
+               [-eco_route_use_soft_spacing_for_timing_optimization true | false]
+               [-eco_route_special_design_rule_fixing_stage  none | early_routing | late_routing]
+               [-elapsed_time_limit limit]
+               [-force_max_number_iterations true | false]
+               [-generate_extra_off_grid_pin_tracks true | false]
+               [-generate_off_grid_feed_through_tracks off | low | medium | high]
+               [-group_route_special_design_rule_fixing_stage none | early_routing | late_routing]
+               [-hop_layers_to_fix_antenna true | false]
+               [-ignore_drc {{drc_name true | false}...}]
+               [-incremental_detail_route_special_design_rule_fixing_stage none | early_routing | late_routing]
+               [-insert_diodes_during_routing true | false]
+               [-macro_pin_antenna_mode normal | jump | top_layer]
+               [-max_antenna_pin_count int]
+               [-merge_gates_for_antenna true | false]
+               [-optimize_tie_off_effort_level off | low | high]
+               [-optimize_wire_via_effort_level off | low | medium | high]
+               [-pin_taper_mode default_width | pin_width | off]
+               [-port_antenna_mode float | jump | top_layer]
+               [-post_process_special_design_rule_fixing_stage none | early_routing | late_routing]
+               [-repair_shorts_over_macros_effort_level off | low | medium | high]
+               [-report_ignore_drc {list_of_drc_names}]
+               [-reuse_filler_locations_for_diodes true | false]
+               [-save_after_iterations iter_list]
+               [-save_cell_prefix prefix]
+               [-skip_antenna_fixing_for_nets nets]
+               [-timing_driven true | false]
+               [-top_layer_antenna_fix_threshold int]
+               [-use_default_width_for_min_area_min_len_stub true | false]
+               [-use_lower_hierarchy_for_port_diodes true | false]
+               [-use_wide_wire_to_input_pin true | false]
+               [-use_wide_wire_to_macro_pin true | false]
+               [-use_wide_wire_to_output_pin true | false]
+               [-use_wide_wire_to_pad_pin same_as_macro_pin | true | false]
+               [-use_wide_wire_to_port same_as_macro_pin | true | false]
+               [-use_wide_wire_effort_level off | low | high]
+               [-user_defined_partition {llx lly urx ury}]
+               [-var_spacing_to_same_net true | false]
+
+   Data Types
+       num                   integer
+       real                  float
+       lib_cells             collection
+       limit                 integer
+       int                   integer
+       list_of_drc_names     list
+       iter_list             collection
+       prefix                string
+       nets                  collection
+       llx                   float
+       lly                   float
+       urx                   float
+       ury                   float
+
+ARGUMENTS
+       -antenna true | false
+              Enables (true) or disables (false) antenna analysis.
+
+              The default is true.
+
+       -antenna_fixing_preference hop_layers | use_diodes
+              Specifies  the  preferred  technique  used to fix antenna viola-
+              tions: layer hopping or diode insertion.
+
+              The default is hop_layers.
+
+       -antenna_on_iteration num
+              Specifies the detail routing iteration at which antenna analysis
+              and optimization is turned on.
+
+              The  range  is from 1 to 19 (the routing iteration number starts
+              at 0).
+
+              The default is 1.
+
+       -antenna_verbose_level num
+              Specifies the verbosity level to  print  extra  information  for
+              antenna  analysis  and optimization. This option does not affect
+              the actual analysis or optimization.
+
+              The range is from 0 to 2.
+
+              The default is 1.
+
+       -check_antenna_on_pg true | false
+              Enables (true) or disables (false) analysis and optimization  of
+              antennas on power and ground nets.
+
+              The default is false.
+
+              For designs with high-fanout power or ground nets, enabling this
+              option typically increases the runtime for routing commands.
+
+       -check_patchable_drc_from_fixed_shapes true | false
+              Enables (true) or disables (false) checking  of  patchable  DRCs
+              for fixed routes.
+
+              When this option is enabled, patchable DRCs (minimum area, mini-
+              mum length, and end-of-line spacing) are checked  between  fixed
+              routes.  Violations  are Violations are resolved by metal patch-
+              ing.
+
+              The default is false.
+
+       -check_pin_min_area_min_length true | false
+              Enables (true) or disables (false) checking for minimum area and
+              minimum length rules on pins.
+
+              The default is true.
+
+       -check_port_min_area_min_length true | false
+              Enables (true) or disables (false) checking for minimum area and
+              minimum length rules on physical ports (terminals).
+
+              The default is true.
+
+       -continue_after_large_design_rule_value_error true | false
+              Controls whether to continue on large design rule values.
+
+              The tool has an internal threshold for the fatTblExtensionRange,
+              fatTblXExtensionRange,  fatTblYExtensionRange,  and  protrusion-
+              LengthLimitTbl attributes in the DesignRule section of the tech-
+              nology file.
+
+              By  default (false), the detail router fails if the value speci-
+              fied for any of these attributes exceeds the internal threshold.
+
+              When this option is enabled, the detail router continues even if
+              the internal threshold is exceeded.  Enabling  this  option  can
+              cause  excessive  runtime  and memory overhead and is not recom-
+              mended.
+
+       -default true | false
+              If true, this option resets all options to their default values.
+
+              The default is false.
+
+       -default_diode_protection real
+              Specifies  the  diode  protection  value  used  for  pins during
+              antenna analysis if the value is not specified in the FRAM  view
+              of the cell. This option has no effect when the FRAM view speci-
+              fies a diode protection value.
+
+              The range is from 0.0 to 1,000,000.00.  There  is  no  unit  for
+              diode  protection.   Depending on the diode mode, it can be used
+              to calculate antenna ratio requirements, equivalent metal  area,
+              or equivalent gate area.
+
+              The default is 0.0.
+
+       -default_gate_size real
+              Specifies the gate size used for pins during antenna analysis if
+              the gate size is not specified in the FRAM view of the cell.
+
+              The range is from -1.0 to 1,000,000.00. The unit is  the  square
+              of the unitLengthName specified in the technology file.
+
+              The tool uses this option only when you set it to a value of 0.0
+              or greater and the FRAM view does not specify the gate size  for
+              the  pin. This option has no effect when the FRAM view specifies
+              a gate size value.
+
+              The default is -1.0.
+
+       -default_port_external_antenna_area real
+              Specifies the antenna area value used for ports (top-level pins)
+              during  antenna analysis if the antenna area is not specified in
+              the FRAM view of the cell. The antenna area is  the  metal  area
+              from the gate input pin to the external port.
+
+              The range is from 0.0 to 1,000,000.00. The unit is the square of
+              the unitLengthName specified in the technology file.
+
+              The default is 0.0.
+
+       -default_port_external_gate_size real
+              Specifies the gate size used for ports (top-level  pins)  during
+              antenna  analysis  if the gate size is not specified in the FRAM
+              view of the cell.
+
+              The range is from -1.0 to 1,000,000.00. The unit  is  square  of
+              unitLengthName specified in the technology file.
+
+              The tool uses this option only when you set it to a value of 0.0
+              or greater and the FRAM view does not specify the gate size  for
+              the port. This option has no effect when the FRAM view specifies
+              a gate size value.
+
+              If the gate size is not set for a port, Zroute issues a  ZRT-311
+              message and does not perform antenna analysis on the port.
+
+              The default is -1.0.
+
+       -detail_route_special_design_rule_fixing_stage  none  | early_routing |
+       late_routing
+              Selects the stage at which to fix special design rules when run-
+              ning the route_zrt_detail, route_zrt_auto,  and  route_opt  com-
+              mands.
+
+              The  special  design  rules  include the iso-dense via enclosure
+              rule. Fixing the special design rules requires significant rout-
+              ing  resources, so you might not want to fix them at all stages.
+
+              You can fix these rules at the following stages:
+              o late_routing (the default) Check and fix these  rules  in  the
+                postroute stage, after the other DRC rules.
+
+              o early_routing
+                Check and fix these rules along with the other DRC rules.
+
+              o none
+                Never check and fix these rules.
+
+       -diagonal_min_width true | false
+              Specifies  whether  to  use  diagonal distance for minimum width
+              violations.
+
+              If true (the default), diagonal distance is used.
+              If false, manhattan distance is used.
+
+       -diode_insertion_mode new_and_spare | spare | new
+              Specifies whether to fix antenna violations by  using  both  new
+              and  spare diodes (new_and_spare), spare diodes only (spare), or
+              new diodes only (new).
+
+              If you do not specify this option,  Zroute  uses  both  new  and
+              spare diodes.
+
+       -diode_libcell_names lib_cells
+              Specifies the diode library cells to use for antenna fixing.
+
+              The  default is an empty list, in which case diodes are detected
+              automatically.
+
+icc_shell> 
+icc_shell> man set_host_options
+2.  Synopsys Commands                                        Command Reference
+                               set_host_options
+
+NAME
+       set_host_options
+              Controls  the  maximum  number  of cores used by commands in the
+              parent (master) process. Also controls the options used by  com-
+              mands that can run distributed jobs.
+
+SYNTAX for the Parent (Master) Process
+       status set_host_options
+               [-max_cores number_of_cores]
+
+   Data Types for the Parent (Master) Process
+       number_of_cores                      int
+
+SYNTAX for the Child (Slave) Processes
+       status set_host_options
+               [-name options_name]
+               [-num_processes number_of_jobs_or_partitions]
+               [-max_cores number_of_cores]
+               [-timeout timeout]
+               [-submit_command batch_submission_command_path]
+               [-submit_options batch_submission_command_options]
+               [-32bit]
+               [-pool lsf | grd]
+               [-target ICC | PrimeTime | StarRC]
+               [list_of_hosts]
+
+   Data Types for the Child (Slave) Processes
+       options_name                         string
+       number_of_jobs_or_partitions         int
+       timeout                              int
+       batch_submission_command_path        string
+       batch_submission_command_options     string
+       list_of_hosts                        list
+
+ARGUMENTS
+       -max_cores number_of_cores
+              If  this  option is specified by itself, it controls the maximum
+              number of cores that can be used by multicore  commands  in  the
+              current (main) job.
+
+              If  it  is specified as part of a host or pool specification, it
+              controls the number of cores each distributed slave job  on  the
+              specified hosts or pool are allowed to use.
+
+              In  both  cases,  the value is a maximum, so some commands might
+              use fewer cores than the specified value, but in no  case  would
+              they use more.
+
+       -name options_name
+              Specifies a name for this configuration.
+
+              You  can specify this name in the remove_host_options command to
+              remove only this configuration.
+
+              If you do not specify this option, the tool  generates  a  name.
+              If  a  configuration with the specified name already exists, the
+              specified options replace the existing options.
+
+       -num_processes number_of_jobs_or_partitions
+              Controls the level of parallelism used for job submission.
+
+              If you are defining an LSF, GRD, or custom  pool,  this  is  the
+              maximum total number of jobs that can be submitted to it.
+
+              If  you  are  defining  a collection of named hosts, this is the
+              maximum number of jobs per host that can  be  started  on  those
+              hosts.
+
+              You can restrict the number of active jobs to a specified number
+              based on hardware or license resource restrictions.
+
+              The default is no limit.
+
+       -timeout timeout
+              Specifies the job submission timeout value in seconds.
+
+              If the submitted jobs do not  become  running  jobs  within  the
+              specified time, they are killed. This is to prevent hanging jobs
+              in the queuing system.
+
+              If you do not specify this option, the system waits as  long  as
+              needed for jobs to start.
+
+       -submit_command batch_submission_command_path
+              Specifies the full path name of the LSF, GRD, or custom job sub-
+              mission program.
+
+              If you specify the -pool option and do not specify this  option,
+              the  system  might be able to locate and use the standard LSF or
+              GRD job submission programs.
+
+              If you are defining a simple pool of machines and do not specify
+              this  option,  rsh is used as the submission program. If you use
+              this option and specify "ssh", ssh is  used  as  the  submission
+              program  instead  of rsh. Note that ssh might need a password to
+              submit jobs and therefore you might need to configure the  hosts
+              to enable ssh job submission without a password.
+
+       -submit_options batch_submission_command_options
+              Specifies  options  to be passed to the LSF, GRD, rsh, or custom
+              job submission program.
+
+       -32bit Indicates that the program used by the distributed commands  for
+              executing their slave jobs is run in 32-bit mode.
+
+              If you do not specify this option, 64-bit mode is used if possi-
+              ble; otherwise, 32-bit mode is used.
+
+       -pool lsf | grd
+              Used by some commands to optimize their behavior for the  speci-
+              fied type of queuing system.
+
+              If  you  are  defining a queuing system, you must specify either
+              this option or the -submit_command option.
+
+              If you are defining a simple pool of machines,  this  option  is
+              ignored.
+
+       -target ICC | PrimeTime | StarRC
+              Specifies which tool the configuration applies to.
+
+              If  you do not specify this option, the configuration applies to
+              commands run in the IC Compiler tool.
+
+              The PrimeTime and StarRC settings are used only by  the  signoff
+              flow. When you specify one of these values,
+  o You can specify only a single host.
+                To submit jobs to different machines, run the set_host_options
+                commmand multiple times with different machines.
+
+                o The default submit command is rsh.
+                To use another submit command, such as ssh, LSF, or  GRD,  use
+                the  -submit_command  option  to specify its full binary path.
+                You can specify options for the submit command either by using
+                double  quotes  to  specify  them  within  the -submit_command
+                option or by using the -submit_options option.
+
+                When you use LSF or GRD as the submit command, you  must  also
+                specify the -pool option.
+
+  o Some options, such as the -timeout and -32bit options, are disabled.
+
+              When you specify the PrimeTime setting,
+  o   If  you do not specify the -num_processes option, only one PrimeTime job
+                is submitted.
+
+  o If you use rsh or ssh but do not specify  a  host,  the  default  host  is
+                "localhost".
+
+              When you specify the StarRC setting,
+  o The -max_cores option is not supported.
+                You  must  use  the set_starrcxt_options -num_parts command to
+                enable the StarRC multicore feature.
+
+       list_of_hosts
+              Specifies a list of hosts that are used to run distributed jobs.
+
+              If you specify this argument, the -pool and -timeout options are
+              ignored.
+
+DESCRIPTION
+       IC Compiler supports several commands that can be  run  in  distributed
+       mode, in which a task is broken up into many pieces and each subproblem
+       is run independently. The set_host_options command defines the  parame-
+       ters for running a command in distributed mode.
+
+       It  allows  for  simple setup for the new user and also for arbitrarily
+       complex setup for the user with more sophisticated needs.
+
+       In its simplest form, the command is used  to  control  the  number  of
+       cores  used  by  multicore  commands. A multicore command can use fewer
+       cores than this maximum, but the command can never  exceed  the  stated
+       maximum.
+icc_shell> man route_search_repair
+2.  Synopsys Commands                                        Command Reference
+                              route_search_repair
+
+NAME
+       route_search_repair
+              Performs a search and repair routing operation on the design.
+
+SYNTAX
+       status route_search_repair
+               [-loop num]
+               [-run_time_limit num]
+               [-reset_width]
+               [-rerun_drc]
+               [-reset_min_max_layer]
+               [-trim_antenna_of_user_wires]
+               [-dont_connect_tie_off]
+               [-ignore_open_nets]
+               [-num_cpus num]
+
+   Data Types
+       num     integer
+
+ARGUMENTS
+       -loop num
+              Specifies the number of search and repair loops.  The default is
+              50.  The range is 0 to 1000.
+
+       -run_time_limit num
+              CPU runtime limit in minutes.  The default  is  no  limit.   The
+              range is -1 to 500.
+
+       -reset_width
+              Resets the default width.
+
+       -rerun_drc
+              Runs  the design rule checker before starting search and repair.
+
+       -reset_min_max_layer
+              Resets the min-max layer setting.
+
+       -trim_antenna_of_user_wires
+              Trims wire segments of preroute wires.
+
+       -dont_connect_tie_off
+              Specifies not to connect pg or clock.
+
+       -ignore_open_nets
+              Specifies not to connect partially routed wire segments.
+
+       -num_cpus num
+              Specifies the number of cpus for distributed routing.   It  must
+              be >= 1.  The range is 0 to 63.
+
+DESCRIPTION
+       This  command  allows  you to run incremental search and repair routing
+       passes after detail routing.  During these  routing  passes,  the  tool
+       searches  for design rule violations and reroutes wires in an effort to
+       avoid violations.
+
+   Multicorner-Multimode Support
+       This command uses information from the current scenario only.
+
+EXAMPLES
+       The following example performs search and repair  using  the  following
+       options:     -loop,    -run_time_limit,    -reset_width,    -rerun_drc,
+       -reset_min_max_layer,      -trim_antenna_of_user_wires,      -dont_con-
+       nect_tie_off, -ignore_open_nets, and -num_cpus.
+
+         prompt> route_search_repair -loop 5\
+         -run_time_limit 50 -reset_width\
+         -rerun_drc -reset_min_max_layer
+         -trim_antenna_of_user_wires\
+         -dont_connect_tie_off\
+         -ignore_open_nets -num_cpus 1
+
+SEE ALSO
+       route_auto(2)
+       route_detail(2)
+       set_route_options(2)
+
+                         Version L-2016.03-SP5-1
+            Copyright (c) 2016 Synopsys, Inc. All rights reserved.
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> man insert_stdcell_filler
+2.  Synopsys Commands                                        Command Reference
+                             insert_stdcell_filler
+
+NAME
+       insert_stdcell_filler
+              Fills empty spaces in standard cell rows with filler cells.
+
+SYNTAX
+       status insert_stdcell_filler
+               [-cell_without_metal lib_cells]
+               [-cell_without_metal_prefix prefix]
+               [-cell_with_metal lib_cells]
+               [-cell_with_metal_prefix prefix]
+               [-vt_filler lib_cells]
+               [-vt_filler_prefix prefix]
+               [-randomize]
+               [-bounding_box rectangle]
+               [-voltage_area voltage_areas]
+               [-plan_group plan_groups]
+               [-dont_respect_hard_placement_blockage]
+               [-dont_respect_soft_placement_blockage]
+               [-ignore_hard_placement_blockage]
+               [-ignore_soft_placement_blockage]
+               [-between_std_cells_only]
+               [-respect_overlap]
+               [-respect_keepout]
+               [-avoid_layers metal_layers]
+               [-connect_to_power power_net_name]
+               [-connect_to_ground ground_net_name]
+               [-pin_net pin_net_list]
+               [-check_only]
+               [-restore_filler_snapshot]
+               [-leakage_power max_total_leakage_power]
+               [-metal_filler_coverage_area max_total_coverage_area]
+               [-no_1x]
+
+   Data Types
+       lib_cells                   collection
+       prefix                      string
+       rectangle                   rectangle
+       voltage_areas               collection
+       metal_layers                collection
+       power_net_name              string
+       ground_net_name             string
+       pin_net_list                collection
+       max_total_leakage_power     float
+       max_total_coverage_area     float
+
+ARGUMENTS
+       -cell_without_metal lib_cells
+              Specifies  the list of filler cells to be used. You must specify
+              filler cells that do not contain metal. These filler  cells  are

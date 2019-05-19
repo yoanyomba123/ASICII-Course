@@ -34,3 +34,12 @@ man clock_opt
 man psynopt
 man route_zrt_group
 man clock_opt_feasibility
+man preroute_standard_cells
+man verify_pg_nets
+man set_route_options
+man set_route_zrt_common_options
+man route_zrt_clock_tree
+man set_route_zrt_detail_options
+man set_host_options
+man route_search_repair
+man insert_stdcell_filler
