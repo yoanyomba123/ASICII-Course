@@ -66,7 +66,7 @@ create_rectangular_rings  -nets  {VDDA}  -left_offset 1.8  -left_segment_layer M
 set_preroute_advanced_via_rule -move_via_to_center
 create_power_straps -nets { VDDA } -layer M6 -direction vertical -width 3 -advanced_via_rules
 create_power_straps -nets { VSS } -layer M6 -direction vertical  -width 3
-# create_fp_placement -num_cpus 16
+#create_fp_placement -num_cpus 16
 # remove standard cells and regenerate them
 # cut_row -all
 #add_row \
@@ -81,7 +81,7 @@ create_power_straps -nets { VSS } -layer M6 -direction vertical  -width 3
 #set_keepout_margin -type soft -north -outer {2 2 2 2} [all_macro_cells]
 
 # create initial placement
-#create_fp_placement -timing_driven -no_hierarchy_gravity -num_cpus 16
+create_fp_placement -timing_driven -no_hierarchy_gravity -num_cpus 16
 
 ## Generate the floorplan power rails
 #synthesize_fp_rail 
