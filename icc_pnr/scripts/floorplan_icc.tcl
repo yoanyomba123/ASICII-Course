@@ -49,7 +49,7 @@ set floorplan_design fpu_fp
 # standard cells, and leave no space for routing tracks.
 #
 # this command allocates space for the chip and palce the pins evenly on the border
-create_floorplan -control_type aspect_ratio -core_aspect_ratio "1" -core_utilization 0.6 -start_first_row -left_io2core 15 -bottom_io2core 15 -right_io2core 15 -top_io2core 15 -row_core_ratio 1
+create_floorplan -control_type aspect_ratio -core_aspect_ratio "1" -core_utilization 0.6 -start_first_row -left_io2core 15 -bottom_io2core 15 -right_io2core 15 -top_io2core 15
 
 derive_pg_connection -power_net VDDA -ground_net VSS
 derive_pg_connection -power_net VDDA -ground_net VSS -tie
@@ -63,8 +63,9 @@ create_rectangular_rings  -nets  {VSS}  -left_offset 0.5  -left_segment_layer M6
 create_rectangular_rings  -nets  {VDDA}  -left_offset 1.8  -left_segment_layer M6 -left_segment_width 1.0 -extend_ll -extend_lh -right_offset 1.8 -right_segment_layer M6 -right_segment_width 1.0 -extend_rl -extend_rh -bottom_offset 1.8  -bottom_segment_layer M7 -bottom_segment_width 1.0 -extend_bl -extend_bh -top_offset 1.8 -top_segment_layer M7 -top_segment_width 1.0 -extend_tl -extend_th
 
 ## Creates Power Strap 
-create_power_strap -nets { VDDA } -layer M6 -direction vertical -width 3  
-create_power_strap -nets { VSS } -layer M6 -direction vertical  -width 3
+set_preroute_advanced_via_rule -move_via_to_center
+create_power_straps -nets { VDDA } -layer M6 -direction vertical -width 3 -advanced_via_rules
+create_power_straps -nets { VSS } -layer M6 -direction vertical  -width 3
 # create_fp_placement -num_cpus 16
 # remove standard cells and regenerate them
 # cut_row -all
@@ -83,7 +84,7 @@ create_power_strap -nets { VSS } -layer M6 -direction vertical  -width 3
 #create_fp_placement -timing_driven -no_hierarchy_gravity -num_cpus 16
 
 ## Generate the floorplan power rails
-#synthesize_fp_rail \
+#synthesize_fp_rail 
 # -power_budget 1000 \
 # -voltage_supply 1.2 \
 # -target_voltage_drop 250 \
