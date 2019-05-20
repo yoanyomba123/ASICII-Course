@@ -5,99 +5,99 @@ Report : power
         -analysis_effort low
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Fri May 10 00:46:37 2019
+Date   : Sun May 19 22:45:42 2019
 ****************************************
 
 
 Library(s) Used:
 
-    saed32rvt_ss0p95v25c (File: /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db)
+    saed32hvt_ss0p95v25c (File: /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_hvt/db_ccs/saed32hvt_ss0p95v25c.db)
 
 
-Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+Operating Conditions: ss0p95v25c   Library: saed32hvt_ss0p95v25c
 Wire Load Model Mode: enclosed
 
 Design        Wire Load Model            Library
 ------------------------------------------------
-fpu                    140000            saed32rvt_ss0p95v25c
-bw_r_rf16x160          35000             saed32rvt_ss0p95v25c
-fpu_add                35000             saed32rvt_ss0p95v25c
-fpu_mul                35000             saed32rvt_ss0p95v25c
-fpu_div                16000             saed32rvt_ss0p95v25c
+fpu                    140000            saed32hvt_ss0p95v25c
+bw_r_rf16x160          35000             saed32hvt_ss0p95v25c
+fpu_add                35000             saed32hvt_ss0p95v25c
+fpu_mul                35000             saed32hvt_ss0p95v25c
+fpu_div                16000             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE69
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE4_0_6
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE4_0_5
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_0
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_1
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_bw_r_rf16x160_0
-                       ForQA             saed32rvt_ss0p95v25c
-fpu_add_frac_dp        16000             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
+fpu_add_frac_dp        16000             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE8
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE31
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE11_0_9
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE13_0_8
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_add_0
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_add_1
-                       ForQA             saed32rvt_ss0p95v25c
-fpu_mul_frac_dp        8000              saed32rvt_ss0p95v25c
-mul64                  35000             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
+fpu_mul_frac_dp        16000             saed32hvt_ss0p95v25c
+mul64                  35000             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE13_0_3
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_mul_0
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_mul_1
-                       ForQA             saed32rvt_ss0p95v25c
-fpu_div_frac_dp        8000              saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
+fpu_div_frac_dp        8000              saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE3_0_0
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE5_0_0
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE6_0_0
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE13_0_0
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE3_0_1
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE11_0_1
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE13_0_1
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_div_0
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_div_1
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_div_2
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_fpu_div_5
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE64_0_7
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE64_0_1
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_6
-                       ForQA             saed32rvt_ss0p95v25c
-mul_array1_1           8000              saed32rvt_ss0p95v25c
-mul_array1_0           8000              saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
+mul_array1_1           8000              saed32hvt_ss0p95v25c
+mul_array1_0           8000              saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_0
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_4
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_4
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_3
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_1
-                       ForQA             saed32rvt_ss0p95v25c
+                       ForQA             saed32hvt_ss0p95v25c
 
 
 Global Operating Voltage = 0.95 
@@ -109,12 +109,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =  84.8133 uW   (90%)
-  Net Switching Power  =   9.6456 uW   (10%)
+  Cell Internal Power  = 127.2889 uW   (89%)
+  Net Switching Power  =  15.4015 uW   (11%)
                          ---------
-Total Dynamic Power    =  94.4589 uW  (100%)
+Total Dynamic Power    = 142.6904 uW  (100%)
 
-Cell Leakage Power     =   2.4011 mW
+Cell Leakage Power     =   2.4817 mW
 
 
                  Internal         Switching           Leakage            Total
@@ -123,10 +123,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      1.0674            8.1985        7.1541e+06           16.4200  (   0.66%)
-register          81.8708            0.2931        5.1561e+08          597.7737  (  23.95%)
-sequential     8.4607e-06        1.2450e-06        3.8036e+08          380.3559  (  15.24%)
-combinational      1.8754            1.1540        1.4980e+09        1.5010e+03  (  60.15%)
+clock_network      1.7075           12.9576        7.1541e+06           21.8192  (   0.83%)
+register         122.5503            0.4139        5.2113e+08          644.0901  (  24.54%)
+sequential     1.6246e-04        2.5294e-05        3.8036e+08          380.3561  (  14.49%)
+combinational      3.0311            2.0299        1.5731e+09        1.5782e+03  (  60.13%)
 --------------------------------------------------------------------------------------------------
-Total             84.8136 uW         9.6456 uW     2.4011e+09 pW     2.4956e+03 uW
+Total            127.2891 uW        15.4015 uW     2.4817e+09 pW     2.6244e+03 uW
 1

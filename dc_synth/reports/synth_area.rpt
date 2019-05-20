@@ -3,28 +3,28 @@
 Report : area
 Design : fpu
 Version: M-2016.12-SP1
-Date   : Fri May 10 00:46:38 2019
+Date   : Sun May 19 22:45:42 2019
 ****************************************
 
 Library(s) Used:
 
-    saed32rvt_ss0p95v25c (File: /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db)
+    saed32hvt_ss0p95v25c (File: /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_hvt/db_ccs/saed32hvt_ss0p95v25c.db)
 
 Number of ports:                         3438
-Number of nets:                         31301
-Number of cells:                        26547
-Number of combinational cells:          20130
-Number of sequential cells:              6373
+Number of nets:                         31755
+Number of cells:                        27046
+Number of combinational cells:          20593
+Number of sequential cells:              6409
 Number of macros/black boxes:               0
-Number of buf/inv:                       1566
+Number of buf/inv:                       1772
 Number of references:                      42
 
-Combinational area:              49873.218760
-Buf/Inv area:                     2250.699306
-Noncombinational area:           37750.804749
+Combinational area:              50215.042361
+Buf/Inv area:                     2513.230059
+Noncombinational area:           38017.655959
 Macro/Black Box area:                0.000000
-Net Interconnect area:           35587.703431
+Net Interconnect area:           36034.576739
 
-Total cell area:                 87624.023509
-Total area:                     123211.726939
+Total cell area:                 88232.698320
+Total area:                     124267.275059
 1
